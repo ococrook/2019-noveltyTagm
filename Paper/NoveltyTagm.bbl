@@ -1,0 +1,282 @@
+\begin{thebibliography}{}
+
+\bibitem[Antoniak(1974)Antoniak]{antoniak::1974}
+Antoniak, C.~E. (1974).
+\newblock Mixtures of dirichlet processes with applications to bayesian
+  nonparametric problems.
+\newblock {\em Ann. Statist.}, {\bf 2}(6), 1152--1174.
+
+\bibitem[Ashburner {\em et~al.}(2000)Ashburner, Ball, Blake, Botstein, Butler,
+  Cherry, Davis, Dolinski, Dwight, Eppig, {\em et~al.}]{Ashburner:2000}
+Ashburner, M. et~al. (2000).
+\newblock Gene ontology: tool for the unification of biology.
+\newblock {\em Nature genetics\/}, {\bf 25}(1), 25--29.
+
+\bibitem[Beltran {\em et~al.}(2016)Beltran, Mathias, and
+  Cristea]{Jean_Beltran:2016}
+Beltran, P. M.~J. et~al. (2016).
+\newblock A portrait of the human organelle proteome in space and time during
+  cytomegalovirus infection.
+\newblock {\em Cell systems\/}, {\bf 3}(4), 361--373.
+
+\bibitem[Benjamini and Hochberg(1995)Benjamini and Hochberg]{FDR:1995}
+Benjamini, Y. et~al. (1995).
+\newblock Controlling the false discovery rate: a practical and powerful
+  approach to multiple testing.
+\newblock {\em Journal of the royal statistical society. Series B
+  (Methodological)\/}, pages 289--300.
+
+\bibitem[Breckels {\em et~al.}(2013)Breckels, Gatto, Christoforou, Groen,
+  Lilley, and Trotter]{Breckels:2013}
+Breckels, L.~M. et~al. (2013).
+\newblock The effect of organelle discovery upon sub-cellular protein
+  localisation.
+\newblock {\em Journal of proteomics\/}, {\bf 88}, 129--140.
+
+\bibitem[Christoforou {\em et~al.}(2016)Christoforou, Mulvey, Breckels,
+  Geladaki, Hurrell, Hayward, Naake, Gatto, Viner, Arias, {\em et~al.}]{hyper}
+Christoforou, A. et~al. (2016).
+\newblock A draft map of the mouse pluripotent stem cell spatial proteome.
+\newblock {\em Nature communications\/}, {\bf 7}, 9992.
+
+\bibitem[Crook {\em et~al.}(2018)Crook, Mulvey, Kirk, Lilley, and
+  Gatto]{Crook:2018}
+Crook, O.~M. et~al. (2018).
+\newblock A bayesian mixture modelling approach for spatial proteomics.
+\newblock {\em bioRxiv\/}.
+
+\bibitem[Dunkley {\em et~al.}(2004)Dunkley, Watson, Griffin, Dupree, and
+  Lilley]{Dunkley:2004}
+Dunkley, T.~P. et~al. (2004).
+\newblock Localization of organelle proteins by isotope tagging (lopit).
+\newblock {\em Molecular \& Cellular Proteomics\/}, {\bf 3}(11), 1128--1134.
+
+\bibitem[Dunkley {\em et~al.}(2006)Dunkley, Hester, Shadforth, Runions, Weimar,
+  Hanton, Griffin, Bessant, Brandizzi, Hawes, {\em et~al.}]{Dunkley:2006}
+Dunkley, T.~P. et~al. (2006).
+\newblock Mapping the arabidopsis organelle proteome.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
+  103}(17), 6518--6523.
+
+\bibitem[Ferguson(1974)Ferguson]{ferguson::1974}
+Ferguson, T.~S. (1974).
+\newblock Prior distributions on spaces of probability measures.
+\newblock {\em Ann. Statist.}, {\bf 2}(4), 615--629.
+
+\bibitem[Foster {\em et~al.}(2006)Foster, de~Hoog, Zhang, Zhang, Xie, Mootha,
+  and Mann]{Foster:2006}
+Foster, L.~J. et~al. (2006).
+\newblock A mammalian organelle map by protein correlation profiling.
+\newblock {\em Cell\/}, {\bf 125}(1), 187--199.
+
+\bibitem[Fritsch and Ickstadt(2009)Fritsch and Ickstadt]{fritsch::2009}
+Fritsch, A. et~al. (2009).
+\newblock Improved criteria for clustering based on the posterior similarity
+  matrix.
+\newblock {\em Bayesian Anal.}, {\bf 4}(2), 367--391.
+
+\bibitem[Gatto and Lilley(2012)Gatto and Lilley]{MSnbase:2012}
+Gatto, L. et~al. (2012).
+\newblock Msnbase - an r/bioconductor package for isobaric tagged mass
+  spectrometry data visualization, processing and quantitation.
+\newblock {\em Bioinformatics\/}, {\bf 28}, 288--289.
+
+\bibitem[Gatto {\em et~al.}(2010)Gatto, Vizca{\'\i}no, Hermjakob, Huber, and
+  Lilley]{Gatto:2010}
+Gatto, L. et~al. (2010).
+\newblock Organelle proteomics experimental designs and analysis.
+\newblock {\em Proteomics\/}, {\bf 10}(22), 3957--3969.
+
+\bibitem[Gatto {\em et~al.}(2014a)Gatto, Breckels, Burger, Nightingale, Groen,
+  Campbell, Mulvey, Christoforou, Ferro, and Lilley]{Gatto:2014b}
+Gatto, L. et~al. (2014a).
+\newblock A foundation for reliable spatial proteomics data analysis.
+\newblock {\em Molecular \& Cellular Proteomics\/}, pages mcp--M113.
+
+\bibitem[Gatto {\em et~al.}(2014b)Gatto, Breckels, Wieczorek, Burger, and
+  Lilley]{pRoloc:2014}
+Gatto, L. et~al. (2014b).
+\newblock Mass-spectrometry based spatial proteomics data analysis using proloc
+  and prolocdata.
+\newblock {\em Bioinformatics\/}.
+
+\bibitem[Gatto {\em et~al.}(2018)Gatto, Breckels, and Lilley]{Gatto:2018}
+Gatto, L. et~al. (2018).
+\newblock Assessing sub-cellular resolution in spatial proteomics experiments.
+\newblock {\em bioRxiv\/}.
+
+\bibitem[Geladaki {\em et~al.}(2018)Geladaki, Kocevar~Britovsek, Breckels,
+  Smith, Mulvey, Crook, Gatto, and Lilley]{DC:2018}
+Geladaki, A. et~al. (2018).
+\newblock Lopit-dc: A simpler approach to high-resolution spatial proteomics.
+\newblock {\em bioRxiv\/}.
+
+\bibitem[Gentleman {\em et~al.}(2004)Gentleman, Carey, Bates, Bolstad,
+  Dettling, Dudoit, Ellis, Gautier, Ge, Gentry, {\em
+  et~al.}]{Bioconductor::2004}
+Gentleman, R.~C. et~al. (2004).
+\newblock Bioconductor: open software development for computational biology and
+  bioinformatics.
+\newblock {\em Genome biology\/}, {\bf 5}(10), R80.
+
+\bibitem[Gibson(2009)Gibson]{Gibson:2009}
+Gibson, T.~J. (2009).
+\newblock Cell regulation: determined to signal discrete cooperation.
+\newblock {\em Trends in biochemical sciences\/}, {\bf 34}(10), 471--482.
+
+\bibitem[Groen {\em et~al.}(2014)Groen, Sancho-Andrés, Breckels, Gatto,
+  Aniento, and Lilley]{Groen:2014}
+Groen, A.~J. et~al. (2014).
+\newblock Identification of trans-golgi network proteins in arabidopsis
+  thaliana root tissue.
+\newblock {\em Journal of proteome research\/}, {\bf 13}(2), 763--776.
+
+\bibitem[Hirst {\em et~al.}(2018)Hirst, Itzhak, Antrobus, Borner, and
+  Robinson]{Hirst:2018}
+Hirst, J. et~al. (2018).
+\newblock Role of the ap-5 adaptor protein complex in late endosome-to-golgi
+  retrieval.
+\newblock {\em PLoS biology\/}, {\bf 16}(1), e2004411.
+
+\bibitem[Huber {\em et~al.}(2015)Huber, Carey, Gentleman, Anders, Carlson,
+  Carvalho, Bravo, Davis, Gatto, Girke, {\em et~al.}]{Huber:2015}
+Huber, W. et~al. (2015).
+\newblock Orchestrating high-throughput genomic analysis with bioconductor.
+\newblock {\em Nature methods\/}, {\bf 12}(2), 115--121.
+
+\bibitem[Hubert and Arabie(1985)Hubert and Arabie]{Hubert::1985}
+Hubert, L. et~al. (1985).
+\newblock Comparing partitions.
+\newblock {\em Journal of Classification\/}, {\bf 2}(1), 193--218.
+
+\bibitem[Itzhak {\em et~al.}(2016)Itzhak, Tyanova, Cox, and
+  Borner]{Itzhak:2016}
+Itzhak, D.~N. et~al. (2016).
+\newblock Global, quantitative and dynamic mapping of protein subcellular
+  localization.
+\newblock {\em Elife\/}, {\bf 5}, e16950.
+
+\bibitem[Itzhak {\em et~al.}(2017)Itzhak, Davies, Tyanova, Mishra, Williamson,
+  Antrobus, Cox, Weekes, and Borner]{Itzhak::2017}
+Itzhak, D.~N. et~al. (2017).
+\newblock A mass spectrometry-based approach for mapping protein subcellular
+  localization reveals the spatial proteome of mouse primary neurons.
+\newblock {\em Cell reports\/}, {\bf 20}(11), 2706--2718.
+
+\bibitem[Kau {\em et~al.}(2004)Kau, Way, and Silver]{Kau:2004}
+Kau, T.~R. et~al. (2004).
+\newblock Nuclear transport and cancer: from mechanism to intervention.
+\newblock {\em Nature Reviews Cancer\/}, {\bf 4}(2), 106--117.
+
+\bibitem[Kristensen and Foster(2014)Kristensen and Foster]{kristensen:2014}
+Kristensen, A.~R. et~al. (2014).
+\newblock Protein correlation profiling-silac to study protein-protein
+  interactions.
+\newblock In {\em Stable Isotope Labeling by Amino Acids in Cell Culture
+  (SILAC)\/}, pages 263--270. Springer.
+
+\bibitem[Kristensen {\em et~al.}(2012)Kristensen, Gsponer, and
+  Foster]{kristensen:2012}
+Kristensen, A.~R. et~al. (2012).
+\newblock A high-throughput approach for measuring temporal changes in the
+  interactome.
+\newblock {\em Nature methods\/}, {\bf 9}(9), 907.
+
+\bibitem[Laurila and Vihinen(2009)Laurila and Vihinen]{Laurila:2009}
+Laurila, K. et~al. (2009).
+\newblock Prediction of disease-related mutations affecting protein
+  localization.
+\newblock {\em BMC genomics\/}, {\bf 10}(1), 122.
+
+\bibitem[McAlister {\em et~al.}(2014)McAlister, Nusinow, Jedrychowski, Wühr,
+  Huttlin, Erickson, Rad, Haas, and Gygi]{Mcalister::2014}
+McAlister, G.~C. et~al. (2014).
+\newblock Multinotch ms3 enables accurate, sensitive, and multiplexed detection
+  of differential expression across cancer cell line proteomes.
+\newblock {\em Analytical chemistry\/}, {\bf 86}(14), 7150--7158.
+
+\bibitem[Mulvey {\em et~al.}(2017)Mulvey, Breckels, Geladaki, Britov{\v{s}}ek,
+  Nightingale, Christoforou, Elzek, Deery, Gatto, and Lilley]{Mulvey:2017}
+Mulvey, C.~M. et~al. (2017).
+\newblock Using {hyperLOPIT} to perform high-resolution mapping of the spatial
+  proteome.
+\newblock {\em Nature Protocols\/}, {\bf 12}(6), 1110--1135.
+
+\bibitem[Nightingale {\em et~al.}(2019)Nightingale, Geladaki, Breckels, Oliver,
+  and Lilley]{Nightingale::2019}
+Nightingale, D. J.~H. et~al. (2019).
+\newblock The subcellular organisation of saccharomyces cerevisiae.
+\newblock {\em Current Opinion in Chemical Biology\/}, {\bf 48}(11), 1--10.
+
+\bibitem[Rand(1971)Rand]{rand::1971}
+Rand, W.~M. (1971).
+\newblock Objective criteria for the evaluation of clustering methods.
+\newblock {\em Journal of the American Statistical association\/}, {\bf
+  66}(336), 846--850.
+
+\bibitem[Richardson and Green(1997)Richardson and Green]{Richardson::1997}
+Richardson, S. et~al. (1997).
+\newblock On bayesian analysis of mixtures with an unknown number of components
+  (with discussion).
+\newblock {\em Journal of the Royal Statistical Society: series B (statistical
+  methodology)\/}, {\bf 59}(4), 731--792.
+
+\bibitem[Rousseau and Mengersen(2011)Rousseau and Mengersen]{Rousseau::2011}
+Rousseau, J. et~al. (2011).
+\newblock Asymptotic behaviour of the posterior distribution in overfitted
+  mixture models.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)\/}, {\bf 73}(5), 689--710.
+
+\bibitem[Schwarz {\em et~al.}(1978)Schwarz {\em et~al.}]{Schwarz::1978}
+Schwarz, G. et~al. (1978).
+\newblock Estimating the dimension of a model.
+\newblock {\em The annals of statistics\/}, {\bf 6}(2), 461--464.
+
+\bibitem[Siljee {\em et~al.}(2018)Siljee, Wang, Bernard, Ersoy, Zhang, Marley,
+  Von~Zastrow, Reiter, and Vaisse]{Siljee:2018}
+Siljee, J.~E. et~al. (2018).
+\newblock Subcellular localization of {MC4R} with {ADCY3} at neuronal primary
+  cilia underlies a common pathway for genetic predisposition to obesity.
+\newblock {\em Nat Genet\/}.
+
+\bibitem[Stephens(2000)Stephens]{Stephens:2000}
+Stephens, M. (2000).
+\newblock Dealing with label switching in mixture models.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)\/}, {\bf 62}(4), 795--809.
+
+\bibitem[Tan {\em et~al.}(2009)Tan, Dvinge, Christoforou, Bertone,
+  Martinez~Arias, and Lilley]{Tan:2009}
+Tan, D.~J. et~al. (2009).
+\newblock Mapping organelle proteins and protein complexes in drosophila
+  melanogaster.
+\newblock {\em Journal of proteome research\/}, {\bf 8}(6), 2667--2678.
+
+\bibitem[Thompson {\em et~al.}(2003)Thompson, Sch{\"a}fer, Kuhn, Kienle,
+  Schwarz, Schmidt, Neumann, and Hamon]{Thompson:2003}
+Thompson, A. et~al. (2003).
+\newblock Tandem mass tags: a novel quantification strategy for comparative
+  analysis of complex protein mixtures by ms/ms.
+\newblock {\em Analytical chemistry\/}, {\bf 75}(8), 1895--1904.
+
+\bibitem[Thul {\em et~al.}(2017)Thul, {\AA}kesson, Wiking, Mahdessian,
+  Geladaki, Blal, Alm, Asplund, Bj{\"o}rk, Breckels, {\em et~al.}]{Thul:2017}
+Thul, P.~J. et~al. (2017).
+\newblock A subcellular map of the human proteome.
+\newblock {\em Science\/}, {\bf 356}(6340), eaal3321.
+
+\bibitem[Ting {\em et~al.}(2011)Ting, Rad, Gygi, and Haas]{Ting:2011}
+Ting, L. et~al. (2011).
+\newblock Ms3 eliminates ratio distortion in isobaric multiplexed quantitative
+  proteomics.
+\newblock {\em Nature methods\/}, {\bf 8}(11), 937.
+
+\bibitem[Yu {\em et~al.}(2012)Yu, Wang, Han, and He]{Yu:2012}
+Yu, G. et~al. (2012).
+\newblock {clusterProfiler}: an {R} package for comparing biological themes
+  among gene clusters.
+\newblock {\em Omics: a journal of integrative biology\/}, {\bf 16}(5),
+  284--287.
+
+\end{thebibliography}
