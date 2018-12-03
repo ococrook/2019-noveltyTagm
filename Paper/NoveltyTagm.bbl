@@ -33,6 +33,19 @@ Breckels, L.~M. et~al. (2013).
   localisation.
 \newblock {\em Journal of proteomics\/}, {\bf 88}, 129--140.
 
+\bibitem[Bue {\em et~al.}(2006)Bue, Bentivoglio, and Barlowe]{Bue:2006}
+Bue, C.~A. et~al. (2006).
+\newblock Erv26p directs pro-alkaline phosphatase into endoplasmic
+  reticulum--derived coat protein complex ii transport vesicles.
+\newblock {\em Molecular biology of the cell\/}, {\bf 17}(11), 4780--4789.
+
+\bibitem[Cappellaro {\em et~al.}(1998)Cappellaro, Mrsa, and
+  Tanner]{Cappellaro:1998}
+Cappellaro, C. et~al. (1998).
+\newblock New potential cell wall glucanases ofsaccharomyces cerevisiae and
+  their involvement in mating.
+\newblock {\em Journal of bacteriology\/}, {\bf 180}(19), 5030--5037.
+
 \bibitem[Christoforou {\em et~al.}(2016)Christoforou, Mulvey, Breckels,
   Geladaki, Hurrell, Hayward, Naake, Gatto, Viner, Arias, {\em et~al.}]{hyper}
 Christoforou, A. et~al. (2016).
@@ -43,7 +56,13 @@ Christoforou, A. et~al. (2016).
   Gatto]{Crook:2018}
 Crook, O.~M. et~al. (2018).
 \newblock A bayesian mixture modelling approach for spatial proteomics.
-\newblock {\em bioRxiv\/}.
+\newblock {\em PLOS Computational Biology\/}, {\bf 14}(11), 1--29.
+
+\bibitem[Delic {\em et~al.}(2013)Delic, Valli, Graf, Pfeffer, Mattanovich, and
+  Gasser]{Delic:2013}
+Delic, M. et~al. (2013).
+\newblock The secretory pathway: exploring yeast diversity.
+\newblock {\em FEMS microbiology reviews\/}, {\bf 37}(6), 872--914.
 
 \bibitem[Dunkley {\em et~al.}(2004)Dunkley, Watson, Griffin, Dupree, and
   Lilley]{Dunkley:2004}
@@ -149,6 +168,20 @@ Hubert, L. et~al. (1985).
 \newblock Comparing partitions.
 \newblock {\em Journal of Classification\/}, {\bf 2}(1), 193--218.
 
+\bibitem[Huh {\em et~al.}(2003)Huh, Falvo, Gerke, Carroll, Howson, Weissman,
+  and O'shea]{Huh:2003}
+Huh, W.-K. et~al. (2003).
+\newblock Global analysis of protein localization in budding yeast.
+\newblock {\em Nature\/}, {\bf 425}(6959), 686.
+
+\bibitem[Inadome {\em et~al.}(2005)Inadome, Noda, Adachi, and
+  Yoda]{Inadome:2005}
+Inadome, H. et~al. (2005).
+\newblock Immunoisolaton of the yeast golgi subcompartments and
+  characterization of a novel membrane protein, svp26, discovered in the
+  sed5-containing compartments.
+\newblock {\em Molecular and cellular biology\/}, {\bf 25}(17), 7696--7710.
+
 \bibitem[Itzhak {\em et~al.}(2016)Itzhak, Tyanova, Cox, and
   Borner]{Itzhak:2016}
 Itzhak, D.~N. et~al. (2016).
@@ -207,6 +240,20 @@ Mulvey, C.~M. et~al. (2017).
 Nightingale, D. J.~H. et~al. (2019).
 \newblock The subcellular organisation of saccharomyces cerevisiae.
 \newblock {\em Current Opinion in Chemical Biology\/}, {\bf 48}(11), 1--10.
+
+\bibitem[Otte {\em et~al.}(2001)Otte, Belden, Heidtman, Liu, Jensen, and
+  Barlowe]{Otte:2001}
+Otte, S. et~al. (2001).
+\newblock Erv41p and erv46p: new components of copii vesicles involved in
+  transport between the er and golgi complex.
+\newblock {\em The Journal of cell biology\/}, {\bf 152}(3), 503--518.
+
+\bibitem[Pardo {\em et~al.}(2004)Pardo, Monteoliva, Vazquez, Mart{\'\i}nez,
+  Molero, Nombela, and Gil]{Pardo:2004}
+Pardo, M. et~al. (2004).
+\newblock Pst1 and ecm33 encode two yeast cell surface gpi proteins important
+  for cell wall integrity.
+\newblock {\em Microbiology\/}, {\bf 150}(12), 4157--4170.
 
 \bibitem[Rand(1971)Rand]{rand::1971}
 Rand, W.~M. (1971).
@@ -271,6 +318,28 @@ Ting, L. et~al. (2011).
 \newblock Ms3 eliminates ratio distortion in isobaric multiplexed quantitative
   proteomics.
 \newblock {\em Nature methods\/}, {\bf 8}(11), 937.
+
+\bibitem[Wendler {\em et~al.}(2010)Wendler, Gillingham, Sinka, Rosa-Ferreira,
+  Gordon, Franch-Marro, Peden, Vincent, and Munro]{Wendler:2010}
+Wendler, F. et~al. (2010).
+\newblock A genome-wide rna interference screen identifies two novel components
+  of the metazoan secretory pathway.
+\newblock {\em The EMBO journal\/}, {\bf 29}(2), 304--314.
+
+\bibitem[Yin {\em et~al.}(2005)Yin, de~Groot, Dekker, de~Jong, Klis, and
+  de~Koster]{Yin:2005}
+Yin, Q.~Y. et~al. (2005).
+\newblock Comprehensive proteomic analysis of saccharomyces cerevisiae cell
+  walls identification of proteins covalently attached via
+  glycosylphosphatidylinositol remnants or mild alkali-sensitive linkages.
+\newblock {\em Journal of Biological Chemistry\/}, {\bf 280}(21), 20894--20901.
+
+\bibitem[Yofe {\em et~al.}(2016)Yofe, Weill, Meurer, Chuartzman, Zalckvar,
+  Goldman, Ben-Dor, Sch{\"u}tze, Wiedemann, Knop, {\em et~al.}]{Yofe:2016}
+Yofe, I. et~al. (2016).
+\newblock One library to make them all: streamlining the creation of yeast
+  libraries via a swap-tag strategy.
+\newblock {\em Nature methods\/}, {\bf 13}(4), 371.
 
 \bibitem[Yu {\em et~al.}(2012)Yu, Wang, Han, and He]{Yu:2012}
 Yu, G. et~al. (2012).
