@@ -201,6 +201,12 @@ Kau, T.~R. et~al. (2004).
 \newblock Nuclear transport and cancer: from mechanism to intervention.
 \newblock {\em Nature Reviews Cancer\/}, {\bf 4}(2), 106--117.
 
+\bibitem[Kirk {\em et~al.}(2012)Kirk, Griffin, Savage, Ghahramani, and
+  Wild]{Kirk:2012}
+Kirk, P. et~al. (2012).
+\newblock Bayesian correlated clustering to integrate multiple datasets.
+\newblock {\em Bioinformatics\/}, {\bf 28}(24), 3290--3297.
+
 \bibitem[Kristensen and Foster(2014)Kristensen and Foster]{kristensen:2014}
 Kristensen, A.~R. et~al. (2014).
 \newblock Protein correlation profiling-silac to study protein-protein
@@ -292,6 +298,14 @@ Stephens, M. (2000).
 \newblock Dealing with label switching in mixture models.
 \newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
   Methodology)\/}, {\bf 62}(4), 795--809.
+
+\bibitem[Sullivan {\em et~al.}(2018)Sullivan, Winsnes, {\AA}kesson, Hjelmare,
+  Wiking, Schutten, Campbell, Leifsson, Rhodes, Nordgren, {\em
+  et~al.}]{Sullivan:2018}
+Sullivan, D.~P. et~al. (2018).
+\newblock Deep learning is combined with massive-scale citizen science to
+  improve large-scale image classification.
+\newblock {\em Nature biotechnology\/}, {\bf 36}(9), 820.
 
 \bibitem[Tan {\em et~al.}(2009)Tan, Dvinge, Christoforou, Bertone,
   Martinez~Arias, and Lilley]{Tan:2009}
