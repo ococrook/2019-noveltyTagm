@@ -8,7 +8,7 @@
 \BOOKMARK [3][-]{subsubsection.2.2.4}{Uncertainty Quantification}{subsection.2.2}% 8
 \BOOKMARK [2][-]{subsection.2.3}{Validating computational approaches}{section.2}% 9
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Artificial masking of annotations to recover experimental design}{subsection.2.3}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Human protein atlas validation}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.2}{The human protein atlas}{subsection.2.3}% 11
 \BOOKMARK [3][-]{subsubsection.2.3.3}{Gene-Ontology term enrichment}{subsection.2.3}% 12
 \BOOKMARK [1][-]{section.3}{Results}{}% 13
 \BOOKMARK [2][-]{subsection.3.1}{Validating experimental design in hyperLOPIT}{section.3}% 14
@@ -24,3 +24,5 @@
 \BOOKMARK [3][-]{subsubsection.3.3.2}{Mouse primary neuron cells \(Itzhak et. al 2017\)}{subsection.3.3}% 24
 \BOOKMARK [3][-]{subsubsection.3.3.3}{HeLa cells \(Hirst et. al 2018\)}{subsection.3.3}% 25
 \BOOKMARK [1][-]{section.4}{Discussion}{}% 26
+\BOOKMARK [1][-]{section.5}{Appendix}{}% 27
+\BOOKMARK [2][-]{subsection.5.1}{Handling label switching}{section.5}% 28

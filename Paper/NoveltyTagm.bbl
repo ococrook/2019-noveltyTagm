@@ -33,6 +33,20 @@ Breckels, L.~M. et~al. (2013).
   localisation.
 \newblock {\em Journal of proteomics\/}, {\bf 88}, 129--140.
 
+\bibitem[Breckels {\em et~al.}(2016a)Breckels, Mulvey, Lilley, and
+  Gatto]{Breckels:2016b}
+Breckels, L.~M. et~al. (2016a).
+\newblock A bioconductor workflow for processing and analysing spatial
+  proteomics data.
+\newblock {\em F1000Research\/}, {\bf 5}.
+
+\bibitem[Breckels {\em et~al.}(2016b)Breckels, Holden, Wojnar, Mulvey,
+  Christoforou, Groen, Trotter, Kohlbacher, Lilley, and Gatto]{Breckels:2016}
+Breckels, L.~M. et~al. (2016b).
+\newblock Learning from heterogeneous data sources: an application in spatial
+  proteomics.
+\newblock {\em PLoS computational biology\/}, {\bf 12}(5), e1004920.
+
 \bibitem[Bue {\em et~al.}(2006)Bue, Bentivoglio, and Barlowe]{Bue:2006}
 Bue, C.~A. et~al. (2006).
 \newblock Erv26p directs pro-alkaline phosphatase into endoplasmic
@@ -93,6 +107,12 @@ Fritsch, A. et~al. (2009).
 \newblock Improved criteria for clustering based on the posterior similarity
   matrix.
 \newblock {\em Bayesian Anal.}, {\bf 4}(2), 367--391.
+
+\bibitem[Gatto and Christoforou(2014)Gatto and Christoforou]{Gatto:2014}
+Gatto, L. et~al. (2014).
+\newblock Using r and bioconductor for proteomics data analysis.
+\newblock {\em Biochimica et Biophysica Acta (BBA)-Proteins and Proteomics\/},
+  {\bf 1844}(1), 42--51.
 
 \bibitem[Gatto and Lilley(2012)Gatto and Lilley]{MSnbase:2012}
 Gatto, L. et~al. (2012).
