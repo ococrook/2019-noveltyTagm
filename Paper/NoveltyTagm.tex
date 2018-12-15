@@ -160,7 +160,7 @@ which we can approximate by the following Monte-Carlo average:
 Since the summation in equation \ref{equation::discoveryprob} only goes up to $K$ (the number of annotated organelles), this equation is identifiable. Throughout we refer to this as the discovery probability.
 \subsection{Validating computational approaches}
 In a supervised framework the performance of computational methods can be assessed by 
-using the training data, where a proportion of the training data is withheld from the classifier to be used for the assessment of predictive performance. In an unsupervised framework or semi-supervised framework we cannot validate in this way, since there is no ground truth with which to compare. Thus, we propose three approaches, using external information, for independent validation of our method.
+using the training data, where a proportion of the training data is withheld from the classifier to be used for the assessment of predictive performance. In an unsupervised framework or semi-supervised framework we cannot validate in this way, since there is no ground truth with which to compare. Thus, we propose three approaches, using external information, for independent validation of our method. Table \ref{table:methods} summarises the differences between the current available machine-learning methods for spatial proteomics.
 \subsubsection{Artificial masking of annotations to recover experimental design}
 Removing the annotations from an entire component and assessing the ability of our method to rediscover these annotations is one form of validation. We consider this validation approach in several of the datasets; in particular, chromatin enrichment is performed in two of the \textit{hyper}LOPIT experiments, where the intention is to increase the resolution between chromatin and non-chromatin associated nuclear proteins \citep{Mulvey:2017}. As validation of our method we hide these annotations and rediscover them in a unbiased fashion.
 \subsubsection{The human protein atlas}
@@ -192,7 +192,7 @@ The gene ontology provides a database of relationships between genes and classes
 		\hline
 	\end{tabular}
 	\caption{Summary of computational methods for spatial  proteomics datasets.}
-	\label{table:data}
+	\label{table:methods}
 \end{table}
 \clearpage
 \section{Results}
@@ -379,6 +379,8 @@ which is known as the Posterior Expected Adjusted Rand index (PEAR). One obvious
 PEAR \approx \frac{1}{T} \sum_{t = 1}^{T}AR(z^*, z^{(t)}).
 \end{equation}
 The space of all possible clustering over which to maximise is infeasibly large to explore. Thus we take an approach taken in \cite{fritsch::2009} to propose candidate clusterings over which to maximise. Using hierarchical clustering with distance $1 - S_{ij}$, the PEAR criterion is computed for clusterings at every level of the hierarchy. The optimal clustering $\hat{z}$ is the allocation vector which maximises the PEAR.
+\subsection{Details of MCMC}
+The MCMC algorithm use in \cite{Crook:2018} is insufficient to handle inference of unknown phenotypes. A collapsed Gibbs sampler approach is used, but a number of modifications are made. Firstly, to accelerate convergence of the algorithm half the proteins are initial allocated randomly amongst the new phenotypes. Secondly, the parameters for the new phenotypes are proposed from the prior. Throughout the same default prior choices are used as in \cite{Crook:2018}.
 
 \clearpage
 \bibliographystyle{natbib}
