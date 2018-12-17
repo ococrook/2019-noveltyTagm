@@ -6,6 +6,7 @@ output: html_document
 ---
 ```{r,}
 source("../scripts/plot2D.R")
+myBlues <- colorRampPalette(RColorBrewer::brewer.pal(9,"Blues"))(100)
 ```
 
 ```{r,}
@@ -68,12 +69,12 @@ rownames(annot) <- rownames(fData(newHirst))[toSubsethl]
 ann_colors = list(
   organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes$mpCombined$cl)])
 )
-names(ann_colors$organelle) <- levels(annot$organelle)
+names(ann_colors$organelle) <- as.character(levels(annot$organelle))
 
 psmSub <- rownames(fData(newHirst))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(hirstTagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HeLa (Hirst et al.) data")
+pheatmap(hirstTagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HeLa (Hirst et al.) data", color = myBlues, fontsize = 10, cellheight=0.5,cellwidth=0.7)
 ```
 
 ```{r,}
@@ -171,7 +172,7 @@ save(beltranMOCK24TagmNoveltyRes, file = "beltranMOCK24TagmNoveltyRes.rda")
 
 ```{r,}
 ## attach information to MSnset
-fData(beltran2016MOCK24)$tagm.phenotype <- beltranHCMV24TagmNoveltyRes$mpCombined$cl[rownames(fData(beltran2016MOCK24))]
+fData(beltran2016MOCK24)$tagm.phenotype <- beltranMOCK24TagmNoveltyRes$mpCombined$cl[rownames(fData(beltran2016MOCK24))]
 fData(beltran2016MOCK24)$tagm.newcluster.prob <- beltranMOCK24TagmNoveltyRes$tagm.newcluster.prob[rownames(fData(beltran2016MOCK24))]
 
 fData(beltran2016MOCK24)$tagm.newcluster.prob[is.na(fData(beltran2016MOCK24)$tagm.newcluster.prob)] <- 0
@@ -209,7 +210,7 @@ names(ann_colors$organelle) <- levels(annot$organelle)
 psmSub <- rownames(fData(beltran2016MOCK24))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(beltranMOCK24TagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the MOCK fibroblast data")
+pheatmap(beltranMOCK24TagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the MOCK fibroblast data", col = myBlues)
 ```
 
 
@@ -277,10 +278,10 @@ HCMV24diag <- gelman.diag(outliers)
 
 
 ```{r,}
-beltranHCMV24TagmNoveltyRes <- tagmNoveltyProcess(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
+#beltranHCMV24TagmNoveltyRes <- tagmNoveltyProcess(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
 beltranHCMV24TagmNoveltyparams <- tagmMcmcProcess(beltranHCMV24TagmNoveltyparams)
 beltran2016HCMV24 <- tagmPredict(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
-save(beltranHCMV24TagmNoveltyRes, file = "beltranHCMV24TagmNoveltyRes.rda")
+#save(beltranHCMV24TagmNoveltyRes, file = "beltranHCMV24TagmNoveltyRes.rda")
 ```
 
 ```{r,}
@@ -323,7 +324,7 @@ names(ann_colors$organelle) <- levels(annot$organelle)
 psmSub <- rownames(fData(beltran2016HCMV24))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(beltranHCMV24TagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HCMV infected fibroblast data")
+pheatmap(beltranHCMV24TagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HCMV infected fibroblast data", col = myBlues, cellwidth = 2.5)
 ```
 
 
@@ -437,7 +438,7 @@ hlmouseTagmNoveltyparams_conv <- hlmouseTagmNoveltyparams[c(2,4)]
 hlmouseTagmNoveltyRes_conv <- tagmNoveltyProcess(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
 hlmouseTagmNoveltyparams_conv <- tagmMcmcProcess(hlmouseTagmNoveltyparams_conv)
 hlmouse <- tagmPredict(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
-save(hlmouseTagmNoveltyRes_conv, file = "hlmouseTagmNoveltyRes_conv.rda")
+#save(hlmouseTagmNoveltyRes_conv, file = "hlmouseTagmNoveltyRes_conv.rda")
 ```
 
 ```{r,}
@@ -465,7 +466,7 @@ par(mar=c(5,4,4,13), xpd = T)
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(hlmouse)$tagm.newcluster.prob 
 plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of hyperLOPIT mouse data with pointer scaled to discovery probability")
-myleg <- levels(hlmouseTagmNoveltyRes$mpCombined$cl)
+myleg <- levels(hlmouseTagmNoveltyRes_conv$mpCombined$cl)
 legend(6, 5, legend = myleg, col = getStockcol(), bty = "n",
        pch = 19, cex = 0.7, pt.cex = 1)
 ```
@@ -478,14 +479,14 @@ annot <- data.frame(organelle = fData(hlmouse)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(hlmouse))[toSubsethl]
 # Set up for heat map
 ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(hlmouseTagmNoveltyRes$mpCombined$cl)])
+  organelle = c(getStockcol()[1:nlevels(hlmouseTagmNoveltyRes_conv$mpCombined$cl)])
 )
 names(ann_colors$organelle) <- levels(annot$organelle)
 
 psmSub <- rownames(fData(hlmouse))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(hlmouseTagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse data")
+pheatmap(hlmouseTagmNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse data", col = myBlues, cellwidth = 2.5)
 ```
 
 ```{r,}
