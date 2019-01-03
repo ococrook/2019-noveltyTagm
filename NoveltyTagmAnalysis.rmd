@@ -560,10 +560,10 @@ hlyeastTagmNoveltyparams_conv <- hlyeastTagmNoveltyparams[c(5,6)]
 ```
 
 ```{r,}
-hlyeastTagmNoveltyRes <- tagmNoveltyProcess(object = yeast2018, params = hlyeastTagmNoveltyparams_conv)
+#hlyeastTagmNoveltyRes <- tagmNoveltyProcess(object = yeast2018, params = hlyeastTagmNoveltyparams_conv)
 hlyeastTagmNoveltyparams_conv <- tagmMcmcProcess(hlyeastTagmNoveltyparams_conv)
 yeast2018 <- tagmPredict(object = yeast2018, params = hlyeastTagmNoveltyparams_conv)
-save(hlyeastTagmNoveltyRes, file = "hlyeastTagmNoveltyRes.rda")
+#save(hlyeastTagmNoveltyRes, file = "hlyeastTagmNoveltyRes.rda")
 ```
 
 ```{r,}
@@ -604,7 +604,7 @@ names(ann_colors$organelle) <- levels(annot$organelle)
 psmSub <- rownames(fData(yeast2018))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(hlyeastTagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the yeast data")
+pheatmap(hlyeastTagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the yeast data", col = myBlues, cellwidth = 1)
 ```
 
 ```{r,}
@@ -687,10 +687,10 @@ itzhak2016Diag <- gelman.diag(outliers[c(1,2,6)])
 
 ```{r,}
 itzhak2016TagmNoveltyparams_conv <- itzhak2016TagmNoveltyparams[c(1,2,6)]
-itzhak2016NoveltyRes <- tagmNoveltyProcess(object = itzhak2016, params = itzhak2016TagmNoveltyparams_conv)
+#itzhak2016NoveltyRes <- tagmNoveltyProcess(object = itzhak2016, params = itzhak2016TagmNoveltyparams_conv)
 itzhak2016TagmNoveltyparams_conv <- tagmMcmcProcess(itzhak2016TagmNoveltyparams_conv)
 itzhak2016 <- tagmPredict(object  = itzhak2016, params = itzhak2016TagmNoveltyparams_conv)
-save(itzhak2016NoveltyRes, file = "itzhak2016NovelyRes.rda")
+#save(itzhak2016NoveltyRes, file = "itzhak2016NovelyRes.rda")
 ```
 
 ```{r,}
@@ -731,7 +731,7 @@ names(ann_colors$organelle) <- levels(annot$organelle)
 psmSub <- rownames(fData(itzhak2016))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(itzhak2016NoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HeLa (Itzhak) data")
+pheatmap(itzhak2016NoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HeLa (Itzhak) data", col = myBlues, cellwidth = 2)
 ```
 
 
@@ -828,7 +828,7 @@ legend(10, 8, legend = myleg, col = getStockcol(), bty = "n",
 ```
 
 ```{r,}
-toSubsethl <- (fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.99) & fData(lopitdcU2OS2018)$tagm.mcmc.outlier < 0.01 
+toSubsethl <- (fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.99) & fData(lopitdcU2OS2018)$tagm.mcmc.outlier < 0.00001 
 
 # Create annotation 
 annot <- data.frame(organelle = fData(lopitdcU2OS2018)$tagm.phenotype[toSubsethl])
@@ -842,7 +842,7 @@ names(ann_colors$organelle) <- levels(annot$organelle)
 psmSub <- rownames(fData(lopitdcU2OS2018))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(lopitdcNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS LOPIT-DC data")
+pheatmap(lopitdcNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS LOPIT-DC data", col = myBlues)
 ```
 
 
@@ -962,10 +962,10 @@ itzhak2017diag <- gelman.diag(outliers[c(4,5)])
 
 ```{r,}
 itzhak2017TagmNoveltyparams_conv <- itzhak2017TagmNoveltyparams[c(4,5)]
-itzhak2017NoveltyRes <- tagmNoveltyProcess(object = itzhak2017, params = itzhak2017TagmNoveltyparams_conv)
+#itzhak2017NoveltyRes <- tagmNoveltyProcess(object = itzhak2017, params = itzhak2017TagmNoveltyparams_conv)
 itzhak2017TagmNoveltyparams_conv <- tagmMcmcProcess(itzhak2017TagmNoveltyparams_conv)
 itzhak2017 <- tagmPredict(itzhak2017, params = itzhak2017TagmNoveltyparams_conv)
-save(itzhak2017NoveltyRes, file = "itzhak2017NoveltyRes.rda")
+#save(itzhak2017NoveltyRes, file = "itzhak2017NoveltyRes.rda")
 ```
 
 
@@ -1009,7 +1009,7 @@ names(ann_colors$organelle) <- levels(annot$organelle)
 psmSub <- rownames(fData(itzhak2017))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(itzhak2017NoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse neuron data")
+pheatmap(itzhak2017NoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse neuron data", col = myBlues, cellwidth = 1)
 ```
 
 ```{r,}
@@ -1109,10 +1109,10 @@ hlU2OSTagmNoveltyparams_conv <- hlU2OSTagmNoveltyparams[c(2,4)]
 ```
 
 ```{r,}
-hlu2osNoveltyRes_conv <- tagmNoveltyProcess(object = hyperLOPITU2OS2018, params = hlU2OSTagmNoveltyparams_conv)
+#hlu2osNoveltyRes_conv <- tagmNoveltyProcess(object = hyperLOPITU2OS2018, params = hlU2OSTagmNoveltyparams_conv)
 hlu2osNoveltyparams_conv <- tagmMcmcProcess(params = hlU2OSTagmNoveltyparams_conv)
 hyperLOPITU2OS2018 <- tagmPredict(object = hyperLOPITU2OS2018, params = hlu2osNoveltyparams_conv)
-save(hlu2osNoveltyRes_conv, file = "hlu2osNoveltyRes_conv.rda")
+#save(hlu2osNoveltyRes_conv, file = "hlu2osNoveltyRes_conv.rda")
 ```
 
 ```{r,}
@@ -1140,7 +1140,7 @@ legend(11, 10, legend = myleg, col = getStockcol(), bty = "n",
 ```
 
 ```{r,}
-toSubsethl <- (fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.99) & fData(hyperLOPITU2OS2018)$tagm.mcmc.outlier < 0.95 
+toSubsethl <- (fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.99) & fData(hyperLOPITU2OS2018)$tagm.mcmc.outlier < 0.5 
 
 # Create annotation 
 annot <- data.frame(organelle = fData(hyperLOPITU2OS2018)$tagm.phenotype[toSubsethl])
@@ -1154,7 +1154,7 @@ names(ann_colors$organelle) <- levels(annot$organelle)
 psmSub <- rownames(fData(hyperLOPITU2OS2018))[toSubsethl]
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(hlu2osNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS data")
+pheatmap(hlu2osNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS data", col = myBlues, cellwidth = 1)
 ```
 
 
