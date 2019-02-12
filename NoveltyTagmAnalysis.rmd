@@ -1237,4 +1237,5 @@ cc9hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS20
 ## Shared dc and hyperlopit endosome
 sum(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 8" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95] %in% rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 2" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95])
 
+candidateEndosome <- rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 8" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95][rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 8" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95] %in% rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 2" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95]]
 ```

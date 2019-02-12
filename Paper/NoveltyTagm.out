@@ -23,8 +23,9 @@
 \BOOKMARK [3][-]{subsubsection.3.3.1}{HeLa cells \(Itzhak et. al 2016\)}{subsection.3.3}% 23
 \BOOKMARK [3][-]{subsubsection.3.3.2}{Mouse primary neuron cells \(Itzhak et. al 2017\)}{subsection.3.3}% 24
 \BOOKMARK [3][-]{subsubsection.3.3.3}{HeLa cells \(Hirst et. al 2018\)}{subsection.3.3}% 25
-\BOOKMARK [1][-]{section.4}{Discussion}{}% 26
-\BOOKMARK [1][-]{section.5}{Appendix}{}% 27
-\BOOKMARK [2][-]{subsection.5.1}{Handling label switching}{section.5}% 28
-\BOOKMARK [2][-]{subsection.5.2}{Summarising posterior similarity matrices}{section.5}% 29
-\BOOKMARK [2][-]{subsection.5.3}{Details of MCMC}{section.5}% 30
+\BOOKMARK [1][-]{section.4}{Comparison between Novelty TAGM and phenodisco}{}% 26
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 27
+\BOOKMARK [1][-]{section.6}{Appendix}{}% 28
+\BOOKMARK [2][-]{subsection.6.1}{Handling label switching}{section.6}% 29
+\BOOKMARK [2][-]{subsection.6.2}{Summarising posterior similarity matrices}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.3}{Details of MCMC}{section.6}% 31

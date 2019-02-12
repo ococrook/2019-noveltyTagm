@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  6 JAN 2019 14:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  12 FEB 2019 12:21
 entering extended mode
 **./NoveltyTagm.tex
 (NoveltyTagm.tex
@@ -603,7 +603,7 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
-<figures/IMG_Protein_Allocation_Draft_v1.png, id=199, 747.54282pt x 315.67938pt
+<figures/IMG_Protein_Allocation_Draft_v1.png, id=203, 747.54282pt x 315.67938pt
 >
 File: figures/IMG_Protein_Allocation_Draft_v1.png Graphic file (type png)
  <use figures/IMG_Protein_Allocation_Draft_v1.png>
@@ -704,14 +704,14 @@ Overfull \hbox (41.03156pt too wide) in paragraph at lines 181--201
  []|  [] 
  []
 
-[8] <figures/pcaMousehl.pdf, id=333, 867.24pt x 722.7pt>
+[8] <figures/pcaMousehl.pdf, id=338, 867.24pt x 722.7pt>
 File: figures/pcaMousehl.pdf Graphic file (type pdf)
 
 <use figures/pcaMousehl.pdf>
 Package pdftex.def Info: figures/pcaMousehl.pdf used on input line 219.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-<figures/heatmapMousehl.jpg, id=334, 867.24pt x 505.89pt>
+<figures/heatmapMousehl.jpg, id=339, 867.24pt x 505.89pt>
 File: figures/heatmapMousehl.jpg Graphic file (type jpg)
 
 <use figures/heatmapMousehl.jpg>
@@ -722,14 +722,14 @@ Overfull \hbox (74.8541pt too wide) in paragraph at lines 224--225
  [][] 
  []
 
-<figures/pcau2oshl.pdf, id=335, 867.24pt x 722.7pt>
+<figures/pcau2oshl.pdf, id=340, 867.24pt x 722.7pt>
 File: figures/pcau2oshl.pdf Graphic file (type pdf)
 
 <use figures/pcau2oshl.pdf>
 Package pdftex.def Info: figures/pcau2oshl.pdf used on input line 230.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-<figures/heatmapuU2oshl.jpg, id=336, 867.24pt x 578.16pt>
+<figures/heatmapuU2oshl.jpg, id=341, 867.24pt x 578.16pt>
 File: figures/heatmapuU2oshl.jpg Graphic file (type jpg)
 
 <use figures/heatmapuU2oshl.jpg>
@@ -760,14 +760,14 @@ tiple pdfs with page group included in a single page
 > <./figures/heatmapuU2oshl.jpg>] [11
 
 ]
-<figures/pcau2osdc.pdf, id=399, 867.24pt x 722.7pt>
+<figures/pcau2osdc.pdf, id=404, 867.24pt x 722.7pt>
 File: figures/pcau2osdc.pdf Graphic file (type pdf)
 
 <use figures/pcau2osdc.pdf>
 Package pdftex.def Info: figures/pcau2osdc.pdf used on input line 262.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-<figures/heatmapU2osdc.jpg, id=400, 867.24pt x 505.89pt>
+<figures/heatmapU2osdc.jpg, id=405, 867.24pt x 505.89pt>
 File: figures/heatmapU2osdc.jpg Graphic file (type jpg)
 
 <use figures/heatmapU2osdc.jpg>
@@ -778,13 +778,13 @@ Overfull \hbox (74.8541pt too wide) in paragraph at lines 267--268
  [][] 
  []
 
-<figures/pcaYeast.pdf, id=401, 867.24pt x 722.7pt>
+<figures/pcaYeast.pdf, id=406, 867.24pt x 722.7pt>
 File: figures/pcaYeast.pdf Graphic file (type pdf)
  <use figures/pcaYeast.pdf>
 Package pdftex.def Info: figures/pcaYeast.pdf used on input line 273.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-<figures/heatmapYeast.jpg, id=402, 867.24pt x 578.16pt>
+<figures/heatmapYeast.jpg, id=407, 867.24pt x 578.16pt>
 File: figures/heatmapYeast.jpg Graphic file (type jpg)
 
 <use figures/heatmapYeast.jpg>
@@ -805,27 +805,27 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 260--281
 [] [] 
  []
 
-<figures/pcaBeltranH.pdf, id=403, 867.24pt x 722.7pt>
+<figures/pcaBeltranH.pdf, id=408, 867.24pt x 722.7pt>
 File: figures/pcaBeltranH.pdf Graphic file (type pdf)
 
 <use figures/pcaBeltranH.pdf>
 Package pdftex.def Info: figures/pcaBeltranH.pdf used on input line 288.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-<figures/HeatmapHCMV.pdf, id=404, 867.24pt x 722.7pt>
+<figures/HeatmapHCMV.pdf, id=409, 867.24pt x 722.7pt>
 File: figures/HeatmapHCMV.pdf Graphic file (type pdf)
 
 <use figures/HeatmapHCMV.pdf>
 Package pdftex.def Info: figures/HeatmapHCMV.pdf used on input line 293.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-<figures/pcaMOCK.pdf, id=405, 867.24pt x 722.7pt>
+<figures/pcaMOCK.pdf, id=410, 867.24pt x 722.7pt>
 File: figures/pcaMOCK.pdf Graphic file (type pdf)
  <use figures/pcaMOCK.pdf>
 Package pdftex.def Info: figures/pcaMOCK.pdf used on input line 299.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-<figures/heatmapMOCK.pdf, id=406, 722.7pt x 650.43pt>
+<figures/heatmapMOCK.pdf, id=411, 722.7pt x 650.43pt>
 File: figures/heatmapMOCK.pdf Graphic file (type pdf)
 
 <use figures/heatmapMOCK.pdf>
@@ -859,14 +859,14 @@ ple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./figures/heatmapMOCK.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
->] <figures/pcaItzhak2016.pdf, id=520, 867.24pt x 722.7pt>
+>] <figures/pcaItzhak2016.pdf, id=525, 867.24pt x 722.7pt>
 File: figures/pcaItzhak2016.pdf Graphic file (type pdf)
 
 <use figures/pcaItzhak2016.pdf>
 Package pdftex.def Info: figures/pcaItzhak2016.pdf used on input line 324.
 (pdftex.def)             Requested size: 173.44493pt x 144.54pt.
 
-<figures/itzhak2016heatmap.jpg, id=521, 867.24pt x 505.89pt>
+<figures/itzhak2016heatmap.jpg, id=526, 867.24pt x 505.89pt>
 File: figures/itzhak2016heatmap.jpg Graphic file (type jpg)
 
 <use figures/itzhak2016heatmap.jpg>
@@ -877,14 +877,14 @@ Overfull \hbox (12.91042pt too wide) in paragraph at lines 329--330
  [][] 
  []
 
-<figures/pcaItzhak2017.pdf, id=522, 867.24pt x 722.7pt>
+<figures/pcaItzhak2017.pdf, id=527, 867.24pt x 722.7pt>
 File: figures/pcaItzhak2017.pdf Graphic file (type pdf)
 
 <use figures/pcaItzhak2017.pdf>
 Package pdftex.def Info: figures/pcaItzhak2017.pdf used on input line 335.
 (pdftex.def)             Requested size: 173.44493pt x 144.54pt.
 
-<figures/heatmapItzhak2017.jpg, id=523, 867.24pt x 505.89pt>
+<figures/heatmapItzhak2017.jpg, id=528, 867.24pt x 505.89pt>
 File: figures/heatmapItzhak2017.jpg Graphic file (type jpg)
 
 <use figures/heatmapItzhak2017.jpg>
@@ -895,13 +895,13 @@ Overfull \hbox (12.91042pt too wide) in paragraph at lines 340--341
  [][] 
  []
 
-<figures/pcaHirst.pdf, id=524, 867.24pt x 722.7pt>
+<figures/pcaHirst.pdf, id=529, 867.24pt x 722.7pt>
 File: figures/pcaHirst.pdf Graphic file (type pdf)
  <use figures/pcaHirst.pdf>
 Package pdftex.def Info: figures/pcaHirst.pdf used on input line 346.
 (pdftex.def)             Requested size: 173.44493pt x 144.54pt.
 
-<figures/heatmapHirst.jpg, id=525, 867.24pt x 505.89pt>
+<figures/heatmapHirst.jpg, id=530, 867.24pt x 505.89pt>
 File: figures/heatmapHirst.jpg Graphic file (type jpg)
 
 <use figures/heatmapHirst.jpg>
@@ -938,73 +938,167 @@ pdfTeX warning: pdflatex.exe (file ./figures/pcaItzhak2017.pdf): PDF inclusion:
 
 pdfTeX warning: pdflatex.exe (file ./figures/pcaHirst.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
-> <./figures/heatmapHirst.jpg>] [17
+> <./figures/heatmapHirst.jpg>]
+<figures/pcaMarkershek.pdf, id=587, 722.7pt x 722.7pt>
+File: figures/pcaMarkershek.pdf Graphic file (type pdf)
+
+<use figures/pcaMarkershek.pdf>
+Package pdftex.def Info: figures/pcaMarkershek.pdf used on input line 368.
+(pdftex.def)             Requested size: 144.53743pt x 144.54pt.
+
+<figures/pcaPDhek.pdf, id=588, 722.7pt x 722.7pt>
+File: figures/pcaPDhek.pdf Graphic file (type pdf)
+ <use figures/pcaPDhek.pdf>
+Package pdftex.def Info: figures/pcaPDhek.pdf used on input line 373.
+(pdftex.def)             Requested size: 144.53743pt x 144.54pt.
+
+<figures/pcaTAGMhek.pdf, id=589, 722.7pt x 722.7pt>
+File: figures/pcaTAGMhek.pdf Graphic file (type pdf)
+
+<use figures/pcaTAGMhek.pdf>
+Package pdftex.def Info: figures/pcaTAGMhek.pdf used on input line 378.
+(pdftex.def)             Requested size: 144.53743pt x 144.54pt.
+
+<figures/phenodiscodist.pdf, id=590, 867.24pt x 722.7pt>
+File: figures/phenodiscodist.pdf Graphic file (type pdf)
+
+<use figures/phenodiscodist.pdf>
+Package pdftex.def Info: figures/phenodiscodist.pdf used on input line 384.
+(pdftex.def)             Requested size: 173.44493pt x 144.54pt.
+
+<figures/noveltytagmdist.pdf, id=591, 867.24pt x 722.7pt>
+File: figures/noveltytagmdist.pdf Graphic file (type pdf)
+
+<use figures/noveltytagmdist.pdf>
+Package pdftex.def Info: figures/noveltytagmdist.pdf used on input line 389.
+(pdftex.def)             Requested size: 173.44493pt x 144.54pt.
+
+<figures/phenonumhek.pdf, id=592, 867.24pt x 722.7pt>
+File: figures/phenonumhek.pdf Graphic file (type pdf)
+
+<use figures/phenonumhek.pdf>
+Package pdftex.def Info: figures/phenonumhek.pdf used on input line 395.
+(pdftex.def)             Requested size: 173.44493pt x 144.54pt.
+
+<figures/hekcompare.pdf, id=593, 867.24pt x 722.7pt>
+File: figures/hekcompare.pdf Graphic file (type pdf)
+
+<use figures/hekcompare.pdf>
+Package pdftex.def Info: figures/hekcompare.pdf used on input line 400.
+(pdftex.def)             Requested size: 173.44493pt x 144.54pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--406
+[][][][]
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 366--406
+[] []
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 366--406
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--406
+
+ []
+
+[17
+
+] [18 <./figures/pcaMarkershek.pdf> <./figures/pcaPDhek.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/pcaPDhek.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/pcaTAGMhek.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/pcaTAGMhek.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./figures/phenodiscodist.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/phenodiscodist.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./figures/noveltytagmdist.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/noveltytagmdist.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./figures/phenonumhek.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/phenonumhek.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./figures/hekcompare.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/hekcompare.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>] [19
 
 ]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 376.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 429.
 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsrom.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [18] [19]
-(NoveltyTagm.bbl [20
+)
+[20] [21] (NoveltyTagm.bbl [22
 
-] [21] [22])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 395.
- [23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 395.
+] [23] [24])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 448.
+ [25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 448.
  (NoveltyTagm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 395.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 395.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 448.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 448.
 Package rerunfilecheck Info: File `NoveltyTagm.out' has not changed.
-(rerunfilecheck)             Checksum: 889D59B3E2985441D28268C0E67D5D1A;2458.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 395.
+(rerunfilecheck)             Checksum: 17E97F8FC5F3B54D6127374D0F5CDCC3;2541.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 448.
  ) 
 Here is how much of TeX's memory you used:
- 10668 strings out of 493323
- 158712 string characters out of 3139066
- 266049 words of memory out of 3000000
- 13842 multiletter control sequences out of 15000+200000
- 32285 words of font info for 92 fonts, out of 3000000 for 9000
+ 10711 strings out of 493323
+ 159709 string characters out of 3139066
+ 266616 words of memory out of 3000000
+ 13873 multiletter control sequences out of 15000+200000
+ 32985 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,20n,39p,2056b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecbi1440.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecti1000.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\OllyC\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\OllyC\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\OllyC\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Us
-ers\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.
+ecbi1728.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbi1440.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\OllyC\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\OllyC\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\OllyC\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Us
+ers\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.
 pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ectt1000.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
-\ec\dpi600\ecti1095.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\OllyC\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk> <C:\Users\OllyC\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\OllyC
-\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\U
-sers\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095
+\ecrm1200.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ectt1000.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\OllyC\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\OllyC\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk> <C:\Users\OllyC
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\U
+sers\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800
 .pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on NoveltyTagm.pdf (23 pages, 5353322 bytes).
+0\ecrm1095.pk> <C:\Users\OllyC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on NoveltyTagm.pdf (25 pages, 5708729 bytes).
 PDF statistics:
- 1249 PDF objects out of 1440 (max. 8388607)
- 128 named destinations out of 1000 (max. 500000)
- 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1374 PDF objects out of 1440 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 
