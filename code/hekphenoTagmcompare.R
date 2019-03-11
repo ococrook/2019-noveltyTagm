@@ -7,7 +7,7 @@ fData(HEK293T2011)$pd.markers[fData(HEK293T2011)$pd.markers %in% c("Chromatin as
                                                                    "Cytosol/Nucleus",
                                                                    "Lysosome",
                                                                    "Nucleus")] <- "unknown"
-
+fData(HEK293T2011)$pd.markers <- droplevels(fData(HEK293T2011)$pd.markers)
 
 # check convergence
 outliers <- mcmc_get_outliers(hektagmNov)
@@ -30,13 +30,14 @@ fData(hektagm)$tagm.newcluster.prob <- hekTagmNoveltyRes@tagm.newcluster.prob[ro
 fData(hektagm)$tagm.newcluster.prob[is.na(fData(hektagm)$tagm.newcluster.prob)] <- 0
 
 ptsze <- exp(fData(hektagm)$tagm.newcluster.prob) - 1
-plot2D(hektagm, fcol = "tagm.phenotype", cex = ptsze)
-addLegend(hektagm, fcol = "tagm.phenotype", ncol = 3, where = "topright", cex = 0.5)
+plot2D(hektagm, fcol = "tagm.phenotype", cex = ptsze, main = "PCA showing Novelty TAGM results", cex.main = 2)
+addLegend(hektagm, fcol = "tagm.phenotype", ncol = 3, where = "topright", cex = 1.2)
 
-plot2D(hektagm, fcol = "pd.2013")
+plot2D(hektagm, fcol = "pd.2013", main = "PCA showing phenodisco results", cex.main = 2)
+addLegend(hektagm, fcol = "pd.2013", ncol = 3, where = "topright", cex = 1.2)
 
-
-
+plot2D(HEK293T2011, fcol = "pd.markers", main = "PCA showing marker proteins", cex.main = 2)
+addLegend(HEK293T2011, fcol = "pd.markers", ncol = 3, where = "topright", cex = 1.2)
 
 toSubsethek <- (fData(hektagm)$tagm.newcluster.prob > 0.95)
 
@@ -121,7 +122,8 @@ df1 <- data.frame(table(fData(hektagm)$tagm.phenotype)[order(table(fData(hektagm
 colnames(df1) <- c("Phenotype", "NumProteins")
 gg <- ggplot(df1, aes(x= Phenotype, y = NumProteins)) 
 gg <- gg + geom_bar(stat = "Identity", fill = "steelblue", color = "steelblue") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-                                                                                panel.background = element_blank(), axis.line = element_line(colour = "black"))
+                                                                                panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                                                                                text = element_text(size=20))
 gg <- gg + coord_flip() + ylab("Number of proteins") + ggtitle("The distribution of proteins across phenotypes for Novelty TAGM") 
 gg
 
@@ -129,7 +131,8 @@ df2 <- data.frame(table(fData(hektagm)$pd.2013)[order(table(fData(hektagm)$pd.20
 colnames(df2) <- c("Phenotype", "NumProteins")
 gg <- ggplot(df2, aes(x= Phenotype, y = NumProteins)) 
 gg <- gg + geom_bar(stat = "Identity", fill = "steelblue", color = "steelblue") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-                                                                                        panel.background = element_blank(), axis.line = element_line(colour = "black"))
+                                                                                        panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                                                                                        text = element_text(size=20))
 gg <- gg + coord_flip() + ylab("Number of proteins") + ggtitle("The distribution of proteins across phenotypes for phenodisco") 
 gg
 
@@ -192,16 +195,16 @@ gg2 <- ggplot(df3_long, aes(y = value, x = Var2, fill = Var1)) + geom_bar(stat =
 gg2 <- gg2 + coord_flip() + scale_fill_brewer(palette="Dark2") + scale_y_continuous(breaks = c(0,2,4,6,8,10))
 gg2 <- gg2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
              panel.background = element_blank(), axis.line = element_line(colour = "black"),
-             legend.title = element_blank())
+             legend.title = element_blank(), text = element_text(size=20))
 gg2 <- gg2 + ylab("Number of novel Phenotypes") + xlab("Method") + ggtitle("Number of functional enriched phenotypes uncovered") 
 gg2
 
-head(fData(hektagm)$tagm.mcmc.probability)
 fData(hektagm)$tagm.allocation <- "unknown"
 levels(fData(hektagm)$tagm.allocation) <- levels(fData(hektagm)$tagm.phenotype)
 fData(hektagm)$tagm.allocation[fData(hektagm)$tagm.newcluster.prob > 0.95] <- as.character(fData(hektagm)$tagm.phenotype[fData(hektagm)$tagm.newcluster.prob > 0.95])
 fData(hektagm)$tagm.allocation[fData(hektagm)$tagm.mcmc.probability > 0.95] <- as.character(fData(hektagm)$tagm.mcmc.allocation[fData(hektagm)$tagm.mcmc.probability > 0.95])
-
+myBlues <- colorRampPalette(RColorBrewer::brewer.pal(9,"Blues"))(100)
 df4 <- table(fData(hektagm)$tagm.allocation, fData(hektagm)$pd.2013)
-df4 <- df4/max(df4)
-pheatmap(df4, scale = "none", cluster_rows = F, cluster_cols = F, color = myCols)
+#df4 <- df4/max(df4)
+pheatmap(df4, scale = "none", cluster_rows = F, cluster_cols = F, color = myBlues[c(1,25:65)],
+         main = "Novelty TAGM and phenodisco allocations comparison", fontsize = 16)

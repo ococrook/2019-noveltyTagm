@@ -1,10 +1,22 @@
 \begin{thebibliography}{}
 
+\bibitem[Al~Hawas {\em et~al.}(2012)Al~Hawas, Ren, Ye, Karim, Filipovich, and
+  Whiteheart]{Al:2012}
+Al~Hawas, R. et~al. (2012).
+\newblock Munc18b/stxbp2 is required for platelet secretion.
+\newblock {\em Blood\/}, {\bf 120}(12), 2493--2500.
+
 \bibitem[Antoniak(1974)Antoniak]{antoniak::1974}
 Antoniak, C.~E. (1974).
 \newblock Mixtures of dirichlet processes with applications to bayesian
   nonparametric problems.
 \newblock {\em Ann. Statist.}, {\bf 2}(6), 1152--1174.
+
+\bibitem[Araki and Milbrandt(2003)Araki and Milbrandt]{Araki:2003}
+Araki, T. et~al. (2003).
+\newblock Znrf proteins constitute a family of presynaptic e3 ubiquitin
+  ligases.
+\newblock {\em Journal of Neuroscience\/}, {\bf 23}(28), 9385--9394.
 
 \bibitem[Ashburner {\em et~al.}(2000)Ashburner, Ball, Blake, Botstein, Butler,
   Cherry, Davis, Dolinski, Dwight, Eppig, {\em et~al.}]{Ashburner:2000}
@@ -45,6 +57,12 @@ Bue, C.~A. et~al. (2006).
 \newblock Erv26p directs pro-alkaline phosphatase into endoplasmic
   reticulum--derived coat protein complex ii transport vesicles.
 \newblock {\em Molecular biology of the cell\/}, {\bf 17}(11), 4780--4789.
+
+\bibitem[Callaghan {\em et~al.}(1999)Callaghan, Nixon, Bucci, Toh, and
+  Stenmark]{Callaghan:1999}
+Callaghan, J. et~al. (1999).
+\newblock Direct interaction of eea1 with rab5b.
+\newblock {\em European journal of biochemistry\/}, {\bf 265}(1), 361--366.
 
 \bibitem[Cappellaro {\em et~al.}(1998)Cappellaro, Mrsa, and
   Tanner]{Cappellaro:1998}
@@ -95,11 +113,26 @@ Foster, L.~J. et~al. (2006).
 \newblock A mammalian organelle map by protein correlation profiling.
 \newblock {\em Cell\/}, {\bf 125}(1), 187--199.
 
+\bibitem[Fouraux {\em et~al.}(2004)Fouraux, Deneka, Ivan, Van Der~Heijden,
+  Raymackers, Van~Suylekom, Van~Venrooij, Van Der~Sluijs, and
+  Pruijn]{Fouraux:2004}
+Fouraux, M.~A. et~al. (2004).
+\newblock Rabip4' is an effector of rab5 and rab4 and regulates transport
+  through early endosomes.
+\newblock {\em Molecular biology of the cell\/}, {\bf 15}(2), 611--624.
+
 \bibitem[Fritsch and Ickstadt(2009)Fritsch and Ickstadt]{fritsch::2009}
 Fritsch, A. et~al. (2009).
 \newblock Improved criteria for clustering based on the posterior similarity
   matrix.
 \newblock {\em Bayesian Anal.}, {\bf 4}(2), 367--391.
+
+\bibitem[Fuchs {\em et~al.}(2007)Fuchs, Haas, Spooner, Yoshimura, Lord, and
+  Barr]{Fuchs:2007}
+Fuchs, E. et~al. (2007).
+\newblock Specific rab gtpase-activating proteins define the shiga toxin and
+  epidermal growth factor uptake pathways.
+\newblock {\em The Journal of cell biology\/}, {\bf 177}(6), 1133--1143.
 
 \bibitem[Gatto and Lilley(2012)Gatto and Lilley]{MSnbase:2012}
 Gatto, L. et~al. (2012).
@@ -145,6 +178,13 @@ Gentleman, R.~C. et~al. (2004).
   bioinformatics.
 \newblock {\em Genome biology\/}, {\bf 5}(10), R80.
 
+\bibitem[George {\em et~al.}(2007)George, Ying, Rainey, Solomon, Parikh, Gao,
+  Band, and Band]{George:2007}
+George, M. et~al. (2007).
+\newblock Shared as well as distinct roles of ehd proteins revealed by
+  biochemical and functional comparisons in mammalian cells and c. elegans.
+\newblock {\em BMC cell biology\/}, {\bf 8}(1), 3.
+
 \bibitem[Gibson(2009)Gibson]{Gibson:2009}
 Gibson, T.~J. (2009).
 \newblock Cell regulation: determined to signal discrete cooperation.
@@ -157,12 +197,33 @@ Groen, A.~J. et~al. (2014).
   thaliana root tissue.
 \newblock {\em Journal of proteome research\/}, {\bf 13}(2), 763--776.
 
+\bibitem[Haas {\em et~al.}(2007)Haas, Yoshimura, Stephens, Preisinger, Fuchs,
+  and Barr]{Haas:2007}
+Haas, A.~K. et~al. (2007).
+\newblock Analysis of gtpase-activating proteins: Rab1 and rab43 are key rabs
+  required to maintain a functional golgi complex in human cells.
+\newblock {\em Journal of cell science\/}, {\bf 120}(17), 2997--3010.
+
 \bibitem[Hirst {\em et~al.}(2018)Hirst, Itzhak, Antrobus, Borner, and
   Robinson]{Hirst:2018}
 Hirst, J. et~al. (2018).
 \newblock Role of the ap-5 adaptor protein complex in late endosome-to-golgi
   retrieval.
 \newblock {\em PLoS biology\/}, {\bf 16}(1), e2004411.
+
+\bibitem[Hoepfner {\em et~al.}(2005)Hoepfner, Severin, Cabezas, Habermann,
+  Runge, Gillooly, Stenmark, and Zerial]{Hoepfner:2005}
+Hoepfner, S. et~al. (2005).
+\newblock Modulation of receptor recycling and degradation by the endosomal
+  kinesin kif16b.
+\newblock {\em Cell\/}, {\bf 121}(3), 437--450.
+
+\bibitem[Hoxhaj {\em et~al.}(2016)Hoxhaj, Caddye, Najafov, Houde, Johnson,
+  Dissanayake, Toth, Campbell, Prescott, and MacKintosh]{Hoxhaj:2016}
+Hoxhaj, G. et~al. (2016).
+\newblock The e3 ubiquitin ligase znrf2 is a substrate of mtorc1 and regulates
+  its activation by amino acids.
+\newblock {\em elife\/}, {\bf 5}, e12278.
 
 \bibitem[Huber {\em et~al.}(2015)Huber, Carey, Gentleman, Anders, Carlson,
   Carvalho, Bravo, Davis, Gatto, Girke, {\em et~al.}]{Huber:2015}
@@ -180,6 +241,14 @@ Hubert, L. et~al. (1985).
 Huh, W.-K. et~al. (2003).
 \newblock Global analysis of protein localization in budding yeast.
 \newblock {\em Nature\/}, {\bf 425}(6959), 686.
+
+\bibitem[Hunker {\em et~al.}(2006)Hunker, Galvis, Kruk, Giambini, Veisaga, and
+  Barbieri]{Hunker:2006}
+Hunker, C. et~al. (2006).
+\newblock Rab5-activating protein 6, a novel endosomal protein with a role in
+  endocytosis.
+\newblock {\em Biochemical and biophysical research communications\/}, {\bf
+  340}(3), 967--975.
 
 \bibitem[Inadome {\em et~al.}(2005)Inadome, Noda, Adachi, and
   Yoda]{Inadome:2005}
@@ -228,11 +297,25 @@ Kristensen, A.~R. et~al. (2012).
   interactome.
 \newblock {\em Nature methods\/}, {\bf 9}(9), 907.
 
+\bibitem[Lanzetti {\em et~al.}(2000)Lanzetti, Rybin, Malabarba, Christoforidis,
+  Scita, Zerial, and Di~Fiore]{Lanzetti:2000}
+Lanzetti, L. et~al. (2000).
+\newblock The eps8 protein coordinates egf receptor signalling through rac and
+  trafficking through rab5.
+\newblock {\em Nature\/}, {\bf 408}(6810), 374.
+
 \bibitem[Laurila and Vihinen(2009)Laurila and Vihinen]{Laurila:2009}
 Laurila, K. et~al. (2009).
 \newblock Prediction of disease-related mutations affecting protein
   localization.
 \newblock {\em BMC genomics\/}, {\bf 10}(1), 122.
+
+\bibitem[Martin-Verdeaux {\em et~al.}(2003)Martin-Verdeaux, Pombo, Iannascoli,
+  Roa, Varin-Blank, Rivera, and Blank]{Martin:2003}
+Martin-Verdeaux, S. et~al. (2003).
+\newblock Evidence of a role for munc18-2 and microtubules in mast cell granule
+  exocytosis.
+\newblock {\em Journal of cell science\/}, {\bf 116}(2), 325--334.
 
 \bibitem[McAlister {\em et~al.}(2014)McAlister, Nusinow, Jedrychowski, Wühr,
   Huttlin, Erickson, Rad, Haas, and Gygi]{Mcalister::2014}
@@ -241,12 +324,27 @@ McAlister, G.~C. et~al. (2014).
   of differential expression across cancer cell line proteomes.
 \newblock {\em Analytical chemistry\/}, {\bf 86}(14), 7150--7158.
 
+\bibitem[Mishra {\em et~al.}(2010)Mishra, Eathiraj, Corvera, and
+  Lambright]{Mishra:2010}
+Mishra, A. et~al. (2010).
+\newblock Structural basis for rab gtpase recognition and endosome tethering by
+  the c2h2 zinc finger of early endosomal autoantigen 1 (eea1).
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
+  107}(24), 10866--10871.
+
 \bibitem[Mulvey {\em et~al.}(2017)Mulvey, Breckels, Geladaki, Britov{\v{s}}ek,
   Nightingale, Christoforou, Elzek, Deery, Gatto, and Lilley]{Mulvey:2017}
 Mulvey, C.~M. et~al. (2017).
 \newblock Using {hyperLOPIT} to perform high-resolution mapping of the spatial
   proteome.
 \newblock {\em Nature Protocols\/}, {\bf 12}(6), 1110--1135.
+
+\bibitem[Naslavsky {\em et~al.}(2006)Naslavsky, Rahajeng, Sharma, Jovic, and
+  Caplan]{Naslavsky:2006}
+Naslavsky, N. et~al. (2006).
+\newblock Interactions between ehd proteins and rab11-fip2: a role for ehd3 in
+  early endosomal transport.
+\newblock {\em Molecular biology of the cell\/}, {\bf 17}(1), 163--177.
 
 \bibitem[Nightingale {\em et~al.}(2019)Nightingale, Geladaki, Breckels, Oliver,
   and Lilley]{Nightingale::2019}
@@ -260,6 +358,14 @@ Otte, S. et~al. (2001).
 \newblock Erv41p and erv46p: new components of copii vesicles involved in
   transport between the er and golgi complex.
 \newblock {\em The Journal of cell biology\/}, {\bf 152}(3), 503--518.
+
+\bibitem[Pagel {\em et~al.}(2012)Pagel, Beutel, Lehmberg, Koch, Maul-Pavicic,
+  Rohlfs, Al-Jefri, Beier, Ousager, Ehlert, {\em et~al.}]{Pagel:2012}
+Pagel, J. et~al. (2012).
+\newblock Distinct mutations in stxbp2 are associated with variable clinical
+  presentations in patients with familial hemophagocytic lymphohistiocytosis
+  type 5 (fhl5).
+\newblock {\em Blood\/}, {\bf 119}(25), 6016--6024.
 
 \bibitem[Pardo {\em et~al.}(2004)Pardo, Monteoliva, Vazquez, Mart{\'\i}nez,
   Molero, Nombela, and Gil]{Pardo:2004}
@@ -293,6 +399,13 @@ Schwarz, G. et~al. (1978).
 \newblock Estimating the dimension of a model.
 \newblock {\em The annals of statistics\/}, {\bf 6}(2), 461--464.
 
+\bibitem[Sigismund {\em et~al.}(2012)Sigismund, Confalonieri, Ciliberto, Polo,
+  Scita, and Di~Fiore]{Sigismund:2012}
+Sigismund, S. et~al. (2012).
+\newblock Endocytosis and signaling: cell logistics shape the eukaryotic cell
+  plan.
+\newblock {\em Physiological reviews\/}, {\bf 92}(1), 273--366.
+
 \bibitem[Siljee {\em et~al.}(2018)Siljee, Wang, Bernard, Ersoy, Zhang, Marley,
   Von~Zastrow, Reiter, and Vaisse]{Siljee:2018}
 Siljee, J.~E. et~al. (2018).
@@ -313,6 +426,13 @@ Sullivan, D.~P. et~al. (2018).
 \newblock Deep learning is combined with massive-scale citizen science to
   improve large-scale image classification.
 \newblock {\em Nature biotechnology\/}, {\bf 36}(9), 820.
+
+\bibitem[Tai {\em et~al.}(2004)Tai, Lu, Wang, Tang, Goud, Johannes, and
+  Hong]{Tai:2004}
+Tai, G. et~al. (2004).
+\newblock Participation of the syntaxin 5/ykt6/gs28/gs15 snare complex in
+  transport from the early/recycling endosome to the trans-golgi network.
+\newblock {\em Molecular biology of the cell\/}, {\bf 15}(9), 4011--4022.
 
 \bibitem[Tan {\em et~al.}(2009)Tan, Dvinge, Christoforou, Bertone,
   Martinez~Arias, and Lilley]{Tan:2009}
@@ -368,5 +488,13 @@ Yu, G. et~al. (2012).
   among gene clusters.
 \newblock {\em Omics: a journal of integrative biology\/}, {\bf 16}(5),
   284--287.
+
+\bibitem[zur Stadt {\em et~al.}(2009)zur Stadt, Rohr, Seifert, Koch, Grieve,
+  Pagel, Strau{\ss}, Kasper, N{\"u}rnberg, Becker, {\em et~al.}]{Zur:2009}
+zur Stadt, U. et~al. (2009).
+\newblock Familial hemophagocytic lymphohistiocytosis type 5 (fhl-5) is caused
+  by mutations in munc18-2 and impaired binding to syntaxin 11.
+\newblock {\em The American Journal of Human Genetics\/}, {\bf 85}(4),
+  482--492.
 
 \end{thebibliography}
