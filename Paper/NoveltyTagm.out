@@ -13,9 +13,9 @@
 \BOOKMARK [1][-]{section.3}{Results}{}% 13
 \BOOKMARK [2][-]{subsection.3.1}{Validating experimental design in hyperLOPIT}{section.3}% 14
 \BOOKMARK [3][-]{subsubsection.3.1.1}{Mouse pluripotent embryonic stem cells}{subsection.3.1}% 15
-\BOOKMARK [3][-]{subsubsection.3.1.2}{The human osteosarcoma \(U2OS\) cell-line}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.2}{The human osteosarcoma \(U 2-OS\) cell-line}{subsection.3.1}% 16
 \BOOKMARK [2][-]{subsection.3.2}{Uncovering additional sub-cellular structures}{section.3}% 17
-\BOOKMARK [3][-]{subsubsection.3.2.1}{U2OS cell line revisited}{subsection.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.1}{U 2-OS cell line revisited}{subsection.3.2}% 18
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Saccharomyces cerevisiae}{subsection.3.2}% 19
 \BOOKMARK [3][-]{subsubsection.3.2.3}{HCMV infected fibroblast cells}{subsection.3.2}% 20
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Fibroblast cells without infection}{subsection.3.2}% 21
@@ -23,7 +23,7 @@
 \BOOKMARK [3][-]{subsubsection.3.3.1}{HeLa cells \(Itzhak et. al 2016\)}{subsection.3.3}% 23
 \BOOKMARK [3][-]{subsubsection.3.3.2}{Mouse primary neuron cells \(Itzhak et. al 2017\)}{subsection.3.3}% 24
 \BOOKMARK [3][-]{subsubsection.3.3.3}{HeLa cells \(Hirst et. al 2018\)}{subsection.3.3}% 25
-\BOOKMARK [1][-]{section.4}{Comparison between Novelty TAGM and phenodisco}{}% 26
+\BOOKMARK [1][-]{section.4}{Comparison between Novelty TAGM and phenoDisco}{}% 26
 \BOOKMARK [1][-]{section.5}{Improved annotation allows exploration of endosomal processes}{}% 27
 \BOOKMARK [1][-]{section.6}{Discussion}{}% 28
 \BOOKMARK [1][-]{section.7}{Appendix}{}% 29

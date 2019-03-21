@@ -164,11 +164,12 @@ Gatto, L. et~al. (2018).
 \newblock Assessing sub-cellular resolution in spatial proteomics experiments.
 \newblock {\em bioRxiv\/}.
 
-\bibitem[Geladaki {\em et~al.}(2018)Geladaki, Kocevar~Britovsek, Breckels,
-  Smith, Mulvey, Crook, Gatto, and Lilley]{DC:2018}
-Geladaki, A. et~al. (2018).
-\newblock Lopit-dc: A simpler approach to high-resolution spatial proteomics.
-\newblock {\em bioRxiv\/}.
+\bibitem[Geladaki {\em et~al.}(2019)Geladaki, Britovsek, Breckels, Smith,
+  Mulvey, Crook, Gatto, and Lilley]{DC:2018}
+Geladaki, A. et~al. (2019).
+\newblock Combining lopit with differential ultracentrifugation for
+  high-resolution spatial proteomics.
+\newblock {\em Nature Communications\/}, {\bf 10}, 331.
 
 \bibitem[Gentleman {\em et~al.}(2004)Gentleman, Carey, Bates, Bolstad,
   Dettling, Dudoit, Ellis, Gautier, Ge, Gentry, {\em
@@ -351,6 +352,13 @@ Naslavsky, N. et~al. (2006).
 Nightingale, D. J.~H. et~al. (2019).
 \newblock The subcellular organisation of saccharomyces cerevisiae.
 \newblock {\em Current Opinion in Chemical Biology\/}, {\bf 48}(11), 1--10.
+
+\bibitem[Orre {\em et~al.}(2019)Orre, Vesterlund, Pan, Arslan, Zhu, Woodbridge,
+  Frings, Fredlund, and Lehtiö]{Orre:2019}
+Orre, L.~M. et~al. (2019).
+\newblock Subcellbarcode: Proteome-wide mapping of protein localization and
+  relocalization.
+\newblock {\em Molecular Cell\/}, {\bf 73}(1), 166 -- 182.e7.
 
 \bibitem[Otte {\em et~al.}(2001)Otte, Belden, Heidtman, Liu, Jensen, and
   Barlowe]{Otte:2001}
