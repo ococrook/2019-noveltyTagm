@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  24 MAR 2019 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  24 MAR 2019 14:26
 entering extended mode
 **./NoveltyTagm.tex
 (NoveltyTagm.tex
@@ -1066,23 +1066,28 @@ Overfull \hbox (6.8479pt too wide) in paragraph at lines 435--436
  [][] 
  []
 
-<figures/summaryu2os.pdf, id=741, 1011.78pt x 722.7pt>
+<figures/summaryu2os.pdf, id=741, 867.24pt x 722.7pt>
 File: figures/summaryu2os.pdf Graphic file (type pdf)
 
 <use figures/summaryu2os.pdf>
 Package pdftex.def Info: figures/summaryu2os.pdf used on input line 440.
-(pdftex.def)             Requested size: 202.35242pt x 144.54pt.
+(pdftex.def)             Requested size: 173.44493pt x 144.54pt.
 
-Overfull \hbox (61.42448pt too wide) in paragraph at lines 440--441
+Overfull \hbox (32.517pt too wide) in paragraph at lines 440--441
  [][] 
  []
 
-<figures/endoViolin.pdf, id=742, 1156.32pt x 722.7pt>
+<figures/endoViolin.pdf, id=742, 1192.455pt x 722.7pt>
 File: figures/endoViolin.pdf Graphic file (type pdf)
 
 <use figures/endoViolin.pdf>
 Package pdftex.def Info: figures/endoViolin.pdf used on input line 446.
-(pdftex.def)             Requested size: 462.5198pt x 289.07999pt.
+(pdftex.def)             Requested size: 476.97356pt x 289.07999pt.
+
+Overfull \hbox (7.21854pt too wide) in paragraph at lines 446--447
+ [][] 
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 428--450
 [][] [] []
@@ -1171,7 +1176,7 @@ msy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 am Files/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on NoveltyTagm.pdf (29 pages, 20175011 bytes).
+Output written on NoveltyTagm.pdf (29 pages, 20176667 bytes).
 PDF statistics:
  1492 PDF objects out of 1728 (max. 8388607)
  157 named destinations out of 1000 (max. 500000)
