@@ -2,6 +2,7 @@
 setStockcol(paste0(getStockcol(), 90))
 load("hektagmNov.rda")
 
+data("HEK293T2011")
 fData(HEK293T2011)$pd.markers[fData(HEK293T2011)$pd.markers %in% c("Chromatin associated",
                                                                    "Cytosol",
                                                                    "Cytosol/Nucleus",
@@ -12,7 +13,7 @@ fData(HEK293T2011)$pd.markers <- droplevels(fData(HEK293T2011)$pd.markers)
 # check convergence
 outliers <- mcmc_get_outliers(hektagmNov)
 
-hekdiag <- gelman.diag(outliers[-c(4)]) # converged yay
+hekdiag <- gelman.diag(outliers[-c(4)]) # converged 
 hektagmNov_conv <- hektagmNov[-c(4)]
 fData(HEK293T2011)$markers <- fData(HEK293T2011)$pd.markers
 
@@ -24,20 +25,18 @@ save(hekTagmNoveltyRes, file = "hekTagmNoveltyRes.rda")
 
 
 ## attach information to MSnset
-fData(hektagm)$tagm.phenotype <- hekTagmNoveltyRes@pooledRes@mp@cl[rownames(fData(hektagm))]
-fData(hektagm)$tagm.newcluster.prob <- hekTagmNoveltyRes@tagm.newcluster.prob[rownames(fData(hektagm))]
+par(mar = c(2,2,2,2))
+hektagm <- tagmNoveltyPredict(object = hektagm, params = hekTagmNoveltyRes)
 
-fData(hektagm)$tagm.newcluster.prob[is.na(fData(hektagm)$tagm.newcluster.prob)] <- 0
-
-ptsze <- exp(fData(hektagm)$tagm.newcluster.prob) - 1
+ptsze <- exp(fData(hektagm)$tagm.discovery.prob) - 1
 plot2D(hektagm, fcol = "tagm.phenotype", cex = ptsze, main = "PCA showing Novelty TAGM results", cex.main = 2)
-addLegend(hektagm, fcol = "tagm.phenotype", ncol = 3, where = "topright", cex = 1.2)
+addLegend(hektagm, fcol = "tagm.phenotype", ncol = 3, where = "topright", cex = 1.3)
 
-plot2D(hektagm, fcol = "pd.2013", main = "PCA showing phenodisco results", cex.main = 2)
-addLegend(hektagm, fcol = "pd.2013", ncol = 3, where = "topright", cex = 1.2)
+plot2D(hektagm, fcol = "pd.2013", main = "PCA showing phenoDisco results", cex.main = 2)
+addLegend(hektagm, fcol = "pd.2013", ncol = 3, where = "topright", cex = 1.3)
 
 plot2D(HEK293T2011, fcol = "pd.markers", main = "PCA showing marker proteins", cex.main = 2)
-addLegend(HEK293T2011, fcol = "pd.markers", ncol = 3, where = "topright", cex = 1.2)
+addLegend(HEK293T2011, fcol = "pd.markers", ncol = 3, where = "topright", cex = 1.3)
 
 toSubsethek <- (fData(hektagm)$tagm.newcluster.prob > 0.95)
 
@@ -133,7 +132,7 @@ gg <- ggplot(df2, aes(x= Phenotype, y = NumProteins))
 gg <- gg + geom_bar(stat = "Identity", fill = "steelblue", color = "steelblue") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                                                                                         panel.background = element_blank(), axis.line = element_line(colour = "black"),
                                                                                         text = element_text(size=20))
-gg <- gg + coord_flip() + ylab("Number of proteins") + ggtitle("The distribution of proteins across phenotypes for phenodisco") 
+gg <- gg + coord_flip() + ylab("Number of proteins") + ggtitle("The distribution of proteins across phenotypes for phenoDisco") 
 gg
 
 
@@ -188,23 +187,23 @@ cc8Hekpd <- enrichGO(gene = rownames(hektagm)[fData(hektagm)$pd.2013 == "Phenoty
                      universe = rownames(fData(hektagm)))
 
 df3 <- data.frame(c(8, 5), c(8,4), row.names = c("Total Phenotypes", "Functional Enriched"))
-colnames(df3) <- c("Novelty TAGM", "phenodisco")
+colnames(df3) <- c("Novelty TAGM", "phenoDisco")
 df3_long <- melt(as.matrix(df3))
 
 gg2 <- ggplot(df3_long, aes(y = value, x = Var2, fill = Var1)) + geom_bar(stat = "Identity", position=position_dodge())
 gg2 <- gg2 + coord_flip() + scale_fill_brewer(palette="Dark2") + scale_y_continuous(breaks = c(0,2,4,6,8,10))
 gg2 <- gg2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
              panel.background = element_blank(), axis.line = element_line(colour = "black"),
-             legend.title = element_blank(), text = element_text(size=20))
+             legend.title = element_blank(), text = element_text(size=25))
 gg2 <- gg2 + ylab("Number of novel Phenotypes") + xlab("Method") + ggtitle("Number of functional enriched phenotypes uncovered") 
 gg2
 
 fData(hektagm)$tagm.allocation <- "unknown"
 levels(fData(hektagm)$tagm.allocation) <- levels(fData(hektagm)$tagm.phenotype)
-fData(hektagm)$tagm.allocation[fData(hektagm)$tagm.newcluster.prob > 0.95] <- as.character(fData(hektagm)$tagm.phenotype[fData(hektagm)$tagm.newcluster.prob > 0.95])
+fData(hektagm)$tagm.allocation[fData(hektagm)$tagm.discovery.prob > 0.95] <- as.character(fData(hektagm)$tagm.phenotype[fData(hektagm)$tagm.discovery.prob > 0.95])
 fData(hektagm)$tagm.allocation[fData(hektagm)$tagm.mcmc.probability > 0.95] <- as.character(fData(hektagm)$tagm.mcmc.allocation[fData(hektagm)$tagm.mcmc.probability > 0.95])
 myBlues <- colorRampPalette(RColorBrewer::brewer.pal(9,"Blues"))(100)
 df4 <- table(fData(hektagm)$tagm.allocation, fData(hektagm)$pd.2013)
 #df4 <- df4/max(df4)
 pheatmap(df4, scale = "none", cluster_rows = F, cluster_cols = F, color = myBlues[c(1,25:65)],
-         main = "Novelty TAGM and phenodisco allocations comparison", fontsize = 16)
+         main = "Novelty TAGM and phenoDisco allocations comparison", fontsize = 20)

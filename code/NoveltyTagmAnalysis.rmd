@@ -4,6 +4,11 @@ author: "Oliver M. Crook"
 date: "17 November 2018"
 output: html_document
 ---
+```{r,eval=FALSE}
+devtools::install_github("lgatto/pRoloc", ref = "novelty" ,force = TRUE)
+```
+
+
 ```{r,}
 source("../scripts/plot2D.R")
 myBlues <- colorRampPalette(RColorBrewer::brewer.pal(9,"Blues"))(100)
