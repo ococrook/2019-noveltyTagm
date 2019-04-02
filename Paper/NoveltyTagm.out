@@ -8,20 +8,20 @@
 \BOOKMARK [3][-]{subsubsection.2.2.4}{Uncertainty Quantification}{subsection.2.2}% 8
 \BOOKMARK [2][-]{subsection.2.3}{Validating computational approaches}{section.2}% 9
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Artificial masking of annotations to recover experimental design}{subsection.2.3}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.2}{The human protein atlas}{subsection.2.3}% 11
-\BOOKMARK [3][-]{subsubsection.2.3.3}{Gene-Ontology term enrichment}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.2}{The Human Protein Atlas}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Gene Ontology \(GO\) term enrichment}{subsection.2.3}% 12
 \BOOKMARK [1][-]{section.3}{Results}{}% 13
 \BOOKMARK [2][-]{subsection.3.1}{Validating experimental design in hyperLOPIT}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Mouse pluripotent embryonic stem cells}{subsection.3.1}% 15
-\BOOKMARK [3][-]{subsubsection.3.1.2}{The human osteosarcoma \(U 2-OS\) cell-line}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Pluripotent mESCs \(E14TG2a\)}{subsection.3.1}% 15
+\BOOKMARK [3][-]{subsubsection.3.1.2}{The human bone osteosarcoma \(U-2 OS\) cells}{subsection.3.1}% 16
 \BOOKMARK [2][-]{subsection.3.2}{Uncovering additional sub-cellular structures}{section.3}% 17
-\BOOKMARK [3][-]{subsubsection.3.2.1}{U 2-OS cell line revisited}{subsection.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.1}{U-2 OS cell line revisited}{subsection.3.2}% 18
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Saccharomyces cerevisiae}{subsection.3.2}% 19
-\BOOKMARK [3][-]{subsubsection.3.2.3}{HCMV infected fibroblast cells}{subsection.3.2}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.3}{HCMV-infected fibroblast cells}{subsection.3.2}% 20
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Fibroblast cells without infection}{subsection.3.2}% 21
-\BOOKMARK [2][-]{subsection.3.3}{Refining annotation in organeller maps}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.3}{Refining annotation in organellar maps}{section.3}% 22
 \BOOKMARK [3][-]{subsubsection.3.3.1}{HeLa cells \(Itzhak et. al 2016\)}{subsection.3.3}% 23
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Mouse primary neuron cells \(Itzhak et. al 2017\)}{subsection.3.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Mouse primary neurons}{subsection.3.3}% 24
 \BOOKMARK [3][-]{subsubsection.3.3.3}{HeLa cells \(Hirst et. al 2018\)}{subsection.3.3}% 25
 \BOOKMARK [1][-]{section.4}{Comparison between Novelty TAGM and phenoDisco}{}% 26
 \BOOKMARK [1][-]{section.5}{Improved annotation allows exploration of endosomal processes}{}% 27

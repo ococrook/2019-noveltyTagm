@@ -186,7 +186,7 @@ cc8Hekpd <- enrichGO(gene = rownames(hektagm)[fData(hektagm)$pd.2013 == "Phenoty
                      ont = "CC",
                      universe = rownames(fData(hektagm)))
 
-df3 <- data.frame(c(8, 5), c(8,4), row.names = c("Total Phenotypes", "Functional Enriched"))
+df3 <- data.frame(c(8, 5), c(8,4), row.names = c("Total Phenotypes", "Functionally Enriched"))
 colnames(df3) <- c("Novelty TAGM", "phenoDisco")
 df3_long <- melt(as.matrix(df3))
 
@@ -195,7 +195,7 @@ gg2 <- gg2 + coord_flip() + scale_fill_brewer(palette="Dark2") + scale_y_continu
 gg2 <- gg2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
              panel.background = element_blank(), axis.line = element_line(colour = "black"),
              legend.title = element_blank(), text = element_text(size=25))
-gg2 <- gg2 + ylab("Number of novel Phenotypes") + xlab("Method") + ggtitle("Number of functional enriched phenotypes uncovered") 
+gg2 <- gg2 + ylab("Number of novel Phenotypes") + xlab("Method") + ggtitle("Number of functionally enriched phenotypes uncovered") 
 gg2
 
 fData(hektagm)$tagm.allocation <- "unknown"
