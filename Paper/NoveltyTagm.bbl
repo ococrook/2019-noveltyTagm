@@ -176,6 +176,11 @@ Geladaki, A. et~al. (2019).
   high-resolution spatial proteomics.
 \newblock {\em Nature Communications\/}, {\bf 10}, 331.
 
+\bibitem[Gelman and Rubin(1992)Gelman and Rubin]{Gelman:1992}
+Gelman, A. et~al. (1992).
+\newblock Inference from iterative simulation using multiple sequences.
+\newblock {\em Statistical science\/}, pages 457--472.
+
 \bibitem[Gentleman {\em et~al.}(2004)Gentleman, Carey, Bates, Bolstad,
   Dettling, Dudoit, Ellis, Gautier, Ge, Gentry, {\em
   et~al.}]{Bioconductor::2004}
