@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  3 APR 2019 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  16 APR 2019 15:09
 entering extended mode
 **./NoveltyTagm.tex
 (NoveltyTagm.tex
@@ -603,22 +603,18 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
-<figures/IMG_Protein_Allocation_Draft_v1.png, id=220, 747.54282pt x 315.67938pt
->
-File: figures/IMG_Protein_Allocation_Draft_v1.png Graphic file (type png)
- <use figures/IMG_Protein_Allocation_Draft_v1.png>
-Package pdftex.def Info: figures/IMG_Protein_Allocation_Draft_v1.png used on in
-put line 74.
-(pdftex.def)             Requested size: 479.19002pt x 202.35622pt.
+<figures/IMG_Protein_Allocation_Draft_v2.png, id=220, 551.661pt x 251.2587pt>
+File: figures/IMG_Protein_Allocation_Draft_v2.png Graphic file (type png)
 
-Overfull \hbox (9.435pt too wide) in paragraph at lines 74--75
- [][] 
- []
+<use figures/IMG_Protein_Allocation_Draft_v2.png>
+Package pdftex.def Info: figures/IMG_Protein_Allocation_Draft_v2.png used on in
+put line 74.
+(pdftex.def)             Requested size: 444.30083pt x 202.35622pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4 <./figures/IMG_Protein_Allocation_Draft_v1.png (PNG copy)>] [5] [6]
+[3] [4 <./figures/IMG_Protein_Allocation_Draft_v2.png (PNG copy)>] [5] [6]
 [7]
 Underfull \hbox (badness 10000) in paragraph at lines 185--185
 []\T1/cmr/m/n/10 Localisation
@@ -1177,7 +1173,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on NoveltyTagm.pdf (32 pages, 20885757 bytes).
+Output written on NoveltyTagm.pdf (32 pages, 20643125 bytes).
 PDF statistics:
  1554 PDF objects out of 1728 (max. 8388607)
  164 named destinations out of 1000 (max. 500000)
