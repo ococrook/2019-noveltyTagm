@@ -24,6 +24,12 @@ Ashburner, M. et~al. (2000).
 \newblock Gene ontology: tool for the unification of biology.
 \newblock {\em Nature genetics\/}, {\bf 25}(1), 25--29.
 
+\bibitem[Bastin and Heximer(2013)Bastin and Heximer]{Bastin::2013}
+Bastin, G. et~al. (2013).
+\newblock Rab family proteins regulate the endosomal trafficking and function
+  of rgs4.
+\newblock {\em Journal of Biological Chemistry\/}, {\bf 288}(30), 21836--21849.
+
 \bibitem[Beltran {\em et~al.}(2016)Beltran, Mathias, and
   Cristea]{Jean_Beltran:2016}
 Beltran, P. M.~J. et~al. (2016).
@@ -70,6 +76,19 @@ Cappellaro, C. et~al. (1998).
 \newblock New potential cell wall glucanases ofsaccharomyces cerevisiae and
   their involvement in mating.
 \newblock {\em Journal of bacteriology\/}, {\bf 180}(19), 5030--5037.
+
+\bibitem[Chen {\em et~al.}(2009)Chen, Kong, Su, and Stahl]{Chen::2009}
+Chen, P.-I. et~al. (2009).
+\newblock Rab5 isoforms differentially regulate the trafficking and degradation
+  of epidermal growth factor receptors.
+\newblock {\em Journal of Biological Chemistry\/}, {\bf 284}(44), 30328--30338.
+
+\bibitem[Chen {\em et~al.}(2014)Chen, Schauer, Kong, Harding, Goud, and
+  Stahl]{Chen::2014}
+Chen, P.-I. et~al. (2014).
+\newblock Rab5 isoforms orchestrate a “division of labor” in the endocytic
+  network; rab5c modulates rac-mediated cell motility.
+\newblock {\em PloS one\/}, {\bf 9}(2), e90384.
 
 \bibitem[Christoforou {\em et~al.}(2016)Christoforou, Mulvey, Breckels,
   Geladaki, Hurrell, Hayward, Naake, Gatto, Viner, Arias, {\em et~al.}]{hyper}
@@ -168,6 +187,14 @@ Gatto, L. et~al. (2014b).
 Gatto, L. et~al. (2018).
 \newblock Assessing sub-cellular resolution in spatial proteomics experiments.
 \newblock {\em bioRxiv\/}.
+
+\bibitem[Gautreau {\em et~al.}(2014)Gautreau, Oguievetskaia, and
+  Ungermann]{Gautreau::2014}
+Gautreau, A. et~al. (2014).
+\newblock Function and regulation of the endosomal fusion and fission
+  machineries.
+\newblock {\em Cold Spring Harbor perspectives in biology\/}, {\bf 6}(3),
+  a016832.
 
 \bibitem[Geladaki {\em et~al.}(2019)Geladaki, Britovsek, Breckels, Smith,
   Mulvey, Crook, Gatto, and Lilley]{DC:2018}
@@ -321,6 +348,19 @@ Laurila, K. et~al. (2009).
   localization.
 \newblock {\em BMC genomics\/}, {\bf 10}(1), 122.
 
+\bibitem[Law {\em et~al.}(2017)Law, Seo, Wang, DeLeon, Bolis, Brown, Zong, Du,
+  and Rocheleau]{Law::2017}
+Law, F. et~al. (2017).
+\newblock The vps34 pi3k negatively regulates rab-5 during endosome maturation.
+\newblock {\em J Cell Sci\/}, {\bf 130}(12), 2007--2017.
+
+\bibitem[Liu {\em et~al.}(2015)Liu, Su, Li, Yuan, Mo, Li, He, Ma, and
+  Han]{Liu::2015}
+Liu, B. et~al. (2015).
+\newblock Cmtm7 knockdown increases tumorigenicity of human non-small cell lung
+  cancer cells and egfr-akt signaling by reducing rab5 activation.
+\newblock {\em Oncotarget\/}, {\bf 6}(38), 41092.
+
 \bibitem[Martin-Verdeaux {\em et~al.}(2003)Martin-Verdeaux, Pombo, Iannascoli,
   Roa, Varin-Blank, Rivera, and Blank]{Martin:2003}
 Martin-Verdeaux, S. et~al. (2003).
@@ -334,6 +374,13 @@ McAlister, G.~C. et~al. (2014).
 \newblock Multinotch ms3 enables accurate, sensitive, and multiplexed detection
   of differential expression across cancer cell line proteomes.
 \newblock {\em Analytical chemistry\/}, {\bf 86}(14), 7150--7158.
+
+\bibitem[Mendoza {\em et~al.}(2013)Mendoza, Ortiz, D{\'\i}az, Quest, Leyton,
+  Stupack, and Torres]{Mendoza::2013}
+Mendoza, P. et~al. (2013).
+\newblock Rab5 activation promotes focal adhesion disassembly, migration and
+  invasiveness in tumor cells.
+\newblock {\em J Cell Sci\/}, {\bf 126}(17), 3835--3847.
 
 \bibitem[Mishra {\em et~al.}(2010)Mishra, Eathiraj, Corvera, and
   Lambright]{Mishra:2010}
@@ -405,6 +452,13 @@ Richardson, S. et~al. (1997).
 \newblock {\em Journal of the Royal Statistical Society: series B (statistical
   methodology)\/}, {\bf 59}(4), 731--792.
 
+\bibitem[Rink {\em et~al.}(2005)Rink, Ghigo, Kalaidzidis, and
+  Zerial]{Rink::2005}
+Rink, J. et~al. (2005).
+\newblock Rab conversion as a mechanism of progression from early to late
+  endosomes.
+\newblock {\em Cell\/}, {\bf 122}(5), 735--749.
+
 \bibitem[Rousseau and Mengersen(2011)Rousseau and Mengersen]{Rousseau::2011}
 Rousseau, J. et~al. (2011).
 \newblock Asymptotic behaviour of the posterior distribution in overfitted
@@ -430,6 +484,12 @@ Siljee, J.~E. et~al. (2018).
 \newblock Subcellular localization of {MC4R} with {ADCY3} at neuronal primary
   cilia underlies a common pathway for genetic predisposition to obesity.
 \newblock {\em Nat Genet\/}.
+
+\bibitem[Simonsen {\em et~al.}(1998)Simonsen, Lippe, Christoforidis, Gaullier,
+  Brech, Callaghan, Toh, Murphy, Zerial, and Stenmark]{Simonsen::1998}
+Simonsen, A. et~al. (1998).
+\newblock Eea1 links pi (3) k function to rab5 regulation of endosome fusion.
+\newblock {\em Nature\/}, {\bf 394}(6692), 494.
 
 \bibitem[Stephens(2000)Stephens]{Stephens:2000}
 Stephens, M. (2000).
@@ -478,12 +538,24 @@ Ting, L. et~al. (2011).
   proteomics.
 \newblock {\em Nature methods\/}, {\bf 8}(11), 937.
 
+\bibitem[Trischler {\em et~al.}(1999)Trischler, Stoorvogel, and
+  Ullrich]{Trischler::1999}
+Trischler, M. et~al. (1999).
+\newblock Biochemical analysis of distinct rab5-and rab11-positive endosomes
+  along the transferrin pathway.
+\newblock {\em J Cell Sci\/}, {\bf 112}(24), 4773--4783.
+
 \bibitem[Wendler {\em et~al.}(2010)Wendler, Gillingham, Sinka, Rosa-Ferreira,
   Gordon, Franch-Marro, Peden, Vincent, and Munro]{Wendler:2010}
 Wendler, F. et~al. (2010).
 \newblock A genome-wide rna interference screen identifies two novel components
   of the metazoan secretory pathway.
 \newblock {\em The EMBO journal\/}, {\bf 29}(2), 304--314.
+
+\bibitem[Woodman(2000)Woodman]{Woodman::2000}
+Woodman, P.~G. (2000).
+\newblock Biogenesis of the sorting endosome: the role of rab5.
+\newblock {\em Traffic\/}, {\bf 1}(9), 695--701.
 
 \bibitem[Yin {\em et~al.}(2005)Yin, de~Groot, Dekker, de~Jong, Klis, and
   de~Koster]{Yin:2005}
@@ -506,6 +578,11 @@ Yu, G. et~al. (2012).
   among gene clusters.
 \newblock {\em Omics: a journal of integrative biology\/}, {\bf 16}(5),
   284--287.
+
+\bibitem[Zerial and McBride(2001)Zerial and McBride]{Zerial::2001}
+Zerial, M. et~al. (2001).
+\newblock Rab proteins as membrane organizers.
+\newblock {\em Nature reviews Molecular cell biology\/}, {\bf 2}(2), 107.
 
 \bibitem[zur Stadt {\em et~al.}(2009)zur Stadt, Rohr, Seifert, Koch, Grieve,
   Pagel, Strau{\ss}, Kasper, N{\"u}rnberg, Becker, {\em et~al.}]{Zur:2009}
