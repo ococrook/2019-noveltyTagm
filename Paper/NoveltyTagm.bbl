@@ -1,11 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[Al~Hawas {\em et~al.}(2012)Al~Hawas, Ren, Ye, Karim, Filipovich, and
-  Whiteheart]{Al:2012}
-Al~Hawas, R. et~al. (2012).
-\newblock Munc18b/stxbp2 is required for platelet secretion.
-\newblock {\em Blood\/}, {\bf 120}(12), 2493--2500.
-
 \bibitem[Antoniak(1974)Antoniak]{antoniak::1974}
 Antoniak, C.~E. (1974).
 \newblock Mixtures of dirichlet processes with applications to bayesian
@@ -29,6 +23,13 @@ Bastin, G. et~al. (2013).
 \newblock Rab family proteins regulate the endosomal trafficking and function
   of rgs4.
 \newblock {\em Journal of Biological Chemistry\/}, {\bf 288}(30), 21836--21849.
+
+\bibitem[Bay {\em et~al.}(2013)Bay, Schreiner, Mazzoni, Carvajal-Gonzalez,
+  Gravotta, Perret, Mantaras, Zhu, and Rodriguez-Boulan]{Bay::2013}
+Bay, A. E.~P. et~al. (2013).
+\newblock The kinesin kif16b mediates apical transcytosis of transferrin
+  receptor in ap-1b-deficient epithelia.
+\newblock {\em The EMBO journal\/}, {\bf 32}(15), 2125--2139.
 
 \bibitem[Beltran {\em et~al.}(2016)Beltran, Mathias, and
   Cristea]{Jean_Beltran:2016}
@@ -64,18 +65,20 @@ Bue, C.~A. et~al. (2006).
   reticulum--derived coat protein complex ii transport vesicles.
 \newblock {\em Molecular biology of the cell\/}, {\bf 17}(11), 4780--4789.
 
-\bibitem[Callaghan {\em et~al.}(1999)Callaghan, Nixon, Bucci, Toh, and
-  Stenmark]{Callaghan:1999}
-Callaghan, J. et~al. (1999).
-\newblock Direct interaction of eea1 with rab5b.
-\newblock {\em European journal of biochemistry\/}, {\bf 265}(1), 361--366.
-
 \bibitem[Cappellaro {\em et~al.}(1998)Cappellaro, Mrsa, and
   Tanner]{Cappellaro:1998}
 Cappellaro, C. et~al. (1998).
 \newblock New potential cell wall glucanases ofsaccharomyces cerevisiae and
   their involvement in mating.
 \newblock {\em Journal of bacteriology\/}, {\bf 180}(19), 5030--5037.
+
+\bibitem[Carlucci {\em et~al.}(2010)Carlucci, Porpora, Garbi, Galgani,
+  Santoriello, Mascolo, di~Lorenzo, Altieri, Quarto, Terracciano, {\em
+  et~al.}]{Carlucci::2010}
+Carlucci, A. et~al. (2010).
+\newblock Ptpd1 supports receptor stability and mitogenic signaling in bladder
+  cancer cells.
+\newblock {\em Journal of biological chemistry\/}, {\bf 285}(50), 39260--39270.
 
 \bibitem[Chen {\em et~al.}(2009)Chen, Kong, Su, and Stahl]{Chen::2009}
 Chen, P.-I. et~al. (2009).
@@ -102,6 +105,12 @@ Crook, O.~M. et~al. (2018).
 \newblock A bayesian mixture modelling approach for spatial proteomics.
 \newblock {\em PLOS Computational Biology\/}, {\bf 14}(11), 1--29.
 
+\bibitem[De~Franceschi {\em et~al.}(2015)De~Franceschi, Hamidi, Alanko, Sahgal,
+  and Ivaska]{De::2015}
+De~Franceschi, N. et~al. (2015).
+\newblock Integrin traffic--the update.
+\newblock {\em J Cell Sci\/}, {\bf 128}(5), 839--852.
+
 \bibitem[Dealtry and Rickwood(1992)Dealtry and Rickwood]{Dealtry:1992}
 Dealtry, G.~B. et~al. (1992).
 \newblock {\em Cell biology labfax\/}.
@@ -112,6 +121,13 @@ Dealtry, G.~B. et~al. (1992).
 Delic, M. et~al. (2013).
 \newblock The secretory pathway: exploring yeast diversity.
 \newblock {\em FEMS microbiology reviews\/}, {\bf 37}(6), 872--914.
+
+\bibitem[Dilcher {\em et~al.}(2001)Dilcher, K{\"o}hler, and von
+  Mollard]{Dilcher::2001}
+Dilcher, M. et~al. (2001).
+\newblock Genetic interactions with the yeast q-snare vti1reveal novel
+  functions for the r-snare ykt6.
+\newblock {\em Journal of Biological Chemistry\/}, {\bf 276}(37), 34537--34544.
 
 \bibitem[Dunkley {\em et~al.}(2004)Dunkley, Watson, Griffin, Dupree, and
   Lilley]{Dunkley:2004}
@@ -126,6 +142,14 @@ Dunkley, T.~P. et~al. (2006).
 \newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
   103}(17), 6518--6523.
 
+\bibitem[Farkhondeh {\em et~al.}(2015)Farkhondeh, Niwa, Takei, and
+  Hirokawa]{Farkhondeh::2015}
+Farkhondeh, A. et~al. (2015).
+\newblock Characterizing kif16b in neurons reveals a novel intramolecular
+  “stalk inhibition” mechanism that regulates its capacity to potentiate
+  the selective somatodendritic localization of early endosomes.
+\newblock {\em Journal of Neuroscience\/}, {\bf 35}(12), 5067--5086.
+
 \bibitem[Ferguson(1974)Ferguson]{ferguson::1974}
 Ferguson, T.~S. (1974).
 \newblock Prior distributions on spaces of probability measures.
@@ -137,26 +161,19 @@ Foster, L.~J. et~al. (2006).
 \newblock A mammalian organelle map by protein correlation profiling.
 \newblock {\em Cell\/}, {\bf 125}(1), 187--199.
 
-\bibitem[Fouraux {\em et~al.}(2004)Fouraux, Deneka, Ivan, Van Der~Heijden,
-  Raymackers, Van~Suylekom, Van~Venrooij, Van Der~Sluijs, and
-  Pruijn]{Fouraux:2004}
-Fouraux, M.~A. et~al. (2004).
-\newblock Rabip4' is an effector of rab5 and rab4 and regulates transport
-  through early endosomes.
-\newblock {\em Molecular biology of the cell\/}, {\bf 15}(2), 611--624.
-
 \bibitem[Fritsch and Ickstadt(2009)Fritsch and Ickstadt]{fritsch::2009}
 Fritsch, A. et~al. (2009).
 \newblock Improved criteria for clustering based on the posterior similarity
   matrix.
 \newblock {\em Bayesian Anal.}, {\bf 4}(2), 367--391.
 
-\bibitem[Fuchs {\em et~al.}(2007)Fuchs, Haas, Spooner, Yoshimura, Lord, and
-  Barr]{Fuchs:2007}
-Fuchs, E. et~al. (2007).
-\newblock Specific rab gtpase-activating proteins define the shiga toxin and
-  epidermal growth factor uptake pathways.
-\newblock {\em The Journal of cell biology\/}, {\bf 177}(6), 1133--1143.
+\bibitem[Fukasawa {\em et~al.}(2004)Fukasawa, Varlamov, Eng, S{\"o}llner, and
+  Rothman]{Fukasawa::2004}
+Fukasawa, M. et~al. (2004).
+\newblock Localization and activity of the snare ykt6 determined by its
+  regulatory domain and palmitoylation.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
+  101}(14), 4815--4820.
 
 \bibitem[Gatto and Lilley(2012)Gatto and Lilley]{MSnbase:2012}
 Gatto, L. et~al. (2012).
@@ -216,13 +233,6 @@ Gentleman, R.~C. et~al. (2004).
   bioinformatics.
 \newblock {\em Genome biology\/}, {\bf 5}(10), R80.
 
-\bibitem[George {\em et~al.}(2007)George, Ying, Rainey, Solomon, Parikh, Gao,
-  Band, and Band]{George:2007}
-George, M. et~al. (2007).
-\newblock Shared as well as distinct roles of ehd proteins revealed by
-  biochemical and functional comparisons in mammalian cells and c. elegans.
-\newblock {\em BMC cell biology\/}, {\bf 8}(1), 3.
-
 \bibitem[Gibson(2009)Gibson]{Gibson:2009}
 Gibson, T.~J. (2009).
 \newblock Cell regulation: determined to signal discrete cooperation.
@@ -236,7 +246,7 @@ Groen, A.~J. et~al. (2014).
 \newblock {\em Journal of proteome research\/}, {\bf 13}(2), 763--776.
 
 \bibitem[Haas {\em et~al.}(2007)Haas, Yoshimura, Stephens, Preisinger, Fuchs,
-  and Barr]{Haas:2007}
+  and Barr]{Haas::2007}
 Haas, A.~K. et~al. (2007).
 \newblock Analysis of gtpase-activating proteins: Rab1 and rab43 are key rabs
   required to maintain a functional golgi complex in human cells.
@@ -255,6 +265,13 @@ Hoepfner, S. et~al. (2005).
 \newblock Modulation of receptor recycling and degradation by the endosomal
   kinesin kif16b.
 \newblock {\em Cell\/}, {\bf 121}(3), 437--450.
+
+\bibitem[Hoxhaj {\em et~al.}(2012)Hoxhaj, Najafov, Toth, Campbell, Prescott,
+  and MacKintosh]{Hoxhaj::2012}
+Hoxhaj, G. et~al. (2012).
+\newblock Znrf2 is released from membranes by growth factors and, together with
+  znrf1, regulates the na+/k+ atpase.
+\newblock {\em J Cell Sci\/}, {\bf 125}(19), 4662--4675.
 
 \bibitem[Hoxhaj {\em et~al.}(2016)Hoxhaj, Caddye, Najafov, Houde, Johnson,
   Dissanayake, Toth, Campbell, Prescott, and MacKintosh]{Hoxhaj:2016}
@@ -279,14 +296,6 @@ Hubert, L. et~al. (1985).
 Huh, W.-K. et~al. (2003).
 \newblock Global analysis of protein localization in budding yeast.
 \newblock {\em Nature\/}, {\bf 425}(6959), 686.
-
-\bibitem[Hunker {\em et~al.}(2006)Hunker, Galvis, Kruk, Giambini, Veisaga, and
-  Barbieri]{Hunker:2006}
-Hunker, C. et~al. (2006).
-\newblock Rab5-activating protein 6, a novel endosomal protein with a role in
-  endocytosis.
-\newblock {\em Biochemical and biophysical research communications\/}, {\bf
-  340}(3), 967--975.
 
 \bibitem[Inadome {\em et~al.}(2005)Inadome, Noda, Adachi, and
   Yoda]{Inadome:2005}
@@ -336,7 +345,7 @@ Kristensen, A.~R. et~al. (2012).
 \newblock {\em Nature methods\/}, {\bf 9}(9), 907.
 
 \bibitem[Lanzetti {\em et~al.}(2000)Lanzetti, Rybin, Malabarba, Christoforidis,
-  Scita, Zerial, and Di~Fiore]{Lanzetti:2000}
+  Scita, Zerial, and Di~Fiore]{Lanzetti::2000}
 Lanzetti, L. et~al. (2000).
 \newblock The eps8 protein coordinates egf receptor signalling through rac and
   trafficking through rab5.
@@ -354,6 +363,13 @@ Law, F. et~al. (2017).
 \newblock The vps34 pi3k negatively regulates rab-5 during endosome maturation.
 \newblock {\em J Cell Sci\/}, {\bf 130}(12), 2007--2017.
 
+\bibitem[Linnemannst{\"o}ns {\em et~al.}(2018)Linnemannst{\"o}ns, Witte,
+  Kittel, Danieli, M{\"u}ller, Nitsch, Honemann-Capito, Grawe, Wodarz, Gross,
+  {\em et~al.}]{Linnemannstons::2018}
+Linnemannst{\"o}ns, K. et~al. (2018).
+\newblock Ykt6 membrane-to-cytosol cycling regulates exosomal wnt secretion.
+\newblock {\em bioRxiv\/}, page 485565.
+
 \bibitem[Liu {\em et~al.}(2015)Liu, Su, Li, Yuan, Mo, Li, He, Ma, and
   Han]{Liu::2015}
 Liu, B. et~al. (2015).
@@ -361,12 +377,19 @@ Liu, B. et~al. (2015).
   cancer cells and egfr-akt signaling by reducing rab5 activation.
 \newblock {\em Oncotarget\/}, {\bf 6}(38), 41092.
 
-\bibitem[Martin-Verdeaux {\em et~al.}(2003)Martin-Verdeaux, Pombo, Iannascoli,
-  Roa, Varin-Blank, Rivera, and Blank]{Martin:2003}
-Martin-Verdeaux, S. et~al. (2003).
-\newblock Evidence of a role for munc18-2 and microtubules in mast cell granule
-  exocytosis.
-\newblock {\em Journal of cell science\/}, {\bf 116}(2), 325--334.
+\bibitem[Martinu {\em et~al.}(2002)Martinu, Santiago-Walker, Qi, and
+  Chou]{Martinu::2002}
+Martinu, L. et~al. (2002).
+\newblock Endocytosis of epidermal growth factor receptor regulated by
+  grb2-mediated recruitment of the rab5 gtpase-activating protein rn-tre.
+\newblock {\em Journal of Biological Chemistry\/}, {\bf 277}(52), 50996--51002.
+
+\bibitem[Matsui {\em et~al.}(2018)Matsui, Jiang, Nakano, Sakamaki, Yamamoto,
+  and Mizushima]{Matsui::2018}
+Matsui, T. et~al. (2018).
+\newblock Autophagosomal ykt6 is required for fusion with lysosomes
+  independently of syntaxin 17.
+\newblock {\em J Cell Biol\/}, {\bf 217}(8), 2633--2645.
 
 \bibitem[McAlister {\em et~al.}(2014)McAlister, Nusinow, Jedrychowski, Wühr,
   Huttlin, Erickson, Rad, Haas, and Gygi]{Mcalister::2014}
@@ -375,6 +398,13 @@ McAlister, G.~C. et~al. (2014).
   of differential expression across cancer cell line proteomes.
 \newblock {\em Analytical chemistry\/}, {\bf 86}(14), 7150--7158.
 
+\bibitem[Meiringer {\em et~al.}(2008)Meiringer, Auffarth, Hou, and
+  Ungermann]{Meiringer::2008}
+Meiringer, C.~T. et~al. (2008).
+\newblock Depalmitoylation of ykt6 prevents its entry into the multivesicular
+  body pathway.
+\newblock {\em Traffic\/}, {\bf 9}(9), 1510--1521.
+
 \bibitem[Mendoza {\em et~al.}(2013)Mendoza, Ortiz, D{\'\i}az, Quest, Leyton,
   Stupack, and Torres]{Mendoza::2013}
 Mendoza, P. et~al. (2013).
@@ -382,27 +412,12 @@ Mendoza, P. et~al. (2013).
   invasiveness in tumor cells.
 \newblock {\em J Cell Sci\/}, {\bf 126}(17), 3835--3847.
 
-\bibitem[Mishra {\em et~al.}(2010)Mishra, Eathiraj, Corvera, and
-  Lambright]{Mishra:2010}
-Mishra, A. et~al. (2010).
-\newblock Structural basis for rab gtpase recognition and endosome tethering by
-  the c2h2 zinc finger of early endosomal autoantigen 1 (eea1).
-\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
-  107}(24), 10866--10871.
-
 \bibitem[Mulvey {\em et~al.}(2017)Mulvey, Breckels, Geladaki, Britov{\v{s}}ek,
   Nightingale, Christoforou, Elzek, Deery, Gatto, and Lilley]{Mulvey:2017}
 Mulvey, C.~M. et~al. (2017).
 \newblock Using {hyperLOPIT} to perform high-resolution mapping of the spatial
   proteome.
 \newblock {\em Nature Protocols\/}, {\bf 12}(6), 1110--1135.
-
-\bibitem[Naslavsky {\em et~al.}(2006)Naslavsky, Rahajeng, Sharma, Jovic, and
-  Caplan]{Naslavsky:2006}
-Naslavsky, N. et~al. (2006).
-\newblock Interactions between ehd proteins and rab11-fip2: a role for ehd3 in
-  early endosomal transport.
-\newblock {\em Molecular biology of the cell\/}, {\bf 17}(1), 163--177.
 
 \bibitem[Nightingale {\em et~al.}(2019)Nightingale, Geladaki, Breckels, Oliver,
   and Lilley]{Nightingale::2019}
@@ -424,13 +439,13 @@ Otte, S. et~al. (2001).
   transport between the er and golgi complex.
 \newblock {\em The Journal of cell biology\/}, {\bf 152}(3), 503--518.
 
-\bibitem[Pagel {\em et~al.}(2012)Pagel, Beutel, Lehmberg, Koch, Maul-Pavicic,
-  Rohlfs, Al-Jefri, Beier, Ousager, Ehlert, {\em et~al.}]{Pagel:2012}
-Pagel, J. et~al. (2012).
-\newblock Distinct mutations in stxbp2 are associated with variable clinical
-  presentations in patients with familial hemophagocytic lymphohistiocytosis
-  type 5 (fhl5).
-\newblock {\em Blood\/}, {\bf 119}(25), 6016--6024.
+\bibitem[Palamidessi {\em et~al.}(2013)Palamidessi, Frittoli, Ducano,
+  Offenhauser, Sigismund, Kajiho, Parazzoli, Oldani, Gobbi, Serini, {\em
+  et~al.}]{Palamidessi::2013}
+Palamidessi, A. et~al. (2013).
+\newblock The gtpase-activating protein rn-tre controls focal adhesion turnover
+  and cell migration.
+\newblock {\em Current biology\/}, {\bf 23}(23), 2355--2364.
 
 \bibitem[Pardo {\em et~al.}(2004)Pardo, Monteoliva, Vazquez, Mart{\'\i}nez,
   Molero, Nombela, and Gil]{Pardo:2004}
@@ -471,13 +486,6 @@ Schwarz, G. et~al. (1978).
 \newblock Estimating the dimension of a model.
 \newblock {\em The annals of statistics\/}, {\bf 6}(2), 461--464.
 
-\bibitem[Sigismund {\em et~al.}(2012)Sigismund, Confalonieri, Ciliberto, Polo,
-  Scita, and Di~Fiore]{Sigismund:2012}
-Sigismund, S. et~al. (2012).
-\newblock Endocytosis and signaling: cell logistics shape the eukaryotic cell
-  plan.
-\newblock {\em Physiological reviews\/}, {\bf 92}(1), 273--366.
-
 \bibitem[Siljee {\em et~al.}(2018)Siljee, Wang, Bernard, Ersoy, Zhang, Marley,
   Von~Zastrow, Reiter, and Vaisse]{Siljee:2018}
 Siljee, J.~E. et~al. (2018).
@@ -490,6 +498,13 @@ Siljee, J.~E. et~al. (2018).
 Simonsen, A. et~al. (1998).
 \newblock Eea1 links pi (3) k function to rab5 regulation of endosome fusion.
 \newblock {\em Nature\/}, {\bf 394}(6692), 494.
+
+\bibitem[Skjeldal {\em et~al.}(2012)Skjeldal, Strunze, Bergeland, Walseng,
+  Gregers, and Bakke]{Skjeldal::2012}
+Skjeldal, F.~M. et~al. (2012).
+\newblock The fusion of early endosomes induces molecular-motor-driven tubule
+  formation and fission.
+\newblock {\em J Cell Sci\/}, {\bf 125}(8), 1910--1919.
 
 \bibitem[Stephens(2000)Stephens]{Stephens:2000}
 Stephens, M. (2000).
@@ -511,6 +526,13 @@ Tai, G. et~al. (2004).
 \newblock Participation of the syntaxin 5/ykt6/gs28/gs15 snare complex in
   transport from the early/recycling endosome to the trans-golgi network.
 \newblock {\em Molecular biology of the cell\/}, {\bf 15}(9), 4011--4022.
+
+\bibitem[Tak{\'a}ts {\em et~al.}(2018)Tak{\'a}ts, Glatz, Szenci, Boda,
+  Horv{\'a}th, Heged{\H{u}}s, Kov{\'a}cs, and Juh{\'a}sz]{Takats::2018}
+Tak{\'a}ts, S. et~al. (2018).
+\newblock Non-canonical role of the snare protein ykt6 in
+  autophagosome-lysosome fusion.
+\newblock {\em PLoS genetics\/}, {\bf 14}(4), e1007359.
 
 \bibitem[Tan {\em et~al.}(2009)Tan, Dvinge, Christoforou, Bertone,
   Martinez~Arias, and Lilley]{Tan:2009}
@@ -545,6 +567,12 @@ Trischler, M. et~al. (1999).
   along the transferrin pathway.
 \newblock {\em J Cell Sci\/}, {\bf 112}(24), 4773--4783.
 
+\bibitem[Ueno {\em et~al.}(2011)Ueno, Huang, Tanaka, and Hirokawa]{Ueno::2011}
+Ueno, H. et~al. (2011).
+\newblock Kif16b/rab14 molecular motor complex is critical for early embryonic
+  development by transporting fgf receptor.
+\newblock {\em Developmental cell\/}, {\bf 20}(1), 60--71.
+
 \bibitem[Wendler {\em et~al.}(2010)Wendler, Gillingham, Sinka, Rosa-Ferreira,
   Gordon, Franch-Marro, Peden, Vincent, and Munro]{Wendler:2010}
 Wendler, F. et~al. (2010).
@@ -572,6 +600,12 @@ Yofe, I. et~al. (2016).
   libraries via a swap-tag strategy.
 \newblock {\em Nature methods\/}, {\bf 13}(4), 371.
 
+\bibitem[Yong and Tang(2019)Yong and Tang]{Yong::2019}
+Yong, C. Q.~Y. et~al. (2019).
+\newblock Another longin snare for autophagosome-lysosome fusion—how does
+  ykt6 work?
+\newblock {\em Autophagy\/}, {\bf 15}(2), 352--357.
+
 \bibitem[Yu {\em et~al.}(2012)Yu, Wang, Han, and He]{Yu:2012}
 Yu, G. et~al. (2012).
 \newblock {clusterProfiler}: an {R} package for comparing biological themes
@@ -583,13 +617,5 @@ Yu, G. et~al. (2012).
 Zerial, M. et~al. (2001).
 \newblock Rab proteins as membrane organizers.
 \newblock {\em Nature reviews Molecular cell biology\/}, {\bf 2}(2), 107.
-
-\bibitem[zur Stadt {\em et~al.}(2009)zur Stadt, Rohr, Seifert, Koch, Grieve,
-  Pagel, Strau{\ss}, Kasper, N{\"u}rnberg, Becker, {\em et~al.}]{Zur:2009}
-zur Stadt, U. et~al. (2009).
-\newblock Familial hemophagocytic lymphohistiocytosis type 5 (fhl-5) is caused
-  by mutations in munc18-2 and impaired binding to syntaxin 11.
-\newblock {\em The American Journal of Human Genetics\/}, {\bf 85}(4),
-  482--492.
 
 \end{thebibliography}
