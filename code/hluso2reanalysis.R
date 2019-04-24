@@ -78,7 +78,7 @@ gg8 <- plot(u2ostagmNov_conv, tempNames2[34])  # KIF16B
 gg9 <- plot(u2ostagmNov_conv, tempNames2[35]) # known PM, LYS, ENDO
 # "O00186"   "Q9NZN3"   "P20339-2" "Q96L93-6" "Q8NHG8" 
 
-gg1 + gg2 + gg3 + gg4 + gg6 + gg7 + gg8 + gg9 + plot_layout(ncol = 3)
+gg1 + gg3 + gg4 + gg6 + gg7 + gg8 + gg9 + plot_layout(ncol = 3)
 
 
 ## Barplot of different number of proteins

@@ -18,6 +18,28 @@ Ashburner, M. et~al. (2000).
 \newblock Gene ontology: tool for the unification of biology.
 \newblock {\em Nature genetics\/}, {\bf 25}(1), 25--29.
 
+\bibitem[Avanzato {\em et~al.}(2018)Avanzato, Pupo, Ducano, Isella, Bertalot,
+  Luise, Pece, Bruna, Rueda, Caldas, {\em et~al.}]{Avanzato::2018}
+Avanzato, D. et~al. (2018).
+\newblock High usp6nl levels in breast cancer sustain chronic akt
+  phosphorylation and glut1 stability fueling aerobic glycolysis.
+\newblock {\em Cancer research\/}, {\bf 78}(13), 3432--3444.
+
+\bibitem[Bahl {\em et~al.}(2016)Bahl, Xie, Spagnol, Sorgen, Naslavsky, and
+  Caplan]{Bahl::2016}
+Bahl, K. et~al. (2016).
+\newblock Ehd3 protein is required for tubular recycling endosome
+  stabilization, and an asparagine-glutamic acid residue pair within its eps15
+  homology (eh) domain dictates its selective binding to npf peptides.
+\newblock {\em Journal of Biological Chemistry\/}, {\bf 291}(26), 13465--13478.
+
+\bibitem[Banerjee and Rachubinski(2017)Banerjee and
+  Rachubinski]{Banerjee::2017}
+Banerjee, H. et~al. (2017).
+\newblock Involvement of snare protein ykt6 in glycosome biogenesis in
+  trypanosoma brucei.
+\newblock {\em Molecular and biochemical parasitology\/}, {\bf 218}, 28--37.
+
 \bibitem[Bastin and Heximer(2013)Bastin and Heximer]{Bastin::2013}
 Bastin, G. et~al. (2013).
 \newblock Rab family proteins regulate the endosomal trafficking and function
@@ -65,6 +87,12 @@ Bue, C.~A. et~al. (2006).
   reticulum--derived coat protein complex ii transport vesicles.
 \newblock {\em Molecular biology of the cell\/}, {\bf 17}(11), 4780--4789.
 
+\bibitem[Cabasso {\em et~al.}(2015)Cabasso, Pekar, and Horowitz]{Cabasso::2015}
+Cabasso, O. et~al. (2015).
+\newblock Sumoylation of ehd3 modulates tubulation of the endocytic recycling
+  compartment.
+\newblock {\em PloS one\/}, {\bf 10}(7), e0134053.
+
 \bibitem[Cappellaro {\em et~al.}(1998)Cappellaro, Mrsa, and
   Tanner]{Cappellaro:1998}
 Cappellaro, C. et~al. (1998).
@@ -79,6 +107,22 @@ Carlucci, A. et~al. (2010).
 \newblock Ptpd1 supports receptor stability and mitogenic signaling in bladder
   cancer cells.
 \newblock {\em Journal of biological chemistry\/}, {\bf 285}(50), 39260--39270.
+
+\bibitem[Cataldo {\em et~al.}(1997)Cataldo, Barnett, Pieroni, and
+  Nixon]{Cataldo::1997}
+Cataldo, A.~M. et~al. (1997).
+\newblock Increased neuronal endocytosis and protease delivery to early
+  endosomes in sporadic alzheimer’s disease: neuropathologic evidence for a
+  mechanism of increased $\beta$-amyloidogenesis.
+\newblock {\em Journal of Neuroscience\/}, {\bf 17}(16), 6142--6151.
+
+\bibitem[Cataldo {\em et~al.}(2000)Cataldo, Peterhoff, Troncoso, Gomez-Isla,
+  Hyman, and Nixon]{Cataldo::2000}
+Cataldo, A.~M. et~al. (2000).
+\newblock Endocytic pathway abnormalities precede amyloid $\beta$ deposition in
+  sporadic alzheimer’s disease and down syndrome: differential effects of
+  apoe genotype and presenilin mutations.
+\newblock {\em The American journal of pathology\/}, {\bf 157}(1), 277--286.
 
 \bibitem[Chen {\em et~al.}(2009)Chen, Kong, Su, and Stahl]{Chen::2009}
 Chen, P.-I. et~al. (2009).
@@ -99,11 +143,37 @@ Christoforou, A. et~al. (2016).
 \newblock A draft map of the mouse pluripotent stem cell spatial proteome.
 \newblock {\em Nature communications\/}, {\bf 7}, 9992.
 
+\bibitem[Crook {\em et~al.}(2019a)Crook, Breckels, Lilley, Kirk, and
+  Gatto]{Crook::2019b}
+Crook, O. et~al. (2019a).
+\newblock A bioconductor workflow for the bayesian analysis of spatial
+  proteomics [version 1; peer review: awaiting peer review].
+\newblock {\em F1000Research\/}, {\bf 8}(446).
+
 \bibitem[Crook {\em et~al.}(2018)Crook, Mulvey, Kirk, Lilley, and
   Gatto]{Crook:2018}
 Crook, O.~M. et~al. (2018).
 \newblock A bayesian mixture modelling approach for spatial proteomics.
 \newblock {\em PLOS Computational Biology\/}, {\bf 14}(11), 1--29.
+
+\bibitem[Crook {\em et~al.}(2019b)Crook, Lilley, Gatto, and Kirk]{Crook::2019a}
+Crook, O.~M. et~al. (2019b).
+\newblock Semi-supervised non-parametric bayesian modelling of spatial
+  proteomics.
+\newblock {\em arXiv preprint arXiv:1903.02909\/}.
+
+\bibitem[Cui {\em et~al.}(2019)Cui, Luo, Lin, Shi, Hong, and Yan]{Cui::2019}
+Cui, Z. et~al. (2019).
+\newblock Long non-coding rna ttn-as1 facilitates tumorigenesis of papillary
+  thyroid cancer through modulating mir-153-3p/znrf2 axis.
+\newblock {\em The journal of gene medicine\/}, page e3083.
+
+\bibitem[Curran {\em et~al.}(2014)Curran, Makara, Little, Musa, Liu, Wu,
+  Polina, Alecusan, Wright, Li, {\em et~al.}]{Curran::2014}
+Curran, J. et~al. (2014).
+\newblock Ehd3-dependent endosome pathway regulates cardiac membrane
+  excitability and physiology.
+\newblock {\em Circulation research\/}, {\bf 115}(1), 68--78.
 
 \bibitem[De~Franceschi {\em et~al.}(2015)De~Franceschi, Hamidi, Alanko, Sahgal,
   and Ivaska]{De::2015}
@@ -121,6 +191,13 @@ Dealtry, G.~B. et~al. (1992).
 Delic, M. et~al. (2013).
 \newblock The secretory pathway: exploring yeast diversity.
 \newblock {\em FEMS microbiology reviews\/}, {\bf 37}(6), 872--914.
+
+\bibitem[D{\'\i}az {\em et~al.}(2014)D{\'\i}az, Mendoza, Ortiz, D{\'\i}az,
+  Leyton, Stupack, Quest, and Torres]{Diaz::2014}
+D{\'\i}az, J. et~al. (2014).
+\newblock Rab5 is required in metastatic cancer cells for caveolin-1-enhanced
+  rac1 activation, migration and invasion.
+\newblock {\em J Cell Sci\/}, {\bf 127}(11), 2401--2406.
 
 \bibitem[Dilcher {\em et~al.}(2001)Dilcher, K{\"o}hler, and von
   Mollard]{Dilcher::2001}
@@ -167,6 +244,21 @@ Fritsch, A. et~al. (2009).
   matrix.
 \newblock {\em Bayesian Anal.}, {\bf 4}(2), 367--391.
 
+\bibitem[Frittoli {\em et~al.}(2014)Frittoli, Palamidessi, Marighetti,
+  Confalonieri, Bianchi, Malinverno, Mazzarol, Viale, Martin-Padura, Garr{\'e},
+  {\em et~al.}]{Frittoli::2014}
+Frittoli, E. et~al. (2014).
+\newblock A rab5/rab4 recycling circuitry induces a proteolytic invasive
+  program and promotes tumor dissemination.
+\newblock {\em J Cell Biol\/}, {\bf 206}(2), 307--328.
+
+\bibitem[Fuchs {\em et~al.}(2007)Fuchs, Haas, Spooner, Yoshimura, Lord, and
+  Barr]{Fuchs::2007}
+Fuchs, E. et~al. (2007).
+\newblock Specific rab gtpase-activating proteins define the shiga toxin and
+  epidermal growth factor uptake pathways.
+\newblock {\em The Journal of cell biology\/}, {\bf 177}(6), 1133--1143.
+
 \bibitem[Fukasawa {\em et~al.}(2004)Fukasawa, Varlamov, Eng, S{\"o}llner, and
   Rothman]{Fukasawa::2004}
 Fukasawa, M. et~al. (2004).
@@ -174,6 +266,13 @@ Fukasawa, M. et~al. (2004).
   regulatory domain and palmitoylation.
 \newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
   101}(14), 4815--4820.
+
+\bibitem[Fukui {\em et~al.}(2007)Fukui, Tamura, Wada, Kamada, Igura, Kiso, and
+  Hayashi]{Fukui::2007}
+Fukui, K. et~al. (2007).
+\newblock Expression of rab5a in hepatocellular carcinoma: possible involvement
+  in epidermal growth factor signaling.
+\newblock {\em Hepatology Research\/}, {\bf 37}(11), 957--965.
 
 \bibitem[Gatto and Lilley(2012)Gatto and Lilley]{MSnbase:2012}
 Gatto, L. et~al. (2012).
@@ -233,6 +332,13 @@ Gentleman, R.~C. et~al. (2004).
   bioinformatics.
 \newblock {\em Genome biology\/}, {\bf 5}(10), R80.
 
+\bibitem[George {\em et~al.}(2007)George, Ying, Rainey, Solomon, Parikh, Gao,
+  Band, and Band]{George::2007}
+George, M. et~al. (2007).
+\newblock Shared as well as distinct roles of ehd proteins revealed by
+  biochemical and functional comparisons in mammalian cells and c. elegans.
+\newblock {\em BMC cell biology\/}, {\bf 8}(1), 3.
+
 \bibitem[Gibson(2009)Gibson]{Gibson:2009}
 Gibson, T.~J. (2009).
 \newblock Cell regulation: determined to signal discrete cooperation.
@@ -251,6 +357,13 @@ Haas, A.~K. et~al. (2007).
 \newblock Analysis of gtpase-activating proteins: Rab1 and rab43 are key rabs
   required to maintain a functional golgi complex in human cells.
 \newblock {\em Journal of cell science\/}, {\bf 120}(17), 2997--3010.
+
+\bibitem[Henmi {\em et~al.}(2016)Henmi, Oe, Kono, Taguchi, Takei, and
+  Tanabe]{Henmi::2016}
+Henmi, Y. et~al. (2016).
+\newblock Phosphatidic acid induces ehd3-containing membrane tubulation and is
+  required for receptor recycling.
+\newblock {\em Experimental cell research\/}, {\bf 342}(1), 1--10.
 
 \bibitem[Hirst {\em et~al.}(2018)Hirst, Itzhak, Antrobus, Borner, and
   Robinson]{Hirst:2018}
@@ -296,6 +409,13 @@ Hubert, L. et~al. (1985).
 Huh, W.-K. et~al. (2003).
 \newblock Global analysis of protein localization in budding yeast.
 \newblock {\em Nature\/}, {\bf 425}(6959), 686.
+
+\bibitem[Igarashi {\em et~al.}(2017)Igarashi, Araki, Yokobori, Altan, Yamanaka,
+  Ishii, Tsukagoshi, Watanabe, Kubo, Handa, {\em et~al.}]{Igarashi::2017}
+Igarashi, T. et~al. (2017).
+\newblock Association of rab5 overexpression in pancreatic cancer with cancer
+  progression and poor prognosis via e-cadherin suppression.
+\newblock {\em Oncotarget\/}, {\bf 8}(7), 12290.
 
 \bibitem[Inadome {\em et~al.}(2005)Inadome, Noda, Adachi, and
   Yoda]{Inadome:2005}
@@ -377,6 +497,19 @@ Liu, B. et~al. (2015).
   cancer cells and egfr-akt signaling by reducing rab5 activation.
 \newblock {\em Oncotarget\/}, {\bf 6}(38), 41092.
 
+\bibitem[Liu {\em et~al.}(2011)Liu, Chen, Zheng, Shi, and Li]{Liu::2011}
+Liu, S.-s. et~al. (2011).
+\newblock Knockdown of rab5a expression decreases cancer cell motility and
+  invasion through integrin-mediated signaling pathway.
+\newblock {\em Journal of biomedical science\/}, {\bf 18}(1), 58.
+
+\bibitem[Madan {\em et~al.}(2008)Madan, Krishnamurthy, and
+  Mukhopadhyay]{Madan::2008}
+Madan, R. et~al. (2008).
+\newblock Sope-mediated recruitment of host rab5 on phagosomes inhibits
+  salmonella transport to lysosomes.
+\newblock In {\em Autophagosome and Phagosome\/}, pages 417--437. Springer.
+
 \bibitem[Martinu {\em et~al.}(2002)Martinu, Santiago-Walker, Qi, and
   Chou]{Martinu::2002}
 Martinu, L. et~al. (2002).
@@ -419,6 +552,20 @@ Mulvey, C.~M. et~al. (2017).
   proteome.
 \newblock {\em Nature Protocols\/}, {\bf 12}(6), 1110--1135.
 
+\bibitem[Naslavsky {\em et~al.}(2006)Naslavsky, Rahajeng, Sharma, Jovic, and
+  Caplan]{Naslavsky::2006}
+Naslavsky, N. et~al. (2006).
+\newblock Interactions between ehd proteins and rab11-fip2: a role for ehd3 in
+  early endosomal transport.
+\newblock {\em Molecular biology of the cell\/}, {\bf 17}(1), 163--177.
+
+\bibitem[Naslavsky {\em et~al.}(2009)Naslavsky, McKenzie, Altan-Bonnet, Sheff,
+  and Caplan]{Naslavsky::2009}
+Naslavsky, N. et~al. (2009).
+\newblock Ehd3 regulates early-endosome-to-golgi transport and preserves golgi
+  morphology.
+\newblock {\em Journal of cell science\/}, {\bf 122}(3), 389--400.
+
 \bibitem[Nightingale {\em et~al.}(2019)Nightingale, Geladaki, Breckels, Oliver,
   and Lilley]{Nightingale::2019}
 Nightingale, D. J.~H. et~al. (2019).
@@ -460,6 +607,12 @@ Rand, W.~M. (1971).
 \newblock {\em Journal of the American Statistical association\/}, {\bf
   66}(336), 846--850.
 
+\bibitem[Rauma {\em et~al.}(1999)Rauma, Tuukkanen, Bergelson, Denning, and
+  Hautala]{Rauma::1999}
+Rauma, T. et~al. (1999).
+\newblock rab5 gtpase regulates adenovirus endocytosis.
+\newblock {\em Journal of virology\/}, {\bf 73}(11), 9664--9668.
+
 \bibitem[Richardson and Green(1997)Richardson and Green]{Richardson::1997}
 Richardson, S. et~al. (1997).
 \newblock On bayesian analysis of mixtures with an unknown number of components
@@ -474,6 +627,13 @@ Rink, J. et~al. (2005).
   endosomes.
 \newblock {\em Cell\/}, {\bf 122}(5), 735--749.
 
+\bibitem[Rosenfeld {\em et~al.}(2001)Rosenfeld, Moore, Zimmer, Alpizar-Foster,
+  Dai, Zarka, and Knoll]{Rosenfeld::2001}
+Rosenfeld, J.~L. et~al. (2001).
+\newblock Lysosome proteins are redistributed during expression of a
+  gtp-hydrolysis-defective rab5a.
+\newblock {\em Journal of cell science\/}, {\bf 114}(24), 4499--4508.
+
 \bibitem[Rousseau and Mengersen(2011)Rousseau and Mengersen]{Rousseau::2011}
 Rousseau, J. et~al. (2011).
 \newblock Asymptotic behaviour of the posterior distribution in overfitted
@@ -481,10 +641,26 @@ Rousseau, J. et~al. (2011).
 \newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
   Methodology)\/}, {\bf 73}(5), 689--710.
 
+\bibitem[Saitoh {\em et~al.}(2017)Saitoh, Maruyama, Yako, Kajita, Fujioka,
+  Ohba, Kasai, Sugama, Kon, Ishikawa, {\em et~al.}]{Saitoh::2017}
+Saitoh, S. et~al. (2017).
+\newblock Rab5-regulated endocytosis plays a crucial role in apical extrusion
+  of transformed cells.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
+  114}(12), E2327--E2336.
+
 \bibitem[Schwarz {\em et~al.}(1978)Schwarz {\em et~al.}]{Schwarz::1978}
 Schwarz, G. et~al. (1978).
 \newblock Estimating the dimension of a model.
 \newblock {\em The annals of statistics\/}, {\bf 6}(2), 461--464.
+
+\bibitem[Sheng {\em et~al.}(2014)Sheng, Li, Zou, Wang, Cao, Zhang, Huang, and
+  Tang]{Sheng::2014}
+Sheng, Y. et~al. (2014).
+\newblock Downregulation of mir-101-3p by hepatitis b virus promotes
+  proliferation and migration of hepatocellular carcinoma cells by targeting
+  rab5a.
+\newblock {\em Archives of virology\/}, {\bf 159}(9), 2397--2410.
 
 \bibitem[Siljee {\em et~al.}(2018)Siljee, Wang, Bernard, Ersoy, Zhang, Marley,
   Von~Zastrow, Reiter, and Vaisse]{Siljee:2018}
@@ -512,6 +688,13 @@ Stephens, M. (2000).
 \newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
   Methodology)\/}, {\bf 62}(4), 795--809.
 
+\bibitem[Stone {\em et~al.}(2007)Stone, Jia, Do~Heo, Meyer, and
+  Konan]{Stone::2007}
+Stone, M. et~al. (2007).
+\newblock Participation of rab5, an early endosome protein, in hepatitis c
+  virus rna replication machinery.
+\newblock {\em Journal of virology\/}, {\bf 81}(9), 4551--4563.
+
 \bibitem[Sullivan {\em et~al.}(2018)Sullivan, Winsnes, {\AA}kesson, Hjelmare,
   Wiking, Schutten, Campbell, Leifsson, Rhodes, Nordgren, {\em
   et~al.}]{Sullivan:2018}
@@ -533,6 +716,13 @@ Tak{\'a}ts, S. et~al. (2018).
 \newblock Non-canonical role of the snare protein ykt6 in
   autophagosome-lysosome fusion.
 \newblock {\em PLoS genetics\/}, {\bf 14}(4), e1007359.
+
+\bibitem[Takeda {\em et~al.}(2019)Takeda, Koseki, Takahashi, Miyoshi, Nishida,
+  Nishimura, Hata, Matsuda, Mizushima, Yamamoto, {\em et~al.}]{Takeda::2019}
+Takeda, M. et~al. (2019).
+\newblock Disruption of endolysosomal rab5/7 efficiently eliminates colorectal
+  cancer stem cells.
+\newblock {\em Cancer research\/}, pages canres--2192.
 
 \bibitem[Tan {\em et~al.}(2009)Tan, Dvinge, Christoforou, Bertone,
   Martinez~Arias, and Lilley]{Tan:2009}
@@ -560,6 +750,12 @@ Ting, L. et~al. (2011).
   proteomics.
 \newblock {\em Nature methods\/}, {\bf 8}(11), 937.
 
+\bibitem[Torres {\em et~al.}(2010)Torres, Mielgo, Barbero, Hsiao, Wilkins, and
+  Stupack]{Torres::2010}
+Torres, V.~A. et~al. (2010).
+\newblock Rab5 mediates caspase-8--promoted cell motility and metastasis.
+\newblock {\em Molecular biology of the cell\/}, {\bf 21}(2), 369--376.
+
 \bibitem[Trischler {\em et~al.}(1999)Trischler, Stoorvogel, and
   Ullrich]{Trischler::1999}
 Trischler, M. et~al. (1999).
@@ -573,6 +769,12 @@ Ueno, H. et~al. (2011).
   development by transporting fgf receptor.
 \newblock {\em Developmental cell\/}, {\bf 20}(1), 60--71.
 
+\bibitem[Verma {\em et~al.}(2017)Verma, Rastogi, and Mukhopadhyay]{Verma::2017}
+Verma, J.~K. et~al. (2017).
+\newblock Leishmania donovani resides in modified early endosomes by
+  upregulating rab5a expression via the downregulation of mir-494.
+\newblock {\em PLoS pathogens\/}, {\bf 13}(6), e1006459.
+
 \bibitem[Wendler {\em et~al.}(2010)Wendler, Gillingham, Sinka, Rosa-Ferreira,
   Gordon, Franch-Marro, Peden, Vincent, and Munro]{Wendler:2010}
 Wendler, F. et~al. (2010).
@@ -584,6 +786,19 @@ Wendler, F. et~al. (2010).
 Woodman, P.~G. (2000).
 \newblock Biogenesis of the sorting endosome: the role of rab5.
 \newblock {\em Traffic\/}, {\bf 1}(9), 695--701.
+
+\bibitem[Xiao {\em et~al.}(2017)Xiao, Yang, An, and Qi]{Xiao::2017}
+Xiao, Q. et~al. (2017).
+\newblock Microrna-100 suppresses human osteosarcoma cell proliferation and
+  chemo-resistance via znrf2.
+\newblock {\em Oncotarget\/}, {\bf 8}(21), 34678.
+
+\bibitem[Yang {\em et~al.}(2011)Yang, Yin, Tseng, Yang, Hsu, Lee, Horng, and
+  Chi]{Yang::2011}
+Yang, P.-S. et~al. (2011).
+\newblock Rab5a is associated with axillary lymph node metastasis in breast
+  cancer patients.
+\newblock {\em Cancer science\/}, {\bf 102}(12), 2172--2178.
 
 \bibitem[Yin {\em et~al.}(2005)Yin, de~Groot, Dekker, de~Jong, Klis, and
   de~Koster]{Yin:2005}
@@ -613,9 +828,30 @@ Yu, G. et~al. (2012).
 \newblock {\em Omics: a journal of integrative biology\/}, {\bf 16}(5),
   284--287.
 
+\bibitem[Yu {\em et~al.}(1999)Yu, Hui-Chen, Chen, Zou, Yan, Chun-Xiang, Wu-Ru,
+  and Li]{Yu::1999}
+Yu, L. et~al. (1999).
+\newblock Differential expression of rab5a in human lung adenocarcinoma cells
+  with different metastasis potential.
+\newblock {\em Clinical \& experimental metastasis\/}, {\bf 17}(3), 213--219.
+
 \bibitem[Zerial and McBride(2001)Zerial and McBride]{Zerial::2001}
 Zerial, M. et~al. (2001).
 \newblock Rab proteins as membrane organizers.
 \newblock {\em Nature reviews Molecular cell biology\/}, {\bf 2}(2), 107.
+
+\bibitem[Zhang {\em et~al.}(2016)Zhang, Guo, Zhao, Xu, Han, Li, and
+  Wang]{Zhang::2016}
+Zhang, X. et~al. (2016).
+\newblock The role of znrf2 in the growth of non-small cell lung cancer.
+\newblock {\em European review for medical and pharmacological sciences\/},
+  {\bf 20}, 4011--4017.
+
+\bibitem[Zhao {\em et~al.}(2010)Zhao, Liu, Wu, Zou, Wang, Ni, Chen, and
+  Fan]{Zhao::2010}
+Zhao, Z. et~al. (2010).
+\newblock Rab5a overexpression promoting ovarian cancer cell proliferation may
+  be associated with appl1-related epidermal growth factor signaling pathway.
+\newblock {\em Cancer science\/}, {\bf 101}(6), 1454--1462.
 
 \end{thebibliography}
