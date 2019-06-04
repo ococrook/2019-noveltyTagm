@@ -59,6 +59,10 @@
 \citation{Jean_Beltran:2016}
 \citation{Thul:2017}
 \citation{Sullivan:2018}
+\citation{Gatto:2014b}
+\citation{Breckels:2016}
+\citation{Breckels:2013}
+\citation{Crook:2018}
 \citation{Dunkley:2004}
 \citation{Dunkley:2006}
 \citation{Mulvey:2017}
@@ -87,39 +91,37 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}Methods}{4}{section.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Datasets}{4}{subsection.2.1}}
 \citation{Crook:2018}
-\citation{Crook:2018}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Summary of computational methods for spatial proteomics datasets.\relax }}{5}{table.caption.2}}
+\newlabel{table:methods}{{1}{5}{Summary of computational methods for spatial proteomics datasets.\relax }{table.caption.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Model}{5}{subsection.2.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Spatial proteomics mixture model}{5}{subsubsection.2.2.1}}
 \citation{Crook:2018}
-\citation{Rousseau::2011}
 \citation{Crook:2018}
-\citation{fritsch::2009}
-\citation{fritsch::2009}
+\citation{Rousseau::2011}
 \newlabel{equation::tammeq}{{2}{6}{Spatial proteomics mixture model}{equation.2.2}{}}
 \newlabel{equation::tammepseq}{{3}{6}{Spatial proteomics mixture model}{equation.2.3}{}}
 \newlabel{equation::tammepseq2}{{4}{6}{Spatial proteomics mixture model}{equation.2.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Bayesian inference and convergence}{6}{subsubsection.2.2.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Visualising patterns in uncertainty}{6}{subsubsection.2.2.3}}
+\citation{Crook:2018}
+\citation{fritsch::2009}
+\citation{fritsch::2009}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Bayesian inference and convergence}{7}{subsubsection.2.2.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Visualising patterns in uncertainty}{7}{subsubsection.2.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4}Uncertainty quantification}{7}{subsubsection.2.2.4}}
+\newlabel{equation::discoveryprob}{{7}{7}{Uncertainty quantification}{equation.2.7}{}}
 \citation{hyper}
 \citation{Mulvey:2017}
 \citation{DC:2018}
 \citation{Thul:2017}
 \citation{Sullivan:2018}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4}Uncertainty Quantification}{7}{subsubsection.2.2.4}}
-\newlabel{equation::discoveryprob}{{7}{7}{Uncertainty Quantification}{equation.2.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Validating computational approaches}{7}{subsection.2.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Artificial masking of annotations to recover experimental design}{7}{subsubsection.2.3.1}}
 \citation{FDR:1995}
 \citation{Ashburner:2000}
 \citation{Yu:2012}
-\citation{Gatto:2014b}
-\citation{Breckels:2016}
-\citation{Breckels:2013}
-\citation{Crook:2018}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.5}Applying the model in practise}{8}{subsubsection.2.2.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Validating computational approaches}{8}{subsection.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Artificial masking of annotations to recover experimental design}{8}{subsubsection.2.3.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}The Human Protein Atlas}{8}{subsubsection.2.3.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Gene Ontology (GO) term enrichment}{8}{subsubsection.2.3.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Summary of computational methods for spatial proteomics datasets.\relax }}{8}{table.caption.2}}
-\newlabel{table:methods}{{1}{8}{Summary of computational methods for spatial proteomics datasets.\relax }{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4}Robustness across multiple MS-based spatial proteomics datasets}{8}{subsubsection.2.3.4}}
 \citation{hyper}
 \citation{Thul:2017}
 \citation{DC:2018}
@@ -128,12 +130,13 @@
 \citation{Sullivan:2018}
 \citation{Thul:2017}
 \citation{DC:2018}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{9}{section.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Validating experimental design in \textit  {hyper}LOPIT}{9}{subsection.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Pluripotent mESCs (E14TG2a)}{9}{subsubsection.3.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}The human bone osteosarcoma (U-2 OS) cells}{9}{subsubsection.3.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a,c) PCA plots of the \textit  {hyper}LOPIT mESC data and the \textit  {hyper}LOPIT U-2 OS cancer cell line data. The points are coloured according to the organelle or proposed new phenotype and are scaled according to the discovery probability. The PCA plots reveal clear clustering structure in the data and confidently identified new phenotypes. (b,d) Heatmaps of the posterior similarity matrix derived from the mESC data and the U-2 OS cell line data demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than 0.95 ($0.5$ for the U-2 OS dataset to reduce the number of visualised proteins.).\relax }}{11}{figure.caption.3}}
-\newlabel{figure:mouse}{{2}{11}{(a,c) PCA plots of the \textit {hyper}LOPIT mESC data and the \textit {hyper}LOPIT U-2 OS cancer cell line data. The points are coloured according to the organelle or proposed new phenotype and are scaled according to the discovery probability. The PCA plots reveal clear clustering structure in the data and confidently identified new phenotypes. (b,d) Heatmaps of the posterior similarity matrix derived from the mESC data and the U-2 OS cell line data demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than 0.95 ($0.5$ for the U-2 OS dataset to reduce the number of visualised proteins.).\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{10}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Validating experimental design in \textit  {hyper}LOPIT}{10}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Pluripotent mESCs (E14TG2a)}{10}{subsubsection.3.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}The human bone osteosarcoma (U-2 OS) cells}{10}{subsubsection.3.1.2}}
+\newlabel{section:u2os}{{3.1.2}{10}{The human bone osteosarcoma (U-2 OS) cells}{subsubsection.3.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a,c) PCA plots of the \textit  {hyper}LOPIT mESC data and the \textit  {hyper}LOPIT U-2 OS cancer cell line data. The points are coloured according to the organelle or proposed new phenotype and are scaled according to the discovery probability. The PCA plots reveal clear clustering structure in the data and confidently identified new phenotypes. (b,d) Heatmaps of the posterior similarity matrix derived from the mESC data and the U-2 OS cell line data demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than 0.95 ($0.5$ for the U-2 OS dataset to reduce the number of visualised proteins.)\relax }}{11}{figure.caption.3}}
+\newlabel{figure:mouse}{{2}{11}{(a,c) PCA plots of the \textit {hyper}LOPIT mESC data and the \textit {hyper}LOPIT U-2 OS cancer cell line data. The points are coloured according to the organelle or proposed new phenotype and are scaled according to the discovery probability. The PCA plots reveal clear clustering structure in the data and confidently identified new phenotypes. (b,d) Heatmaps of the posterior similarity matrix derived from the mESC data and the U-2 OS cell line data demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than 0.95 ($0.5$ for the U-2 OS dataset to reduce the number of visualised proteins.)\relax }{figure.caption.3}{}}
 \citation{DC:2018}
 \citation{Thul:2017}
 \citation{DC:2018}
@@ -292,6 +295,7 @@
 \citation{Curran::2014}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces (a) PCA of U-2 OS \textit  {hyper}LOPIT data with pointer scaled to localisation probability and outliers shrunk. Points are coloured according to their most probable organelle. (b) Immunofluorescence images and subcellular localisation annotation taken from the HPA database (https://www.proteinatlas.org/humanproteome/cell) for the proteins with UniProt accessions P61020, O15498, Q9NZN3, and Q96L93. The nucleus is stained in blue; microtubules in red, and the antibody staining targeting the protein in green. (c) A barplot representing the number of proteins allocated before and after re-annotation of the endosomal class. (d) Violin plots of full probability distribution of proteins to organelles, where each violin plot is for a single protein. \relax }}{26}{figure.caption.8}}
 \newlabel{figure:u2os}{{7}{26}{(a) PCA of U-2 OS \textit {hyper}LOPIT data with pointer scaled to localisation probability and outliers shrunk. Points are coloured according to their most probable organelle. (b) Immunofluorescence images and subcellular localisation annotation taken from the HPA database (https://www.proteinatlas.org/humanproteome/cell) for the proteins with UniProt accessions P61020, O15498, Q9NZN3, and Q96L93. The nucleus is stained in blue; microtubules in red, and the antibody staining targeting the protein in green. (c) A barplot representing the number of proteins allocated before and after re-annotation of the endosomal class. (d) Violin plots of full probability distribution of proteins to organelles, where each violin plot is for a single protein. \relax }{figure.caption.8}{}}
+\citation{mclust}
 \citation{Bioconductor::2004}
 \citation{Huber:2015}
 \citation{MSnbase:2012}
@@ -303,10 +307,11 @@
 \citation{fritsch::2009}
 \citation{rand::1971}
 \citation{Hubert::1985}
-\citation{fritsch::2009}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Appendix}{28}{section.7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Handling label switching}{28}{subsection.7.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Summarising posterior similarity matrices}{28}{subsection.7.2}}
+\citation{fritsch::2009}
+\citation{Crook:2018}
 \citation{Crook:2018}
 \citation{Crook:2018}
 \citation{Gelman:1992}
@@ -314,8 +319,8 @@
 \citation{Hirst:2018}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Details of MCMC}{29}{subsection.7.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Summary of convergence diagnostics}{29}{subsection.7.4}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces A table reporting convergence diagnostics for MCMC analysis\relax }}{29}{table.caption.9}}
-\newlabel{table:mcmcconvergence}{{2}{29}{A table reporting convergence diagnostics for MCMC analysis\relax }{table.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces A table reporting convergence diagnostics for MCMC analysis\relax }}{30}{table.caption.9}}
+\newlabel{table:mcmcconvergence}{{2}{30}{A table reporting convergence diagnostics for MCMC analysis\relax }{table.caption.9}{}}
 \bibstyle{natbib}
 \bibdata{BayesProt}
 \bibcite{antoniak::1974}{{1}{1974}{{Antoniak}}{{Antoniak}}}
@@ -354,95 +359,96 @@
 \bibcite{Farkhondeh::2015}{{34}{2015}{{Farkhondeh {\em  et~al.}}}{{Farkhondeh, Niwa, Takei, and Hirokawa}}}
 \bibcite{ferguson::1974}{{35}{1974}{{Ferguson}}{{Ferguson}}}
 \bibcite{Foster:2006}{{36}{2006}{{Foster {\em  et~al.}}}{{Foster, de~Hoog, Zhang, Zhang, Xie, Mootha, and Mann}}}
-\bibcite{fritsch::2009}{{37}{2009}{{Fritsch and Ickstadt}}{{Fritsch and Ickstadt}}}
-\bibcite{Frittoli::2014}{{38}{2014}{{Frittoli {\em  et~al.}}}{{Frittoli, Palamidessi, Marighetti, Confalonieri, Bianchi, Malinverno, Mazzarol, Viale, Martin-Padura, Garr{\'e}, {\em  et~al.}}}}
-\bibcite{Fuchs::2007}{{39}{2007}{{Fuchs {\em  et~al.}}}{{Fuchs, Haas, Spooner, Yoshimura, Lord, and Barr}}}
-\bibcite{Fukasawa::2004}{{40}{2004}{{Fukasawa {\em  et~al.}}}{{Fukasawa, Varlamov, Eng, S{\"o}llner, and Rothman}}}
-\bibcite{Fukui::2007}{{41}{2007}{{Fukui {\em  et~al.}}}{{Fukui, Tamura, Wada, Kamada, Igura, Kiso, and Hayashi}}}
-\bibcite{MSnbase:2012}{{42}{2012}{{Gatto and Lilley}}{{Gatto and Lilley}}}
-\bibcite{Gatto:2010}{{43}{2010}{{Gatto {\em  et~al.}}}{{Gatto, Vizca{\'\i }no, Hermjakob, Huber, and Lilley}}}
-\bibcite{Gatto:2014b}{{44}{2014a}{{Gatto {\em  et~al.}}}{{Gatto, Breckels, Burger, Nightingale, Groen, Campbell, Mulvey, Christoforou, Ferro, and Lilley}}}
-\bibcite{pRoloc:2014}{{45}{2014b}{{Gatto {\em  et~al.}}}{{Gatto, Breckels, Wieczorek, Burger, and Lilley}}}
-\bibcite{Gatto:2018}{{46}{2018}{{Gatto {\em  et~al.}}}{{Gatto, Breckels, and Lilley}}}
-\bibcite{Gautreau::2014}{{47}{2014}{{Gautreau {\em  et~al.}}}{{Gautreau, Oguievetskaia, and Ungermann}}}
-\bibcite{DC:2018}{{48}{2019}{{Geladaki {\em  et~al.}}}{{Geladaki, Britovsek, Breckels, Smith, Mulvey, Crook, Gatto, and Lilley}}}
-\bibcite{Gelman:1992}{{49}{1992}{{Gelman and Rubin}}{{Gelman and Rubin}}}
-\bibcite{Bioconductor::2004}{{50}{2004}{{Gentleman {\em  et~al.}}}{{Gentleman, Carey, Bates, Bolstad, Dettling, Dudoit, Ellis, Gautier, Ge, Gentry, {\em  et~al.}}}}
-\bibcite{George::2007}{{51}{2007}{{George {\em  et~al.}}}{{George, Ying, Rainey, Solomon, Parikh, Gao, Band, and Band}}}
-\bibcite{Gibson:2009}{{52}{2009}{{Gibson}}{{Gibson}}}
-\bibcite{Groen:2014}{{53}{2014}{{Groen {\em  et~al.}}}{{Groen, Sancho-Andrés, Breckels, Gatto, Aniento, and Lilley}}}
-\bibcite{Haas::2007}{{54}{2007}{{Haas {\em  et~al.}}}{{Haas, Yoshimura, Stephens, Preisinger, Fuchs, and Barr}}}
-\bibcite{Henmi::2016}{{55}{2016}{{Henmi {\em  et~al.}}}{{Henmi, Oe, Kono, Taguchi, Takei, and Tanabe}}}
-\bibcite{Hirst:2018}{{56}{2018}{{Hirst {\em  et~al.}}}{{Hirst, Itzhak, Antrobus, Borner, and Robinson}}}
-\bibcite{Hoepfner:2005}{{57}{2005}{{Hoepfner {\em  et~al.}}}{{Hoepfner, Severin, Cabezas, Habermann, Runge, Gillooly, Stenmark, and Zerial}}}
-\bibcite{Hoxhaj::2012}{{58}{2012}{{Hoxhaj {\em  et~al.}}}{{Hoxhaj, Najafov, Toth, Campbell, Prescott, and MacKintosh}}}
-\bibcite{Hoxhaj:2016}{{59}{2016}{{Hoxhaj {\em  et~al.}}}{{Hoxhaj, Caddye, Najafov, Houde, Johnson, Dissanayake, Toth, Campbell, Prescott, and MacKintosh}}}
-\bibcite{Huber:2015}{{60}{2015}{{Huber {\em  et~al.}}}{{Huber, Carey, Gentleman, Anders, Carlson, Carvalho, Bravo, Davis, Gatto, Girke, {\em  et~al.}}}}
-\bibcite{Hubert::1985}{{61}{1985}{{Hubert and Arabie}}{{Hubert and Arabie}}}
-\bibcite{Huh:2003}{{62}{2003}{{Huh {\em  et~al.}}}{{Huh, Falvo, Gerke, Carroll, Howson, Weissman, and O'shea}}}
-\bibcite{Igarashi::2017}{{63}{2017}{{Igarashi {\em  et~al.}}}{{Igarashi, Araki, Yokobori, Altan, Yamanaka, Ishii, Tsukagoshi, Watanabe, Kubo, Handa, {\em  et~al.}}}}
-\bibcite{Inadome:2005}{{64}{2005}{{Inadome {\em  et~al.}}}{{Inadome, Noda, Adachi, and Yoda}}}
-\bibcite{Itzhak:2016}{{65}{2016}{{Itzhak {\em  et~al.}}}{{Itzhak, Tyanova, Cox, and Borner}}}
-\bibcite{Itzhak::2017}{{66}{2017}{{Itzhak {\em  et~al.}}}{{Itzhak, Davies, Tyanova, Mishra, Williamson, Antrobus, Cox, Weekes, and Borner}}}
-\bibcite{Kau:2004}{{67}{2004}{{Kau {\em  et~al.}}}{{Kau, Way, and Silver}}}
-\bibcite{Kirk:2012}{{68}{2012}{{Kirk {\em  et~al.}}}{{Kirk, Griffin, Savage, Ghahramani, and Wild}}}
-\bibcite{kristensen:2014}{{69}{2014}{{Kristensen and Foster}}{{Kristensen and Foster}}}
-\bibcite{kristensen:2012}{{70}{2012}{{Kristensen {\em  et~al.}}}{{Kristensen, Gsponer, and Foster}}}
-\bibcite{Lanzetti::2000}{{71}{2000}{{Lanzetti {\em  et~al.}}}{{Lanzetti, Rybin, Malabarba, Christoforidis, Scita, Zerial, and Di~Fiore}}}
-\bibcite{Laurila:2009}{{72}{2009}{{Laurila and Vihinen}}{{Laurila and Vihinen}}}
-\bibcite{Law::2017}{{73}{2017}{{Law {\em  et~al.}}}{{Law, Seo, Wang, DeLeon, Bolis, Brown, Zong, Du, and Rocheleau}}}
-\bibcite{Linnemannstons::2018}{{74}{2018}{{Linnemannst{\"o}ns {\em  et~al.}}}{{Linnemannst{\"o}ns, Witte, Kittel, Danieli, M{\"u}ller, Nitsch, Honemann-Capito, Grawe, Wodarz, Gross, {\em  et~al.}}}}
-\bibcite{Liu::2015}{{75}{2015}{{Liu {\em  et~al.}}}{{Liu, Su, Li, Yuan, Mo, Li, He, Ma, and Han}}}
-\bibcite{Liu::2011}{{76}{2011}{{Liu {\em  et~al.}}}{{Liu, Chen, Zheng, Shi, and Li}}}
-\bibcite{Madan::2008}{{77}{2008}{{Madan {\em  et~al.}}}{{Madan, Krishnamurthy, and Mukhopadhyay}}}
-\bibcite{Martinu::2002}{{78}{2002}{{Martinu {\em  et~al.}}}{{Martinu, Santiago-Walker, Qi, and Chou}}}
-\bibcite{Matsui::2018}{{79}{2018}{{Matsui {\em  et~al.}}}{{Matsui, Jiang, Nakano, Sakamaki, Yamamoto, and Mizushima}}}
-\bibcite{Mcalister::2014}{{80}{2014}{{McAlister {\em  et~al.}}}{{McAlister, Nusinow, Jedrychowski, Wühr, Huttlin, Erickson, Rad, Haas, and Gygi}}}
-\bibcite{Meiringer::2008}{{81}{2008}{{Meiringer {\em  et~al.}}}{{Meiringer, Auffarth, Hou, and Ungermann}}}
-\bibcite{Mendoza::2013}{{82}{2013}{{Mendoza {\em  et~al.}}}{{Mendoza, Ortiz, D{\'\i }az, Quest, Leyton, Stupack, and Torres}}}
-\bibcite{Mulvey:2017}{{83}{2017}{{Mulvey {\em  et~al.}}}{{Mulvey, Breckels, Geladaki, Britov{\v {s}}ek, Nightingale, Christoforou, Elzek, Deery, Gatto, and Lilley}}}
-\bibcite{Naslavsky::2006}{{84}{2006}{{Naslavsky {\em  et~al.}}}{{Naslavsky, Rahajeng, Sharma, Jovic, and Caplan}}}
-\bibcite{Naslavsky::2009}{{85}{2009}{{Naslavsky {\em  et~al.}}}{{Naslavsky, McKenzie, Altan-Bonnet, Sheff, and Caplan}}}
-\bibcite{Nightingale::2019}{{86}{2019}{{Nightingale {\em  et~al.}}}{{Nightingale, Geladaki, Breckels, Oliver, and Lilley}}}
-\bibcite{Orre:2019}{{87}{2019}{{Orre {\em  et~al.}}}{{Orre, Vesterlund, Pan, Arslan, Zhu, Woodbridge, Frings, Fredlund, and Lehtiö}}}
-\bibcite{Otte:2001}{{88}{2001}{{Otte {\em  et~al.}}}{{Otte, Belden, Heidtman, Liu, Jensen, and Barlowe}}}
-\bibcite{Palamidessi::2013}{{89}{2013}{{Palamidessi {\em  et~al.}}}{{Palamidessi, Frittoli, Ducano, Offenhauser, Sigismund, Kajiho, Parazzoli, Oldani, Gobbi, Serini, {\em  et~al.}}}}
-\bibcite{Pardo:2004}{{90}{2004}{{Pardo {\em  et~al.}}}{{Pardo, Monteoliva, Vazquez, Mart{\'\i }nez, Molero, Nombela, and Gil}}}
-\bibcite{rand::1971}{{91}{1971}{{Rand}}{{Rand}}}
-\bibcite{Rauma::1999}{{92}{1999}{{Rauma {\em  et~al.}}}{{Rauma, Tuukkanen, Bergelson, Denning, and Hautala}}}
-\bibcite{Richardson::1997}{{93}{1997}{{Richardson and Green}}{{Richardson and Green}}}
-\bibcite{Rink::2005}{{94}{2005}{{Rink {\em  et~al.}}}{{Rink, Ghigo, Kalaidzidis, and Zerial}}}
-\bibcite{Rosenfeld::2001}{{95}{2001}{{Rosenfeld {\em  et~al.}}}{{Rosenfeld, Moore, Zimmer, Alpizar-Foster, Dai, Zarka, and Knoll}}}
-\bibcite{Rousseau::2011}{{96}{2011}{{Rousseau and Mengersen}}{{Rousseau and Mengersen}}}
-\bibcite{Saitoh::2017}{{97}{2017}{{Saitoh {\em  et~al.}}}{{Saitoh, Maruyama, Yako, Kajita, Fujioka, Ohba, Kasai, Sugama, Kon, Ishikawa, {\em  et~al.}}}}
-\bibcite{Schwarz::1978}{{98}{1978}{{Schwarz {\em  et~al.}}}{{Schwarz {\em  et~al.}}}}
-\bibcite{Sheng::2014}{{99}{2014}{{Sheng {\em  et~al.}}}{{Sheng, Li, Zou, Wang, Cao, Zhang, Huang, and Tang}}}
-\bibcite{Siljee:2018}{{100}{2018}{{Siljee {\em  et~al.}}}{{Siljee, Wang, Bernard, Ersoy, Zhang, Marley, Von~Zastrow, Reiter, and Vaisse}}}
-\bibcite{Simonsen::1998}{{101}{1998}{{Simonsen {\em  et~al.}}}{{Simonsen, Lippe, Christoforidis, Gaullier, Brech, Callaghan, Toh, Murphy, Zerial, and Stenmark}}}
-\bibcite{Skjeldal::2012}{{102}{2012}{{Skjeldal {\em  et~al.}}}{{Skjeldal, Strunze, Bergeland, Walseng, Gregers, and Bakke}}}
-\bibcite{Stephens:2000}{{103}{2000}{{Stephens}}{{Stephens}}}
-\bibcite{Stone::2007}{{104}{2007}{{Stone {\em  et~al.}}}{{Stone, Jia, Do~Heo, Meyer, and Konan}}}
-\bibcite{Sullivan:2018}{{105}{2018}{{Sullivan {\em  et~al.}}}{{Sullivan, Winsnes, {\r A}kesson, Hjelmare, Wiking, Schutten, Campbell, Leifsson, Rhodes, Nordgren, {\em  et~al.}}}}
-\bibcite{Tai:2004}{{106}{2004}{{Tai {\em  et~al.}}}{{Tai, Lu, Wang, Tang, Goud, Johannes, and Hong}}}
-\bibcite{Takats::2018}{{107}{2018}{{Tak{\'a}ts {\em  et~al.}}}{{Tak{\'a}ts, Glatz, Szenci, Boda, Horv{\'a}th, Heged{\H {u}}s, Kov{\'a}cs, and Juh{\'a}sz}}}
-\bibcite{Takeda::2019}{{108}{2019}{{Takeda {\em  et~al.}}}{{Takeda, Koseki, Takahashi, Miyoshi, Nishida, Nishimura, Hata, Matsuda, Mizushima, Yamamoto, {\em  et~al.}}}}
-\bibcite{Tan:2009}{{109}{2009}{{Tan {\em  et~al.}}}{{Tan, Dvinge, Christoforou, Bertone, Martinez~Arias, and Lilley}}}
-\bibcite{Thompson:2003}{{110}{2003}{{Thompson {\em  et~al.}}}{{Thompson, Sch{\"a}fer, Kuhn, Kienle, Schwarz, Schmidt, Neumann, and Hamon}}}
-\bibcite{Thul:2017}{{111}{2017}{{Thul {\em  et~al.}}}{{Thul, {\r A}kesson, Wiking, Mahdessian, Geladaki, Blal, Alm, Asplund, Bj{\"o}rk, Breckels, {\em  et~al.}}}}
-\bibcite{Ting:2011}{{112}{2011}{{Ting {\em  et~al.}}}{{Ting, Rad, Gygi, and Haas}}}
-\bibcite{Torres::2010}{{113}{2010}{{Torres {\em  et~al.}}}{{Torres, Mielgo, Barbero, Hsiao, Wilkins, and Stupack}}}
-\bibcite{Trischler::1999}{{114}{1999}{{Trischler {\em  et~al.}}}{{Trischler, Stoorvogel, and Ullrich}}}
-\bibcite{Ueno::2011}{{115}{2011}{{Ueno {\em  et~al.}}}{{Ueno, Huang, Tanaka, and Hirokawa}}}
-\bibcite{Verma::2017}{{116}{2017}{{Verma {\em  et~al.}}}{{Verma, Rastogi, and Mukhopadhyay}}}
-\bibcite{Wendler:2010}{{117}{2010}{{Wendler {\em  et~al.}}}{{Wendler, Gillingham, Sinka, Rosa-Ferreira, Gordon, Franch-Marro, Peden, Vincent, and Munro}}}
-\bibcite{Woodman::2000}{{118}{2000}{{Woodman}}{{Woodman}}}
-\bibcite{Xiao::2017}{{119}{2017}{{Xiao {\em  et~al.}}}{{Xiao, Yang, An, and Qi}}}
-\bibcite{Yang::2011}{{120}{2011}{{Yang {\em  et~al.}}}{{Yang, Yin, Tseng, Yang, Hsu, Lee, Horng, and Chi}}}
-\bibcite{Yin:2005}{{121}{2005}{{Yin {\em  et~al.}}}{{Yin, de~Groot, Dekker, de~Jong, Klis, and de~Koster}}}
-\bibcite{Yofe:2016}{{122}{2016}{{Yofe {\em  et~al.}}}{{Yofe, Weill, Meurer, Chuartzman, Zalckvar, Goldman, Ben-Dor, Sch{\"u}tze, Wiedemann, Knop, {\em  et~al.}}}}
-\bibcite{Yong::2019}{{123}{2019}{{Yong and Tang}}{{Yong and Tang}}}
-\bibcite{Yu:2012}{{124}{2012}{{Yu {\em  et~al.}}}{{Yu, Wang, Han, and He}}}
-\bibcite{Yu::1999}{{125}{1999}{{Yu {\em  et~al.}}}{{Yu, Hui-Chen, Chen, Zou, Yan, Chun-Xiang, Wu-Ru, and Li}}}
-\bibcite{Zerial::2001}{{126}{2001}{{Zerial and McBride}}{{Zerial and McBride}}}
-\bibcite{Zhang::2016}{{127}{2016}{{Zhang {\em  et~al.}}}{{Zhang, Guo, Zhao, Xu, Han, Li, and Wang}}}
-\bibcite{Zhao::2010}{{128}{2010}{{Zhao {\em  et~al.}}}{{Zhao, Liu, Wu, Zou, Wang, Ni, Chen, and Fan}}}
+\bibcite{mclust}{{37}{2012}{{Fraley {\em  et~al.}}}{{Fraley, Raftery, Murphy, and Scrucca}}}
+\bibcite{fritsch::2009}{{38}{2009}{{Fritsch and Ickstadt}}{{Fritsch and Ickstadt}}}
+\bibcite{Frittoli::2014}{{39}{2014}{{Frittoli {\em  et~al.}}}{{Frittoli, Palamidessi, Marighetti, Confalonieri, Bianchi, Malinverno, Mazzarol, Viale, Martin-Padura, Garr{\'e}, {\em  et~al.}}}}
+\bibcite{Fuchs::2007}{{40}{2007}{{Fuchs {\em  et~al.}}}{{Fuchs, Haas, Spooner, Yoshimura, Lord, and Barr}}}
+\bibcite{Fukasawa::2004}{{41}{2004}{{Fukasawa {\em  et~al.}}}{{Fukasawa, Varlamov, Eng, S{\"o}llner, and Rothman}}}
+\bibcite{Fukui::2007}{{42}{2007}{{Fukui {\em  et~al.}}}{{Fukui, Tamura, Wada, Kamada, Igura, Kiso, and Hayashi}}}
+\bibcite{MSnbase:2012}{{43}{2012}{{Gatto and Lilley}}{{Gatto and Lilley}}}
+\bibcite{Gatto:2010}{{44}{2010}{{Gatto {\em  et~al.}}}{{Gatto, Vizca{\'\i }no, Hermjakob, Huber, and Lilley}}}
+\bibcite{Gatto:2014b}{{45}{2014a}{{Gatto {\em  et~al.}}}{{Gatto, Breckels, Burger, Nightingale, Groen, Campbell, Mulvey, Christoforou, Ferro, and Lilley}}}
+\bibcite{pRoloc:2014}{{46}{2014b}{{Gatto {\em  et~al.}}}{{Gatto, Breckels, Wieczorek, Burger, and Lilley}}}
+\bibcite{Gatto:2018}{{47}{2018}{{Gatto {\em  et~al.}}}{{Gatto, Breckels, and Lilley}}}
+\bibcite{Gautreau::2014}{{48}{2014}{{Gautreau {\em  et~al.}}}{{Gautreau, Oguievetskaia, and Ungermann}}}
+\bibcite{DC:2018}{{49}{2019}{{Geladaki {\em  et~al.}}}{{Geladaki, Britovsek, Breckels, Smith, Mulvey, Crook, Gatto, and Lilley}}}
+\bibcite{Gelman:1992}{{50}{1992}{{Gelman and Rubin}}{{Gelman and Rubin}}}
+\bibcite{Bioconductor::2004}{{51}{2004}{{Gentleman {\em  et~al.}}}{{Gentleman, Carey, Bates, Bolstad, Dettling, Dudoit, Ellis, Gautier, Ge, Gentry, {\em  et~al.}}}}
+\bibcite{George::2007}{{52}{2007}{{George {\em  et~al.}}}{{George, Ying, Rainey, Solomon, Parikh, Gao, Band, and Band}}}
+\bibcite{Gibson:2009}{{53}{2009}{{Gibson}}{{Gibson}}}
+\bibcite{Groen:2014}{{54}{2014}{{Groen {\em  et~al.}}}{{Groen, Sancho-Andrés, Breckels, Gatto, Aniento, and Lilley}}}
+\bibcite{Haas::2007}{{55}{2007}{{Haas {\em  et~al.}}}{{Haas, Yoshimura, Stephens, Preisinger, Fuchs, and Barr}}}
+\bibcite{Henmi::2016}{{56}{2016}{{Henmi {\em  et~al.}}}{{Henmi, Oe, Kono, Taguchi, Takei, and Tanabe}}}
+\bibcite{Hirst:2018}{{57}{2018}{{Hirst {\em  et~al.}}}{{Hirst, Itzhak, Antrobus, Borner, and Robinson}}}
+\bibcite{Hoepfner:2005}{{58}{2005}{{Hoepfner {\em  et~al.}}}{{Hoepfner, Severin, Cabezas, Habermann, Runge, Gillooly, Stenmark, and Zerial}}}
+\bibcite{Hoxhaj::2012}{{59}{2012}{{Hoxhaj {\em  et~al.}}}{{Hoxhaj, Najafov, Toth, Campbell, Prescott, and MacKintosh}}}
+\bibcite{Hoxhaj:2016}{{60}{2016}{{Hoxhaj {\em  et~al.}}}{{Hoxhaj, Caddye, Najafov, Houde, Johnson, Dissanayake, Toth, Campbell, Prescott, and MacKintosh}}}
+\bibcite{Huber:2015}{{61}{2015}{{Huber {\em  et~al.}}}{{Huber, Carey, Gentleman, Anders, Carlson, Carvalho, Bravo, Davis, Gatto, Girke, {\em  et~al.}}}}
+\bibcite{Hubert::1985}{{62}{1985}{{Hubert and Arabie}}{{Hubert and Arabie}}}
+\bibcite{Huh:2003}{{63}{2003}{{Huh {\em  et~al.}}}{{Huh, Falvo, Gerke, Carroll, Howson, Weissman, and O'shea}}}
+\bibcite{Igarashi::2017}{{64}{2017}{{Igarashi {\em  et~al.}}}{{Igarashi, Araki, Yokobori, Altan, Yamanaka, Ishii, Tsukagoshi, Watanabe, Kubo, Handa, {\em  et~al.}}}}
+\bibcite{Inadome:2005}{{65}{2005}{{Inadome {\em  et~al.}}}{{Inadome, Noda, Adachi, and Yoda}}}
+\bibcite{Itzhak:2016}{{66}{2016}{{Itzhak {\em  et~al.}}}{{Itzhak, Tyanova, Cox, and Borner}}}
+\bibcite{Itzhak::2017}{{67}{2017}{{Itzhak {\em  et~al.}}}{{Itzhak, Davies, Tyanova, Mishra, Williamson, Antrobus, Cox, Weekes, and Borner}}}
+\bibcite{Kau:2004}{{68}{2004}{{Kau {\em  et~al.}}}{{Kau, Way, and Silver}}}
+\bibcite{Kirk:2012}{{69}{2012}{{Kirk {\em  et~al.}}}{{Kirk, Griffin, Savage, Ghahramani, and Wild}}}
+\bibcite{kristensen:2014}{{70}{2014}{{Kristensen and Foster}}{{Kristensen and Foster}}}
+\bibcite{kristensen:2012}{{71}{2012}{{Kristensen {\em  et~al.}}}{{Kristensen, Gsponer, and Foster}}}
+\bibcite{Lanzetti::2000}{{72}{2000}{{Lanzetti {\em  et~al.}}}{{Lanzetti, Rybin, Malabarba, Christoforidis, Scita, Zerial, and Di~Fiore}}}
+\bibcite{Laurila:2009}{{73}{2009}{{Laurila and Vihinen}}{{Laurila and Vihinen}}}
+\bibcite{Law::2017}{{74}{2017}{{Law {\em  et~al.}}}{{Law, Seo, Wang, DeLeon, Bolis, Brown, Zong, Du, and Rocheleau}}}
+\bibcite{Linnemannstons::2018}{{75}{2018}{{Linnemannst{\"o}ns {\em  et~al.}}}{{Linnemannst{\"o}ns, Witte, Kittel, Danieli, M{\"u}ller, Nitsch, Honemann-Capito, Grawe, Wodarz, Gross, {\em  et~al.}}}}
+\bibcite{Liu::2015}{{76}{2015}{{Liu {\em  et~al.}}}{{Liu, Su, Li, Yuan, Mo, Li, He, Ma, and Han}}}
+\bibcite{Liu::2011}{{77}{2011}{{Liu {\em  et~al.}}}{{Liu, Chen, Zheng, Shi, and Li}}}
+\bibcite{Madan::2008}{{78}{2008}{{Madan {\em  et~al.}}}{{Madan, Krishnamurthy, and Mukhopadhyay}}}
+\bibcite{Martinu::2002}{{79}{2002}{{Martinu {\em  et~al.}}}{{Martinu, Santiago-Walker, Qi, and Chou}}}
+\bibcite{Matsui::2018}{{80}{2018}{{Matsui {\em  et~al.}}}{{Matsui, Jiang, Nakano, Sakamaki, Yamamoto, and Mizushima}}}
+\bibcite{Mcalister::2014}{{81}{2014}{{McAlister {\em  et~al.}}}{{McAlister, Nusinow, Jedrychowski, Wühr, Huttlin, Erickson, Rad, Haas, and Gygi}}}
+\bibcite{Meiringer::2008}{{82}{2008}{{Meiringer {\em  et~al.}}}{{Meiringer, Auffarth, Hou, and Ungermann}}}
+\bibcite{Mendoza::2013}{{83}{2013}{{Mendoza {\em  et~al.}}}{{Mendoza, Ortiz, D{\'\i }az, Quest, Leyton, Stupack, and Torres}}}
+\bibcite{Mulvey:2017}{{84}{2017}{{Mulvey {\em  et~al.}}}{{Mulvey, Breckels, Geladaki, Britov{\v {s}}ek, Nightingale, Christoforou, Elzek, Deery, Gatto, and Lilley}}}
+\bibcite{Naslavsky::2006}{{85}{2006}{{Naslavsky {\em  et~al.}}}{{Naslavsky, Rahajeng, Sharma, Jovic, and Caplan}}}
+\bibcite{Naslavsky::2009}{{86}{2009}{{Naslavsky {\em  et~al.}}}{{Naslavsky, McKenzie, Altan-Bonnet, Sheff, and Caplan}}}
+\bibcite{Nightingale::2019}{{87}{2019}{{Nightingale {\em  et~al.}}}{{Nightingale, Geladaki, Breckels, Oliver, and Lilley}}}
+\bibcite{Orre:2019}{{88}{2019}{{Orre {\em  et~al.}}}{{Orre, Vesterlund, Pan, Arslan, Zhu, Woodbridge, Frings, Fredlund, and Lehtiö}}}
+\bibcite{Otte:2001}{{89}{2001}{{Otte {\em  et~al.}}}{{Otte, Belden, Heidtman, Liu, Jensen, and Barlowe}}}
+\bibcite{Palamidessi::2013}{{90}{2013}{{Palamidessi {\em  et~al.}}}{{Palamidessi, Frittoli, Ducano, Offenhauser, Sigismund, Kajiho, Parazzoli, Oldani, Gobbi, Serini, {\em  et~al.}}}}
+\bibcite{Pardo:2004}{{91}{2004}{{Pardo {\em  et~al.}}}{{Pardo, Monteoliva, Vazquez, Mart{\'\i }nez, Molero, Nombela, and Gil}}}
+\bibcite{rand::1971}{{92}{1971}{{Rand}}{{Rand}}}
+\bibcite{Rauma::1999}{{93}{1999}{{Rauma {\em  et~al.}}}{{Rauma, Tuukkanen, Bergelson, Denning, and Hautala}}}
+\bibcite{Richardson::1997}{{94}{1997}{{Richardson and Green}}{{Richardson and Green}}}
+\bibcite{Rink::2005}{{95}{2005}{{Rink {\em  et~al.}}}{{Rink, Ghigo, Kalaidzidis, and Zerial}}}
+\bibcite{Rosenfeld::2001}{{96}{2001}{{Rosenfeld {\em  et~al.}}}{{Rosenfeld, Moore, Zimmer, Alpizar-Foster, Dai, Zarka, and Knoll}}}
+\bibcite{Rousseau::2011}{{97}{2011}{{Rousseau and Mengersen}}{{Rousseau and Mengersen}}}
+\bibcite{Saitoh::2017}{{98}{2017}{{Saitoh {\em  et~al.}}}{{Saitoh, Maruyama, Yako, Kajita, Fujioka, Ohba, Kasai, Sugama, Kon, Ishikawa, {\em  et~al.}}}}
+\bibcite{Schwarz::1978}{{99}{1978}{{Schwarz {\em  et~al.}}}{{Schwarz {\em  et~al.}}}}
+\bibcite{Sheng::2014}{{100}{2014}{{Sheng {\em  et~al.}}}{{Sheng, Li, Zou, Wang, Cao, Zhang, Huang, and Tang}}}
+\bibcite{Siljee:2018}{{101}{2018}{{Siljee {\em  et~al.}}}{{Siljee, Wang, Bernard, Ersoy, Zhang, Marley, Von~Zastrow, Reiter, and Vaisse}}}
+\bibcite{Simonsen::1998}{{102}{1998}{{Simonsen {\em  et~al.}}}{{Simonsen, Lippe, Christoforidis, Gaullier, Brech, Callaghan, Toh, Murphy, Zerial, and Stenmark}}}
+\bibcite{Skjeldal::2012}{{103}{2012}{{Skjeldal {\em  et~al.}}}{{Skjeldal, Strunze, Bergeland, Walseng, Gregers, and Bakke}}}
+\bibcite{Stephens:2000}{{104}{2000}{{Stephens}}{{Stephens}}}
+\bibcite{Stone::2007}{{105}{2007}{{Stone {\em  et~al.}}}{{Stone, Jia, Do~Heo, Meyer, and Konan}}}
+\bibcite{Sullivan:2018}{{106}{2018}{{Sullivan {\em  et~al.}}}{{Sullivan, Winsnes, {\r A}kesson, Hjelmare, Wiking, Schutten, Campbell, Leifsson, Rhodes, Nordgren, {\em  et~al.}}}}
+\bibcite{Tai:2004}{{107}{2004}{{Tai {\em  et~al.}}}{{Tai, Lu, Wang, Tang, Goud, Johannes, and Hong}}}
+\bibcite{Takats::2018}{{108}{2018}{{Tak{\'a}ts {\em  et~al.}}}{{Tak{\'a}ts, Glatz, Szenci, Boda, Horv{\'a}th, Heged{\H {u}}s, Kov{\'a}cs, and Juh{\'a}sz}}}
+\bibcite{Takeda::2019}{{109}{2019}{{Takeda {\em  et~al.}}}{{Takeda, Koseki, Takahashi, Miyoshi, Nishida, Nishimura, Hata, Matsuda, Mizushima, Yamamoto, {\em  et~al.}}}}
+\bibcite{Tan:2009}{{110}{2009}{{Tan {\em  et~al.}}}{{Tan, Dvinge, Christoforou, Bertone, Martinez~Arias, and Lilley}}}
+\bibcite{Thompson:2003}{{111}{2003}{{Thompson {\em  et~al.}}}{{Thompson, Sch{\"a}fer, Kuhn, Kienle, Schwarz, Schmidt, Neumann, and Hamon}}}
+\bibcite{Thul:2017}{{112}{2017}{{Thul {\em  et~al.}}}{{Thul, {\r A}kesson, Wiking, Mahdessian, Geladaki, Blal, Alm, Asplund, Bj{\"o}rk, Breckels, {\em  et~al.}}}}
+\bibcite{Ting:2011}{{113}{2011}{{Ting {\em  et~al.}}}{{Ting, Rad, Gygi, and Haas}}}
+\bibcite{Torres::2010}{{114}{2010}{{Torres {\em  et~al.}}}{{Torres, Mielgo, Barbero, Hsiao, Wilkins, and Stupack}}}
+\bibcite{Trischler::1999}{{115}{1999}{{Trischler {\em  et~al.}}}{{Trischler, Stoorvogel, and Ullrich}}}
+\bibcite{Ueno::2011}{{116}{2011}{{Ueno {\em  et~al.}}}{{Ueno, Huang, Tanaka, and Hirokawa}}}
+\bibcite{Verma::2017}{{117}{2017}{{Verma {\em  et~al.}}}{{Verma, Rastogi, and Mukhopadhyay}}}
+\bibcite{Wendler:2010}{{118}{2010}{{Wendler {\em  et~al.}}}{{Wendler, Gillingham, Sinka, Rosa-Ferreira, Gordon, Franch-Marro, Peden, Vincent, and Munro}}}
+\bibcite{Woodman::2000}{{119}{2000}{{Woodman}}{{Woodman}}}
+\bibcite{Xiao::2017}{{120}{2017}{{Xiao {\em  et~al.}}}{{Xiao, Yang, An, and Qi}}}
+\bibcite{Yang::2011}{{121}{2011}{{Yang {\em  et~al.}}}{{Yang, Yin, Tseng, Yang, Hsu, Lee, Horng, and Chi}}}
+\bibcite{Yin:2005}{{122}{2005}{{Yin {\em  et~al.}}}{{Yin, de~Groot, Dekker, de~Jong, Klis, and de~Koster}}}
+\bibcite{Yofe:2016}{{123}{2016}{{Yofe {\em  et~al.}}}{{Yofe, Weill, Meurer, Chuartzman, Zalckvar, Goldman, Ben-Dor, Sch{\"u}tze, Wiedemann, Knop, {\em  et~al.}}}}
+\bibcite{Yong::2019}{{124}{2019}{{Yong and Tang}}{{Yong and Tang}}}
+\bibcite{Yu:2012}{{125}{2012}{{Yu {\em  et~al.}}}{{Yu, Wang, Han, and He}}}
+\bibcite{Yu::1999}{{126}{1999}{{Yu {\em  et~al.}}}{{Yu, Hui-Chen, Chen, Zou, Yan, Chun-Xiang, Wu-Ru, and Li}}}
+\bibcite{Zerial::2001}{{127}{2001}{{Zerial and McBride}}{{Zerial and McBride}}}
+\bibcite{Zhang::2016}{{128}{2016}{{Zhang {\em  et~al.}}}{{Zhang, Guo, Zhao, Xu, Han, Li, and Wang}}}
+\bibcite{Zhao::2010}{{129}{2010}{{Zhao {\em  et~al.}}}{{Zhao, Liu, Wu, Zou, Wang, Ni, Chen, and Fan}}}

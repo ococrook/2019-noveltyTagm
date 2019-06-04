@@ -112,7 +112,7 @@ Carlucci, A. et~al. (2010).
   Nixon]{Cataldo::1997}
 Cataldo, A.~M. et~al. (1997).
 \newblock Increased neuronal endocytosis and protease delivery to early
-  endosomes in sporadic alzheimer’s disease: neuropathologic evidence for a
+  endosomes in sporadic alzheimer's disease: neuropathologic evidence for a
   mechanism of increased $\beta$-amyloidogenesis.
 \newblock {\em Journal of Neuroscience\/}, {\bf 17}(16), 6142--6151.
 
@@ -120,8 +120,8 @@ Cataldo, A.~M. et~al. (1997).
   Hyman, and Nixon]{Cataldo::2000}
 Cataldo, A.~M. et~al. (2000).
 \newblock Endocytic pathway abnormalities precede amyloid $\beta$ deposition in
-  sporadic alzheimer’s disease and down syndrome: differential effects of
-  apoe genotype and presenilin mutations.
+  sporadic alzheimer's disease and down syndrome: differential effects of apoe
+  genotype and presenilin mutations.
 \newblock {\em The American journal of pathology\/}, {\bf 157}(1), 277--286.
 
 \bibitem[Chen {\em et~al.}(2009)Chen, Kong, Su, and Stahl]{Chen::2009}
@@ -133,7 +133,7 @@ Chen, P.-I. et~al. (2009).
 \bibitem[Chen {\em et~al.}(2014)Chen, Schauer, Kong, Harding, Goud, and
   Stahl]{Chen::2014}
 Chen, P.-I. et~al. (2014).
-\newblock Rab5 isoforms orchestrate a “division of labor” in the endocytic
+\newblock Rab5 isoforms orchestrate a "division of labor" in the endocytic
   network; rab5c modulates rac-mediated cell motility.
 \newblock {\em PloS one\/}, {\bf 9}(2), e90384.
 
@@ -237,6 +237,11 @@ Ferguson, T.~S. (1974).
 Foster, L.~J. et~al. (2006).
 \newblock A mammalian organelle map by protein correlation profiling.
 \newblock {\em Cell\/}, {\bf 125}(1), 187--199.
+
+\bibitem[Fraley {\em et~al.}(2012)Fraley, Raftery, Murphy, and Scrucca]{mclust}
+Fraley, C. et~al. (2012).
+\newblock mclust version 4 for r: Normal mixture modeling for model-based
+  clustering, classification, and density estimation.
 
 \bibitem[Fritsch and Ickstadt(2009)Fritsch and Ickstadt]{fritsch::2009}
 Fritsch, A. et~al. (2009).
@@ -577,7 +582,7 @@ Nightingale, D. J.~H. et~al. (2019).
 Orre, L.~M. et~al. (2019).
 \newblock Subcellbarcode: Proteome-wide mapping of protein localization and
   relocalization.
-\newblock {\em Molecular Cell\/}, {\bf 73}(1), 166 -- 182.e7.
+\newblock {\em Molecular Cell\/}, {\bf 73}(1), 166 -- 182.
 
 \bibitem[Otte {\em et~al.}(2001)Otte, Belden, Heidtman, Liu, Jensen, and
   Barlowe]{Otte:2001}
