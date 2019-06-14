@@ -1,0 +1,35 @@
+Figures:
+
+1 - To me, this isn't an overview of the method. Personally, I'd include an overview of the idea of novelty detection here. If you keep the current figure but include linear profiles for a subset of classes (with the cartoons if desired), the PCA is still useful to show the complete data structure. Then an arrow from left to right (indicated as "Novelty detection") and another PCA on the right with putative phenotypes included and a few of their linear profiles. This way, the novelty detection remains a "black box" and you're just explaining the aim of it. The caption or figure should indicate that the unclassified proteins on the left may be due to unnotated organelles, multiple-localising proteins or "noisy" quantifcation. Otherwise it seems like all unclassified proteins are from an unannotated organelle.
+
+PCA:
+- Legend and axes text too small
+- Caption includes more detail than I would include. Don't need to mention colour since this is indicated by legend. I wouldn't include interpretation of PCA
+
+PSM:
+- I'd prefer legend Text a bit larger
+- Legend appears to include niches not presented in the PSM
+
+6e - Needs TAGM + PD labels
+
+I think you can summarise the GO enrichments with simple figures in at least one case. For 3.1.2 (U2OS hyperLOPIT), a tile plot with x=phenotype, y=selected celular compartment GO terms, tile colour=fold over-representation, alongside the same with tile colour=log10(p-value) would allow you to cut down the text a lot. Then you could simply explain that the phenotypes discovered reidentify the masked known niches and identify subnuclear compartments and an unexpected endosome cluster.
+
+
+Text:
+
+Personally, I'd facour using the "subcellular niche" over "organelle" since many of the niches clusters may be protein complexes (e.g proteasome), or organelle interaction sites, etc. Or else, define organelle where appropriate
+
+GO enrichment - If you've adjusted for more abundant proteins being more likely to be assigned, mention why and how in methods.
+
+I'd include a section at the start of the results which helps the reader to understand the analysis workflow as many (such as myself) may not read the methods before the results!
+
+I've editted the endosome section to be much briefer explaining why these proteins assignments fit with the literature. The comparison with HPA is then made following this to highlight the advantage of subcellular proteomics + novelty detection for this niche (this section is unfinshed though). I wasn't sure from the text how many proteins were assigned to the endosome in this re-analysis (is it just these 7?) so would be worth spelling that out. I've left in the text you had previously. If you do decide to remove this from the main text, it might be good to keep as a sup. note (referenced in main text) as some readers may wish to read a more detailed account of why these proteins assignments are reasonable.
+
+I would move the following figures to the supplementary material and make brief mentions of them in the main text, mainly to highlight that the same observations were made with another dataset. If you do this, the sections in the main text where you explain which datasets are going to be explore made need updating to focus on those in the main figures.
+- 3.1.1 Pluripotent mESCs
+- 3.2.3 HCMV-infected fibroblast cells
+- 3.2.4 Fibroblast cells without infection
+- 3.3.2 Mouse rimary neurons
+- 3.3.3 Hela Cells (Hirst et al 2018)
+
+"On the other hand, Novelty TAGM phenotypes 2 and 3 [..]" - This is an unexpected observation. Do you have any explanation? If not, perhaps say that it's not clear why this is the case (With any luck, you may find the reviewers themselves put forward a sensible explanation!)
