@@ -25,7 +25,7 @@
 \renewcommand\Authfont{\small}
 \newcommand{\xmark}{\ding{55}}
 %opening
-\title{A semi-supervised Bayesian approach for simultaneous protein sub-cellular localisation assignment and niche discovery }
+\title{A semi-supervised Bayesian approach for simultaneous protein sub-cellular localisation assignment and novelty detection }
 \author[1,2]{Oliver M. Crook}
 \author[1]{Lisa M. Breckels}
 \author[1]{Tom Smith}
@@ -282,12 +282,12 @@ Application of Novelty TAGM to mouse primary neurons \citep{Itzhak::2017} and an
 \begin{figure}
 	\begin{subfigure}[t]{0.5\textwidth}
 		\centering
-		\includegraphics[height=2in]{pcaItzhak2016.pdf}
+		\includegraphics[height=2.5in]{pcaItzhak2016.pdf}
 		\caption{}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.5\textwidth}
 		\centering
-		\includegraphics[height=2in]{itzhak2016heatmap.jpg}
+		\includegraphics[height=2.5in]{itzhak2016heatmap.jpg}
 		\caption{}
 	\end{subfigure}
 	\caption{(a) PCA plots of the HeLa data The pointers are scaled according to their discovery probability. (b) Heatmaps of the HeLa Itzhak data. Only the proteins with discovery probability greater than $0.99$ and outlier probability less than $0.95$ are shown. The heatmaps demonstrate the uncertainty in the clustering structure present in the data.}
@@ -299,7 +299,7 @@ Next, we compare an already available novelty detection algorithm, \textit{pheno
 are quite distinct. The first major difference is that Novelty TAGM is a Bayesian 
 method that performs uncertainty quantification. Novelty TAGM quantifies the uncertainty in both the number of newly identified phenotypes and whether individual proteins should belong to a new phenotypes. On the other hand, \textit{phenoDisco} uses the \textit{Bayesian Information Criterion} (BIC) to select just a single clustering, without taking into account the uncertainty in the number of phenotypes and does not provide an estimate of individual protein-to-phenotype allocation uncertainty. Another difference is the input to both methods; Novelty TAGM uses the data directly, whereas \textit{phenoDisco} takes the top principal components (by default, the first two) as input. \textit{PhenoDisco} also requires an additional parameter - the minimum group size. This parameter can be challenging to specify, since there is a trade-off between identifying functionally relevant phenotypes of different sizes and picking up small spurious protein clusters. Furthermore, \textit{phenoDisco} struggles to scale to many of the datasets presented in this manuscript, because it requires iteratively refitting models and building of an outlier test statistic. 
 
-To demonstrate the differences between the two approaches, we apply \textit{phenoDisco} and Novelty TAGM to the HEK-293 spatial proteomics dataset interrogated by \citep{Breckels:2013}. The PCA plots in figure \ref{figure:phenodisco} reveal broad similarities in the location of the discovered phenotypes. Novelty TAGM provides more information than \ref{figure:phenodisco}; for example, we can scale the pointer size to the discovery probability. We note that both methods reveal 8 putative phenotypes in the data. Figure \ref{figure:phenodisco} (panels d and e) reveals the distribution of proteins across these phenotypes. We conclude that both approaches are able to discover small and large clusters, with both methods identifying phenotypes with a few proteins, but also phenotypes with greater than 100 proteins. Figure \ref{figure:phenodisco} (panel f) shows that both methods find the same number of phenotypes; however, not all of these phenotypes are functionally enriched. For \textit{phenoDisco} four of the phenotypes had at least 1 significant Gene Ontology term, whereas this was true for five of the Novelty TAGM phenotypes. Figure \ref{figure:phenodisco} (panel g) characterises the protein overlap between the two approaches. We see that both methods are in broad agreement, with most of the disagreement attributed to cases where one method assigns a protein as unknown whilst the other allocates to it a phenotype or organelle. For example, Novelty TAGM associates \textit{phenoDisco} phenotype 3, which is a Lysosome-enriched phenotype, with the plasma membrane. On the other hand, Novelty TAGM phenotypes 2 and 3, enriched for chromatin and ribosome respectively, are associated with the mitochondria by \textit{phenoDisco}.
+To demonstrate the differences between the two approaches, we apply \textit{phenoDisco} and Novelty TAGM to the HEK-293 spatial proteomics dataset interrogated by \cite{Breckels:2013}. The PCA plots in figure \ref{figure:phenodisco} reveal broad similarities in the location of the discovered phenotypes. Novelty TAGM provides more information than \ref{figure:phenodisco}; for example, we can scale the pointer size to the discovery probability. We note that both methods reveal 8 putative phenotypes in the data. Figure \ref{figure:phenodisco} (panels d and e) reveals the distribution of proteins across these phenotypes. We conclude that both approaches are able to discover small and large clusters, with both methods identifying phenotypes with a few proteins, but also phenotypes with greater than 100 proteins. Figure \ref{figure:phenodisco} (panel f) shows that both methods find the same number of phenotypes; however, not all of these phenotypes are functionally enriched. For \textit{phenoDisco} four of the phenotypes had at least 1 significant Gene Ontology term, whereas this was true for five of the Novelty TAGM phenotypes. Figure \ref{figure:phenodisco} (panel g) characterises the protein overlap between the two approaches. We see that both methods are in broad agreement, with most of the disagreement attributed to cases where one method assigns a protein as unknown whilst the other allocates to it a phenotype or organelle. For example, Novelty TAGM associates \textit{phenoDisco} phenotype 3, which is a Lysosome-enriched phenotype, with the plasma membrane. On the other hand, Novelty TAGM phenotypes 2 and 3, enriched for chromatin and ribosome respectively, are associated with the mitochondria by \textit{phenoDisco}.
 
 \begin{figure}
 	\begin{subfigure}[t]{0.33\textwidth}
@@ -392,7 +392,7 @@ Our method revealed resolution of $4$ sub-nuclear compartments in the U-2 OS \te
 
 A direct comparison with the state-of-the-art approach \textit{phenoDisco} demonstrates clear differences between the approaches. Novelty TAGM, a fully Bayesian approach, quantifies uncertainty in both the number of newly discovered phenotypes and the individual protein-phenotype associations - \textit{phenoDisco} provides no such information.
 
-Improved annotation of the U-2 0S \textit{hyper}LOPIT data allowed us to explore endosomal processes, which have not previously been considered with this dataset. We compare our results directly to immunofluorescence microscopy-based information from the HPA database and demonstrate the value of orthogonal spatial proteomics approaches to determine protein sub-cellular localisation. Our results also provided insights on the sub-cellular localisation of proteins for which there is no information in the HPA Cell Atlas database. 
+Improved annotation of the U-2 OS \textit{hyper}LOPIT data allowed us to explore endosomal processes, which have not previously been considered with this dataset. We compare our results directly to immunofluorescence microscopy-based information from the HPA database and demonstrate the value of orthogonal spatial proteomics approaches to determine protein sub-cellular localisation. Our results also provided insights on the sub-cellular localisation of proteins for which there is no information in the HPA Cell Atlas database. 
 
 During our analysis, we observed that the posterior similarity matrices have potential sub-clustering structures. Many known organelles and sub-cellular niches have sub-compartmentalisation, thus methodology to detect these sub-compartments is in preparation. Furthermore, we have observed that different experiments and different data modalities provide complementary results. Thus, integrative approaches to spatial proteomics analysis are also desired. 
 

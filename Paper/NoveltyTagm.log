@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  16 JUN 2019 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.18)  16 JUN 2019 13:03
 entering extended mode
 **./NoveltyTagm.tex
 (NoveltyTagm.tex
@@ -845,16 +845,16 @@ File: figures/pcaItzhak2016.pdf Graphic file (type pdf)
 
 <use figures/pcaItzhak2016.pdf>
 Package pdftex.def Info: figures/pcaItzhak2016.pdf used on input line 285.
-(pdftex.def)             Requested size: 168.6193pt x 144.54pt.
+(pdftex.def)             Requested size: 210.78183pt x 180.67499pt.
 
 <figures/itzhak2016heatmap.jpg, id=508, 867.24pt x 505.89pt>
 File: figures/itzhak2016heatmap.jpg Graphic file (type jpg)
 
 <use figures/itzhak2016heatmap.jpg>
 Package pdftex.def Info: figures/itzhak2016heatmap.jpg used on input line 290.
-(pdftex.def)             Requested size: 247.78792pt x 144.54pt.
+(pdftex.def)             Requested size: 309.7316pt x 180.67499pt.
 
-Overfull \hbox (12.91042pt too wide) in paragraph at lines 290--291
+Overfull \hbox (74.8541pt too wide) in paragraph at lines 290--291
  [][] 
  []
 
@@ -1170,7 +1170,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 568.
 Here is how much of TeX's memory you used:
  11654 strings out of 493323
  174480 string characters out of 3139066
- 295114 words of memory out of 3000000
+ 295116 words of memory out of 3000000
  14675 multiletter control sequences out of 15000+200000
  33273 words of font info for 96 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1211,7 +1211,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on NoveltyTagm.pdf (41 pages, 20691405 bytes).
+Output written on NoveltyTagm.pdf (41 pages, 20691402 bytes).
 PDF statistics:
  1861 PDF objects out of 2073 (max. 8388607)
  234 named destinations out of 1000 (max. 500000)
