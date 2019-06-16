@@ -14,23 +14,28 @@
 \BOOKMARK [3][-]{subsubsection.2.3.4}{Robustness across multiple MS-based spatial proteomics datasets}{subsection.2.3}% 14
 \BOOKMARK [1][-]{section.3}{Results}{}% 15
 \BOOKMARK [2][-]{subsection.3.1}{Validating experimental design in hyperLOPIT}{section.3}% 16
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Pluripotent mESCs \(E14TG2a\)}{subsection.3.1}% 17
-\BOOKMARK [3][-]{subsubsection.3.1.2}{The human bone osteosarcoma \(U-2 OS\) cells}{subsection.3.1}% 18
+\BOOKMARK [3][-]{subsubsection.3.1.1}{The human bone osteosarcoma \(U-2 OS\) cells}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Pluripotent mESCs \(E14TG2a\)}{subsection.3.1}% 18
 \BOOKMARK [2][-]{subsection.3.2}{Uncovering additional sub-cellular structures}{section.3}% 19
 \BOOKMARK [3][-]{subsubsection.3.2.1}{U-2 OS cell line revisited}{subsection.3.2}% 20
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Saccharomyces cerevisiae}{subsection.3.2}% 21
-\BOOKMARK [3][-]{subsubsection.3.2.3}{HCMV-infected fibroblast cells}{subsection.3.2}% 22
-\BOOKMARK [3][-]{subsubsection.3.2.4}{Fibroblast cells without infection}{subsection.3.2}% 23
-\BOOKMARK [2][-]{subsection.3.3}{Refining annotation in organellar maps}{section.3}% 24
-\BOOKMARK [3][-]{subsubsection.3.3.1}{HeLa cells \(Itzhak et. al 2016\)}{subsection.3.3}% 25
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Mouse primary neurons}{subsection.3.3}% 26
-\BOOKMARK [3][-]{subsubsection.3.3.3}{HeLa cells \(Hirst et. al 2018\)}{subsection.3.3}% 27
-\BOOKMARK [1][-]{section.4}{Comparison between Novelty TAGM and phenoDisco}{}% 28
-\BOOKMARK [1][-]{section.5}{Improved annotation allows exploration of endosomal processes}{}% 29
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 30
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 31
-\BOOKMARK [2][-]{subsection.7.1}{Handling label switching}{section.7}% 32
-\BOOKMARK [2][-]{subsection.7.2}{Summarising posterior similarity matrices}{section.7}% 33
-\BOOKMARK [2][-]{subsection.7.3}{Details of MCMC}{section.7}% 34
-\BOOKMARK [2][-]{subsection.7.4}{Further details of endosomal proteins}{section.7}% 35
-\BOOKMARK [2][-]{subsection.7.5}{Summary of convergence diagnostics}{section.7}% 36
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Fibroblast Cells}{subsection.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.3}{Refining annotation in organellar maps}{section.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.3.1}{HeLa cells \(Itzhak et. al 2016\)}{subsection.3.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Mouse primary neurons and HeLa cells \(Hirst et. al 2018\)}{subsection.3.3}% 25
+\BOOKMARK [1][-]{section.4}{Comparison between Novelty TAGM and phenoDisco}{}% 26
+\BOOKMARK [1][-]{section.5}{Improved annotation allows exploration of endosomal processes}{}% 27
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 28
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 29
+\BOOKMARK [2][-]{subsection.7.1}{mESC chromatin enrichment validation}{section.7}% 30
+\BOOKMARK [2][-]{subsection.7.2}{Uncovering additional annotations in fibroblast cells}{section.7}% 31
+\BOOKMARK [3][-]{subsubsection.7.2.1}{HCMV-infected fibroblast cells}{subsection.7.2}% 32
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Fibroblast cells without infection}{subsection.7.2}% 33
+\BOOKMARK [2][-]{subsection.7.3}{Additional organellar map datasets}{section.7}% 34
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Mouse primary neurons}{subsection.7.3}% 35
+\BOOKMARK [3][-]{subsubsection.7.3.2}{HeLa cells \(Hirst et. al 2018\)}{subsection.7.3}% 36
+\BOOKMARK [2][-]{subsection.7.4}{Handling label switching}{section.7}% 37
+\BOOKMARK [2][-]{subsection.7.5}{Summarising posterior similarity matrices}{section.7}% 38
+\BOOKMARK [2][-]{subsection.7.6}{Details of MCMC}{section.7}% 39
+\BOOKMARK [2][-]{subsection.7.7}{Further details of endosomal proteins}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.8}{Summary of convergence diagnostics}{section.7}% 41
