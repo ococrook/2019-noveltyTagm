@@ -58,10 +58,10 @@ par(mar=c(5,4,4,13), xpd = T)
 
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(newHirst)$tagm.newcluster.prob 
-plot2D(newHirst, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of control HeLA data with pointer scaled to discovery probability")
+plot2D(newHirst, fcol = "tagm.phenotype", cex = ptsze, main = "HeLa (Hirst et al. 2018)", cex.lab = 1.3)
 myleg <- levels(hirstTagmNoveltyRes$mpCombined$cl)
 legend(7, 8, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 0.7, pt.cex = 1)
+       pch = 19, cex = 1, ncol = 1, pt.cex = 1)
 ```
 
 ```{r,}
@@ -72,14 +72,14 @@ annot <- data.frame(organelle = fData(newHirst)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(newHirst))[toSubsethl]
 # Set up for heat map
 ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes$mpCombined$cl)])
+  #organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes@pooledNoveltyChain@mp@cl)])
+  organelle = c(getStockcol()[1:length(unique(fData(newHirst[psmSub])$tagm.phenotype))])
 )
-names(ann_colors$organelle) <- as.character(levels(annot$organelle))
-
 psmSub <- rownames(fData(newHirst))[toSubsethl]
+names(ann_colors$organelle) <- as.character(unique(fData(newHirst[psmSub])$tagm.phenotype))
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(hirstTagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HeLa (Hirst et al.) data", color = myBlues, fontsize = 10, cellheight=0.5,cellwidth=0.7)
+pheatmap(hirstTagmNoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "HeLa (Hirst et al. 2018)", color = myBlues, fontsize = 14, cellheight=0.5,cellwidth=0.7)
 ```
 
 ```{r,}
@@ -177,8 +177,8 @@ save(beltranMOCK24TagmNoveltyRes, file = "beltranMOCK24TagmNoveltyRes.rda")
 
 ```{r,}
 ## attach information to MSnset
-fData(beltran2016MOCK24)$tagm.phenotype <- beltranMOCK24TagmNoveltyRes$mpCombined$cl[rownames(fData(beltran2016MOCK24))]
-fData(beltran2016MOCK24)$tagm.newcluster.prob <- beltranMOCK24TagmNoveltyRes$tagm.newcluster.prob[rownames(fData(beltran2016MOCK24))]
+fData(beltran2016MOCK24)$tagm.phenotype <- beltranMOCK24TagmNoveltyRes@pooledNoveltyChain@mp@cl[rownames(fData(beltran2016MOCK24))]
+fData(beltran2016MOCK24)$tagm.newcluster.prob <- beltranMOCK24TagmNoveltyRes@tagmNewclusterProb[rownames(fData(beltran2016MOCK24))]
 
 fData(beltran2016MOCK24)$tagm.newcluster.prob[is.na(fData(beltran2016MOCK24)$tagm.newcluster.prob)] <- 0
 
@@ -194,10 +194,10 @@ par(mar=c(5,4,4,13), xpd = T)
 
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(beltran2016MOCK24)$tagm.newcluster.prob 
-plot2D(beltran2016MOCK24, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of MOCK fibroblast data with pointer scaled to discovery probability")
-myleg <- levels(beltranMOCK24TagmNoveltyRes$mpCombined$cl)
+plot2D(beltran2016MOCK24, fcol = "tagm.phenotype", cex = ptsze, main = "MOCK fibroblast", cex.lab = 1.5)
+myleg <- levels(beltranMOCK24TagmNoveltyRes@pooledNoveltyChain@mp@cl)
 legend(3, 2, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 0.7, pt.cex = 1)
+       pch = 19, cex = 1.2, pt.cex = 1)
 ```
 
 ```{r,}
@@ -206,16 +206,18 @@ toSubsethl <- (fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95) & fData(bel
 # Create annotation 
 annot <- data.frame(organelle = fData(beltran2016MOCK24)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(beltran2016MOCK24))[toSubsethl]
-# Set up for heat map
-ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(beltranMOCK24TagmNoveltyRes$mpCombined$cl)])
-)
-names(ann_colors$organelle) <- levels(annot$organelle)
-
 psmSub <- rownames(fData(beltran2016MOCK24))[toSubsethl]
 
+ann_colors = list(
+  #organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes@pooledNoveltyChain@mp@cl)])
+  organelle = c(getStockcol()[1:length(unique(fData(beltran2016MOCK24[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(beltran2016MOCK24[psmSub])$tagm.phenotype))
+
+
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(beltranMOCK24TagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the MOCK fibroblast data", col = myBlues)
+pheatmap(beltranMOCK24TagmNoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "MOCK fibroblast", col = myBlues, fontsize = 14)
 ```
 
 
@@ -283,7 +285,7 @@ HCMV24diag <- gelman.diag(outliers)
 
 
 ```{r,}
-#beltranHCMV24TagmNoveltyRes <- tagmNoveltyProcess(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
+beltranHCMV24TagmNoveltyRes <- tagmNoveltyProcess(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
 beltranHCMV24TagmNoveltyparams <- tagmMcmcProcess(beltranHCMV24TagmNoveltyparams)
 beltran2016HCMV24 <- tagmPredict(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
 #save(beltranHCMV24TagmNoveltyRes, file = "beltranHCMV24TagmNoveltyRes.rda")
@@ -291,8 +293,8 @@ beltran2016HCMV24 <- tagmPredict(object = beltran2016HCMV24, params = beltranHCM
 
 ```{r,}
 ## attach information to MSnset
-fData(beltran2016HCMV24)$tagm.phenotype <- beltranHCMV24TagmNoveltyRes$mpCombined$cl[rownames(fData(beltran2016HCMV24))]
-fData(beltran2016HCMV24)$tagm.newcluster.prob <- beltranHCMV24TagmNoveltyRes$tagm.newcluster.prob[rownames(fData(beltran2016HCMV24))]
+fData(beltran2016HCMV24)$tagm.phenotype <- beltranHCMV24TagmNoveltyRes@pooledNoveltyChain@mp@cl[rownames(fData(beltran2016HCMV24))]
+fData(beltran2016HCMV24)$tagm.newcluster.prob <- beltranHCMV24TagmNoveltyRes@tagmNewclusterProb[rownames(fData(beltran2016HCMV24))]
 
 fData(beltran2016HCMV24)$tagm.newcluster.prob[is.na(fData(beltran2016HCMV24)$tagm.newcluster.prob)] <- 0
 
@@ -304,14 +306,14 @@ addLegend(beltran2016HCMV24, fcol = "tagm.phenotype", ncol = 2, where = "bottoml
 
 ```{r,}
 ## specify large margin on the right hand side using mar and use xpd = T to allow plotting
-par(mar=c(5,4,4,13), xpd = T)
+par(mar=c(5,4,4,15), xpd = T)
 
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(beltran2016HCMV24)$tagm.newcluster.prob 
-plot2D(beltran2016HCMV24, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of HCMV infected fibroblast data with pointer scaled to discovery probability")
-myleg <- levels(beltranHCMV24TagmNoveltyRes$mpCombined$cl)
-legend(3, 2, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 0.7, pt.cex = 1)
+plot2D(beltran2016HCMV24, fcol = "tagm.phenotype", cex = ptsze, main = "HCMV infected fibroblast", cex.lab = 1.5)
+myleg <- levels(beltranHCMV24TagmNoveltyRes@pooledNoveltyChain@mp@cl)
+legend(3, 3, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 1.5, pt.cex = 1)
 ```
 
 ```{r,}
@@ -321,15 +323,16 @@ toSubsethl <- (fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.99) & fData(bel
 annot <- data.frame(organelle = fData(beltran2016HCMV24)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(beltran2016HCMV24))[toSubsethl]
 # Set up for heat map
-ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(beltranHCMV24TagmNoveltyRes$mpCombined$cl)])
-)
-names(ann_colors$organelle) <- levels(annot$organelle)
-
 psmSub <- rownames(fData(beltran2016HCMV24))[toSubsethl]
+ann_colors = list(
+  organelle = c(getStockcol()[1:length(unique(fData(beltran2016HCMV24[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(beltran2016HCMV24[psmSub])$tagm.phenotype))
+
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(beltranHCMV24TagmNoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HCMV infected fibroblast data", col = myBlues, cellwidth = 2.5)
+pheatmap(beltranHCMV24TagmNoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "HCMV infected fibroblast", col = myBlues, cellwidth = 2.5, fontsize = 14)
 ```
 
 
@@ -453,8 +456,8 @@ hlmouse <- tagmPredict(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
 
 ```{r,}
 ## attach information to MSnset
-fData(hlmouse)$tagm.phenotype <- hlmouseTagmNoveltyRes_conv$mpCombined$cl[rownames(fData(hlmouse))]
-fData(hlmouse)$tagm.newcluster.prob <- hlmouseTagmNoveltyRes_conv$tagm.newcluster.prob[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.phenotype <- hlmouseTagmNoveltyRes_conv@pooledNoveltyChain@mp@cl[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob <- hlmouseTagmNoveltyRes_conv@tagmNewclusterProb[rownames(fData(hlmouse))]
 
 fData(hlmouse)$tagm.newcluster.prob[is.na(fData(hlmouse)$tagm.newcluster.prob)] <- 0
 
@@ -469,11 +472,13 @@ addLegend(hlmouse, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex 
 par(mar=c(5,4,4,13), xpd = T)
 
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
-ptsze <- fData(hlmouse)$tagm.newcluster.prob 
-plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of hyperLOPIT mouse data with pointer scaled to discovery probability")
+ptsze <- fData(hlmouse)$tagm.newcluster.prob
+ptsze[fData(hlmouse)$tagm.mcmc.outlier > 0.001] <- 0.01
+plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze, main = "mESC")
 myleg <- levels(hlmouseTagmNoveltyRes_conv$mpCombined$cl)
+
 legend(6, 5, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 0.7, pt.cex = 1)
+       pch = 19, cex = 0.7, pt.cex = 1.5)
 ```
 
 ```{r,}

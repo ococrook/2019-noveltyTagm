@@ -471,16 +471,16 @@ addLegend(hlmouse, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex 
 
 ```{r,}
 ## specify large margin on the right hand side using mar and use xpd = T to allow plotting
-par(mar=c(5,4,4,14), xpd = T)
+par(mar=c(5,4,4,16), xpd = T)
 
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(hlmouse)$tagm.discovery.prob 
 ptsze[fData(hlmouse)$tagm.mcmc.outlier > 0.001] <- 0.01
-plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of hyperLOPIT mouse data with pointer scaled to discovery probability",
+plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze, main = "mESC",
        cex.main = 2)
 myleg <- levels(hlmouseTagmNoveltyRes_conv@pooledNoveltyChain@mp@cl)
 legend(6, 5, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 1, pt.cex = 1)
+       pch = 19, cex = 1, pt.cex = 1.5)
 ```
 
 ```{r,}
@@ -490,15 +490,15 @@ toSubsethl <- (fData(hlmouse)$tagm.discovery.prob > 0.99) & fData(hlmouse)$TAGM$
 annot <- data.frame(organelle = fData(hlmouse)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(hlmouse))[toSubsethl]
 # Set up for heat map
-ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(hlmouseTagmNoveltyRes_conv@pooledNoveltyChain@mp@cl)])
-)
-names(ann_colors$organelle) <- levels(annot$organelle)
-
 psmSub <- rownames(fData(hlmouse))[toSubsethl]
+ann_colors = list(
+  organelle = c(getStockcol()[1:length(unique(fData(hlmouse[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(hlmouse[psmSub])$tagm.phenotype))
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(hlmouseTagmNoveltyRes_conv@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse data", col = myBlues, cellwidth = 2.5)
+pheatmap(hlmouseTagmNoveltyRes_conv@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "mESC", col = myBlues, cellwidth = 0.75, fontsize = 14)
 ```
 # using pROloc function
 ```{r,}
@@ -587,7 +587,7 @@ yeastDiag <- gelman.diag(outliers[c(5,6)])
 
 ```{r,}
 hlyeastTagmNoveltyRes <- tagmNoveltyProcess(object = yeast2018, params = hlyeastTagmNoveltyparams[c(5,6)])
-save(hlyeastTagmNoveltyRes, file = "hlyeastTagmNoveltyRes.rda")
+#save(hlyeastTagmNoveltyRes, file = "hlyeastTagmNoveltyRes.rda")
 ```
 
 ```{r,}
@@ -607,16 +607,16 @@ addLegend(yeast2018, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", ce
 ```
 ```{r,}
 ## specify large margin on the right hand side using mar and use xpd = T to allow plotting
-par(mar=c(5,4,4,16), xpd = T)
+par(mar=c(5,4,4,22), xpd = T)
 
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(yeast2018)$tagm.discovery.prob 
 ptsze[fData(yeast2018)$tagm.mcmc.outlier > 0.001] <- 0.01
-plot2D(yeast2018, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of hyperLOPIT yeast data with pointer scaled to discovery probability",
+plot2D(yeast2018, fcol = "tagm.phenotype", cex = ptsze, main = "bakers' yeast",
        cex.main = 2)
 myleg <- levels(hlyeastTagmNoveltyRes@pooledNoveltyChain@mp@cl)
-legend(9, 8, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 1, pt.cex = 1)
+legend(9, 10, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 1.5, pt.cex = 1)
 ```
 
 
@@ -625,8 +625,26 @@ toSubsethl <- (fData(yeast2018)$tagm.discovery.prob > 0.99) & fData(yeast2018)$t
 pRoloc:::plotPostSimMat(object = yeast2018[toSubsethl],
                         params = hlyeastTagmNoveltyRes,
                         main = "Heatmap of the posterior similarity matrix for the yeast data",
-                        fontsize = 10)
+                        fontsize = 14)
+```
 
+
+```{r,}
+toSubsethl <- (fData(yeast2018)$tagm.discovery.prob > 0.99) & fData(yeast2018)$tagm.mcmc.outlier < 0.95 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(yeast2018)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(yeast2018))[toSubsethl]
+# Set up for heat map
+psmSub <- rownames(fData(yeast2018))[toSubsethl]
+ann_colors = list(
+  organelle = c(getStockcol()[1:length(unique(fData(yeast2018[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(yeast2018[psmSub])$tagm.phenotype))
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(hlyeastTagmNoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "bakers' yeast", col = myBlues, cellwidth = 0.5, fontsize = 14)
 ```
 
 ```{r,}
@@ -678,6 +696,29 @@ cc8hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotyp
                ont = "CC",
                universe = rownames(fData(yeast2018))) # charperone complex 
 
+```
+
+## Make tile plot for goEnrichment results
+```{r,}
+yeastTile <- matrix(1, ncol = 4, nrow = 7)
+
+colnames(yeastTile) <- c("Phenotype 1", "Phenotype 3", "Phenotype 4", "Phenotype 8")
+rownames(yeastTile) <- c(ccYeastres[[1]]@result$Description[1], ccYeastres[[1]]@result$Description[4],
+                         ccYeastres[[3]]@result$Description[6], ccYeastres[[4]]@result$Description[1], 
+                         ccYeastres[[8]]@result$Description[c(1,5,10)])
+yeastTile[ccYeastres[[1]]@result[,2][ccYeastres[[1]]@result[,2] %in%  rownames(yeastTile)], 1] <- ccYeastres[[1]]@result[,5][ccYeastres[[1]]@result[,2] %in%  rownames(yeastTile)]
+yeastTile[ccYeastres[[3]]@result[,2][ccYeastres[[3]]@result[,2] %in%  rownames(yeastTile)], 2] <- ccYeastres[[3]]@result[,5][ccYeastres[[3]]@result[,2] %in%  rownames(yeastTile)]
+yeastTile[ccYeastres[[4]]@result[,2][ccYeastres[[4]]@result[,2] %in%  rownames(yeastTile)], 3] <- ccYeastres[[4]]@result[,5][ccYeastres[[4]]@result[,2] %in%  rownames(yeastTile)]
+yeastTile[ccYeastres[[8]]@result[,2][ccYeastres[[8]]@result[,2] %in%  rownames(yeastTile)], 4] <- ccYeastres[[8]]@result[,5][ccYeastres[[8]]@result[,2] %in%  rownames(yeastTile)]
+
+df <- as.data.frame(yeastTile)
+df_long <- melt(df)
+
+gg <- ggplot(df_long) + geom_tile(aes(fill = value))
+
+myCol <- brewer.pal(7,"YlGnBu")
+pheatmap(-log10(yeastTile), cluster_rows = FALSE, cluster_cols = FALSE, treeheight_row = 0, treeheight_col = 0, main = "bakers' yeast", col = myCol, fontsize = 14, legend_breaks = c(0, 5, 10, 15, 20, max(-log10(yeastTile))), legend_labels = c("0", "5", "10", "15","20", "-log10(p.value)\n"),
+legend = TRUE)
 ```
 
 
