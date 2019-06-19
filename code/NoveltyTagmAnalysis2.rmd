@@ -741,7 +741,7 @@ itzhak2016TagmNoveltyparams_conv <- itzhak2016TagmNoveltyparams[c(1,2,6)]
 itzhak2016NoveltyRes <- tagmNoveltyProcess(object = itzhak2016, params = itzhak2016TagmNoveltyparams_conv)
 itzhak2016TagmNoveltyparams_conv <- tagmMcmcProcess(itzhak2016TagmNoveltyparams_conv)
 itzhak2016 <- tagmPredict(object  = itzhak2016, params = itzhak2016TagmNoveltyparams_conv)
-save(itzhak2016NoveltyRes, file = "itzhak2016NovelyRes.rda")
+#save(itzhak2016NoveltyRes, file = "itzhak2016NovelyRes.rda")
 ```
 
 ```{r,}
@@ -759,11 +759,11 @@ par(mar=c(5,4,4,14), xpd = T)
 
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(itzhak2016)$tagm.discovery.prob 
-plot2D(itzhak2016, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of HeLa (itzhak 2016) data with pointer scaled to discovery probability",
+plot2D(itzhak2016, fcol = "tagm.phenotype", cex = ptsze, main = "HeLa (itzhak et al 2016)",
        cex.main = 2)
 myleg <- levels(fData(itzhak2016)$tagm.phenotype)
 legend(13, 10, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 1, pt.cex = 1)
+       pch = 19, cex = 1, pt.cex = 1.5)
 ```
 
 ```{r,}
@@ -772,16 +772,16 @@ toSubsethl <- (fData(itzhak2016)$tagm.discovery.prob > 0.99) & fData(itzhak2016)
 # Create annotation 
 annot <- data.frame(organelle = fData(itzhak2016)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(itzhak2016))[toSubsethl]
-# Set up for heat map
-ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(itzhak2016NoveltyRes@pooledNoveltyChain@mp@cl)])
-)
-names(ann_colors$organelle) <- levels(annot$organelle)
-
 psmSub <- rownames(fData(itzhak2016))[toSubsethl]
 
+ann_colors = list(
+  organelle = c(getStockcol()[1:length(unique(fData(itzhak2016[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(itzhak2016[psmSub])$tagm.phenotype))
+
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(itzhak2016NoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HeLa (Itzhak) data", color = myBlues )
+pheatmap(itzhak2016NoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "HeLa (Itzhak et al.)", color = myBlues, fontsize = 14)
 ```
 ## Using pRoloc function
 ```{r,}
@@ -820,6 +820,29 @@ ccItzhak2016res <- list(cc1itzhak2016, cc2itzhak2016, cc3itzhak2016)
 save(ccItzhak2016res, file = "ccItzhak2016res.rda")
 ```
 
+## Make tile plot for goEnrichment results
+```{r,}
+itzhakTile <- matrix(1, ncol = 3, nrow = 6)
+
+colnames(itzhakTile) <- c("Phenotype 1", "Phenotype 2", "Phenotype 3")
+rownames(itzhakTile) <- c(ccItzhak2016res[[1]]@result$Description[1], ccItzhak2016res[[2]]@result$Description[c(1,3,5)],
+                         ccItzhak2016res[[3]]@result$Description[1:2])
+itzhakTile[ccItzhak2016res[[1]]@result[,2][ccItzhak2016res[[1]]@result[,2] %in%  rownames(itzhakTile)], 1] <- ccItzhak2016res[[1]]@result[,5][ccItzhak2016res[[1]]@result[,2] %in%  rownames(itzhakTile)]
+
+itzhakTile[ccItzhak2016res[[2]]@result[,2][ccItzhak2016res[[2]]@result[,2] %in%  rownames(itzhakTile)], 2] <- ccItzhak2016res[[2]]@result[,5][ccItzhak2016res[[2]]@result[,2] %in%  rownames(itzhakTile)]
+
+itzhakTile[ccItzhak2016res[[3]]@result[,2][ccItzhak2016res[[3]]@result[,2] %in%  rownames(itzhakTile)], 3] <- ccItzhak2016res[[3]]@result[,5][ccItzhak2016res[[3]]@result[,2] %in%  rownames(itzhakTile)]
+
+myCol <- brewer.pal(9,"YlGnBu")[c(1,2,4:9)]
+myCol  <- colorRampPalette(RColorBrewer::brewer.pal(9,"YlGnBu"))(100)
+pheatmap(-log10(itzhakTile), cluster_rows = FALSE, cluster_cols = FALSE, treeheight_row = 0, treeheight_col = 0, main = "HeLa (Itzhak et al.)", col = myCol[c(1,10:100)], fontsize = 14, legend_breaks = c(0, 10, 20,30, 40, max(-log10(itzhakTile))), legend_labels = c("0","10", "20", "30","40", "-log10(p.value)\n"),
+legend = TRUE)
+```
+
+
+
+
+
 # LOPIT DC U2OS
 ```{r,}
 load("dcU2OSTagmNoveltyparams.rda")
@@ -843,9 +866,9 @@ dcU2OSTagmNoveltyparams_conv <- dcU2OSTagmNoveltyparams[c(1,3,5)]
 ```{r,}
 lopitdcNoveltyRes_conv <- tagmNoveltyProcess(object = lopitdcU2OS2018, params = dcU2OSTagmNoveltyparams_conv)
 dcU2OSTagmNoveltyparams_conv <- tagmMcmcProcess(params = dcU2OSTagmNoveltyparams_conv)
-save(dcU2OSTagmNoveltyparams_conv, file = "dcU2OSTagmNoveltyparams_conv.rda")
+#save(dcU2OSTagmNoveltyparams_conv, file = "dcU2OSTagmNoveltyparams_conv.rda")
 lopitdcU2OS2018 <- tagmPredict(object = lopitdcU2OS2018, params = dcU2OSTagmNoveltyparams_conv)
-save(lopitdcNoveltyRes_conv, file = "lopitdcNoveltyRes_conv.rda")
+#save(lopitdcNoveltyRes_conv, file = "lopitdcNoveltyRes_conv.rda")
 ```
 
 
@@ -869,11 +892,11 @@ par(mar=c(5,4,4,10), xpd = T)
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(lopitdcU2OS2018)$tagm.discovery.prob
 ptsze[fData(lopitdcU2OS2018)$tagm.mcmc.outlier > 0.0001] <- 0.01
-plot2D(lopitdcU2OS2018 , fcol = "tagm.phenotype", cex = ptsze, main = "PCA of LOPIT-DC U2OS data with pointer scaled to discovery probability",
+plot2D(lopitdcU2OS2018 , fcol = "tagm.phenotype", cex = ptsze, main = "LOPIT-DC U-2 OS",
        cex.main = 2)
 myleg <- levels(lopitdcNoveltyRes_conv@pooledNoveltyChain@mp@cl)
-legend(10, 8, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 1, pt.cex = 1)
+legend(10, 9, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 1, pt.cex = 1.5)
 ```
 
 ```{r,}
@@ -883,15 +906,15 @@ toSubsethl <- (fData(lopitdcU2OS2018)$tagm.discovery.prob > 0.99) & fData(lopitd
 annot <- data.frame(organelle = fData(lopitdcU2OS2018)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(lopitdcU2OS2018))[toSubsethl]
 # Set up for heat map
-ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(lopitdcNoveltyRes_conv@pooledNoveltyChain@mp@cl)])
-)
-names(ann_colors$organelle) <- levels(annot$organelle)
-
 psmSub <- rownames(fData(lopitdcU2OS2018))[toSubsethl]
+ann_colors = list(
+  organelle = c(getStockcol()[1:length(unique(fData(lopitdcU2OS2018[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(lopitdcU2OS2018[psmSub])$tagm.phenotype))
 
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(lopitdcNoveltyRes_conv@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS LOPIT-DC data")
+pheatmap(lopitdcNoveltyRes_conv@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, col = myBlues, treeheight_row = 0, treeheight_col = 0, main = "U-2 OS LOPIT-DC", fontsize = 14)
 ```
 
 ```{r,}
@@ -971,6 +994,35 @@ save(goCCDCres, file = "goCCDCres.rda")
 ```
 
 ```{r,}
+dcTile <- matrix(1, ncol = 5, nrow = 8)
+
+colnames(dcTile) <- c("Phenotype 3", "Phenotype 5", "Phenotype 6", "Phenotype 8", "Phenotype 9")
+rownames(dcTile) <- c(goCCDCres[[3]]@result$Description[c(1,4)], goCCDCres[[5]]@result$Description[c(1)],
+                      goCCDCres[[6]]@result$Description[c(1,3)], goCCDCres[[8]]@result$Description[1], goCCDCres[[9]]@result$Description[c(1,5)])
+
+dcTile[goCCDCres[[3]]@result[,2][goCCDCres[[3]]@result[,2] %in%  rownames(dcTile)], 1] <- goCCDCres[[3]]@result[,5][goCCDCres[[3]]@result[,2] %in%  rownames(dcTile)]
+
+dcTile[goCCDCres[[5]]@result[,2][goCCDCres[[5]]@result[,2] %in%  rownames(dcTile)], 2] <- goCCDCres[[5]]@result[,5][goCCDCres[[5]]@result[,2] %in%  rownames(dcTile)]
+
+dcTile[goCCDCres[[6]]@result[,2][goCCDCres[[6]]@result[,2] %in%  rownames(dcTile)], 3] <- goCCDCres[[6]]@result[,5][goCCDCres[[6]]@result[,2] %in%  rownames(dcTile)]
+
+dcTile[goCCDCres[[8]]@result[,2][goCCDCres[[8]]@result[,2] %in%  rownames(dcTile)], 4] <- goCCDCres[[8]]@result[,5][goCCDCres[[8]]@result[,2] %in%  rownames(dcTile)]
+
+dcTile[goCCDCres[[9]]@result[,2][goCCDCres[[9]]@result[,2] %in%  rownames(dcTile)], 5] <- goCCDCres[[9]]@result[,5][goCCDCres[[9]]@result[,2] %in%  rownames(dcTile)]
+
+myCol <- brewer.pal(9,"YlGnBu")[c(1,2,4:9)]
+myCol  <- colorRampPalette(RColorBrewer::brewer.pal(9,"YlGnBu"))(100)
+pheatmap(-log10(dcTile), cluster_rows = FALSE, cluster_cols = FALSE, treeheight_row = 0, treeheight_col = 0, main = "LOPIT-DC U-2 OS", col = myCol[c(1,10:100)], fontsize = 14, legend_breaks = c(0, 10, 20,30, 40,50, 60, max(-log10(dcTile))), legend_labels = c("0","10", "20", "30","40", "50", "60",  "-log10(p.value)\n"),
+legend = TRUE)
+```
+
+
+
+
+
+
+
+```{r,}
 hpa <- read.table("aal3321_Thul_SM_table_S11.csv", sep = ",", header = TRUE)
 annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 1"], 1, 6), "U.2.OS.location"])
 annotations[order(annotations, decreasing = T)[1:20]]
@@ -1021,7 +1073,7 @@ itzhak2017NoveltyRes <- tagmNoveltyProcess(object = itzhak2017, params = itzhak2
 itzhak2017TagmNoveltyparams_conv <- tagmMcmcProcess(itzhak2017TagmNoveltyparams_conv)
 itzhak2017 <- tagmPredict(itzhak2017, params = itzhak2017TagmNoveltyparams_conv)
 itzhak2017 <- tagmNoveltyPredict(itzhak2017, itzhak2017NoveltyRes)
-save(itzhak2017NoveltyRes, file = "itzhak2017NoveltyRes.rda")
+#save(itzhak2017NoveltyRes, file = "itzhak2017NoveltyRes.rda")
 ```
 
 
@@ -1041,29 +1093,31 @@ par(mar=c(5,4,4,14), xpd = T)
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(itzhak2017)$tagm.discovery.prob
 ptsze[fData(itzhak2017)$tagm.mcmc.outlier > 0.0001] <- 0.01
-plot2D(itzhak2017 , fcol = "tagm.phenotype", cex = ptsze, main = "PCA of mouse neuron data with pointer scaled to discovery probability",
+plot2D(itzhak2017 , fcol = "tagm.phenotype", cex = ptsze, main = "Mouse primary neuron",
        cex.main = 2)
 myleg <- levels(itzhak2017NoveltyRes@pooledNoveltyChain@mp@cl)
 legend(7, 8, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 1, pt.cex = 1)
+       pch = 19, cex = 1, pt.cex = 1.5)
 ```
 
 ```{r,}
 toSubsethl <- (fData(itzhak2017)$tagm.discovery.prob > 0.99) & fData(itzhak2017)$tagm.mcmc.outlier < 0.01 
 
 # Create annotation 
+# Create annotation 
 annot <- data.frame(organelle = fData(itzhak2017)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(itzhak2017))[toSubsethl]
-# Set up for heat map
-ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(itzhak2017NoveltyRes@pooledNoveltyChain@mp@cl)])
-)
-names(ann_colors$organelle) <- levels(annot$organelle)
-
 psmSub <- rownames(fData(itzhak2017))[toSubsethl]
 
+ann_colors = list(
+  #organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes@pooledNoveltyChain@mp@cl)])
+  organelle = c(getStockcol()[1:length(unique(fData(itzhak2017[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(itzhak2017[psmSub])$tagm.phenotype))
+
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(itzhak2017NoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse neuron data")
+pheatmap(itzhak2017NoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, col = myBlues, treeheight_row = 0, treeheight_col = 0, main = "Mouse primary neuron", fontsize = 14)
 ```
 
 ## Using pRoloc functon
@@ -1176,7 +1230,7 @@ hlu2osNoveltyRes_conv <- tagmNoveltyProcess(object = hyperLOPITU2OS2018, params 
 hlu2osNoveltyparams_conv <- tagmMcmcProcess(params = hlU2OSTagmNoveltyparams_conv)
 hyperLOPITU2OS2018 <- tagmPredict(object = hyperLOPITU2OS2018, params = hlu2osNoveltyparams_conv)
 hyperLOPITU2OS2018 <- tagmNoveltyPredict(object = hyperLOPITU2OS2018, hlu2osNoveltyRes_conv) 
-save(hlu2osNoveltyRes_conv, file = "hlu2osNoveltyRes_conv.rda")
+#save(hlu2osNoveltyRes_conv, file = "hlu2osNoveltyRes_conv.rda")
 ```
 
 ```{r,}
@@ -1193,11 +1247,11 @@ par(mar=c(5,4,4,14), xpd = T)
 ## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
 ptsze <- fData(hyperLOPITU2OS2018)$tagm.discovery.prob
 ptsze[fData(hyperLOPITU2OS2018)$tagm.mcmc.outlier > 0.00001] <- 0.01
-plot2D(hyperLOPITU2OS2018 , fcol = "tagm.phenotype", cex = ptsze, main = "PCA of hyperLOPIT U2OS with pointer scaled to discovery probability",
+plot2D(hyperLOPITU2OS2018 , fcol = "tagm.phenotype", cex = ptsze, main = "hyperLOPIT U-2 OS",
        cex.main = 2)
 myleg <- levels(hlu2osNoveltyRes_conv@pooledNoveltyChain@mp@cl)
 legend(11, 10, legend = myleg, col = getStockcol(), bty = "n",
-       pch = 19, cex = 1, pt.cex = 1)
+       pch = 19, cex = 1, pt.cex = 1.5)
 ```
 
 ```{r,}
@@ -1206,16 +1260,17 @@ toSubsethl <- (fData(hyperLOPITU2OS2018)$tagm.discovery.prob > 0.99) & fData(hyp
 # Create annotation 
 annot <- data.frame(organelle = fData(hyperLOPITU2OS2018)$tagm.phenotype[toSubsethl])
 rownames(annot) <- rownames(fData(hyperLOPITU2OS2018))[toSubsethl]
-# Set up for heat map
-ann_colors = list(
-  organelle = c(getStockcol()[1:nlevels(hlu2osNoveltyRes_conv@pooledNoveltyChain@mp@cl)])
-)
-names(ann_colors$organelle) <- levels(annot$organelle)
-
 psmSub <- rownames(fData(hyperLOPITU2OS2018))[toSubsethl]
 
+ann_colors = list(
+  #organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes@pooledNoveltyChain@mp@cl)])
+  organelle = c(getStockcol()[1:length(unique(fData(hyperLOPITU2OS2018[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(hyperLOPITU2OS2018[psmSub])$tagm.phenotype))
+
 # Create Heatmap of PSM to big too run subset to 
-pheatmap(hlu2osNoveltyRes_conv@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS data")
+pheatmap(hlu2osNoveltyRes_conv@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, col = myBlues, main = "hyperLOPIT U-2 OS data", fontsize = 14)
 ```
 ## Using pRoloc function
 ```{r,}
@@ -1274,10 +1329,10 @@ cc5hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS20
                ont = "CC",
                universe = rownames(fData(hyperLOPITU2OS2018))) # nucleplasm
 
-bp6hlu2os <- enrichGO(gene = substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 6" & fData(hyperLOPITU2OS2018)$tagm.discovery.prob > 0.95], 1, 6),
+cc6hlu2os <- enrichGO(gene = substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 6" & fData(hyperLOPITU2OS2018)$tagm.discovery.prob > 0.95], 1, 6),
                OrgDb = "org.Hs.eg.db",
                keyType = "UNIPROT",
-               ont = "MF",
+               ont = "CC",
                universe = rownames(fData(hyperLOPITU2OS2018))) # (HPA Cyosol/Nucleoplasm)
 
 cc7hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 7" & fData(hyperLOPITU2OS2018)$tagm.discovery.prob > 0.95],
@@ -1299,7 +1354,35 @@ cc9hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS20
                universe = rownames(fData(hyperLOPITU2OS2018))) # nothing
 
 ```
+```{r,}
+ccu2os <- list(cc1hlu2os, cc2hlu2os, cc3hlu2os, cc4hlu2os,
+                     cc5hlu2os, cc6hlu2os, cc7hlu2os, cc8hlu2os,
+                     cc9hlu2os)
+save(ccu2os, file = "ccu2os.rda")
 
+
+```
+
+```{r,}
+u2osTile <- matrix(1, ncol = 6, nrow = 8)
+
+colnames(u2osTile) <- c("Phenotype 1","Phenotype 2","Phenotype 3", "Phenotype 4", "Phenotype 5", "Phenotype 8")
+rownames(u2osTile) <- c(ccu2os[[1]]@result$Description[4], ccu2os[[2]]@result$Description[1], ccu2os[[3]]@result$Description[c(1,4)],
+                      ccu2os[[4]]@result$Description[1], ccu2os[[5]]@result$Description[1], ccu2os[[8]]@result$Description[c(3,4)])
+
+u2osTile[ccu2os[[1]]@result[,2][ccu2os[[1]]@result[,2] %in%  rownames(u2osTile)], 1] <- ccu2os[[1]]@result[,5][ccu2os[[1]]@result[,2] %in%  rownames(u2osTile)]
+u2osTile[ccu2os[[2]]@result[,2][ccu2os[[2]]@result[,2] %in%  rownames(u2osTile)], 2] <- ccu2os[[2]]@result[,5][ccu2os[[2]]@result[,2] %in%  rownames(u2osTile)]
+u2osTile[ccu2os[[3]]@result[,2][ccu2os[[3]]@result[,2] %in%  rownames(u2osTile)], 3] <- ccu2os[[3]]@result[,5][ccu2os[[3]]@result[,2] %in%  rownames(u2osTile)]
+u2osTile[ccu2os[[4]]@result[,2][ccu2os[[4]]@result[,2] %in%  rownames(u2osTile)], 4] <- ccu2os[[4]]@result[,5][ccu2os[[4]]@result[,2] %in%  rownames(u2osTile)]
+u2osTile[ccu2os[[5]]@result[,2][ccu2os[[5]]@result[,2] %in%  rownames(u2osTile)], 5] <- ccu2os[[5]]@result[,5][ccu2os[[5]]@result[,2] %in%  rownames(u2osTile)]
+u2osTile[ccu2os[[8]]@result[,2][ccu2os[[8]]@result[,2] %in%  rownames(u2osTile)], 6] <- ccu2os[[8]]@result[,5][ccu2os[[8]]@result[,2] %in%  rownames(u2osTile)]
+
+
+myCol <- brewer.pal(9,"YlGnBu")[c(1,2,4:9)]
+myCol  <- colorRampPalette(RColorBrewer::brewer.pal(9,"YlGnBu"))(100)
+pheatmap(-log10(u2osTile), cluster_rows = FALSE, cluster_cols = FALSE, treeheight_row = 0, treeheight_col = 0, main = "hyperLOPIT U-2 OS", col = myCol[c(1,10:100)], fontsize = 14, legend_breaks = c(0, 10, 20,30, 40,50, 60, max(-log10(u2osTile))), legend_labels = c("0","10", "20", "30","40", "50", "60",  "-log10(p.value)\n"),
+legend = TRUE)
+```
 
 ```{r,}
 ## Shared dc and hyperlopit endosome
