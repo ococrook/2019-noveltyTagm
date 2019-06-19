@@ -89,24 +89,27 @@ numAlloc <- sum(tb[!(names(tb) %in% c("ENDOSOME", "Phenotype 1"))])
 numAlloc_withend <- sum(tb[!(names(tb) %in% c("Phenotype 1"))])
 totalProteins <- nrow(u2ostagm)
 
+# 240 endosome allocations
 
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-df <- matrix(NA, ncol = 3, nrow = 4)
-colnames(df) <- c("Markers", "TAGM allocation", "Reannotation allocations")
-df[, 1] <- c(numMarkers, totalProteins - numMarkers, 0, 0)
-df[, 2] <- c(numMarkers, numAlloc - numMarkers, totalProteins - (numAlloc), 0)
-df[, 3] <- c(numMarkers, numAlloc - numMarkers, numAlloc_withend - (numAlloc), totalProteins - (numAlloc_withend))
+df <- matrix(NA, ncol = 1, nrow = 4)
+names(df) <- c("Markers", "TAGM allocation", "Reannotation allocations")
+#df[, 1] <- c(numMarkers, totalProteins - numMarkers, 0, 0)
+#df[, 2] <- c(numMarkers, numAlloc - numMarkers, totalProteins - (numAlloc), 0)
+df[, 1] <- c(numMarkers, numAlloc - numMarkers, numAlloc_withend - (numAlloc), totalProteins - (numAlloc_withend))
 df_long <- melt(df)
-df_long$Var1 <- c("a", "d", "b", "c", "a", "b", "d", "c", "a", "b", "c", "d")
+#df_long$Var1 <- c("a", "d", "b", "c", "a", "b", "d", "c", "a", "b", "c", "d")
+df_long$Var1 <- c("a", "b", "c", "d")
 df_long$Var1[df_long$Var1 == "a"] <- c("Markers")
 df_long$Var1[df_long$Var1 == "b"] <- c("Protein allocations")
 df_long$Var1[df_long$Var1 == "c"] <- c("Reannotation allocations")
 df_long$Var1[df_long$Var1 == "d"] <- c("Unknown")
-gg <- ggplot(df_long, aes(x = Var2, y = value, fill = Var1, width = 0.5)) + geom_bar(stat="identity", position = position_stack(reverse = TRUE)) + coord_flip()
+df_long$Var2 <- c("TAGM allocations")
+gg <- ggplot(df_long, aes(x = Var2, y = value, fill = Var1, width = 0.5)) + geom_bar(stat="identity", position = position_stack(reverse = TRUE)) #+ coord_flip()
 gg <- gg + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                  panel.background = element_blank(), axis.line = element_line(colour = "black"),
                  text = element_text(size=20)) + scale_fill_manual(values=cbPalette, name = "Legend")
-gg <- gg + ylab("Number of Proteins ") + xlab("Method") + ggtitle("Number of proteins allocation after dataset reannnotation") 
+gg <- gg + ylab("Number of Proteins ") + xlab("Method") + ggtitle("Protein allocations") 
 gg
 
 
