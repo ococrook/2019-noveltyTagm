@@ -32,18 +32,18 @@
 \author[1]{Aikaterini Geladaki}
 \author[1]{Daniel J.H. Nightingale}
 \author[1]{Owen Vennard}
-\author[1]{Kathryn S. Lilley}
-\author[2]{Paul D.W. Kirk\thanks{\url{paul.kirk@mrc-bsu.cam.ac.uk}}~}
+\author[1]{Kathryn S. Lilley \thanks{\url{ksl23@cam.ac.uk}}~}
 \author[3]{Laurent Gatto\thanks{\url{laurent.gatto@uclouvain.be}}~}
+\author[2,4]{Paul D.W. Kirk\thanks{\url{paul.kirk@mrc-bsu.cam.ac.uk}}~}
 
 
 
 \affil[1]{Cambridge Centre for Proteomics, Department of Biochemistry,
 	University of Cambridge, Cambridge, UK}
-\affil[2]{MRC Biostatistics Unit, Cambridge Institute for Public
-	Health, Cambridge, UK}
+\affil[2]{MRC Biostatistics Unit, School of Clinical Medicine, University of Cambridge, Cambridge, UK}
 \affil[3]{de Duve Institute, UCLouvain, Avenue
 	Hippocrate 75, 1200 Brussels, Belgium}
+\affil[4]{Cambridge Institute of Therapeutic Immunology \& Infectious Disease (CITIID), Jeffrey Cheah Biomedical Centre, Cambridge Biomedical Campus, University of Cambridge, UK.}
 
 \begin{document}
 
@@ -80,16 +80,20 @@ We apply Novelty TAGM to $10$ spatial proteomic datasets across a diverse range 
 	\centering
 	\footnotesize
 	\hspace*{-1.5cm}
-	\begin{tabular}{ |p{2.5cm}|p{2cm}|p{2cm}|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+	\begin{tabular}{ |p{2.5cm}|p{2cm}|p{2cm}|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 		\hline
-		\multicolumn{8}{|c|}{MS-based Spatial Proteomics Computational Methods} \\
+		\multicolumn{8}{|c|}{MS-based Spatial Proteomics Computational Methods for Prediction and Novelty Detection} \\
 		\hline
 		Method & Localisation prediction & Uncertainty in protein localisation & Outlier detection  & Novelty detection & Uncertainty in number of novel phenotypes & Uncertainty in allocation to new phenotypes & Integrative \\
 		\hline
 		\hline
-		Supervised Machine Learning\citep{Gatto:2014b}  & \vfill\hfil \checkmark & \vfill\hfil\xmark & \vfill\hfil\xmark &\vfill\hfil\xmark&\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark\\
+		Supervised Machine Learning (as reviewed in \cite{Gatto:2014b})  & \vfill\hfil \checkmark & \vfill\hfil\xmark & \vfill\hfil\xmark &\vfill\hfil\xmark&\vfill\hfil\xmark&\vfill \hfil\xmark& \vfill\hfil\xmark\\
+		\hline
+		Correlation Profiling \citep{Foster:2006, Krahmer::2018}  & \vfill\hfil \checkmark & \vfill\hfil\xmark & \vfill\hfil\xmark &\vfill\hfil\xmark&\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark\\
 		\hline
 		Transfer Learning \citep{Breckels:2016}  & \vfill\hfil \checkmark  & \vfill\hfil\xmark& \vfill\hfil\xmark &\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark&\vfill\hfil \checkmark\\
+		\hline
+		\textit{Mclust} (as used in \cite{Orre:2019}) & \vfill\hfil\xmark &\vfill\hfil\xmark &\vfill\hfil \checkmark &\vfill\hfil \checkmark&\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark\\
 		\hline
 		\textit{PhenoDisco} \citep{Breckels:2013}  & \vfill\hfil\xmark &\vfill\hfil\xmark &\vfill\hfil \checkmark &\vfill\hfil \checkmark&\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark\\
 		\hline
@@ -99,7 +103,7 @@ We apply Novelty TAGM to $10$ spatial proteomic datasets across a diverse range 
 		\hline
 		\hline
 	\end{tabular}
-	\caption{Summary of computational methods for spatial  proteomics datasets.}
+	\caption{Examples of computational methods for spatial proteomics datasets for prediction and novelty detection.}
 	\label{table:methods}
 \end{table}
 
