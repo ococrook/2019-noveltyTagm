@@ -1,0 +1,1208 @@
+---
+title: "Novelty Tagm Analysis"
+author: "Oliver M. Crook"
+date: "17 November 2018"
+output: html_document
+---
+```{r,eval=FALSE}
+devtools::install_github("lgatto/pRoloc", ref = "novelty" ,force = TRUE)
+```
+
+
+```{r,}
+source("../scripts/plot2D.R")
+myBlues <- colorRampPalette(RColorBrewer::brewer.pal(9,"Blues"))(100)
+```
+
+```{r,}
+require(pRolocdata)
+data(hirst2018)
+newHirst <- hirst2018[, c(11:15, 26:30, 41:45)]
+fData(newHirst)$markers[fData(newHirst)$markers == "Large Protein Complex"] <- "unknown"
+load("hirstTagmNoveltyparams.rda")
+setStockcol(paste0(getStockcol(), 90))
+```
+
+# check convergence
+```{r,}
+outliers <- mcmc_get_outliers(hirstTagmNoveltyparams[c(1,2,4,6)])
+hirstdiag <- gelman.diag(outliers)
+hirstTagmNoveltyparams_conv <- hirstTagmNoveltyparams[c(1,2,4,6)]
+```
+
+
+```{r,}
+hirstTagmNoveltyRes <- tagmNoveltyProcess(object = newHirst, params = hirstTagmNoveltyparams_conv)
+hirstTagmNoveltyparams_conv <- tagmMcmcProcess(hirstTagmNoveltyparams_conv)
+newHirst <- tagmPredict(object = newHirst, params = hirstTagmNoveltyparams_conv)
+save(hirstTagmNoveltyRes, file = "hirstTagmNoveltyRes.rda")
+```
+
+
+```{r,}
+## attach information to MSnset
+fData(newHirst)$tagm.phenotype <- hirstTagmNoveltyRes$mpCombined$cl[rownames(fData(newHirst))]
+fData(newHirst)$tagm.newcluster.prob <- hirstTagmNoveltyRes$tagm.newcluster.prob[rownames(fData(newHirst))]
+
+fData(newHirst)$tagm.newcluster.prob[is.na(fData(newHirst)$tagm.newcluster.prob)] <- 0
+
+ptsze <- exp(fData(newHirst)$tagm.newcluster.prob) - 1
+plot2D(newHirst, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(newHirst, fcol = "tagm.phenotype", ncol = 3, where = "topright", cex = 0.5)
+
+```
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,13), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(newHirst)$tagm.newcluster.prob 
+plot2D(newHirst, fcol = "tagm.phenotype", cex = ptsze, main = "HeLa (Hirst et al. 2018)", cex.lab = 1.3)
+myleg <- levels(hirstTagmNoveltyRes$mpCombined$cl)
+legend(7, 8, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 1, ncol = 1, pt.cex = 1)
+```
+
+```{r,}
+toSubsethl <- (fData(newHirst)$tagm.newcluster.prob > 0.95) & fData(newHirst)$tagm.mcmc.outlier < 0.95 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(newHirst)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(newHirst))[toSubsethl]
+# Set up for heat map
+ann_colors = list(
+  #organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes@pooledNoveltyChain@mp@cl)])
+  organelle = c(getStockcol()[1:length(unique(fData(newHirst[psmSub])$tagm.phenotype))])
+)
+psmSub <- rownames(fData(newHirst))[toSubsethl]
+names(ann_colors$organelle) <- as.character(unique(fData(newHirst[psmSub])$tagm.phenotype))
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(hirstTagmNoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "HeLa (Hirst et al. 2018)", color = myBlues, fontsize = 14, cellheight=0.5,cellwidth=0.7)
+```
+
+```{r,}
+cc1Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 1" & 
+                                                 fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst))) # ribosome, cytosol
+
+cc2Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 2" &
+                                                 fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst))) #extracellular, cytosol 
+
+cc3Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 3" & 
+                                                 fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst))) # nothing
+
+cc4Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 4"  & fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst))) # nothing
+
+cc5Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 5" & fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst))) #
+
+cc6Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 6" & fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst)))
+
+cc7Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 7" & fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst)))
+
+cc8Hirst <- enrichGO(gene = rownames(newHirst)[fData(newHirst)$tagm.phenotype == "Phenotype 8" & fData(newHirst)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(newHirst)))
+
+#bp2Hirst <- enrichGO(gene = rownames(hirst2018)[fData(hirst2018)$tagm.phenotype == "Phenotype 2"],
+#               OrgDb = "org.Hs.eg.db",
+#               keyType = "UNIPROT",
+#               ont = "BP",
+#               universe = rownames(fData(hirst2018))) 
+
+#bp6Hirst <- enrichGO(gene = rownames(hirst2018)[fData(hirst2018)$tagm.phenotype == "Phenotype 6"],
+#               OrgDb = "org.Hs.eg.db",
+#               keyType = "UNIPROT",
+#               ont = "BP",
+#               universe = rownames(fData(hirst2018)))
+
+```
+```{r,}
+ccHirstres <- list(cc1Hirst, cc2Hirst, cc3Hirst, cc4Hirst,
+                   cc5Hirst, cc6Hirst, cc7Hirst, cc8Hirst)
+save(ccHirstres, file = "ccHirstres.rda")
+```
+
+
+Beltran MOCK 24 analysis
+```{r,}
+load("beltranMOCK24TagmNoveltyparams.rda")
+data("beltran2016MOCK24")
+```
+
+# check convergence
+```{r,}
+outliers <- mcmc_get_outliers(beltranMOCK24TagmNoveltyparams)
+MOCK24diag <- gelman.diag(outliers)
+```
+
+
+```{r,}
+beltranMOCK24TagmNoveltyRes <- tagmNoveltyProcess(object = beltran2016MOCK24, params = beltranMOCK24TagmNoveltyparams)
+beltranMOCK24TagmNoveltyparams <- tagmMcmcProcess(beltranMOCK24TagmNoveltyparams)
+beltran2016MOCK24 <- tagmPredict(object = beltran2016MOCK24, params = beltranMOCK24TagmNoveltyparams)
+save(beltranMOCK24TagmNoveltyRes, file = "beltranMOCK24TagmNoveltyRes.rda")
+
+```
+
+```{r,}
+## attach information to MSnset
+fData(beltran2016MOCK24)$tagm.phenotype <- beltranMOCK24TagmNoveltyRes@pooledNoveltyChain@mp@cl[rownames(fData(beltran2016MOCK24))]
+fData(beltran2016MOCK24)$tagm.newcluster.prob <- beltranMOCK24TagmNoveltyRes@tagmNewclusterProb[rownames(fData(beltran2016MOCK24))]
+
+fData(beltran2016MOCK24)$tagm.newcluster.prob[is.na(fData(beltran2016MOCK24)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(beltran2016MOCK24)$tagm.newcluster.prob
+plot2D(beltran2016MOCK24, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(beltran2016MOCK24, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,13), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(beltran2016MOCK24)$tagm.newcluster.prob 
+plot2D(beltran2016MOCK24, fcol = "tagm.phenotype", cex = ptsze, main = "MOCK fibroblast", cex.lab = 1.5)
+myleg <- levels(beltranMOCK24TagmNoveltyRes@pooledNoveltyChain@mp@cl)
+legend(3, 2, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 1.2, pt.cex = 1)
+```
+
+```{r,}
+toSubsethl <- (fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95) & fData(beltran2016MOCK24)$tagm.mcmc.outlier < 0.95 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(beltran2016MOCK24)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(beltran2016MOCK24))[toSubsethl]
+psmSub <- rownames(fData(beltran2016MOCK24))[toSubsethl]
+
+ann_colors = list(
+  #organelle = c(getStockcol()[1:nlevels(hirstTagmNoveltyRes@pooledNoveltyChain@mp@cl)])
+  organelle = c(getStockcol()[1:length(unique(fData(beltran2016MOCK24[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(beltran2016MOCK24[psmSub])$tagm.phenotype))
+
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(beltranMOCK24TagmNoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "MOCK fibroblast", col = myBlues, fontsize = 14)
+```
+
+
+
+
+
+```{r,}
+cc1beltran <- enrichGO(gene = rownames(beltran2016MOCK24)[fData(beltran2016MOCK24)$tagm.phenotype == "Phenotype 1" & fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016MOCK24))) #ribosome, large ribosomal subunit
+
+cc2beltran <- enrichGO(gene = rownames(beltran2016MOCK24)[fData(beltran2016MOCK24)$tagm.phenotype == "Phenotype 2" & fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016MOCK24))) # actin cytoskeleton 
+
+cc3beltran <- enrichGO(gene = rownames(beltran2016MOCK24)[fData(beltran2016MOCK24)$tagm.phenotype == "Phenotype 3" & fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016MOCK24))) # mitochondrial part/ peroxisome
+
+cc4beltran <- enrichGO(gene = rownames(beltran2016MOCK24)[fData(beltran2016MOCK24)$tagm.phenotype == "Phenotype 4" & fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016MOCK24))) # nothing
+cc5beltran <- enrichGO(gene = rownames(beltran2016MOCK24)[fData(beltran2016MOCK24)$tagm.phenotype == "Phenotype 5" & fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016MOCK24))) #ribsomal 
+
+cc6beltran <- enrichGO(gene = rownames(beltran2016MOCK24)[fData(beltran2016MOCK24)$tagm.phenotype == "Phenotype 6" & fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016MOCK24))) # large ribsomal subunit
+cc9beltran <- enrichGO(gene = rownames(beltran2016MOCK24)[fData(beltran2016MOCK24)$tagm.phenotype == "Phenotype 9" & fData(beltran2016MOCK24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016MOCK24))) #nothing
+
+```
+
+Beltran HCMV 24 analysis
+```{r,}
+load("beltranHCMV24TagmNoveltyparams.rda")
+data("beltran2016HCMV24")
+```
+
+```{r,}
+beltranH24NoveltyRes <- tagmNoveltyProcess(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
+```
+
+# check convergence
+```{r,}
+outliers <- mcmc_get_outliers(beltranHCMV24TagmNoveltyparams)
+HCMV24diag <- gelman.diag(outliers)
+```
+
+
+```{r,}
+beltranHCMV24TagmNoveltyRes <- tagmNoveltyProcess(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
+beltranHCMV24TagmNoveltyparams <- tagmMcmcProcess(beltranHCMV24TagmNoveltyparams)
+beltran2016HCMV24 <- tagmPredict(object = beltran2016HCMV24, params = beltranHCMV24TagmNoveltyparams)
+#save(beltranHCMV24TagmNoveltyRes, file = "beltranHCMV24TagmNoveltyRes.rda")
+```
+
+```{r,}
+## attach information to MSnset
+fData(beltran2016HCMV24)$tagm.phenotype <- beltranHCMV24TagmNoveltyRes@pooledNoveltyChain@mp@cl[rownames(fData(beltran2016HCMV24))]
+fData(beltran2016HCMV24)$tagm.newcluster.prob <- beltranHCMV24TagmNoveltyRes@tagmNewclusterProb[rownames(fData(beltran2016HCMV24))]
+
+fData(beltran2016HCMV24)$tagm.newcluster.prob[is.na(fData(beltran2016HCMV24)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(beltran2016HCMV24)$tagm.newcluster.prob
+plot2D(beltran2016HCMV24, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(beltran2016HCMV24, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,15), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(beltran2016HCMV24)$tagm.newcluster.prob 
+plot2D(beltran2016HCMV24, fcol = "tagm.phenotype", cex = ptsze, main = "HCMV infected fibroblast", cex.lab = 1.5)
+myleg <- levels(beltranHCMV24TagmNoveltyRes@pooledNoveltyChain@mp@cl)
+legend(3, 3, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 1.5, pt.cex = 1)
+```
+
+```{r,}
+toSubsethl <- (fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.99) & fData(beltran2016HCMV24)$tagm.mcmc.outlier < 0.95 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(beltran2016HCMV24)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(beltran2016HCMV24))[toSubsethl]
+# Set up for heat map
+psmSub <- rownames(fData(beltran2016HCMV24))[toSubsethl]
+ann_colors = list(
+  organelle = c(getStockcol()[1:length(unique(fData(beltran2016HCMV24[psmSub])$tagm.phenotype))])
+)
+
+names(ann_colors$organelle) <- as.character(unique(fData(beltran2016HCMV24[psmSub])$tagm.phenotype))
+
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(beltranHCMV24TagmNoveltyRes@pooledNoveltyChain@psm[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "HCMV infected fibroblast", col = myBlues, cellwidth = 2.5, fontsize = 14)
+```
+
+
+```{r,}
+# Create annotation 
+annot <- data.frame(organelle = beltranH24NoveltyRes$mpCombined$cl)
+# Set up for heat map
+ann_colors = list(
+  organelle = c(getStockcol()[1:nlevels(beltranH24NoveltyRes$mpCombined$cl)])
+)
+names(ann_colors$organelle) <- levels(annot$organelle)
+
+# Create Heatmap of PSM
+pheatmap(beltranH24NoveltyRes$psmCombined, useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors,
+         treeheight_row = 0, treeheight_col = 0)
+```
+```{r,}
+## attach information to MSnset
+fData(beltran2016HCMV24)$tagm.phenotype <- beltranH24NoveltyRes$mpCombined$cl[rownames(fData(beltran2016HCMV24))]
+fData(beltran2016HCMV24)$tagm.newcluster.prob <- beltranH24NoveltyRes$tagm.newcluster.prob[rownames(fData(beltran2016HCMV24))]
+
+ptsze <- exp(fData(beltran2016HCMV24)$tagm.newcluster.prob) - 1
+plot2D(beltran2016HCMV24, fcol = "tagm.phenotype", cex = ptsze, method = "t-SNE")
+addLegend(beltran2016HCMV24, fcol = "tagm.phenotype", ncol = 2, where = "topleft", cex = 0.5)
+
+```
+
+```{r,}
+cc1Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 1" & 
+                                                             fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) #nucleoplasm, small ribosmal subunit/ribsome
+
+cc2Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 2" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "cc",
+               universe = rownames(fData(beltran2016HCMV24))) # 
+
+cc3Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 3" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) # mitochondrial part, mitchondriol enevelope
+
+cc4Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 4" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) # nuclear envelope
+
+cc5Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 5" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) # ribosome, large ribosomal subunit
+
+cc6Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 6" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) # nothing
+
+cc7Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 7" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) # nothing
+cc8Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 8" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) # nothing
+
+cc9Hbeltran <- enrichGO(gene = rownames(beltran2016HCMV24)[fData(beltran2016HCMV24)$tagm.phenotype == "Phenotype 9" & fData(beltran2016HCMV24)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(beltran2016HCMV24))) # nothing
+```
+```{r,}
+ccHbeltran <- list(cc1Hbeltran, cc2Hbeltran, cc3Hbeltran, cc4Hbeltran,
+                   cc5Hbeltran, cc6Hbeltran, cc7Hbeltran, cc8Hbeltran,
+                   cc9Hbeltran)
+save(ccHbeltran, file = "ccHbeltran.rda")
+```
+
+## Mouse hyperLOPIT analysis
+
+Begin by loading data files and removeing annotations.
+```{r,}
+load("hlmouseTagmNoveltyParams.rda")
+data("hyperLOPIT2015")
+hlmouse <- hyperLOPIT2015
+fData(hlmouse)$markers[fData(hlmouse)$markers %in% c("40S Ribosome","60S Ribosome",
+                                            "Nucleus - Chromatin", "Nucleus - Non-chromatin")] <- "unknown" 
+```
+
+# Check convergence formally
+
+```{r,}
+outliers <- mcmc_get_outliers(hlmouseTagmNoveltyparams)
+mouseDiag <- gelman.diag(outliers[c(2,4)])
+```
+
+
+```{r,}
+hlmouseTagmNoveltyparams_conv <- hlmouseTagmNoveltyparams[c(2,4)]
+hlmouseTagmNoveltyRes_conv <- tagmNoveltyProcess(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
+hlmouseTagmNoveltyparams_conv <- tagmMcmcProcess(hlmouseTagmNoveltyparams_conv)
+hlmouse <- tagmPredict(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
+#save(hlmouseTagmNoveltyRes_conv, file = "hlmouseTagmNoveltyRes_conv.rda")
+```
+
+```{r,}
+#load("C:/Users/OllyC/Desktop/NoveltyTagm/hlmouseTagmNoveltyRes.rda")
+
+```
+
+```{r,}
+## attach information to MSnset
+fData(hlmouse)$tagm.phenotype <- hlmouseTagmNoveltyRes_conv@pooledNoveltyChain@mp@cl[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob <- hlmouseTagmNoveltyRes_conv@tagmNewclusterProb[rownames(fData(hlmouse))]
+
+fData(hlmouse)$tagm.newcluster.prob[is.na(fData(hlmouse)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(hlmouse)$tagm.newcluster.prob
+plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(hlmouse, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,13), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(hlmouse)$tagm.newcluster.prob
+ptsze[fData(hlmouse)$tagm.mcmc.outlier > 0.001] <- 0.01
+plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze, main = "mESC")
+myleg <- levels(hlmouseTagmNoveltyRes_conv$mpCombined$cl)
+
+legend(6, 5, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 0.7, pt.cex = 1.5)
+```
+
+```{r,}
+toSubsethl <- (fData(hlmouse)$tagm.newcluster.prob > 0.99) & fData(hlmouse)$TAGM$tagm.mcmc.outlier < 0.95 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(hlmouse)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(hlmouse))[toSubsethl]
+# Set up for heat map
+ann_colors = list(
+  organelle = c(getStockcol()[1:nlevels(hlmouseTagmNoveltyRes_conv$mpCombined$cl)])
+)
+names(ann_colors$organelle) <- levels(annot$organelle)
+
+psmSub <- rownames(fData(hlmouse))[toSubsethl]
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(hlmouseTagmNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse data", col = myBlues, cellwidth = 2.5)
+```
+
+```{r,}
+cc1hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 1" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # centrosome
+
+cc2hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 2" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # chromosome and chromatin
+
+cc3hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 3" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # nucleolus
+
+cc4hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 4" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # ribosome
+
+cc5hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 5" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # cilium doesnt make any sense
+
+cc6hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 6" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #nothing
+
+cc7hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 7" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # plasma membrane part
+
+cc8hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 8" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # cytoskeletal
+
+cc9hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 9" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # nothing
+
+```
+
+
+```{r,}
+data("yeast2018")
+load("hlyeastTagmNoveltyparams.rda")
+```
+
+```{r,}
+hlyeastTagmNoveltyRes <- tagmNoveltyProcess(object = yeast2018, params = hlyeastTagmNoveltyparams)
+save(hlyeastTagmNoveltyRes, file = "hlyeastTagmNoveltyRes.rda")
+```
+
+ Check convergence formally
+
+```{r,}
+outliers <- mcmc_get_outliers(hlyeastTagmNoveltyparams)
+hlyeastTagmNoveltyparams_burned <- mcmc_burn_chains(hlyeastTagmNoveltyparams, 350)
+yeastDiag <- gelman.diag(outliers[c(2,4)])
+```
+
+
+```{r,}
+## attach information to MSnset
+fData(yeast2018)$tagm.phenotype <- hlyeastTagmNoveltyRes$mpCombined$cl[rownames(fData(yeast2018))]
+fData(yeast2018)$tagm.newcluster.prob <- hlyeastTagmNoveltyRes$tagm.newcluster.prob[rownames(fData(yeast2018))]
+
+ptsze <- fData(yeast2018)$tagm.newcluster.prob
+plot2D(yeast2018, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(yeast2018, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+cc1hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 1"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) # ER, cell periphery, vaculoas membrane, plasma membrane 
+
+cc2hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 2"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) # chromosome kintechore , chromsomal region
+
+cc3hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 3"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) # cytoskelton
+
+cc4hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 4"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) # mitchondrial intermembrane space
+
+cc5hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 5"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) # none
+
+cc6hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 6"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) #none
+
+cc7hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 7"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) # intracellular immature spore, fungal-type cell wall
+
+cc8hlyeast <- enrichGO(gene = rownames(yeast2018)[fData(yeast2018)$tagm.phenotype == "Phenotype 8"],
+               OrgDb = "org.Sc.sgd.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(yeast2018))) # charperone complex 
+
+```
+
+
+## Itzhak 2016
+```{r,}
+load("itzhak2016TagmNoveltyparams.rda")
+data("itzhak2016stcSILAC")
+fData(itzhak2016stcSILAC)$markers[fData(itzhak2016stcSILAC)$markers %in% c("Large Protein Complex")] <- "unknown"
+itzhak2016 <- filterNA(itzhak2016stcSILAC)
+normalise(itzhak2016, method = "vsn")
+```
+
+```{r,}
+outliers <- mcmc_get_outliers(itzhak2016TagmNoveltyparams)
+itzhak2016Diag <- gelman.diag(outliers[c(1,2,6)])
+```
+
+```{r,}
+itzhak2016TagmNoveltyparams_conv <- itzhak2016TagmNoveltyparams[c(1,2,6)]
+itzhak2016NoveltyRes <- tagmNoveltyProcess(object = itzhak2016, params = itzhak2016TagmNoveltyparams_conv)
+itzhak2016TagmNoveltyparams_conv <- tagmMcmcProcess(itzhak2016TagmNoveltyparams_conv)
+itzhak2016 <- tagmPredict(object  = itzhak2016, params = itzhak2016TagmNoveltyparams_conv)
+save(itzhak2016NoveltyRes, file = "itzhak2016NovelyRes.rda")
+```
+
+```{r,}
+fData(itzhak2016)$tagm.phenotype <- itzhak2016NoveltyRes$mpCombined$cl[rownames(fData(itzhak2016))]
+fData(itzhak2016)$tagm.newcluster.prob <- itzhak2016NoveltyRes$tagm.newcluster.prob[rownames(fData(itzhak2016))]
+fData(itzhak2016)$tagm.newcluster.prob[is.na(fData(itzhak2016)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(itzhak2016)$tagm.newcluster.prob
+plot2D(itzhak2016, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(itzhak2016, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,13), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(itzhak2016)$tagm.newcluster.prob 
+plot2D(itzhak2016, fcol = "tagm.phenotype", cex = ptsze, main = "PCA of HeLa (itzhak 2016) data with pointer scaled to discovery probability")
+myleg <- levels(itzhak2016NoveltyRes$mpCombined$cl)
+legend(13, 10, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 0.7, pt.cex = 1)
+```
+
+```{r,}
+toSubsethl <- (fData(itzhak2016)$tagm.newcluster.prob > 0.99) & fData(itzhak2016)$tagm.mcmc.outlier < 0.95 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(itzhak2016)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(itzhak2016))[toSubsethl]
+# Set up for heat map
+ann_colors = list(
+  organelle = c(getStockcol()[1:nlevels(itzhak2016NoveltyRes$mpCombined$cl)])
+)
+names(ann_colors$organelle) <- levels(annot$organelle)
+
+psmSub <- rownames(fData(itzhak2016))[toSubsethl]
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(itzhak2016NoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the HeLa (Itzhak) data")
+```
+
+
+```{r,}
+## attach information to MSnset
+fData(itzhak2016)$tagm.phenotype <- itzhak2016NoveltyRes$mpCombined$cl[rownames(fData(itzhak2016))]
+fData(itzhak2016)$tagm.newcluster.prob <- itzhak2016NoveltyRes$tagm.newcluster.prob[rownames(fData(itzhak2016))]
+
+ptsze <- fData(itzhak2016)$tagm.newcluster.prob
+plot2D(itzhak2016, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(itzhak2016, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+cc1itzhak2016 <- enrichGO(gene = rownames(itzhak2016)[fData(itzhak2016)$tagm.phenotype == "Phenotype 1" & fData(itzhak2016)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2016))) # mitochondrial membrane 
+
+cc2itzhak2016 <- enrichGO(gene = rownames(itzhak2016)[fData(itzhak2016)$tagm.phenotype == "Phenotype 2" & fData(itzhak2016)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2016))) # cytosolic part / nucleolus
+
+cc3itzhak2016 <- enrichGO(gene = rownames(itzhak2016)[fData(itzhak2016)$tagm.phenotype == "Phenotype 3" & fData(itzhak2016)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2016))) # chromsome/ chromatin
+
+```
+
+```{r,}
+ccItzhak2016res <- list(cc1itzhak2016, cc2itzhak2016, cc3itzhak2016)
+save(ccItzhak2016res, file = "ccItzhak2016res.rda")
+```
+
+# LOPIT DC U2OS
+```{r,}
+load("dcU2OSTagmNoveltyparams.rda")
+data(lopitdcU2OS2018)
+fData(lopitdcU2OS2018)$markers[fData(lopitdcU2OS2018)$markers %in% c("NUCLEUS/CHROMATIN","PROTEASOME",
+                                                                           "RIBOSOME")] <- "unknown"
+
+```
+
+# assess convergence
+
+```{r,}
+dcOutlier <- mcmc_get_outliers(dcU2OSTagmNoveltyparams)
+gelman.diag(dcOutlier[c(1,3,5)])
+```
+
+```{r,}
+dcU2OSTagmNoveltyparams_conv <- dcU2OSTagmNoveltyparams[c(1,3,5)]
+```
+
+```{r,}
+lopitdcNoveltyRes_conv <- tagmNoveltyProcess(object = lopitdcU2OS2018, params = dcU2OSTagmNoveltyparams_conv)
+dcU2OSTagmNoveltyparams_conv <- tagmMcmcProcess(params = dcU2OSTagmNoveltyparams_conv)
+save(dcU2OSTagmNoveltyparams_conv, file = "dcU2OSTagmNoveltyparams_conv.rda")
+lopitdcU2OS2018 <- tagmPredict(object = lopitdcU2OS2018, params = dcU2OSTagmNoveltyparams_conv)
+save(lopitdcNoveltyRes_conv, file = "lopitdcNoveltyRes_conv.rda")
+```
+
+
+```{r,}
+## attach information to MSnset
+fData(lopitdcU2OS2018)$tagm.phenotype <- lopitdcNoveltyRes_conv$mpCombined$cl[rownames(fData(lopitdcU2OS2018))]
+fData(lopitdcU2OS2018)$tagm.newcluster.prob <- lopitdcNoveltyRes_conv$tagm.newcluster.prob[rownames(fData(lopitdcU2OS2018))]
+fData(lopitdcU2OS2018)$tagm.newcluster.prob[is.na(fData(lopitdcU2OS2018)$tagm.newcluster.prob)] <- 0
+
+
+ptsze <- fData(lopitdcU2OS2018)$tagm.newcluster.prob
+plot2D(lopitdcU2OS2018, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(lopitdcU2OS2018, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,10), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(lopitdcU2OS2018)$tagm.newcluster.prob 
+plot2D(lopitdcU2OS2018 , fcol = "tagm.phenotype", cex = ptsze, main = "PCA of LOPIT-DC U2OS data with pointer scaled to discovery probability")
+myleg <- levels(lopitdcNoveltyRes_conv$mpCombined$cl)
+legend(10, 8, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 0.7, pt.cex = 1)
+```
+
+```{r,}
+toSubsethl <- (fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.99) & fData(lopitdcU2OS2018)$tagm.mcmc.outlier < 0.01 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(lopitdcU2OS2018)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(lopitdcU2OS2018))[toSubsethl]
+# Set up for heat map
+ann_colors = list(
+  organelle = c(getStockcol()[1:nlevels(lopitdcNoveltyRes_conv$mpCombined$cl)])
+)
+names(ann_colors$organelle) <- levels(annot$organelle)
+
+psmSub <- rownames(fData(lopitdcU2OS2018))[toSubsethl]
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(lopitdcNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS LOPIT-DC data")
+```
+
+
+
+```{r,}
+cc1DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 1" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # nothing
+
+cc2DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 2" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # actin cytoskeleton
+
+cc3DC<- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 3" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # nucleolus, ribsomal subunit
+
+cc4DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 4" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # nucleolus
+
+cc5DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 5" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # proteasome
+
+cc6DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 6" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # extracellular matrix
+
+cc7DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 7" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # myosin complex
+
+cc8DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 8" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) #endosome / early endosome
+
+cc9DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 9" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) #chromsome,
+
+cc10DC <- enrichGO(gene = rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 10" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(lopitdcU2OS2018))) # mitchondrial membrane
+```
+```{r,}
+goCCDCres <- list(cc1DC, cc2DC, cc3DC, cc4DC,
+                  cc5DC, cc6DC, cc7DC, cc8DC,
+                  cc9DC, cc10DC)
+save(goCCDCres, file = "goCCDCres.rda")
+```
+
+```{r,}
+hpa <- read.table("aal3321_Thul_SM_table_S11.csv", sep = ",", header = TRUE)
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 1"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]]
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 2"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]]
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 3"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]] #nucleus enriched
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 4"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]] #nucleus enriched
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 5"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]] #nucleaus enriched
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 6"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]]
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 7"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]] #nucleaus enriched
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 8"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]]
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 9"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]] #nucleaus enriched
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 10"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:20]]
+```
+
+## Itzhak 2017
+
+```{r,}
+data(itzhak2017)
+fData(itzhak2017)$markers[fData(itzhak2017)$markers %in% c("Large Protein Complex")] <- "unknown"
+itzhak2017 <- filterNA(itzhak2017[,c(1:18)])
+load("itzhak2017TagmNoveltyparams.rda")
+```
+
+
+```{r,}
+itzhak2017NoveltyRes <- tagmNoveltyProcess(object = itzhak2017[,c(1:18)], params = itzhak2017TagmNoveltyparams_thinned)
+save(itzhak2017NoveltyRes, file = "itzhak2017NoveltyRes.rda")
+```
+
+## check convergece
+```{r,}
+outliers <- mcmc_get_outliers(itzhak2017TagmNoveltyparams)
+itzhak2017diag <- gelman.diag(outliers[c(4,5)])
+```
+
+```{r,}
+itzhak2017TagmNoveltyparams_conv <- itzhak2017TagmNoveltyparams[c(4,5)]
+itzhak2017NoveltyRes <- tagmNoveltyProcess(object = itzhak2017, params = itzhak2017TagmNoveltyparams_conv)
+itzhak2017TagmNoveltyparams_conv <- tagmMcmcProcess(itzhak2017TagmNoveltyparams_conv)
+itzhak2017 <- tagmPredict(itzhak2017, params = itzhak2017TagmNoveltyparams_conv)
+save(itzhak2017NoveltyRes, file = "itzhak2017NoveltyRes.rda")
+```
+
+
+
+```{r,}
+## attach information to MSnset
+fData(itzhak2017)$tagm.phenotype <- itzhak2017NoveltyRes$mpCombined$cl[rownames(fData(itzhak2017))]
+fData(itzhak2017)$tagm.newcluster.prob <- itzhak2017NoveltyRes$tagm.newcluster.prob[rownames(fData(itzhak2017))]
+fData(itzhak2017)$tagm.newcluster.prob[is.na(fData(itzhak2017)$tagm.newcluster.prob)] <- 0 
+
+ptsze <- fData(itzhak2017)$tagm.newcluster.prob
+plot2D(itzhak2017, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(itzhak2017, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,10), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(itzhak2017)$tagm.newcluster.prob 
+plot2D(itzhak2017 , fcol = "tagm.phenotype", cex = ptsze, main = "PCA of mouse neuron data with pointer scaled to discovery probability")
+myleg <- levels(itzhak2017NoveltyRes$mpCombined$cl)
+legend(7, 8, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 0.7, pt.cex = 1)
+```
+
+```{r,}
+toSubsethl <- (fData(itzhak2017)$tagm.newcluster.prob > 0.99) & fData(itzhak2017)$tagm.mcmc.outlier < 0.01 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(itzhak2017)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(itzhak2017))[toSubsethl]
+# Set up for heat map
+ann_colors = list(
+  organelle = c(getStockcol()[1:nlevels(itzhak2017NoveltyRes$mpCombined$cl)])
+)
+names(ann_colors$organelle) <- levels(annot$organelle)
+
+psmSub <- rownames(fData(itzhak2017))[toSubsethl]
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(itzhak2017NoveltyRes$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the mouse neuron data")
+```
+
+```{r,}
+cc1itzhak2017<- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 1" &
+                                                       fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017))) # nucleolus
+
+cc2itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 2" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017))) #chromatin, chromosome
+
+cc3itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 3" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017))) 
+
+cc4itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 4" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017))) 
+
+cc5itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 5" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017))) 
+
+cc6itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 6" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017))) 
+
+cc7itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 7" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017)))#plasma membrane
+
+cc8itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 8" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017)))
+cc9itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 9" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017)))
+cc10itzhak2017 <- enrichGO(gene = rownames(itzhak2017)[fData(itzhak2017)$tagm.phenotype == "Phenotype 10" &
+                                                        fData(itzhak2017)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(itzhak2017)))
+```
+```{r,}
+ccItzhak2017res <- list(cc1itzhak2017, cc2itzhak2017, cc3itzhak2017, cc4itzhak2017,
+                     cc5itzhak2017, cc6itzhak2017, cc7itzhak2017, cc8itzhak2017,
+                     cc9itzhak2017, cc10itzhak2017)
+save(ccItzhak2017res, file = "ccItzhak2017res.rda")
+```
+
+## hyperLOPIT U2OS
+
+```{r,}
+data(hyperLOPITU2OS2018)
+fData(hyperLOPITU2OS2018)$markers[fData(hyperLOPITU2OS2018)$markers %in% c("RIBOSOME 40S","RIBOSOME 60S",
+                                                                   "CHROMATIN", "NUCLEUS")] <- "unknown"
+load("hlU2OSTagmNoveltyparams.rda")
+```
+
+## assess convergence
+
+```{r,}
+u2osOutlier <- mcmc_get_outliers(hlU2OSTagmNoveltyparams)
+gelman.diag(u2osOutlier[c(2,4)])
+```
+
+```{r,}
+hlU2OSTagmNoveltyparams_conv <- hlU2OSTagmNoveltyparams[c(2,4)]
+```
+
+```{r,}
+hlu2osNoveltyRes_conv <- tagmNoveltyProcess(object = hyperLOPITU2OS2018, params = hlU2OSTagmNoveltyparams_conv)
+hlu2osNoveltyparams_conv <- tagmMcmcProcess(params = hlU2OSTagmNoveltyparams_conv)
+hyperLOPITU2OS2018 <- tagmPredict(object = hyperLOPITU2OS2018, params = hlu2osNoveltyparams_conv)
+save(hlu2osNoveltyRes_conv, file = "hlu2osNoveltyRes_conv.rda")
+```
+
+```{r,}
+## attach information to MSnset
+fData(hyperLOPITU2OS2018)$tagm.phenotype <- hlu2osNoveltyRes_conv$mpCombined$cl[rownames(fData(hyperLOPITU2OS2018))]
+fData(hyperLOPITU2OS2018)$tagm.newcluster.prob <- hlu2osNoveltyRes_conv$tagm.newcluster.prob[rownames(fData(hyperLOPITU2OS2018))]
+fData(hyperLOPITU2OS2018)$tagm.newcluster.prob[is.na(fData(hyperLOPITU2OS2018)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(hyperLOPITU2OS2018)$tagm.newcluster.prob
+plot2D(hyperLOPITU2OS2018, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(hyperLOPITU2OS2018, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+```{r,}
+## specify large margin on the right hand side using mar and use xpd = T to allow plotting
+par(mar=c(5,4,4,10), xpd = T)
+
+## add legend manually with legend, you will need to play with x and y coords in legend depending on your screen and rendering
+ptsze <- fData(hyperLOPITU2OS2018)$tagm.newcluster.prob 
+plot2D(hyperLOPITU2OS2018 , fcol = "tagm.phenotype", cex = ptsze, main = "PCA of hyperLOPIT U2OS with pointer scaled to discovery probability")
+myleg <- levels(hlu2osNoveltyRes_conv$mpCombined$cl)
+legend(11, 10, legend = myleg, col = getStockcol(), bty = "n",
+       pch = 19, cex = 0.7, pt.cex = 1)
+```
+
+```{r,}
+toSubsethl <- (fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.99) & fData(hyperLOPITU2OS2018)$tagm.mcmc.outlier < 0.95 
+
+# Create annotation 
+annot <- data.frame(organelle = fData(hyperLOPITU2OS2018)$tagm.phenotype[toSubsethl])
+rownames(annot) <- rownames(fData(hyperLOPITU2OS2018))[toSubsethl]
+# Set up for heat map
+ann_colors = list(
+  organelle = c(getStockcol()[1:nlevels(hlu2osNoveltyRes_conv$mpCombined$cl)])
+)
+names(ann_colors$organelle) <- levels(annot$organelle)
+
+psmSub <- rownames(fData(hyperLOPITU2OS2018))[toSubsethl]
+
+# Create Heatmap of PSM to big too run subset to 
+pheatmap(hlu2osNoveltyRes_conv$psmCombined[psmSub,psmSub], useRaster = TRUE, annotation_row = annot, show_rownames = F, show_colnames = F, annotation_colors = ann_colors, treeheight_row = 0, treeheight_col = 0, main = "Heatmap of the posterior similarity matrix for the U2OS data")
+```
+
+
+```{r,}
+# which phenotypes are "nuclear" in HPA data
+#substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 1"], 1, 6)
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 3"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:10]] # most nucleoplasm
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 4"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:10]] #mostly nucleoplasm with nucleoli second
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 5"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:10]] #nucleoplasm /cytosol
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 6"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:10]] #cytosol/nucleoplasm
+annotations <- table(hpa[hpa[,3] %in% substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 8"], 1, 6), "U.2.OS.location"])
+annotations[order(annotations, decreasing = T)[1:10]] #nuclear membrane
+
+```
+
+
+```{r,}
+cc1hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 1" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) #ribosome
+
+cc2hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 2" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # endosome
+
+cc3hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 3" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # chrosome and chromatin
+
+cc4hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 4" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # nucleolus (Nucleoli from HPA too)
+
+cc5hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 5" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # nucleplasm
+
+bp6hlu2os <- enrichGO(gene = substr(rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 6" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95], 1, 6),
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "MF",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # (HPA Cyosol/Nucleoplasm)
+
+cc7hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 7" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # filament
+
+cc8hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 8" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # nuclear membrane and nuclear envelope (HPA top annotation)
+
+cc9hlu2os <- enrichGO(gene = rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 9" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Hs.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hyperLOPITU2OS2018))) # nothing
+
+```
+
+
+```{r,}
+## Shared dc and hyperlopit endosome
+sum(rownames(lopitdcU2OS2018)[fData(lopitdcU2OS2018)$tagm.phenotype == "Phenotype 8" & fData(lopitdcU2OS2018)$tagm.newcluster.prob > 0.95] %in% rownames(hyperLOPITU2OS2018)[fData(hyperLOPITU2OS2018)$tagm.phenotype == "Phenotype 2" & fData(hyperLOPITU2OS2018)$tagm.newcluster.prob > 0.95])
+
+```
