@@ -1,5 +1,7 @@
 # NoveltyTagm
 
+[![DOI](https://zenodo.org/badge/160054568.svg)](https://zenodo.org/badge/latestdoi/160054568)
+
 Repository for a A semi-supervised Bayesian approach for simultaneous protein sub-cellular localisation assignment and novelty
 detection.
 
