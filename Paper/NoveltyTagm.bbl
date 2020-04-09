@@ -150,6 +150,11 @@ Crook, O. et~al. (2019a).
   proteomics [version 1; peer review: awaiting peer review].
 \newblock {\em F1000Research\/}, {\bf 8}(446).
 
+\bibitem[Crook {\em et~al.}(2020a)Crook, Kirk, Gatto, and Lilley]{Crookdata}
+Crook, O. et~al. (2020a).
+\newblock Mcmc data for a semi-supervised bayesian approach for simultaneous
+  protein sub-cellular localisation assignment and novelty detection.
+
 \bibitem[Crook {\em et~al.}(2018)Crook, Mulvey, Kirk, Lilley, and
   Gatto]{Crook:2018}
 Crook, O.~M. et~al. (2018).
@@ -161,6 +166,12 @@ Crook, O.~M. et~al. (2019b).
 \newblock Semi-supervised non-parametric bayesian modelling of spatial
   proteomics.
 \newblock {\em arXiv preprint arXiv:1903.02909\/}.
+
+\bibitem[Crook {\em et~al.}(2020b)Crook, Kirk, Lilley, and
+  Gatto]{noveltyGithub}
+Crook, O.~M. et~al. (2020b).
+\newblock ococrook/2019-noveltytagm: Novelty tagm initial release.
+\newblock {\em Zenodo\/}.
 
 \bibitem[Cui {\em et~al.}(2019)Cui, Luo, Lin, Shi, Hong, and Yan]{Cui::2019}
 Cui, Z. et~al. (2019).
