@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.25)  26 APR 2020 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.25)  27 APR 2020 11:29
 entering extended mode
 **./NoveltyTagm.tex
 (NoveltyTagm.tex
@@ -1015,7 +1015,7 @@ ltiple pdfs with page group included in a single page
 >] [20
 
 ]
-<figures/u2ospcaF.pdf, id=778, 722.7pt x 722.7pt>
+<figures/u2ospcaF.pdf, id=757, 722.7pt x 722.7pt>
 File: figures/u2ospcaF.pdf Graphic file (type pdf)
 <use figures/u2ospcaF.pdf>
 Package pdftex.def Info: figures/u2ospcaF.pdf  used on input line 401.
@@ -1025,7 +1025,7 @@ Overfull \hbox (3.6095pt too wide) in paragraph at lines 401--402
  [][] 
  []
 
-<figures/hpa2.png, id=779, 498.78345pt x 463.9734pt>
+<figures/hpa2.png, id=758, 498.78345pt x 463.9734pt>
 File: figures/hpa2.png Graphic file (type png)
 <use figures/hpa2.png>
 Package pdftex.def Info: figures/hpa2.png  used on input line 406.
@@ -1035,7 +1035,7 @@ Overfull \hbox (14.4544pt too wide) in paragraph at lines 406--407
  [][] 
  []
 
-<figures/summaryu2os.pdf, id=780, 722.7pt x 722.7pt>
+<figures/summaryu2os.pdf, id=759, 722.7pt x 722.7pt>
 File: figures/summaryu2os.pdf Graphic file (type pdf)
 <use figures/summaryu2os.pdf>
 Package pdftex.def Info: figures/summaryu2os.pdf  used on input line 411.
@@ -1045,7 +1045,7 @@ Overfull \hbox (3.6095pt too wide) in paragraph at lines 411--412
  [][] 
  []
 
-<figures/endoViolin.pdf, id=781, 1300.86pt x 722.7pt>
+<figures/endoViolin.pdf, id=760, 1300.86pt x 722.7pt>
 File: figures/endoViolin.pdf Graphic file (type pdf)
 <use figures/endoViolin.pdf>
 Package pdftex.def Info: figures/endoViolin.pdf  used on input line 417.
@@ -1082,12 +1082,12 @@ mr/m/n/12 LOPIT
 [23
 
 ]
-<figures/pcaMousehl.pdf, id=837, 650.43pt x 505.89pt>
+<figures/pcaMousehl.pdf, id=816, 650.43pt x 505.89pt>
 File: figures/pcaMousehl.pdf Graphic file (type pdf)
 <use figures/pcaMousehl.pdf>
 Package pdftex.def Info: figures/pcaMousehl.pdf  used on input line 448.
 (pdftex.def)             Requested size: 232.29869pt x 180.67499pt.
-<figures/heatmapMousehl.jpeg, id=838, 712.16063pt x 513.41812pt>
+<figures/heatmapMousehl.jpeg, id=817, 712.16063pt x 513.41812pt>
 File: figures/heatmapMousehl.jpeg Graphic file (type jpg)
 <use figures/heatmapMousehl.jpeg>
 Package pdftex.def Info: figures/heatmapMousehl.jpeg  used on input line 453.
@@ -1103,22 +1103,22 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 446--456
  []
 
 [24 <./figures/pcaMousehl.pdf> <./figures/heatmapMousehl.jpeg>]
-<figures/pcaBeltranH.pdf, id=866, 867.24pt x 722.7pt>
+<figures/pcaBeltranH.pdf, id=845, 867.24pt x 722.7pt>
 File: figures/pcaBeltranH.pdf Graphic file (type pdf)
 <use figures/pcaBeltranH.pdf>
 Package pdftex.def Info: figures/pcaBeltranH.pdf  used on input line 468.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapHCMV.pdf, id=867, 794.97pt x 722.7pt>
+<figures/heatmapHCMV.pdf, id=846, 794.97pt x 722.7pt>
 File: figures/heatmapHCMV.pdf Graphic file (type pdf)
 <use figures/heatmapHCMV.pdf>
 Package pdftex.def Info: figures/heatmapHCMV.pdf  used on input line 473.
 (pdftex.def)             Requested size: 198.742pt x 180.67499pt.
-<figures/pcaMOCK.pdf, id=868, 867.24pt x 722.7pt>
+<figures/pcaMOCK.pdf, id=847, 867.24pt x 722.7pt>
 File: figures/pcaMOCK.pdf Graphic file (type pdf)
 <use figures/pcaMOCK.pdf>
 Package pdftex.def Info: figures/pcaMOCK.pdf  used on input line 479.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapMOCK.pdf, id=869, 867.24pt x 722.7pt>
+<figures/heatmapMOCK.pdf, id=848, 867.24pt x 722.7pt>
 File: figures/heatmapMOCK.pdf Graphic file (type pdf)
 <use figures/heatmapMOCK.pdf>
 Package pdftex.def Info: figures/heatmapMOCK.pdf  used on input line 484.
@@ -1133,12 +1133,12 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 466--487
 [] [] 
  []
 
-<figures/pcaItzhak2017.pdf, id=871, 867.24pt x 722.7pt>
+<figures/pcaItzhak2017.pdf, id=850, 867.24pt x 722.7pt>
 File: figures/pcaItzhak2017.pdf Graphic file (type pdf)
 <use figures/pcaItzhak2017.pdf>
 Package pdftex.def Info: figures/pcaItzhak2017.pdf  used on input line 498.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapItzhak2017.jpeg, id=872, 712.16063pt x 513.41812pt>
+<figures/heatmapItzhak2017.jpeg, id=851, 712.16063pt x 513.41812pt>
 File: figures/heatmapItzhak2017.jpeg Graphic file (type jpg)
 <use figures/heatmapItzhak2017.jpeg>
 Package pdftex.def Info: figures/heatmapItzhak2017.jpeg  used on input line 503
@@ -1149,12 +1149,12 @@ Overfull \hbox (15.74078pt too wide) in paragraph at lines 503--504
  [][] 
  []
 
-<figures/pcaHirst.pdf, id=873, 867.24pt x 722.7pt>
+<figures/pcaHirst.pdf, id=852, 867.24pt x 722.7pt>
 File: figures/pcaHirst.pdf Graphic file (type pdf)
 <use figures/pcaHirst.pdf>
 Package pdftex.def Info: figures/pcaHirst.pdf  used on input line 509.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapHirst.jpeg, id=874, 752.8125pt x 526.96875pt>
+<figures/heatmapHirst.jpeg, id=853, 752.8125pt x 526.96875pt>
 File: figures/heatmapHirst.jpeg Graphic file (type jpg)
 <use figures/heatmapHirst.jpeg>
 Package pdftex.def Info: figures/heatmapHirst.jpeg  used on input line 514.
@@ -1266,9 +1266,9 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on NoveltyTagm.pdf (42 pages, 24361179 bytes).
+Output written on NoveltyTagm.pdf (42 pages, 30202830 bytes).
 PDF statistics:
- 1972 PDF objects out of 2073 (max. 8388607)
+ 1951 PDF objects out of 2073 (max. 8388607)
  240 named destinations out of 1000 (max. 500000)
  510 words of extra memory for PDF output out of 10000 (max. 10000000)
 
