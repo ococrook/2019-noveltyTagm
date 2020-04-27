@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.25)  8 APR 2020 10:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.25)  26 APR 2020 17:54
 entering extended mode
 **./NoveltyTagm.tex
 (NoveltyTagm.tex
@@ -548,20 +548,20 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 (NoveltyTagm.aux)
 \openout1 = `NoveltyTagm.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -619,7 +619,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 46.
+Package hyperref Info: Link coloring ON on input line 47.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -632,51 +632,51 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count156
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 
 (NoveltyTagm.out) (NoveltyTagm.out)
 \@outlinefile=\write3
 \openout3 = `NoveltyTagm.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 48
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 49
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-8.
+9.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-8.
+9.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [1
 
 {C:/Users/OllyC/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (7.81036pt too wide) in paragraph at lines 57--58
+Overfull \hbox (7.81036pt too wide) in paragraph at lines 58--59
 \T1/cmr/m/n/12 ing al-go-rithms to make protein-organelle as-sign-ments (see []
 []Gatto \T1/cmr/m/it/12 et al. \T1/cmr/m/n/12 (2014a[][]) for an overview).
  []
@@ -688,114 +688,114 @@ Overfull \hbox (7.81036pt too wide) in paragraph at lines 57--58
 File: figures/IMG_Protein_Allocation_Final.png Graphic file (type png)
 <use figures/IMG_Protein_Allocation_Final.png>
 Package pdftex.def Info: figures/IMG_Protein_Allocation_Final.png  used on inpu
-t line 72.
+t line 73.
 (pdftex.def)             Requested size: 462.23462pt x 202.35622pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []\T1/cmr/m/n/10 Localisation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []\T1/cmr/m/n/10 Uncertainty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 \T1/cmr/m/n/10 in pro-tein
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []\T1/cmr/m/n/10 Outlier
  []
 
 
-Underfull \hbox (badness 7151) in paragraph at lines 85--85
+Underfull \hbox (badness 7151) in paragraph at lines 86--86
 []\T1/cmr/m/n/10 Novelty de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []\T1/cmr/m/n/10 Uncertainty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 \T1/cmr/m/n/10 in num-ber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 \T1/cmr/m/n/10 of novel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []\T1/cmr/m/n/10 Uncertainty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 \T1/cmr/m/n/10 in al-lo-ca-
  []
 
 
-Underfull \hbox (badness 6825) in paragraph at lines 88--88
+Underfull \hbox (badness 6825) in paragraph at lines 89--89
 \T1/cmr/m/n/10 chine Learn-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 \T1/cmr/m/n/10 (as re-viewed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []\T1/cmr/m/n/10 Correlation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 \T1/cmr/m/it/10 et al.\T1/cmr/m/n/10 , 2006[][];
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 \T1/cmr/m/n/10 ing ([][]Breck-els
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 94--94
+Underfull \hbox (badness 2302) in paragraph at lines 95--95
 \T1/cmr/m/n/10 in [][]Orre \T1/cmr/m/it/10 et al.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []\T1/cmr/m/it/10 PhenoDisco
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 98--98
+Underfull \hbox (badness 6236) in paragraph at lines 99--99
 []\T1/cmr/m/n/10 TAGM ([][]Crook
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 []\T1/cmr/m/n/10 Novelty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 \T1/cmr/m/n/10 TAGM (This
  []
 
 
-Overfull \hbox (41.03156pt too wide) in paragraph at lines 80--104
+Overfull \hbox (41.03156pt too wide) in paragraph at lines 81--105
  []|  [] 
  []
 
@@ -809,25 +809,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figures/pcau2oshl.pdf, id=424, 867.24pt x 722.7pt>
 File: figures/pcau2oshl.pdf Graphic file (type pdf)
 <use figures/pcau2oshl.pdf>
-Package pdftex.def Info: figures/pcau2oshl.pdf  used on input line 230.
+Package pdftex.def Info: figures/pcau2oshl.pdf  used on input line 231.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 <figures/heatmapuU2oshl.jpeg, id=425, 712.16063pt x 513.41812pt>
 File: figures/heatmapuU2oshl.jpeg Graphic file (type jpg)
 <use figures/heatmapuU2oshl.jpeg>
-Package pdftex.def Info: figures/heatmapuU2oshl.jpeg  used on input line 235.
+Package pdftex.def Info: figures/heatmapuU2oshl.jpeg  used on input line 236.
 (pdftex.def)             Requested size: 250.61829pt x 180.67499pt.
 
-Overfull \hbox (15.74078pt too wide) in paragraph at lines 235--236
+Overfull \hbox (15.74078pt too wide) in paragraph at lines 236--237
  [][] 
  []
 
 <figures/pvaluesu2os.pdf, id=426, 722.7pt x 722.7pt>
 File: figures/pvaluesu2os.pdf Graphic file (type pdf)
 <use figures/pvaluesu2os.pdf>
-Package pdftex.def Info: figures/pvaluesu2os.pdf  used on input line 241.
+Package pdftex.def Info: figures/pvaluesu2os.pdf  used on input line 242.
 (pdftex.def)             Requested size: 180.67455pt x 180.67499pt.
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 228--244
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 229--245
 [][] []
  []
 
@@ -842,55 +842,55 @@ ultiple pdfs with page group included in a single page
 <figures/pcau2osdc.pdf, id=491, 867.24pt x 722.7pt>
 File: figures/pcau2osdc.pdf Graphic file (type pdf)
 <use figures/pcau2osdc.pdf>
-Package pdftex.def Info: figures/pcau2osdc.pdf  used on input line 270.
+Package pdftex.def Info: figures/pcau2osdc.pdf  used on input line 271.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 <figures/heatmapU2osdc.jpeg, id=492, 712.16063pt x 513.41812pt>
 File: figures/heatmapU2osdc.jpeg Graphic file (type jpg)
 <use figures/heatmapU2osdc.jpeg>
-Package pdftex.def Info: figures/heatmapU2osdc.jpeg  used on input line 275.
+Package pdftex.def Info: figures/heatmapU2osdc.jpeg  used on input line 276.
 (pdftex.def)             Requested size: 220.5393pt x 158.99377pt.
 <figures/pcaYeast.pdf, id=493, 794.97pt x 578.16pt>
 File: figures/pcaYeast.pdf Graphic file (type pdf)
 <use figures/pcaYeast.pdf>
-Package pdftex.def Info: figures/pcaYeast.pdf  used on input line 281.
+Package pdftex.def Info: figures/pcaYeast.pdf  used on input line 282.
 (pdftex.def)             Requested size: 248.4275pt x 180.67499pt.
 
-Overfull \hbox (13.55pt too wide) in paragraph at lines 281--282
+Overfull \hbox (13.55pt too wide) in paragraph at lines 282--283
  [][] 
  []
 
 <figures/heatmapYeast.jpeg, id=494, 712.16063pt x 513.41812pt>
 File: figures/heatmapYeast.jpeg Graphic file (type jpg)
 <use figures/heatmapYeast.jpeg>
-Package pdftex.def Info: figures/heatmapYeast.jpeg  used on input line 286.
+Package pdftex.def Info: figures/heatmapYeast.jpeg  used on input line 287.
 (pdftex.def)             Requested size: 220.5393pt x 158.99377pt.
 <figures/pvaluesDC.pdf, id=495, 722.7pt x 722.7pt>
 File: figures/pvaluesDC.pdf Graphic file (type pdf)
 <use figures/pvaluesDC.pdf>
-Package pdftex.def Info: figures/pvaluesDC.pdf  used on input line 292.
+Package pdftex.def Info: figures/pvaluesDC.pdf  used on input line 293.
 (pdftex.def)             Requested size: 144.53743pt x 144.54pt.
 <figures/pvalueYeast.pdf, id=496, 722.7pt x 722.7pt>
 File: figures/pvalueYeast.pdf Graphic file (type pdf)
 <use figures/pvalueYeast.pdf>
-Package pdftex.def Info: figures/pvalueYeast.pdf  used on input line 297.
+Package pdftex.def Info: figures/pvalueYeast.pdf  used on input line 298.
 (pdftex.def)             Requested size: 144.53743pt x 144.54pt.
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 268--300
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 269--301
 [][] []
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 268--300
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 269--301
 [] []
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 268--300
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 269--301
 [] [] 
  []
 
 
-LaTeX Warning: Float too large for page by 42.25992pt on input line 302.
+LaTeX Warning: Float too large for page by 42.25992pt on input line 303.
 
 [14] [15 <./figures/pcau2osdc.pdf> <./figures/heatmapU2osdc.jpeg> <./figures/pc
 aYeast.pdf
@@ -909,26 +909,26 @@ ultiple pdfs with page group included in a single page
 <figures/pcaItzhak2016.pdf, id=567, 867.24pt x 722.7pt>
 File: figures/pcaItzhak2016.pdf Graphic file (type pdf)
 <use figures/pcaItzhak2016.pdf>
-Package pdftex.def Info: figures/pcaItzhak2016.pdf  used on input line 317.
+Package pdftex.def Info: figures/pcaItzhak2016.pdf  used on input line 318.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 <figures/itzhak2016heatmap.jpeg, id=568, 712.16063pt x 513.41812pt>
 File: figures/itzhak2016heatmap.jpeg Graphic file (type jpg)
 <use figures/itzhak2016heatmap.jpeg>
-Package pdftex.def Info: figures/itzhak2016heatmap.jpeg  used on input line 322
+Package pdftex.def Info: figures/itzhak2016heatmap.jpeg  used on input line 323
 .
 (pdftex.def)             Requested size: 250.61829pt x 180.67499pt.
 
-Overfull \hbox (15.74078pt too wide) in paragraph at lines 322--323
+Overfull \hbox (15.74078pt too wide) in paragraph at lines 323--324
  [][] 
  []
 
 <figures/pvalueItzhak.pdf, id=569, 722.7pt x 722.7pt>
 File: figures/pvalueItzhak.pdf Graphic file (type pdf)
 <use figures/pvalueItzhak.pdf>
-Package pdftex.def Info: figures/pvalueItzhak.pdf  used on input line 328.
+Package pdftex.def Info: figures/pvalueItzhak.pdf  used on input line 329.
 (pdftex.def)             Requested size: 180.67455pt x 180.67499pt.
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 315--331
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 316--332
 [][] []
  []
 
@@ -943,50 +943,50 @@ multiple pdfs with page group included in a single page
 <figures/pcaMarkershek.pdf, id=614, 722.7pt x 722.7pt>
 File: figures/pcaMarkershek.pdf Graphic file (type pdf)
 <use figures/pcaMarkershek.pdf>
-Package pdftex.def Info: figures/pcaMarkershek.pdf  used on input line 345.
+Package pdftex.def Info: figures/pcaMarkershek.pdf  used on input line 346.
 (pdftex.def)             Requested size: 144.53743pt x 144.54pt.
 <figures/pcaPDhek.pdf, id=615, 867.24pt x 867.24pt>
 File: figures/pcaPDhek.pdf Graphic file (type pdf)
 <use figures/pcaPDhek.pdf>
-Package pdftex.def Info: figures/pcaPDhek.pdf  used on input line 350.
+Package pdftex.def Info: figures/pcaPDhek.pdf  used on input line 351.
 (pdftex.def)             Requested size: 144.53082pt x 144.54pt.
 <figures/pcaTAGMhek.pdf, id=616, 722.7pt x 722.7pt>
 File: figures/pcaTAGMhek.pdf Graphic file (type pdf)
 <use figures/pcaTAGMhek.pdf>
-Package pdftex.def Info: figures/pcaTAGMhek.pdf  used on input line 355.
+Package pdftex.def Info: figures/pcaTAGMhek.pdf  used on input line 356.
 (pdftex.def)             Requested size: 144.53743pt x 144.54pt.
 <figures/phenodiscodist.pdf, id=617, 867.24pt x 722.7pt>
 File: figures/phenodiscodist.pdf Graphic file (type pdf)
 <use figures/phenodiscodist.pdf>
-Package pdftex.def Info: figures/phenodiscodist.pdf  used on input line 361.
+Package pdftex.def Info: figures/phenodiscodist.pdf  used on input line 362.
 (pdftex.def)             Requested size: 173.44493pt x 144.54pt.
 <figures/noveltytagmdist.pdf, id=618, 867.24pt x 722.7pt>
 File: figures/noveltytagmdist.pdf Graphic file (type pdf)
 <use figures/noveltytagmdist.pdf>
-Package pdftex.def Info: figures/noveltytagmdist.pdf  used on input line 366.
+Package pdftex.def Info: figures/noveltytagmdist.pdf  used on input line 367.
 (pdftex.def)             Requested size: 173.44493pt x 144.54pt.
 <figures/hekcompare.pdf, id=619, 903.375pt x 722.7pt>
 File: figures/hekcompare.pdf Graphic file (type pdf)
 <use figures/hekcompare.pdf>
-Package pdftex.def Info: figures/hekcompare.pdf  used on input line 381.
+Package pdftex.def Info: figures/hekcompare.pdf  used on input line 382.
 (pdftex.def)             Requested size: 180.6718pt x 144.54pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--386
+Underfull \hbox (badness 10000) in paragraph at lines 344--387
 [][][][]
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 343--386
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 344--387
 [] []
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 343--386
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 344--387
 []$ []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--386
+Underfull \hbox (badness 10000) in paragraph at lines 344--387
 
  []
 
@@ -1015,48 +1015,48 @@ ltiple pdfs with page group included in a single page
 >] [20
 
 ]
-<figures/u2ospcaF.pdf, id=780, 722.7pt x 722.7pt>
+<figures/u2ospcaF.pdf, id=778, 722.7pt x 722.7pt>
 File: figures/u2ospcaF.pdf Graphic file (type pdf)
 <use figures/u2ospcaF.pdf>
-Package pdftex.def Info: figures/u2ospcaF.pdf  used on input line 400.
+Package pdftex.def Info: figures/u2ospcaF.pdf  used on input line 401.
 (pdftex.def)             Requested size: 144.53743pt x 144.54pt.
 
-Overfull \hbox (3.6095pt too wide) in paragraph at lines 400--401
+Overfull \hbox (3.6095pt too wide) in paragraph at lines 401--402
  [][] 
  []
 
-<figures/hpa2.png, id=781, 498.78345pt x 463.9734pt>
+<figures/hpa2.png, id=779, 498.78345pt x 463.9734pt>
 File: figures/hpa2.png Graphic file (type png)
 <use figures/hpa2.png>
-Package pdftex.def Info: figures/hpa2.png  used on input line 405.
+Package pdftex.def Info: figures/hpa2.png  used on input line 406.
 (pdftex.def)             Requested size: 155.38234pt x 144.54pt.
 
-Overfull \hbox (14.4544pt too wide) in paragraph at lines 405--406
+Overfull \hbox (14.4544pt too wide) in paragraph at lines 406--407
  [][] 
  []
 
-<figures/summaryu2os.pdf, id=782, 722.7pt x 722.7pt>
+<figures/summaryu2os.pdf, id=780, 722.7pt x 722.7pt>
 File: figures/summaryu2os.pdf Graphic file (type pdf)
 <use figures/summaryu2os.pdf>
-Package pdftex.def Info: figures/summaryu2os.pdf  used on input line 410.
+Package pdftex.def Info: figures/summaryu2os.pdf  used on input line 411.
 (pdftex.def)             Requested size: 144.53743pt x 144.54pt.
 
-Overfull \hbox (3.6095pt too wide) in paragraph at lines 410--411
+Overfull \hbox (3.6095pt too wide) in paragraph at lines 411--412
  [][] 
  []
 
-<figures/endoViolin.pdf, id=783, 1300.86pt x 722.7pt>
+<figures/endoViolin.pdf, id=781, 1300.86pt x 722.7pt>
 File: figures/endoViolin.pdf Graphic file (type pdf)
 <use figures/endoViolin.pdf>
-Package pdftex.def Info: figures/endoViolin.pdf  used on input line 416.
+Package pdftex.def Info: figures/endoViolin.pdf  used on input line 417.
 (pdftex.def)             Requested size: 520.3348pt x 289.07999pt.
 
-Overfull \hbox (50.57977pt too wide) in paragraph at lines 416--417
+Overfull \hbox (50.57977pt too wide) in paragraph at lines 417--418
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--420
+Underfull \hbox (badness 10000) in paragraph at lines 399--421
 [][] [] []
  []
 
@@ -1073,7 +1073,7 @@ ultiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures/endoViolin.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >]
-Overfull \hbox (3.274pt too wide) in paragraph at lines 429--430
+Overfull \hbox (3.274pt too wide) in paragraph at lines 430--431
 []\T1/cmr/m/n/12 Our method re-vealed res-o-lu-tion of $\OT1/cmr/m/n/12 4$ \T1/
 cmr/m/n/12 sub-nuclear com-part-ments in the U-2 OS \T1/cmr/m/it/12 hy-per\T1/c
 mr/m/n/12 LOPIT
@@ -1082,95 +1082,95 @@ mr/m/n/12 LOPIT
 [23
 
 ]
-<figures/pcaMousehl.pdf, id=840, 650.43pt x 505.89pt>
+<figures/pcaMousehl.pdf, id=837, 650.43pt x 505.89pt>
 File: figures/pcaMousehl.pdf Graphic file (type pdf)
 <use figures/pcaMousehl.pdf>
-Package pdftex.def Info: figures/pcaMousehl.pdf  used on input line 447.
+Package pdftex.def Info: figures/pcaMousehl.pdf  used on input line 448.
 (pdftex.def)             Requested size: 232.29869pt x 180.67499pt.
-<figures/heatmapMousehl.jpeg, id=841, 712.16063pt x 513.41812pt>
+<figures/heatmapMousehl.jpeg, id=838, 712.16063pt x 513.41812pt>
 File: figures/heatmapMousehl.jpeg Graphic file (type jpg)
 <use figures/heatmapMousehl.jpeg>
-Package pdftex.def Info: figures/heatmapMousehl.jpeg  used on input line 452.
+Package pdftex.def Info: figures/heatmapMousehl.jpeg  used on input line 453.
 (pdftex.def)             Requested size: 250.61829pt x 180.67499pt.
 
-Overfull \hbox (15.74078pt too wide) in paragraph at lines 452--453
+Overfull \hbox (15.74078pt too wide) in paragraph at lines 453--454
  [][] 
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 445--455
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 446--456
 [][] [] 
  []
 
 [24 <./figures/pcaMousehl.pdf> <./figures/heatmapMousehl.jpeg>]
-<figures/pcaBeltranH.pdf, id=869, 867.24pt x 722.7pt>
+<figures/pcaBeltranH.pdf, id=866, 867.24pt x 722.7pt>
 File: figures/pcaBeltranH.pdf Graphic file (type pdf)
 <use figures/pcaBeltranH.pdf>
-Package pdftex.def Info: figures/pcaBeltranH.pdf  used on input line 467.
+Package pdftex.def Info: figures/pcaBeltranH.pdf  used on input line 468.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapHCMV.pdf, id=870, 794.97pt x 722.7pt>
+<figures/heatmapHCMV.pdf, id=867, 794.97pt x 722.7pt>
 File: figures/heatmapHCMV.pdf Graphic file (type pdf)
 <use figures/heatmapHCMV.pdf>
-Package pdftex.def Info: figures/heatmapHCMV.pdf  used on input line 472.
+Package pdftex.def Info: figures/heatmapHCMV.pdf  used on input line 473.
 (pdftex.def)             Requested size: 198.742pt x 180.67499pt.
-<figures/pcaMOCK.pdf, id=871, 867.24pt x 722.7pt>
+<figures/pcaMOCK.pdf, id=868, 867.24pt x 722.7pt>
 File: figures/pcaMOCK.pdf Graphic file (type pdf)
 <use figures/pcaMOCK.pdf>
-Package pdftex.def Info: figures/pcaMOCK.pdf  used on input line 478.
+Package pdftex.def Info: figures/pcaMOCK.pdf  used on input line 479.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapMOCK.pdf, id=872, 867.24pt x 722.7pt>
+<figures/heatmapMOCK.pdf, id=869, 867.24pt x 722.7pt>
 File: figures/heatmapMOCK.pdf Graphic file (type pdf)
 <use figures/heatmapMOCK.pdf>
-Package pdftex.def Info: figures/heatmapMOCK.pdf  used on input line 483.
+Package pdftex.def Info: figures/heatmapMOCK.pdf  used on input line 484.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 465--486
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 466--487
 [][] []
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 465--486
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 466--487
 [] [] 
  []
 
-<figures/pcaItzhak2017.pdf, id=874, 867.24pt x 722.7pt>
+<figures/pcaItzhak2017.pdf, id=871, 867.24pt x 722.7pt>
 File: figures/pcaItzhak2017.pdf Graphic file (type pdf)
 <use figures/pcaItzhak2017.pdf>
-Package pdftex.def Info: figures/pcaItzhak2017.pdf  used on input line 497.
+Package pdftex.def Info: figures/pcaItzhak2017.pdf  used on input line 498.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapItzhak2017.jpeg, id=875, 712.16063pt x 513.41812pt>
+<figures/heatmapItzhak2017.jpeg, id=872, 712.16063pt x 513.41812pt>
 File: figures/heatmapItzhak2017.jpeg Graphic file (type jpg)
 <use figures/heatmapItzhak2017.jpeg>
-Package pdftex.def Info: figures/heatmapItzhak2017.jpeg  used on input line 502
+Package pdftex.def Info: figures/heatmapItzhak2017.jpeg  used on input line 503
 .
 (pdftex.def)             Requested size: 250.61829pt x 180.67499pt.
 
-Overfull \hbox (15.74078pt too wide) in paragraph at lines 502--503
+Overfull \hbox (15.74078pt too wide) in paragraph at lines 503--504
  [][] 
  []
 
-<figures/pcaHirst.pdf, id=876, 867.24pt x 722.7pt>
+<figures/pcaHirst.pdf, id=873, 867.24pt x 722.7pt>
 File: figures/pcaHirst.pdf Graphic file (type pdf)
 <use figures/pcaHirst.pdf>
-Package pdftex.def Info: figures/pcaHirst.pdf  used on input line 508.
+Package pdftex.def Info: figures/pcaHirst.pdf  used on input line 509.
 (pdftex.def)             Requested size: 216.80946pt x 180.67499pt.
-<figures/heatmapHirst.jpeg, id=877, 752.8125pt x 526.96875pt>
+<figures/heatmapHirst.jpeg, id=874, 752.8125pt x 526.96875pt>
 File: figures/heatmapHirst.jpeg Graphic file (type jpg)
 <use figures/heatmapHirst.jpeg>
-Package pdftex.def Info: figures/heatmapHirst.jpeg  used on input line 513.
+Package pdftex.def Info: figures/heatmapHirst.jpeg  used on input line 514.
 (pdftex.def)             Requested size: 258.11241pt x 180.67499pt.
 
-Overfull \hbox (23.23491pt too wide) in paragraph at lines 513--514
+Overfull \hbox (23.23491pt too wide) in paragraph at lines 514--515
  [][] 
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 495--516
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 496--517
 [][] []
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 495--516
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 496--517
 [] [] 
  []
 
@@ -1193,39 +1193,39 @@ pdfTeX warning: pdflatex.exe (file ./figures/pcaHirst.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 > <./figures/heatmapHirst.jpeg>]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
-25.
+26.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/doublestroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [28] [29]
 [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 582--582
+Underfull \hbox (badness 10000) in paragraph at lines 583--583
 []\T1/cmr/m/n/10 Spatio-Temporal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--584
+Underfull \hbox (badness 10000) in paragraph at lines 585--585
 []\T1/cmr/m/n/10 Spatio-Temporal
  []
 
 [32] [33] (NoveltyTagm.bbl [34
 
 ] [35] [36] [37] [38] [39] [40] [41])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 611.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 612.
  [42]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 611.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 612.
 
 (NoveltyTagm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 611.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 611.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 612.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 612.
 Package rerunfilecheck Info: File `NoveltyTagm.out' has not changed.
-(rerunfilecheck)             Checksum: B6BD52F40F0B60EC4F0D665946F0FEAE;3538.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 611.
+(rerunfilecheck)             Checksum: D8FEDFE1EA3914F5572AEF162B831271;3535.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 612.
  ) 
 Here is how much of TeX's memory you used:
  12564 strings out of 492448
  190542 string characters out of 3129723
- 317650 words of memory out of 3000000
+ 317796 words of memory out of 3000000
  16356 multiletter control sequences out of 15000+200000
  33273 words of font info for 96 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1266,7 +1266,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on NoveltyTagm.pdf (42 pages, 24360729 bytes).
+Output written on NoveltyTagm.pdf (42 pages, 24361179 bytes).
 PDF statistics:
  1972 PDF objects out of 2073 (max. 8388607)
  240 named destinations out of 1000 (max. 500000)
