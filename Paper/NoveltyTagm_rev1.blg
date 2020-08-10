@@ -1,0 +1,13 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: NoveltyTagm_rev1.aux
+The style file: natbib.bst
+Database file #1: BayesProt.bib
+Repeated entry---line 572 of file BayesProt.bib
+ : @article{Ueno::2011
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 740 of file BayesProt.bib
+ : @article{Liu::2015
+ :                   ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in mclust
+(There were 2 error messages)

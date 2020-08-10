@@ -1,0 +1,334 @@
+---
+title: "sensitivityAnalysis2"
+author: "Oliver M. Crook"
+date: "10/08/2020"
+output: html_document
+---
+
+```{r,}
+require(MSnbase)
+require(pRoloc)
+require(pRolocdata)
+require(mcclust)
+require(pheatmap)
+require(coda)
+
+source("machinelearning-framework-tagm-Novelty.R")
+source("machinelearning-functions-tagm-Novelty.R")
+
+
+```
+
+
+Begin by loading data files and removeing annotations.
+```{r,}
+load("hlmouseTagmNoveltyParams_semi01.rda")
+data("hyperLOPIT2015")
+hlmouse <- hyperLOPIT2015
+fData(hlmouse)$markers[fData(hlmouse)$markers %in% c("40S Ribosome","60S Ribosome",
+                                            "Nucleus - Chromatin", "Nucleus - Non-chromatin")] <- "unknown" 
+```
+
+# Check convergence formally
+
+```{r,}
+outliers <- mcmc_get_outliers(hlmouseTagmNoveltyparams_semi01)
+mouseDiag <- gelman.diag(outliers[c(4,6)])
+```
+
+
+```{r,}
+hlmouseTagmNoveltyparams_conv <- hlmouseTagmNoveltyparams_semi01[c(4,6)]
+
+newuknowns <- setdiff(rownames(hlmouseTagmNoveltyparams_conv@chains@chains[[1]]@ComponentProb[,1,]),rownames(unknownMSnSet(hlmouse)))
+fData(hlmouse)[newuknowns, "markers"] <- "unknown"
+
+hlmouseTagmNoveltyRes_conv <- tagmNoveltyProcess(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
+hlmouseTagmNoveltyparams_conv <- tagmMcmcProcess(hlmouseTagmNoveltyparams_conv)
+hlmouse <- tagmPredict(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
+```
+
+
+```{r,}
+## attach information to MSnset
+fData(hlmouse)$tagm.phenotype <- hlmouseTagmNoveltyRes_conv@pooledRes@mp@cl[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob <- hlmouseTagmNoveltyRes_conv@tagm.newcluster.prob[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob[is.na(fData(hlmouse)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(hlmouse)$tagm.newcluster.prob
+plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(hlmouse, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+
+```{r,}
+require(clusterProfiler)
+require("org.Mm.eg.db")
+cc1hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 1" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # cytoskelton
+
+cc2hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 2" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # chromosome
+
+cc3hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 3" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # nucleolus
+
+cc4hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 4" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc5hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 5" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc6hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 6" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc7hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 7" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+cc8hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 8" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+cc9hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 9" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+```
+```{r,}
+semi01res <- list(cc2hlmouse, cc3hlmouse)
+```
+
+
+Begin by loading data files and removeing annotations.
+```{r,}
+load("hlmouseTagmNoveltyParams_semi02.rda")
+data("hyperLOPIT2015")
+hlmouse <- hyperLOPIT2015
+fData(hlmouse)$markers[fData(hlmouse)$markers %in% c("40S Ribosome","60S Ribosome",
+                                            "Nucleus - Chromatin", "Nucleus - Non-chromatin")] <- "unknown" 
+```
+
+# Check convergence formally
+
+```{r,}
+outliers <- mcmc_get_outliers(hlmouseTagmNoveltyparams_semi02)
+mouseDiag <- gelman.diag(outliers[c(3,5)])
+```
+
+
+```{r,}
+hlmouseTagmNoveltyparams_conv <- hlmouseTagmNoveltyparams_semi02[c(3,5)]
+
+newuknowns <- setdiff(rownames(hlmouseTagmNoveltyparams_conv@chains@chains[[1]]@ComponentProb[,1,]),rownames(unknownMSnSet(hlmouse)))
+fData(hlmouse)[newuknowns, "markers"] <- "unknown"
+
+hlmouseTagmNoveltyRes_conv <- tagmNoveltyProcess(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
+hlmouseTagmNoveltyparams_conv <- tagmMcmcProcess(hlmouseTagmNoveltyparams_conv)
+```
+
+```{r,}
+## attach information to MSnset
+fData(hlmouse)$tagm.phenotype <- hlmouseTagmNoveltyRes_conv@pooledRes@mp@cl[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob <- hlmouseTagmNoveltyRes_conv@tagm.newcluster.prob[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob[is.na(fData(hlmouse)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(hlmouse)$tagm.newcluster.prob
+plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(hlmouse, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+```{r,}
+require(clusterProfiler)
+require("org.Mm.eg.db")
+cc1hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 1" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # chromosome
+
+cc2hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 2" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) 
+
+cc3hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 3" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # ribosome
+
+cc4hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 4" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # nucleolus
+
+cc5hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 5" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc6hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 6" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc7hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 7" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+cc8hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 8" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+cc9hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 9" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+```
+```{r,}
+semi02res <- list(cc1hlmouse, cc3hlmouse, cc4hlmouse)
+```
+
+
+Begin by loading data files and removeing annotations.
+```{r,}
+load("hlmouseTagmNoveltyParams_semi03.rda")
+data("hyperLOPIT2015")
+hlmouse <- hyperLOPIT2015
+fData(hlmouse)$markers[fData(hlmouse)$markers %in% c("40S Ribosome","60S Ribosome",
+                                            "Nucleus - Chromatin", "Nucleus - Non-chromatin")] <- "unknown" 
+```
+
+# Check convergence formally
+
+```{r,}
+outliers <- mcmc_get_outliers(hlmouseTagmNoveltyparams_semi03)
+mouseDiag <- gelman.diag(outliers[c(5,6)])
+```
+
+
+```{r,}
+hlmouseTagmNoveltyparams_conv <- hlmouseTagmNoveltyparams_semi03[c(5,6)]
+
+newuknowns <- setdiff(rownames(hlmouseTagmNoveltyparams_conv@chains@chains[[1]]@ComponentProb[,1,]),rownames(unknownMSnSet(hlmouse)))
+fData(hlmouse)[newuknowns, "markers"] <- "unknown"
+
+hlmouseTagmNoveltyRes_conv <- tagmNoveltyProcess(object = hlmouse, params = hlmouseTagmNoveltyparams_conv)
+hlmouseTagmNoveltyparams_conv <- tagmMcmcProcess(hlmouseTagmNoveltyparams_conv)
+```
+
+```{r,}
+## attach information to MSnset
+fData(hlmouse)$tagm.phenotype <- hlmouseTagmNoveltyRes_conv@pooledRes@mp@cl[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob <- hlmouseTagmNoveltyRes_conv@tagm.newcluster.prob[rownames(fData(hlmouse))]
+fData(hlmouse)$tagm.newcluster.prob[is.na(fData(hlmouse)$tagm.newcluster.prob)] <- 0
+
+ptsze <- fData(hlmouse)$tagm.newcluster.prob
+plot2D(hlmouse, fcol = "tagm.phenotype", cex = ptsze)
+addLegend(hlmouse, fcol = "tagm.phenotype", ncol = 2, where = "bottomleft", cex = 0.5)
+
+```
+
+
+```{r,}
+require(clusterProfiler)
+require("org.Mm.eg.db")
+cc1hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 1" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # chromosome
+
+cc2hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 2" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) 
+
+cc3hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 3" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # nucleolus
+
+cc4hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 4" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc5hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 5" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc6hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 6" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) #
+
+cc7hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 7" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+cc8hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 8" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+cc9hlmouse <- enrichGO(gene = rownames(hlmouse)[fData(hlmouse)$tagm.phenotype == "Phenotype 9" & fData(hlmouse)$tagm.newcluster.prob > 0.95],
+               OrgDb = "org.Mm.eg.db",
+               keyType = "UNIPROT",
+               ont = "CC",
+               universe = rownames(fData(hlmouse))) # 
+
+```
+```{r,}
+semi03res <- list(cc1hlmouse, cc3hlmouse)
+```
+
+```{r,}
+semires <- list(semi01res, semi02res, semi03res)
+save(semires, file = "sensitivitysemi.rda")
+```

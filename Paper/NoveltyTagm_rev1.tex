@@ -1,0 +1,650 @@
+\documentclass[12pt,english]{article}
+\usepackage{natbib}
+\usepackage{amsmath,mathtools,amssymb,mathrsfs,dsfont,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{color}
+\usepackage{subcaption}
+\graphicspath{ {figures/} }
+\usepackage[colorlinks]{hyperref}
+\hypersetup{citecolor=blue}
+\usepackage{enumitem}
+\usepackage{authblk}
+\usepackage{pifont}
+\usepackage{lineno}
+\usepackage[normalem]{ulem}
+\usepackage[export]{adjustbox}
+
+\renewcommand\Affilfont{\itshape\scriptsize}
+\renewcommand\Authfont{\small}
+\newcommand{\xmark}{\ding{55}}
+%opening
+\title{A semi-supervised Bayesian approach for simultaneous protein sub-cellular localisation assignment and novelty detection }
+\author[1,2]{Oliver M. Crook}
+\author[1,3]{Aikaterini Geladaki}
+\author[1]{Daniel J.H. Nightingale}
+\author[1]{Owen Vennard}
+\author[1]{Kathryn S. Lilley \thanks{\url{ksl23@cam.ac.uk}}~}
+\author[4]{Laurent Gatto\thanks{\url{laurent.gatto@uclouvain.be}}~}
+\author[2,5]{Paul D.W. Kirk\thanks{\url{paul.kirk@mrc-bsu.cam.ac.uk}}~}
+
+
+
+\affil[1]{Cambridge Centre for Proteomics, Department of Biochemistry,
+	University of Cambridge, Cambridge, UK}
+\affil[2]{MRC Biostatistics Unit, School of Clinical Medicine, University of Cambridge, Cambridge, UK}
+\affil[3]{Department of Genetics, Universtiy of Cambridge, Cambridge, UK}
+\affil[4]{de Duve Institute, UCLouvain, Avenue
+	Hippocrate 75, 1200 Brussels, Belgium}
+\affil[5]{Cambridge Institute of Therapeutic Immunology \& Infectious Disease (CITIID), Jeffrey Cheah Biomedical Centre, Cambridge Biomedical Campus, University of Cambridge, UK.}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The cell is compartmentalised into complex micro-environments allowing an array of specialised biological processes to be carried out in synchrony. Determining a protein's sub-cellular localisation to one or more of these compartments can therefore be a first step in determining its function. High-throughput and high-accuracy mass spectrometry-based sub-cellular proteomic methods can now shed light on the localisation of thousands of proteins at once. Machine learning algorithms are then typically employed to make protein-organelle assignments. However, these algorithms are limited by insufficient and incomplete annotation. We propose a semi-supervised Bayesian approach to novelty detection, allowing the discovery of additional, previously unannotated sub-cellular niches. Inference in our model is performed in a Bayesian framework, allowing us to quantify uncertainty in the allocation of proteins to new sub-cellular niches, as well as in the number of newly discovered compartments. We apply our approach across $10$ mass spectrometry based spatial proteomic datasets, representing a diverse range of experimental protocols. Application of our approach to \textit{hyper}LOPIT datasets validates its utility by recovering enrichment with chromatin-associated proteins without annotation and uncovers sub-nuclear compartmentalisation which was not identified in the original analysis. Moreover, using sub-cellular proteomics data from \textit{Saccharomyces cerevisiae}, we uncover a novel group of proteins trafficking from the ER to the early Golgi apparatus. Overall, we demonstrate the potential for novelty detection to yield biologically relevant niches that are missed by current approaches.
+\end{abstract}
+\clearpage
+\section{Introduction}
+Aberrant protein sub-cellular localisation has been implicated in numerous diseases, including cancers \citep{Kau:2004}, obesity \citep{Siljee:2018}, and multiple others \citep{Laurila:2009}. Furthermore, recent estimates suggest that up to $50\%$ of proteins reside in multiple locations with potentially different functions in each sub-cellular niche \citep{hyper, Thul:2017}. Characterising the sub-cellular localisation of proteins is therefore of critical importance in order to understand the pathobiological mechanisms and aetiology of many diseases. Proteins are compartmentalised into sub-cellular niches, including organelles, sub-cellular structures, liquid phase droplets and protein complexes. These compartments ensure that the biochemical conditions for proteins to function correctly are met, and that they are in the proximity of interaction partners \citep{Gibson:2009}. A common approach to map the global sub-cellular localisation of proteins is to couple gentle cell lysis with high-accuracy mass spectrometry (MS) \citep{hyper, Mulvey:2017, DC:2018, Orre:2019}. These methods are designed to yield fractions differentially enriched in the sub-cellular compartments rather than purifying the compartments into individual fractions. As such, these spatial proteomics approaches aim to interrogate the greatest number of sub-cellular niches possible by relying upon rigorous data analysis and interpretation \citep{Gatto:2010, Gatto:2014b}.
+
+Current computational approaches in MS-based spatial proteomics utilise machine learning algorithms to make protein-organelle assignments (see \cite{Gatto:2014b} for an overview). Within this framework, novelty detection, the process of identifying differences between testing and training data, has multiple benefits. For model organisms with well annotated proteomes, novelty detection can potentially uncover groups of proteins with shared sub-cellular niches not described by the training data. Novelty detection can also prove useful in validating experimental design, either by demonstrating that contaminants have been removed or that increased resolution of organelle classes has been achieved by the experimental approach. For most non-model organisms, we have little \textit{a priori} knowledge of their sub-cellular proteome organisation, making it challenging to curate the marker set (training dataset) from the literature \citep{Barylyuk::2020}. In these cases, novelty detection can assist in annotating the spatial proteome.  Crucially, if a dataset is insufficiently annotated, i.e sub-cellular niches detectable in the experimental data are missing from the marker set, then this leads to the classifier making erroneous assignments, resulting in inflated \textit{false discovery rate} (FDR) and uncertainty estimates (where available). Thus, novelty detection is a useful feature for any classifier, even if novel niche detection is not a primary aim.
+
+Previous efforts to discover novel niches within existing sub-cellular proteomics datasets have proved valuable. \cite{Breckels:2013} presented a phenotype discovery algorithm called \textit{phenoDisco} to detect novel sub-cellular niches and alleviate the issue of undiscovered phenotypes. The algorithm uses an iterative procedure and the \textit{Bayesian Information Criterion} (BIC) \citep{Schwarz::1978} is employed to determine the number of newly detected phenotypes. Afterwards, the dataset can be re-annotated and a classifier employed to assign proteins to organelles, including those that have been newly detected. \cite{Breckels:2013} applied their method on several datasets and discovered new organelle classes in \textit{Arabidopsis} \citep{Dunkley:2006} and \textit{Drosophila} \citep{Tan:2009}. This approach later successfully identified the trans-Golgi network (TGN) in \textit{Arabidopsis} roots \citep{Groen:2014}.
+
+Recent work has demonstrated the importance of uncertainty quantification in spatial proteomics \citep{Crook:2018,Crook::2019b, Crook::2019a}. \cite{Crook:2018} proposed a generative classification model and took a Bayesian approach to spatial proteomics data analysis by computing probability distributions of protein-organelle assignments using Markov-chain Monte-Carlo (MCMC). These probabilities were then used as the basis for organelle allocations, as well as to quantify the uncertainty in these allocations. On the basis that some proteins cannot be well described by any of the annotated sub-cellular niches, a multivariate Student's T distribution was included in the model to enable outlier detection. The proposed T-Augmented Gaussian Mixture (TAGM) model was shown to achieve state-of-the-art predictive performance against other commonly used machine learning algorithms \citep{Crook:2018}. Furthermore, the model has been successfully applied to reveal unrivalled insight into the spatial organisation of \textit{Toxoplasma gondii} \citep{Barylyuk::2020} and identify cargo of the Golgins of the trans-Golgi network \citep{Shin::2019}.
+
+Here, we propose an extension to TAGM to allow simultaneous protein-organelle assignments and novelty detection. One assumption of the existing TAGM model is that the number of sub-cellular niches is known. Here, we design a novelty detection algorithm based on allowing an unknown number of additional sub-cellular niches, as well as quantifying uncertainty in this number.
+
+Quantifying uncertainty in the number of clusters in a Bayesian mixture model is challenging and many approaches have been proposed in the literature (see for example \cite{ferguson::1974, antoniak::1974, Richardson::1997} and the appendix for further details). Here, we make use of asymptotic results in Bayesian analysis of mixture models \citep{Rousseau::2011}. The principle of \textit{overfitted mixtures} allows us to specify a (possibly large) maximum number of clusters. As shown in \cite{Rousseau::2011} these components empty if they are not supported by the data, allowing the number of clusters to be inferred. \cite{Kirk:2012} previously made use of this approach in the Bayesian integrative modelling of multiple genomic datasets. In our application, some of the organelles may be annotated with known marker proteins and this places a lower bound on the number of sub-cellular niches. Bringing these ideas together results in a semi-supervised Bayesian approach, which we refer to as Novelty TAGM. Table \ref{table:methods} summarises the differences between the current available machine-learning methods for spatial proteomics.
+
+We apply Novelty TAGM to $10$ spatial proteomic datasets across a diverse range of protocols, including \textit{hyper}LOPIT \citep{hyper, Mulvey:2017}, LOPIT-DC \citep{DC:2018}, Dynamic Organellar Maps (DOM) \citep{Itzhak:2016} and spatial-temporal methods \citep{Jean_Beltran:2016}. Application of Novelty TAGM to each dataset reveals additional biologically relevant compartments. Notably, we detect 4 sub-nuclear compartments in the the U-2 OS \textit{hyper}LOPIT dataset: the nucleolus,  nucleoplasm, chromatin-associated, and the nuclear membrane. In addition, an endosomal compartment is robustly identified across \textit{hyper}LOPIT and LOPIT-DC datasets. Finally, we also uncover collections of proteins with previously uncharacterised localisation patterns; for example, vesicle proteins trafficking from the ER to the early Golgi in \textit{Saccharomyces cerevisiae}.
+
+\begin{figure}[h]
+	
+	\centering
+	\includegraphics[height=2.8in]{IMG_Protein_Allocation_Final.png}
+	\caption{An overview of novelty detection in subcellular proteomics.}
+	\label{figure:overview}
+\end{figure}
+
+\begin{table}[h]
+	\centering
+	\footnotesize
+	\hspace*{-1.5cm}
+	\begin{tabular}{ |p{2.5cm}|p{2cm}|p{2cm}|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+		\hline
+		\multicolumn{8}{|c|}{MS-based Spatial Proteomics Computational Methods for Prediction and Novelty Detection} \\
+		\hline
+		Method & Localisation prediction & Uncertainty in protein localisation & Outlier detection  & Novelty detection & Uncertainty in number of novel phenotypes & Uncertainty in allocation to new phenotypes & Integrative \\
+		\hline
+		\hline
+		Supervised Machine Learning (as reviewed in \cite{Gatto:2014b})  & \vfill\hfil \checkmark & \vfill\hfil\xmark & \vfill\hfil\xmark &\vfill\hfil\xmark&\vfill\hfil\xmark&\vfill \hfil\xmark& \vfill\hfil\xmark\\
+		\hline
+		Correlation Profiling \citep{Foster:2006, Krahmer::2018}  & \vfill\hfil \checkmark & \vfill\hfil\xmark & \vfill\hfil\xmark &\vfill\hfil\xmark&\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark\\
+		\hline
+		Transfer Learning \citep{Breckels:2016}  & \vfill\hfil \checkmark  & \vfill\hfil\xmark& \vfill\hfil\xmark &\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark&\vfill\hfil \checkmark\\
+		\hline
+		\textit{Mclust} (as used in \cite{Orre:2019}) & \vfill\hfil\xmark &\vfill\hfil\xmark &\vfill\hfil \checkmark &\vfill\hfil \checkmark&\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark\\
+		\hline
+		\textit{PhenoDisco} \citep{Breckels:2013}  & \vfill\hfil\xmark &\vfill\hfil\xmark &\vfill\hfil \checkmark &\vfill\hfil \checkmark&\vfill\hfil\xmark&\vfill\hfil\xmark& \vfill\hfil\xmark\\
+		\hline
+		TAGM \citep{Crook:2018}& \vfill\hfil \checkmark & \vfill\hfil \checkmark & \vfill\hfil \checkmark& \vfill\hfil\xmark&\vfill\hfil\xmark&\vfill\hfil\xmark&\vfill\hfil\xmark\\
+		\hline
+		Novelty TAGM (This manuscript)&  \vfill\hfil \checkmark & \vfill\hfil \checkmark &\vfill\hfil \checkmark & \vfill\hfil \checkmark&\vfill\hfil \checkmark&\vfill\hfil \checkmark& \vfill\hfil\xmark\\
+		\hline
+		\hline
+	\end{tabular}
+	\caption{Examples of computational methods for spatial proteomics datasets for prediction and novelty detection.}
+	\label{table:methods}
+\end{table}
+
+
+\section{Methods}
+\subsection{Datasets}
+We provide a brief description of the datasets used in this manuscript. We analyse \textit{hyper}LOPIT data, in which sub-cellular fractionation is performed using density-gradient centrifugation \citep{Dunkley:2004, Dunkley:2006, Mulvey:2017}, on pluripotent mESCs (E14TG2a) \citep{hyper}, human bone osteosarcoma (U-2 OS) cells \citep{Thul:2017, DC:2018}, and \textit{S. cerevisiae} (bakers' yeast) cells \citep{Nightingale::2019}. The mESC dataset combines two 10-plex biological replicates and quantitative information on $5032$ proteins. The U-2 OS dataset combines three 20-plex biological replicates and provides information on $4883$ proteins. The yeast dataset represents four 10-plex biological replicate experiments performed on \textit{S. cerevisiae} cultured to early-mid exponential phase. This dataset contains quantitative information for $2846$ proteins that were common across all replicates. Tandem Mass Tag (TMT) \citep{Thompson:2003} labelling was used in all \textit{hyper}LOPIT experiments with LC-SPS-MS$^{3}$ used for high accuracy quantitation \citep{Ting:2011, Mcalister::2014}. \cite{Jean_Beltran:2016} integrated a temporal component to the LOPIT protocol. They analysed HCMV-infected primary fibroblast cells over 5 days, producing control and infected maps every 24 hours. We analyse the control and infected maps 24 hours post-infection, providing information on $2220$ and $2196$ proteins respectively. In a comparison with \textit{phenoDisco}, we apply Novelty TAGM to a dataset acquired using LOPIT-based fractionation and 8-plex iTRAQ labelling on the HEK-293 human embryonic kidney cell line, quantifying 1371 proteins \citep{Breckels:2013}.
+
+Our approach is not limited to spatial proteomics data where the sub-cellular fractionation is performed using density gradients. We demonstrate this through the analysis of DOM datasets on HeLa cells and mouse primary neurons \citep{Itzhak:2016, Itzhak::2017}, which quantify $3766$ and $8985$ proteins respectively. These approaches used SILAC quantitation with differential centrifugation-based fractionation. We analyse $6$ replicates from the HeLa cell line analyses in \cite{Itzhak:2016} and $3$ replicates from the mouse primary neuron experiments in \cite{Itzhak::2017}. \cite{Hirst:2018} also used the DOM protocol coupled with CRISPR-CAS9 knockouts in order to explore the functional role of AP-5. We analyse the control map from this experiment. Finally, we consider the U-2 OS data which were acquired using the LOPIT-DC protocol \citep{DC:2018} and quantified $6837$ proteins across $3$ biological replicates. In favour of brevity, we do not consider protein correlation profiling (PCP) based spatial proteomics datasets in this manuscript, though our method also applies to such data \citep{Foster:2006, kristensen:2012, kristensen:2014} and other sub-cellular proteomics methods which utilised cellular fractionation \citep{Orre:2019}.
+\subsection{Model}
+\subsubsection{Spatial proteomics mixture model}
+In this section, we briefly review the TAGM model proposed by \cite{Crook:2018}. Let $N$ denote the number of observed protein profiles each of length $L$, corresponding to
+the number of quantified fractions. The quantitative profile for the $i$-th protein is denoted by ${\bf x}_i = [x_{1i}, \ldots, x_{Li}]$.  In the original formulation of the model it is supposed that there are $K$
+known sub-cellular compartments to which each protein could be localised
+(e.g. cytosol, endoplasmic reticulum, mitochondria, \ldots). For simplicity of exposition, we refer to these $K$ sub-cellular compartments as {\em
+	components}, and introduce component labels $z_i$, so that $z_i = k$
+if the $i$-th protein localises to the $k$-th component. To fix notation, we denote by
+$X_L$ the set of proteins whose component labels are known, and by
+$X_U$ the set of unlabelled proteins.  If protein $i$ is in $X_U$, we seek to evaluate the probability that $z_i = k$ for each $k = 1, \ldots, K$;
+that is, for each unlabelled protein, we seek the probability of
+belonging to each component (given a model and the observed data).
+
+
+The distribution of quantitative profiles associated with each
+protein that localises to the $k$-th component is modelled as multivariate normal
+with mean vector $\boldsymbol{\mu}_k$ and covariance matrix
+$\Sigma_k$. However, many proteins are dispersed and do not fit this assumption. To model these "outliers", \cite{Crook:2018} introduced a further indicator variable $\phi$. Each protein ${\bf x}_i$ is then described by an additional variable $\phi_i$, with $\phi_i = 1$ indicating that protein ${\bf x}_i$ belongs to an
+organelle-derived component and $\phi_i = 0$ indicating that protein
+${\bf x}_i$ is not well described by these known components. This
+\textit{outlier component} is then modelled as a multivariate T distribution with
+degrees of freedom $\kappa$, mean vector $\bf{M}$, and scale matrix
+$V$. Thus the model can be written as:
+
+\begin{align}
+{\bf x}_i | z_i = k, \phi_i \quad \sim \mathcal{N}(\boldsymbol{\mu}_k, \Sigma_k)^{\phi_i}\mathcal{T}(\kappa, \boldsymbol{M}, V)^{1 - \phi_i }.
+\end{align}
+
+
+Let  $f({\bf x} | \boldsymbol{\mu}, \Sigma)$ denote the density of
+the multivariate normal with mean vector $\boldsymbol{\mu}$ and
+covariance matrix $\Sigma$ evaluated at ${\bf x}$, and similarly let $g({\bf x | \kappa, \bf{M}, V} )$ denote the density of the multivariate T-distribution. For any $i$, the prior probability of the $i$-th protein localising to the $k$-th component is denoted by $p(z_i = k) = \pi_k$. Letting
+$\boldsymbol{\theta} = \{\boldsymbol{\mu}_k, \Sigma_k \}_{k = 1}^K$
+denote the set of all component mean and covariance parameters, and
+$\boldsymbol{\pi} = \{\pi_k\}_{k = 1}^K$ denote the set of all mixture
+weights, it follows that:
+
+\begin{equation} \label{equation::tammeq}
+\begin{split}
+p({\bf x}_i| \boldsymbol{\theta}, \boldsymbol{\pi} ,\phi_i, \kappa, {\bf M}, V) &=  \sum_{k=1}^{K}\pi_k\left(f({\bf x}_i|\boldsymbol{\mu}_k, \Sigma_k)^{\phi_i}g({\bf x}_i|\kappa, \boldsymbol{M}, V)^{1 - \phi_i }\right).\\
+\end{split}
+\end{equation}
+
+For any $i$, we set the prior probability of the $i$-th protein
+belonging to the outlier component as $p(\phi_i = 0) = \epsilon$, where $\epsilon$ is a parameter that we infer.
+
+Equation \eqref{equation::tammeq}  can then be rewritten in the following way:
+
+\begin{equation}\label{equation::tammepseq}
+\begin{split}
+p({\bf x}_i| \boldsymbol{\theta}, \boldsymbol{\pi} , \kappa, \epsilon, {\bf M}, V) &=  \sum_{k=1}^{K}\pi_k\left((1-\epsilon)(f({\bf x}_i |\boldsymbol{\mu}_k, \Sigma_k) + \epsilon g({\bf x}_i|\kappa, \boldsymbol{M}, V)\right),\\
+\end{split}
+\end{equation}
+
+As in \cite{Crook:2018}, we fix $\kappa = 4$, ${\bf M}$ as the global empirical mean, and $V$
+as half the global empirical variance of the data, including labelled and unlabelled proteins. To extend this model to permit novelty detection, we specify the maximum number of components $K_{max} > K$. Our proposed model then allows up to $K_{novelty} = K_{max} - K \geq 0$, new phenotypes to be detected. Equation \ref{equation::tammepseq} can then be written as 
+\begin{equation}\label{equation::tammepseq2}
+\begin{split}
+p({\bf x}_i| \boldsymbol{\theta}, \boldsymbol{\pi} , \kappa, \epsilon, {\bf M}, V) =  \sum_{k=1}^{K}&\pi_k\left((1-\epsilon)(f({\bf x}_i |\boldsymbol{\mu}_k, \Sigma_k) + \epsilon g({\bf x}_i|\kappa, \boldsymbol{M}, V)\right)\\
++ & \sum_{k=K+1}^{K_{max}}\pi_k\left((1-\epsilon)(f({\bf x}_i |\boldsymbol{\mu}_k, \Sigma_k) + \epsilon g({\bf x}_i|\kappa, \boldsymbol{M}, V)\right),
+\end{split}
+\end{equation}
+where, in the first summation, the $K$ components correspond to known sub-cellular niches and the second summation corresponds to the new phenotypes to be inferred. The parameter sets are then augmented to include these possibly new components; that is, we redefine 
+$\boldsymbol{\theta} = \{\boldsymbol{\mu}_k, \Sigma_k \}_{k = 1}^{K_{max}}$
+to denote the set of all component mean and covariance parameters, and
+$\boldsymbol{\pi} = \{\pi_k\}_{k = 1}^{K_{max}}$ denotes the set of all mixture
+weights. Relying on the principle of over-fitted mixtures \citep{Rousseau::2011}, components that are not supported by the data are left empty with no proteins allocated to them. We find setting $K_{novety} = 10$ is ample to detect new phenotypes.   
+\subsubsection{Bayesian inference and convergence}
+We perform Bayesian inference using Markov-chain Monte-Carlo methods. We make modifications to the collapsed Gibbs sampler approach used previously in \cite{Crook:2018} to allow inference to be performed for the parameters of the novel components (see supplement for full details). Since the number of occupied components at each iteration is random, we monitor this quantity as a convergence diagnostic.
+\subsubsection{Visualising patterns in uncertainty}
+To simultaneously visualise the uncertainty in the number of newly discovered phenotypes, as well as the uncertainty in the allocation of proteins to new components, we use the so-called \textit{posterior similarity matrix} (PSM) \citep{fritsch::2009}. The PSM is an $N\times N$ matrix where the $(i,j)^{th}$ entry is the posterior probability that protein $i$ and protein $j$ reside in the same component. Throughout we use a heatmap representation of this quantity. The PSM is summarised into a clustering by maximising the posterior expected adjusted Rand index (see appendix for details; \citep{fritsch::2009}). Formulating inference around the PSM also avoids some technical statistical challenges, which are discussed in detail in the appendix.
+
+\subsubsection{Uncertainty quantification}
+We may be interested in quantifying the uncertainty in whether a protein belongs to a new sub-cellular component. Indeed, it is important to distinguish whether a protein belongs to a new phenotype or if we simply have large uncertainty about its localisation. The probability that protein $i$ belongs to a new component is computed from the following equation:
+\begin{align}
+P(z_i \in \{K + 1,..., K_{max}\}|X) & = 1 - P(z_i \in \{1,..., K\}|X), \\ 
+\end{align}
+which we approximate by the following Monte-Carlo average:
+\begin{align}\label{equation::discoveryprob}
+1 - \frac{1}{T} \sum_{t = 1}^{T}P(z^{(t)}_i \in \{1,..., K\}|X)= 1 - \frac{1}{T} \sum_{t = 1}^{T} \sum_{k=1}^KP(z^{(t)}_i = k|X),
+\end{align}
+where $T$ is the number of Monte-Carlo iterations. Throughout, we refer to equation \ref{equation::discoveryprob} as the \textit{discovery probability}.
+\subsubsection{Applying the model in practice}
+Applying Novelty TAGM to spatial proteomics datasets consists of several steps. After having run the algorithm on a dataset and assessing convergence, we proceed to explore the ouput of the method. We explore \textit{putative phenotypes}, which we define as newly discovered clusters with at least $1$ protein with discovery probability greater than $0.95$.
+
+\subsection{Validating computational approaches}
+In a supervised framework the performance of computational methods can be assessed by 
+using the training data, where a proportion of the training data is withheld from the classifier to be used for the assessment of predictive performance. In an unsupervised or semi-supervised framework we cannot validate in this way, since there is no "ground truth" with which to compare. Thus, we propose several approaches, using external information, for validation of our method.
+\subsubsection{Artificial masking of annotations to recover experimental design}
+Removing the labels from an entire component and assessing the ability of our method to rediscover these labels is one form of validation. We consider this approach for several of the datasets; in particular, chromatin enrichment was performed in two of the \textit{hyper}LOPIT experiments, where the intention was to increase the resolution between chromatin and non-chromatin associated nuclear proteins \citep{hyper, Mulvey:2017, Thul:2017}. As validation of our method we hide these labels and seek to rediscover them in an unbiased fashion.
+\subsubsection{The Human Protein Atlas}
+A further approach to validating our method is to use additional spatial proteomic information. The Human Protein Atlas (HPA) \citep{Thul:2017, Sullivan:2018} provides confocal microscopy information on thousands of proteins, using validated antibodies. When we consider a dataset for which there is HPA annotation, we use this data to validate the novel phenotypes for biological relevance. 
+\subsubsection{Gene Ontology (GO) term enrichment}
+Throughout, we perform GO enrichment analysis with FDR control performed according to the Benjamini-H\"ochberg procedure \citep{FDR:1995,Ashburner:2000,Yu:2012}. The proteins in each novel putative phenotype are assessed in turn for enriched Cellular Component terms, against the background of all quantified proteins in that experiment.
+\subsubsection{Robustness across multiple MS-based spatial proteomics datasets}
+On occasion some cell lines have been analysed using multiple spatial proteomics technologies \citep{DC:2018}. In these cases, the putative phenotypes discovered by Novelty TAGM are compared directly. If the same phenotype is discovered in different proteomic datasets we consider this as robust evidence for sufficient resolution of that phenotype.
+
+\clearpage
+\section{Results}
+Motivated by the need for novelty detection methods which also quantify the uncertainty in the number of clusters and the assignments of proteins to each cluster, we developed Novelty TAGM (see methods). This approach extends our previous TAGM model \citep{Crook:2018} to enable the detection of novel \textit{putative phenotypes}, which we define as newly discovered clusters with at least $1$ protein with discovery probability greater than $0.95$. Our proposed methodology allows us to interrogate individual proteins to assess whether they belong to a newly discovered phenotype. Through the \textit{posterior similarity matrix} (PSM) we can visualise the global patterns in the uncertainty in phenotype discovery (see supplement). We summarise this posterior similarity matrix into a single clustering by maximising the posterior expected adjusted rand index (see methods). This methodology infers the number of clusters supported by the data, in contrast to many existing approaches which require specification of the number of clusters (such as K-means or Mclust \citep{mclust}). To demonstrate the value of this approach, we applied Novelty TAGM to a diverse set of spatial proteomics datasets.
+
+\subsection{Validating experimental design in \textit{hyper}LOPIT}
+Initially, we validated Novelty TAGM in a setting where we have a strong \textit{a priori} expectation for the presence of an unannotated niche. For this we used a human bone osteosarcoma cell (U-2 OS) \textit{hyper}LOPIT dataset \citep{Thul:2017} and an mESC \textit{hyper}LOPIT dataset \citep{hyper}. These experimental protocols used a chromatin enrichment step to resolve nuclear chromatin-associated proteins from nuclear proteins not associated with chromatin. Removing the nuclear, chromatin and ribosomal annotations from the datasets, we test the ability of Novelty TAGM to recover them.
+
+\subsubsection{Human bone osteosarcoma (U-2 OS) cells}\label{section:u2os}
+%For the U-2 OS cancer cell line dataset, Novelty TAGM reveals $9$ putative phenotypes, which we refer to as phenotype 1, phenotype 2, etc.. These phenotypes, along with the uncertainty associated with them, are visualised in figure \ref{figure:chromatin}. We consider the HPA confocal microscopy data for validation \citep{Thul:2017, Sullivan:2018}. The HPA provides information on the same cell line and therefore constitutes an excellent complementary resource. This \textit{hyper}LOPIT dataset was already shown to be in strong agreement with the microscopy data \citep{Thul:2017, DC:2018}. Proteins in phenotypes $3,4,5$ and $8$ have a nucleus-related annotation as their most frequent annotation in the HPA data. Then, GO term enrichment analysis reveals \textit{chromatin} and \textit{chromosome} annotations for phenotype 3 $(p < 10^{-40})$. Phenotype $4$ is enriched for the \textit{nucleolus} $(p < 10^{-60})$, furthermore nucleoli and nucleoli/nucleus are the $2^{nd}$ and $3^{rd}$ most frequent HPA annotations for proteins belonging to this phenotype. For phenotype 5, the most associated term is nucleoplasm from the HPA data, as well as GO term enrichment $(p < 10^{-10})$. Phenotype $8$ has the \textit{nuclear membrane} as its most frequent HPA annotation and this is supported by GO term enrichment with the terms \textit{nuclear membrane} and \textit{nuclear envelope} associated with proteins in this phenotype $(p < 10^{-10})$. Thus, Novelty TAGM has not only provided successful validation for chromatin enrichment, but also demonstrated further sub-nuclear-level resolution. In addition, phenotype $1$ is enriched for \textit{ribosome} $( p < 10^{-20})$, whilst phenotype $2$ is enriched for \textit{endosomes} $(p < 10^{-30})$.
+For the U-2 OS dataset, Novelty TAGM reveals $9$ putative phenotypes, which we refer to as phenotype 1, phenotype 2, etc... These phenotypes, along with the uncertainty associated with them, are visualised in figure \ref{figure:chromatin}. We consider the HPA confocal microscopy data for validation \citep{Thul:2017, Sullivan:2018}. The HPA provides information on the same cell line and therefore constitutes an excellent complementary resource. This \textit{hyper}LOPIT dataset was already shown to be in strong agreement with the microscopy data \citep{Thul:2017, DC:2018}. Proteins in phenotypes $3,4,5$ and $8$ have a nucleus-related annotation as their most frequent HPA annotation, as well as differential enrichment of nucleus-related GO terms (figure \ref{figure:chromatin}). Phenotype $3$ validates the chromatin enrichment preparation (figure \ref{figure:chromatin} panel (c)) and phenotype $4$ reveals a nucleoli cluster, where nucleoli and nucleoli/nucleus are the $2^{nd}$ and $3^{rd}$ most frequent HPA annotations for proteins belonging to this phenotype. For phenotype 5, the most associated term is nucleoplasm from the HPA data and this is further supported by GO analysis (figure \ref{figure:chromatin} panel (c)). Phenotype $8$ demonstrates further sub-nuclear resolution and has \textit{nuclear membrane} as its most frequent HPA annotation and has corresponding enriched GO terms (figure \ref{figure:chromatin} panel (c)). In addition, phenotypes $1$ and $2$ are enriched for \textit{ribosomes} and \textit{endosomes} respectively.
+
+
+
+\subsubsection{Pluripotent mESCs (E14TG2a)}
+In the case of the mESC dataset, Novelty TAGM reveals $8$ new putative phenotypes. The chromatin enrichment preparation is also validated in these cells, as well as new phenotypes with additional annotations such \textit{nucleolus} and \textit{centrosome} (see supplement \ref{supplement:mesc}).
+
+\begin{figure}[ht]
+	\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pcau2oshl.pdf}
+	\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{heatmapuU2oshl.jpeg}
+	\caption{}
+\end{subfigure}
+~
+\begin{subfigure}[t]{\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pvaluesu2os}
+	\caption{}
+\end{subfigure}
+	\caption{(a) PCA plot of the \textit{hyper}LOPIT U-2 OS cancer cell line data. Points are scaled according to the discovery probability with larger points indicating greater discovery probability. (b) Heatmaps of the posterior similarity matrix derived from U-2 OS cell line data demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than $0.5$ for the U-2 OS dataset to reduce the number of visualised proteins. (c) Tile plot of discovered phenotypes against GO CC terms to demonstrate over-representation, where the colour intensity is the -$\log_{10}$ of the p-value.}
+	\label{figure:chromatin}
+\end{figure}
+\clearpage
+\subsection{Uncovering additional sub-cellular structures}
+Having validated the ability of Novelty TAGM to recover known experimental design, as well as uncover additional sub-cellular niches resolved in the data, we turn to apply Novelty TAGM to several additional datasets.
+
+\subsubsection{U-2 OS cell line revisited}
+ We first consider the LOPIT-DC dataset on the U-2 OS cell line \citep{DC:2018}. Again, we removed the nuclear, proteasomal, and ribosomal annotations. Novelty TAGM reveals $10$ putative phenotypes (figure \ref{figure:DC}).
+
+% In a similar vein to the analysis performed on the \textit{hyper}LOPIT U-2 OS dataset, we initially use the available HPA data to validate these clusters \citep{Thul:2017}. Phenotypes $3,5,7$ and $9$ display nucleus-associated terms as their most frequent HPA annotation. To obtain additional functional information about these phenotypes, we perform an over-representation analysis on GO Cellular Component terms. Phenotype $3$ reveals both \textit{nucleolus} $(p < 10^{-60})$ and \textit{ribosome} $(p < 10^{-30})$ annotations. Phenotype $5$ reveals a \textit{proteasome} cluster $(p < 10^{-30})$. A chromatin-associated phenotype is also discovered, with phenotype $9$ having terms such as \textit{chromosome} $(p < 10^{-60})$ and \textit{chromatin} $(p < 10^{-40})$ terms significantly over-represented in these clusters. Notably, the first evidence for sub-nuclear resolution in this LOPIT-DC dataset. Phenotype $6$ represents a cluster with mixed annotation with over-representation for both \textit{plasma membrane} $(p < 10^{-8})$ and \textit{extracellular matrix} $(p < 10^{-2})$ and this is supported by HPA annotation with vesicles, cytosol, and plasma membrane being the top three annotations. An extracellular matrix-related phenotype was not previously known in these data and might correspond to exocytic vesicles containing ECM proteins. Furthermore, phenotype $8$ is significantly enriched for \textit{endosomes} $(p < 10^{-55})$, again a novel annotation for this data. In addition, $107$ of the proteins in this phenotype are also localised to the endosome-enriched phenotype presented in the U-2 OS \textit{hyper}LOPIT dataset (section \ref{section:u2os}). Thus, we robustly identify new phenotypes across different spatial proteomics protocols. Hence, we have presented strong evidence for additional annotations in this dataset, beyond the original analysis of the data \citep{DC:2018}; in particular, although a separate chromatin enrichment preparation was not included in the U-2 OS LOPIT-DC analysis and the original authors did not identify sufficient resolution between the nucleus and chromatin clusters in this dataset, Novelty TAGM could, in fact, reveal a chromatin-associated phenotype in the U-2 OS LOPIT-DC data. In addition, we have joint evidence for an endosomal cluster in both the LOPIT-DC and \textit{hyper}LOPIT datasets. Finally, through the discovery probability and by using the PSMs we have quantified uncertainty in these proposed phenotypes, enabling more rigorous interrogation of these datasets.
+In a similar vein to the analysis performed on the \textit{hyper}LOPIT U-2 OS dataset, we initially use the available HPA data to validate these clusters \citep{Thul:2017}. Phenotypes $3,5,7$ and $9$ display nucleus-associated terms as their most frequent HPA annotation. Clear differential enrichment of phenotypes with GO Cellular Component terms is evident from figure \ref{figure:DC} panel (e). This analysis reveals \textit{nucleolus}, \textit{ribosome}, \textit{proteasome} phenotypes. Furthermore, a \textit{chromatin} phenotype is also resolved. Notably, this is the first evidence for sub-nuclear resolution in this LOPIT-DC dataset. Phenotype $6$ represents a cluster with mixed \textit{plasma membrane} and \textit{extracellular matrix} annotations and this is supported by HPA annotation with vesicles, cytosol, and plasma membrane being the top three annotations. An extracellular matrix-related phenotype was not previously known in these data and might correspond to exocytic vesicles containing ECM proteins. Furthermore, phenotype $8$ is significantly enriched for \textit{endosomes}, again a novel annotation for this data. In addition, $107$ of the proteins in this phenotype are also localised to the endosome-enriched phenotype presented in the U-2 OS \textit{hyper}LOPIT dataset (section \ref{section:u2os}). Thus, we robustly identify new phenotypes across different spatial proteomics protocols. Hence, we have presented strong evidence for additional annotations in this dataset, beyond the original analysis of the data \citep{DC:2018}. In particular, although a separate chromatin enrichment preparation was not included in the U-2 OS LOPIT-DC analysis and the original authors did not identify sufficient resolution between the nucleus and chromatin clusters in this dataset, Novelty TAGM could, in fact, reveal a chromatin-associated phenotype in the U-2 OS LOPIT-DC data. In addition, we have joint evidence for an endosomal cluster in both the LOPIT-DC and \textit{hyper}LOPIT datasets. Finally, through the discovery probability and by using the PSMs we have quantified uncertainty in these proposed phenotypes, enabling more rigorous interrogation of these datasets.
+
+
+ 
+ \subsubsection{Saccharomyces cerevisiae}
+Novelty TAGM uncovers $8$ putative phenotypes in the yeast \textit{hyper}LOPIT data \citep{Nightingale::2019}. Four of these phenotypes have no significant over-represented annotations.
+% Of the remaining four, the first phenotype is enriched for the \textit{cell periphery} $(p < 10^{-19})$ and \textit{fungal-type vacuole} $(p < 10^{-10})$. Phenotype $3$ has over-represented annotations for the \textit{kinetochore} $(p < 0.01)$, whilst phenotype $4$ is enriched for the \textit{cytoskeleton} $(p < 10^{-7})$. Phenotype $8$ represents a joint Golgi and ER cluster with the COPII-coated ER-to-Golgi transport vesicle enriched in this phenotype $(p < 10^{-14})$, along with the \textit{endoplasmic reticulum membrane} $(p < 10^{-10})$ and the \textit{Golgi membrane} $(p < 10^{-9})$.
+Figure \ref{figure:DC} panel (f) demonstrates that the remaining four phenotypes are differentially enriched for GO terms. Firstly, a mixed \textit{cell periphery} and \textit{fungal-type vacuole} phenotype is uncovered along with a \textit{kinetochore} phenotype, and a \textit{cytoskeleton} phenotype. Phenotype $8$ represents a joint Golgi and ER cluster with several enriched GO terms.  Indeed, most of the proteins in this phenotype have roles in the early secretory pathway that involve either transport from the ER to the early Golgi apparatus, or retrograde transport from the Golgi to the ER \citep{Bue:2006,Inadome:2005, Otte:2001, Yofe:2016}, (also reviewed in \cite{Delic:2013}).
+To be precise, $11$ out of the total $20$ proteins in this cluster are annotated as core components of COPII vesicles and $6$ associated with COPI vesicles. The protein Ksh1p (Q8TGJ3) is further suggested through homology with higher organisms to be part of the early secretory pathway \citep{Wendler:2010}. The proteins Scw4p (P53334), Cts1p (P29029) and Scw10p (Q04951) \citep{Cappellaro:1998}, as well as Pst1p (Q12355)\citep{Pardo:2004}, and Cwp1p (P28319) \citep{Yin:2005}, however, are annotated in the literature as localising to the cell wall or extracellular region. It is therefore possible that their predicted co-localisation with secretory pathway proteins observed here reflects a proportion of their lifecycle being synthesised or spent trafficking through the secretory pathway. The protein Ssp120p (P39931) is of unknown function and has been shown to localise in high throughput studies to the vacuole \citep{Yofe:2016} and to the cytoplasm in a punctate pattern \citep{Huh:2003}. The localisation observed here may suggest that it is therefore either part of the secretory pathway, or trafficks through the secretory organelles for secretion or to become a constituent of the cell wall. 
+\subsubsection{Fibroblast cells}
+We also uncover additional annotations for the HCMV infected and the control fibroblast spatial proteomics datasets \citep{Jean_Beltran:2016}; such as, sub-mitochondrial annotations, as well as resolution of the small and large ribosomal sub-units. These annotations were overlooked in the original analysis \citep{Jean_Beltran:2016} and further details can be found in the supplement \ref{supplement:fibroblast}.
+ 
+\begin{figure}
+	\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pcau2osdc.pdf}
+	\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.2in]{heatmapU2osdc.jpeg}
+	\caption{}
+\end{subfigure}
+~
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pcaYeast.pdf}
+	\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.2in]{heatmapYeast.jpeg}
+	\caption{}
+\end{subfigure}
+~
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2in]{pvaluesDC}
+	\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2in]{pvalueYeast}
+	\caption{}
+\end{subfigure}
+\caption{(a, c) PCA plots of the LOPIT-DC U-2 OS data and the \textit{hyper}LOPIT yeast data. The points are scaled according to the discovery probability. (b, d) Heatmaps of the posterior similarity matrix derived from the U-2 OS and yeast datasets demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than 0.95 ($10^{-5}$ for LOPIT-DC to reduce the number of visualised proteins). (e, f) Tile plots of phenotypes against GO CC terms where the colour intensity is the -$\log_{10}$ of the p-value.}
+ \label{figure:DC}
+\end{figure}
+
+\clearpage
+\subsection{Refining annotation in organellar maps}
+The Dynamic Organellar Maps (DOM) protocol was developed as a faster method for MS-based spatial proteomic mapping, albeit at the cost of lower organelle resolution \citep{Itzhak:2016,Gatto::2019}. The three datasets analysed here are two HeLa cell lines \citep{Itzhak:2016, Hirst:2018} and a mouse primary neuron dataset \citep{Itzhak::2017}. All three of these datasets have been annotated with a class called "large protein complexes''. This class contains a mixture of cytosolic, ribosomal, proteasomal and nuclear sub-compartments that pellet during the centrifugation step used to capture this mixed fraction \citep{Itzhak:2016}. We apply Novelty TAGM to these data and remove this "large protein complexes" class, to derive more precise annotations for these datasets. 
+\subsubsection{HeLa cells (Itzhak et. al 2016)}
+The HeLa dataset of \cite{Itzhak:2016}  has $3$ additional phenotypes uncovered by Novelty TAGM. Figure \ref{figure:DOM} panel c shows a \textit{mitochondrial membrane} phenotype, distinct from the already annotated mitochondrial class.
+Phenotype $2$ represents a mixed cluster with nucleus-, ribosome- and cytosol-related enriched terms. The final phenotype is enriched for \textit{chromatin} and \textit{chromosome}, suggesting sub-nuclear resolution. Furthermore, as a result of quantifying uncertainty, we can see that there are potentially more sub-cellular structures in this data (figure \ref{figure:DOM}). However, the uncertainty is too great to support these phenotypes. 
+
+%The first phenotype is enriched for the \textit{mitochondrial membrane} $(p < 0.01)$, distinct from the already annotated mitochondrial class. Phenotype $2$ represents a mixed cluster with nucleus-, ribosome- and cytosol-related enriched terms, such as \textit{cytosolic ribosome} $(p < 10^{-40})$, \textit{nucleolus} $(p < 10^{-30})$ and \textit{cytosolic part} $(p < 10^{-25})$. The final phenotype is enriched for \textit{chromatin} and \textit{chromosome} $(p < 10^{-10})$, suggesting sub-nuclear resolution. 
+\subsubsection{Mouse primary neurons and HeLa cells (Hirst et. al 2018)}
+Application of Novelty TAGM to mouse primary neuron data \citep{Itzhak::2017} and another HeLa dataset \citep{Hirst:2018} yields further annotations; such as, \textit{ribosomal}, \textit{cytosolic} and \textit{extracellular} annotations (see supplement \ref{supplement:DOM}). 
+\begin{figure}
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.5in]{pcaItzhak2016.pdf}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.5in]{itzhak2016heatmap.jpeg}
+		\caption{}
+	\end{subfigure}
+~
+	\begin{subfigure}[t]{\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pvalueItzhak}
+	\caption{}
+\end{subfigure}
+	\caption{(a) PCA plots of the HeLa data. The pointers are scaled according to their discovery probability. (b) Heatmaps of the HeLa Itzhak data. Only the proteins with discovery probability greater than $0.99$ and outlier probability less than $0.95$ are shown. The heatmaps demonstrate the uncertainty in the clustering structure present in the data. (c) Tile plot of phenotypes against GO CC terms where the colour intensity is the -$\log_{10}$ of the p-value.}
+	\label{figure:DOM}
+\end{figure}
+\clearpage
+\section{Comparison between Novelty TAGM and \textit{phenoDisco}}
+Next, we compare an already available novelty detection algorithm, \textit{phenoDisco}, with Novelty TAGM. Despite both methods performing novelty detection, the algorithms
+are quite distinct. The first major difference is that Novelty TAGM is a Bayesian 
+method that performs uncertainty quantification. Novelty TAGM quantifies the uncertainty in both the number of newly identified phenotypes and whether individual proteins should belong to a new phenotype. On the other hand, \textit{phenoDisco} uses the \textit{Bayesian Information Criterion} (BIC) to select just a single clustering, without taking into account the uncertainty in the number of phenotypes, and does not provide an estimate of individual protein-to-phenotype allocation uncertainty. Another difference is the input to both methods; Novelty TAGM uses the data directly, whereas \textit{phenoDisco} takes the top principal components (by default, the first two) as input. \textit{PhenoDisco} also requires an additional parameter - the minimum group size. This parameter can be challenging to specify, since there is a trade-off between identifying functionally relevant phenotypes of different sizes and picking up small spurious protein clusters. Furthermore, \textit{phenoDisco} struggles to scale to many of the datasets presented in this manuscript, because it requires iteratively refitting models and building of an outlier test statistic. 
+
+To demonstrate the differences between the two approaches, we apply \textit{phenoDisco} and Novelty TAGM to the HEK-293 spatial proteomics dataset interrogated by \cite{Breckels:2013}. The PCA plots in figure \ref{figure:phenodisco} reveal broad similarities in the location of the discovered phenotypes. Novelty TAGM provides more information than \textit{phenoDisco}; for example, we can scale the pointer size to the discovery probability. We note that both methods reveal 8 putative phenotypes in the data. Figure \ref{figure:phenodisco} (panels d and e) reveals the distribution of proteins across these phenotypes. We conclude that both approaches are able to discover small and large clusters, with both methods identifying phenotypes with a few proteins, but also phenotypes with greater than 100 proteins. Figure \ref{figure:phenodisco} (panel f) shows that both methods find the same number of phenotypes; however, not all of these phenotypes are functionally enriched. For \textit{phenoDisco}, four of the phenotypes had at least 1 significant Gene Ontology term, whereas this was true for five of the Novelty TAGM phenotypes. Figure \ref{figure:phenodisco} (panel g) characterises the protein overlap between the two approaches. We see that both methods are in broad agreement, with most of the disagreement attributed to cases where one method assigns a protein as unknown whilst the other allocates to it a phenotype or organelle. For example, Novelty TAGM associates \textit{phenoDisco} phenotype 3, which is a lysosome-enriched phenotype, with the plasma membrane (albeit with low probability). On the other hand, Novelty TAGM phenotypes 2 and 3, enriched for chromatin and ribosome respectively, are associated with the mitochondria by \textit{phenoDisco}. This demonstrates the ability of Novelty TAGM to derive more biologically meaningful phenotypes.
+
+\begin{figure}
+	\begin{subfigure}[t]{0.33\textwidth}
+		\centering
+		\includegraphics[height=2in]{pcaMarkershek}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.33\textwidth}
+		\centering
+		\includegraphics[height=2in]{pcaPDhek}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.33\textwidth}
+		\centering
+		\includegraphics[height=2in]{pcaTAGMhek}
+		\caption{}
+	\end{subfigure}
+~
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2in]{phenodiscodist}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2in]{noveltytagmdist}
+		\caption{}
+	\end{subfigure}	
+~
+\begin{subfigure}{0.5\textwidth}
+	%\includegraphics[height=2in]{phenonumhek}
+		\adjustbox{valign=c}{\begin{tabular}{|c|c|c|}
+		\hline
+		&Phenotypes & Enriched    \\ \hline \hline
+		{\textit{phenoDisco}} & 8                          & 5                        \\ \hline
+		{Novelty Tagm}        & 8                          & 6                       \\ \hline
+	\end{tabular}}	\caption{}
+\end{subfigure}
+	\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2in, valign=c]{hekcompare}
+	\caption{}
+\end{subfigure}
+~
+	\caption{(a) PCA plot showing marker proteins for the HEK-293 dataset. (b) PCA plot with phenotypes identified by \textit{phenoDisco}. (c) PCA plot with phenotypes identified by Novelty TAGM with pointer size scaled to discovery probability. (d, e) Barplots showing the number of proteins allocated to different phenotypes by \textit{phenoDisco} and Novelty TAGM respectively. (f) A table demonstrating the number of phenotypes with functional enrichment for both methods and the number of phenotypes discovered. (g) A heatmap showing the overlap between \textit{phenoDisco} and Novelty TAGM allocations.
+	}
+	\label{figure:phenodisco}
+\end{figure}
+\clearpage
+\section{Improved annotation allows exploration of endosomal processes}\label{section:endo}
+Given the information that the U-2 OS \textit{hyper}LOPIT dataset resolves an endosomal cluster not previously explored, we perform a re-analysis of this dataset focusing on the endosomes. We curate a set of marker proteins for the endosomes and add these annotations to the U-2 OS \textit{hyper}LOPIT dataset. After which, we apply our Bayesian generative classifier TAGM to the data with this additional annotation \citep{Crook:2018}. Protein allocations to each sub-cellular niche are visualised in the PCA plot of figure \ref{figure:u2os} (panel a). Figure \ref{figure:u2os} (panel c) demonstrates the increased number of proteins that can be characterised by improved annotation of the U-2 OS cell dataset. Furthermore, we examine $7$ (of $240$) proteins with uncertain endosomal localisation, which can be visualised in each of the violin plots in figure \ref{figure:u2os} (panel d).
+
+All 7 proteins with uncertain assignment to our new endosome cluster are known to function in endosome dynamics. Rab5a and Rab5b (P20339; P61020) are isoforms of Rab5, a small GTPase which is considered a master organiser of the endocytic system, regulating clathrin-mediated endocytosis and early endosome dynamics \citep{Simonsen::1998,Woodman::2000, Zerial::2001, Rink::2005, Mendoza::2013, Chen::2014, Gautreau::2014, Law::2017}. RN-tre (Q92738) is a GTPase-activating protein which controls the activity of several Rab GTPases, including Rab5, and is therefore a key player in the organisation and dynamics of the endocytic pathway \citep{Lanzetti::2000, Gautreau::2014}. KIF16B (Q96L93) is a plus end-directed molecular motor which regulates early endosome motility along microtubules. It is required for the establishment of the steady-state sub-cellular distribution of early endosomes, as well as the balance between PM recycling and lysosome degradation of signal transducing cell surface receptors including EGFR and TfR \citep{Hoepfner:2005, Carlucci::2010}. Notably, it has been demonstrated that KIF16B co-localises with the small GTPase Rab5, whose isoforms Rab5a and Rab5b we also identified as potentially localised to the endosome and PM in this dataset. ZNRF2 (Q8NHG8) is an E3 ubiquitin ligase which has been shown to regulate mTOR signalling as well as lysosomal acidity and homeostasis in mouse and human cells and has been detected at the endosomes, lysosomes, Golgi apparatus and PM according to the literature \citep{Araki:2003, Hoxhaj:2016}. Ykt6 (O15498) is a SNARE (soluble N-ethylmaleimide-sensitive factor attachment protein receptor) protein that regulates a wide variety of intracellular trafficking and membrane tethering and fusion processes. The membrane-associated form of Ykt6 has been detected at the PM, ER, Golgi apparatus, endosomes, lysosomes, vacuoles (in yeast), and autophagosomes as part of various SNARE complexes \citep{Dilcher::2001, Tai:2004,Fukasawa::2004,Meiringer::2008, Takats::2018, Matsui::2018, Linnemannstons::2018, Yong::2019}. In line with this, our results show a mixed sub-cellular distribution for Ykt6 with potential localisation to the endosome and cytosol (figure \ref{figure:u2os}, panel d). EHD3 (Q9NZN3) is an important regulator of endocytic trafficking and recycling, which promotes the biogenesis and stabilisation of tubular recycling endosomes by inducing early endosome membrane bending and tubulation \citep{Bahl::2016,Henmi::2016}. We observe a mixed steady-state potential localisation to the endosome and PM for EHD3 (figure \ref{figure:u2os}, panel d). This is in agreement with EHD3's role in recycling endosome-to-PM transport \citep{Naslavsky::2006,Naslavsky::2009,George::2007,Cabasso::2015, Henmi::2016}.
+
+Of these 7 proteins with uncertain endosome assignment, only 4 have localisations annotated in HPA (figure \ref{figure:u2os} (b)). The HPA assigns Rab5b to the vesicles  which, in this context, include the endosomes, lysosomes, peroxisomes and lipid droplets. Therefore, a more precise annotation is available using Novelty TAGM. Ykt6 is localised to the cytosol, in support of our observations. EHD3 has approved localisation to the plasma membrane, again in agreement with our assignments. KIF16B is assigned to the mitochondrion, which contradicts our findings as well as previously published literature on the localisation and biological role of this protein. We speculate that this disagreement arises from the uncertainty associated with the specificity of the chosen antibody \citep{Thul:2017}. Thus, Novelty TAGM enables sub-cellular fractionation-based methods to identify proteins in sub-cellular niches which can not be fully interrogated by immunocytochemistry.
+
+\begin{figure}[h]
+	\begin{subfigure}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[height=2in]{u2ospcaF}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.3\textwidth}
+	\centering
+	\includegraphics[height=2in]{hpa2}
+	\caption{}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.3\textwidth}
+	\centering
+	\includegraphics[height=2in]{summaryu2os}
+	\caption{}
+	\end{subfigure}
+	~
+	\begin{subfigure}[t]{1\textwidth}
+		\centering
+		\includegraphics[height=4in]{endoViolin}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) PCA of U-2 OS \textit{hyper}LOPIT data with pointer scaled to localisation probability and outliers shrunk. Points are coloured according to their most probable organelle. (b) Immunofluorescence images and sub-cellular localisation annotation taken from the HPA database (https://www.proteinatlas.org/humanproteome/cell) for the proteins with UniProt accessions P61020 (Rab5b), O15498 (Ykt6), Q9NZN3 (EHD3), and Q96L93 (KIF16B). The nucleus is stained in blue; microtubules in red, and the antibody staining targeting the protein in green. (c) A barplot representing the number of proteins allocated before and after re-annotation of the endosomal class. (d) Violin plots of full probability distribution of proteins to organelles, where each violin plot is for a single protein.
+	}
+	\label{figure:u2os}
+\end{figure}
+\clearpage 
+\section{Discussion}
+We have presented a semi-supervised Bayesian approach that simultaneously allows probabilistic allocation of proteins to organelles, detection of outlier proteins, as well as the discovery of novel sub-cellular structures. Our method unifies several approaches present in the literature, combining the ideas of supervised machine learning and unsupervised structure discovery. Formulating inference in a Bayesian framework allows for the quantification of uncertainty; in particular, the uncertainty in the number of newly discovered annotations.
+
+Application of our method across $10$ different spatial proteomic datasets acquired using diverse fractionation and MS data acquisition protocols and displaying varying levels of resolution revealed additional annotation in every single dataset. Our analysis recovered the chromatin-associated protein phenotype and validated experimental design for chromatin enrichment in \textit{hyper}LOPIT datasets. Our approach also revealed additional sub-cellular niches in the mESC \textit{hyper}LOPIT and U-2 OS \textit{hyper}LOPIT datasets.
+
+Our method revealed resolution of $4$ sub-nuclear compartments in the U-2 OS \textit{hyper}LOPIT dataset, which were validated by Human Protein Atlas annotations. An additional endosome-enriched phenotype was uncovered and Novelty TAGM robustly identified an overlapping phenotype in U-2 OS LOPIT-DC data, providing strong evidence for endosomal resolution. Further biologically relevant annotations were uncovered in these, as well as other datasets. For example, a group of vesicle-associated proteins involved in transport from the ER to the early Golgi was identified in the yeast \textit{hyper}LOPIT dataset; resolution of the ribosomal subunits was identified in the fibroblast dataset, and separate nuclear, cytosolic and ribosomal annotations were identified in the DOM datasets.
+
+A direct comparison with the state-of-the-art approach \textit{phenoDisco} demonstrates clear differences between the approaches. Novelty TAGM, a fully Bayesian approach, quantifies uncertainty in both the number of newly discovered phenotypes and the individual protein-phenotype associations - \textit{phenoDisco} provides no such information.
+
+Improved annotation of the U-2 OS \textit{hyper}LOPIT data allowed us to explore endosomal processes, which have not previously been considered with this dataset. We compare our results directly to immunofluorescence microscopy-based information from the HPA database and demonstrate the value of orthogonal spatial proteomics approaches to determine protein sub-cellular localisation. Our results provide insights on the sub-cellular localisation of proteins for which there is no information in the HPA Cell Atlas database. 
+
+During our analysis, we observed that the posterior similarity matrices have potential sub-clustering structures. Many known organelles and sub-cellular niches have sub-compartmentalisation, thus methodology to detect these sub-compartments is in preparation. Furthermore, we have observed that different experiments and different data modalities provide complementary results. Thus, integrative approaches to spatial proteomics analysis are also desired. 
+
+Our method is widely applicable within the field of spatial proteomics and builds upon state-of-the-art approaches. The computational algorithms presented here are disseminated as part of the Bioconductor project \citep{Bioconductor::2004, Huber:2015} building on MS-based data structures provided in \cite{MSnbase:2012} and are available as part of the pRoloc suite, with all data provided in pRolocdata \citep{pRoloc:2014}.
+
+\pagebreak
+\section{Appendix}
+\subsection{mESC chromatin enrichment validation}\label{supplement:mesc}
+For the mESC dataset, Novelty TAGM reveals $8$ new putative phenotypes. Novelty TAGM recovers the masked annotations with phenotype $2$ having the enriched terms associated with chromatin, such as \textit{chromatin} and \textit{chromosome} $(p < 10^{-80})$. Phenotype 3 corresponds to a separate nuclear substructure with enrichment for the terms \textit{nucleolus} $(p < 10^{-60})$ and \textit{nuclear body} $(p < 10^{-30})$. Thus, in the mESC dataset Novelty TAGM confirms the chromatin enrichment preparation designed to separate chromatin and non-chromatin associated nuclear proteins \citep{Mulvey:2017}. In addition, phenotype 4 demonstrates enrichment for the ribosome annotation $(p < 10^{-35})$. Phenotype 1 is enriched for \textit{centrosome} and \textit{microtubule} annotations $(p < 10^{-15})$, though observing the PSM in figure \ref{figure:mouse} we can see there is much uncertainty in this phenotype. This uncertainty quantification can then be used as a basis for justifying additional expert annotation.
+
+\begin{figure}[h]
+	\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pcaMousehl.pdf}
+	\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{heatmapMousehl.jpeg}
+	\caption{}
+\end{subfigure}
+\caption{(a) PCA plot of the \textit{hyper}LOPIT mESC dataset. Points are scaled according to the discovery probability. (b) Heatmaps of the posterior similarity matrix derived from  mESC data demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than $0.95$ for the mESC dataset to reduce the number of visualised proteins.}
+\label{figure:mouse}
+\end{figure}
+\subsection{Uncovering additional annotations in fibroblast cells}\label{supplement:fibroblast}
+\subsubsection{HCMV-infected fibroblast cells} 
+We apply Novelty TAGM to the dataset corresponding to the HCMV-infected fibroblast cells 24 hours post infection (hpi) \citep{Jean_Beltran:2016}, and discover $9$ putative additional phenotypes (demonstrated in figure \ref{figure:Beltran}). Phenotype $2$ contains a singleton protein and phenotypes $4,6,7,8$ and $9$ are not significantly enriched for any annotations. However, phenotype $3$ is enriched for the \textit{mitochondrial membrane} and  \textit{mitochondrial envelope} annotations $(p < 10^{-4})$; this is an addition to the already annotated mitochondrial class, indicating sub-mitochondrial resolution. Phenotype $1$ is a mixed ribosomal/nuclear cluster with enrichment for \textit{nucleoplasm} $(p < 10^{-5})$ and the \textit{small ribosomal subunit} $(p < 10^{-4})$, which is distinct from phenotype $5$ which is enriched for the \textit{large ribosomal subunit} $(p < 10^{-10})$. This demonstrates unbiased separation of the two ribosomal subunits, which was overlooked in the original analysis \citep{Jean_Beltran:2016}.
+
+\subsubsection{Fibroblast cells without infection} 
+Novelty TAGM reveals $7$ putative phenotypes in the control fibroblast dataset \citep{Jean_Beltran:2016}. Phenotypes $2,4,5,6$ and $9$ have no significantly enriched Gene Ontology terms (threshold $p = 0.01$). However, we observe that phenotype $3$ is enriched with the \textit{large ribosomal subunit} with significance at level $p < 10^{-7} $. Phenotype $1$ represents a mixed \textit{peroxisome} $(p < 10^{-2})$ and \textit{mitochondrion} cluster $(p < 10 ^{-2})$, an unsurprising result since these organelles possess similar biochemical properties and therefore similar profiles during density gradient centrifugation-based fractionation \citep{DC:2018, Dealtry:1992}. The differing number of confidently identified and biologically relevant phenotypes discovered between the two fibroblast datasets could be down to the differing levels of structure between the two datasets. Indeed, it is evident from figure \ref{figure:Beltran} that we see differing levels of clustering structure in these datasets.
+\begin{figure}
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.5in]{pcaBeltranH.pdf}
+		\caption{}
+	\end{subfigure}	
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.5in]{heatmapHCMV.pdf}
+		\caption{}
+	\end{subfigure}
+	~
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.5in]{pcaMOCK.pdf}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.5in]{heatmapMOCK.pdf}
+		\caption{}
+	\end{subfigure}
+	\caption{(a, c) PCA plots of the HCMV-infected fibroblast data 24 hpi and the mock fibroblast data 24 hpi. The points are coloured according to the organelle or proposed new phenotype and are scaled according to the discovery probability. (b, d) Heatmaps of the posterior similarity matrix derived from the infected fibroblast data and mock fibroblast data demonstrating the uncertainty in the clustering structure of the data. We have only plotted the proteins which have greater than 0.99 probability of belonging to a new phenotype and probability of being an outlier less than 0.95.}
+	\label{figure:Beltran}
+\end{figure}
+\subsection{Additional organellar map datasets}\label{supplement:DOM}
+\subsubsection{Mouse primary neurons}
+The mouse primary neuron dataset reveals $10$ phenotypes after we apply Novelty TAGM. However, $8$ of these phenotypes have no enriched GO annotations. This is likely a manifestation of the dispersed nature of this dataset, where the variability is generated by technical artefacts rather than biological signal. Despite this, Novelty TAGM is able to detect two relevant phenotypes: the first phenotype is enriched for \textit{nucleolus} $(p < 0.01)$; the second for \textit{chromosome} $(p < 0.01)$. This suggests additional annotations for this dataset.
+\subsubsection{HeLa cells (Hirst et. al 2018)}
+The HeLa dataset of \cite{Hirst:2018}, which we refer to as HeLa Hirst, reveals $7$ phenotypes with at least 1 protein with discovery probability greater than $0.95$. However, three of these phenotypes represent singleton proteins. Phenotype $1$ reveals mixed cytosol/ribosomal annotations with the terms \textit{cytosolic ribosome} $(p < 10^{-30})$ and \textit{cytosolic part} $(p < 10^{-25})$ significantly over-represented. There are no further phenotypes with enriched annotations $(\text{threshold } p = 0.01)$, except phenotype $2$ which represents a mixed extracellular structure/cytosol cluster. For example, the terms \textit{extracellular organelle} $(p <10^{-13})$ and \textit{cytosol} $(p < 10^{-10})$ are over-represented.
+\begin{figure}
+	\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pcaItzhak2017.pdf}
+	\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{heatmapItzhak2017.jpeg}
+	\caption{}
+\end{subfigure}
+~
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{pcaHirst.pdf}
+	\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[height=2.5in]{heatmapHirst.jpeg}
+	\caption{}
+\end{subfigure}
+	\caption{(a),(c) PCA plots of the mouse primary neuron data and HeLa Hirst data. The pointers are scaled according to their discovery probability. (b),(d) Heatmaps of the mouse neuron data and HeLa Hirst data. Only the proteins whose discovery probability is greater than $0.99$ and outlier probability less than $0.95$ ($10^{-2}$ for the mouse primary neuron dataset to reduce the number of visualised proteins) are shown. The heatmaps demonstrate the uncertainty in the clustering structure present in the data.}
+\end{figure}
+
+
+
+
+\subsection{Handling label switching}
+Bayesian inference in mixture models suffers from an identifiability issue known as \textit{label switching} - a phenomenon where the allocation labels can flip between runs of the algorithm \citep{Richardson::1997, Stephens:2000}. This occurs because of the symmetry of the likelihood function under permutations of these labels. We note that this only occurs in unsupervised or semi-supervised mixture models. This makes inference of the parameters in mixture models challenging. In our setting the labels for the known components do not switch, but for the new phenotypes label switching must occur. One standard approach to circumvent this issue is to form the so-called \textit{posterior similarity matrix} (PSM) \citep{fritsch::2009}. The PSM is an $N\times N$ matrix where the $(i,j)^{th}$ entry is the posterior probability that protein $i$ and protein $j$ reside in the same component. More precisely, if we let $S$ denote the PSM and $T$ denote the number of Monte-Carlo iterations then 
+\begin{equation}
+S_{ij} = P(z_i = z_j| X, \boldsymbol{\theta}, \boldsymbol{\pi} , \kappa, \epsilon, {\bf M}, V) \approx \frac{1}{T} \sum_{t = 1}^{T} \mathds{I}(z^{(t)}_i = z^{(t)}_j),
+\end{equation}
+where $\mathds{I}$ denotes the indicator function. The PSM is clearly invariant to label switching and so avoids the issues arising from the \textit{label switching} problem. 
+\subsection{Summarising posterior similarity matrices}
+To summarise the PSMs, we take the approach proposed by \cite{fritsch::2009}. They proposed the adjusted Rand index (AR) \citep{rand::1971, Hubert::1985}, a measure of cluster similarity, as a utility function and then we wish to find the allocation vector $\hat{z}$ that maximises the expected adjusted Rand index with respect to the true clustering $z$. Formally, we write
+\begin{equation}
+\hat{z} = \arg \max_{z^*} E[AR(z^*, z)|X, \boldsymbol{\theta}, \boldsymbol{\pi} , \kappa, \epsilon, {\bf M}, V],
+\end{equation}
+which is known as the Posterior Expected Adjusted Rand index (PEAR). One obvious pitfall is that this quantity depends on the unknown true clustering $z$. However, this can be approximated from the MCMC samples:
+\begin{equation}
+PEAR \approx \frac{1}{T} \sum_{t = 1}^{T}AR(z^*, z^{(t)}).
+\end{equation}
+The space of all possible clustering over which to maximise is infeasibly large to explore. Thus we take an approach taken in \cite{fritsch::2009} to propose candidate clusterings over which to maximise. Using hierarchical clustering with distance $1 - S_{ij}$, the PEAR criterion is computed for clusterings at every level of the hierarchy. The optimal clustering $\hat{z}$ is the allocation vector which maximises the PEAR.
+\subsection{Details of MCMC}
+The MCMC algorithm used in \cite{Crook:2018} is insufficient to handle inference of unknown phenotypes. As in \cite{Crook:2018}, a collapsed Gibbs sampler approach is used, but a number of modifications are made. Firstly, to accelerate convergence of the algorithm half the proteins are initial allocated randomly amongst the new phenotypes. Secondly, the parameters for the new phenotypes are proposed from the prior. Throughout the same default prior choices are used as in \cite{Crook:2018}.
+
+\subsection{Further details of endosomal proteins}
+For completeness, this appendix provides additional details and important literature on the proteins discussed in section \ref{section:endo}.
+
+First, P20339 (Rab5a) and P61020 (Rab5b) are two of the three isoforms of Rab5, a small GTPase which belongs to the Ras protein superfamily and is considered a master organiser of the endocytic system. Rab5a and Rab5b share a high level of amino acid sequence identity (approximately 85\%) and are ubiquitously expressed in the mouse and human. Independently, these isoforms act as key regulators of clathrin-mediated endocytosis and early endosome dynamics by controlling the following processes \textit{in vivo} and \textit{in vitro}: (a) clathrin-coated vesicle formation at the cell surface; (b) endocytosed vesicle transport from the plasma membrane towards, and fusion with, early endosomes; (c) early endosome biogenesis and maintenance; (d) molecular motor-driven, microtubule-dependent early endosome motility along the endocytic route; (e) early endosome docking/tethering and homotypic fusion, and (f) Rab conversion and early-to-late endosome maturation
+\citep{Simonsen::1998, Zerial::2001, Rink::2005, Chen::2014, Gautreau::2014, Law::2017}.
+
+Rab5a and Rab5b play crucial roles in the internalisation and recycling/degradation of cell surface receptors such as EGFR (epidermal growth factor receptor), TfR (transferrin receptor) and several GPCRs (G-protein-coupled receptors) and integrins as well as peripheral plasma membrane-associated signalling molecules, thereby regulating important intracellular signal transduction pathways \citep{Trischler::1999, Chen::2009, Bastin::2013, Liu::2015}. We observe a mixed steady-state potential localisation between the endosome and PM for both Rab5a and Rab5b (figure \ref{figure:u2os}, panel d). According to previously published information, both Rab5a and Rab5b are mainly localised to (and considered well-established constituents of) the early endosome compartment but have also been detected on the PM and clathrin-coated vesicles, in support of our results \citep{Simonsen::1998, Woodman::2000, Mendoza::2013}. Moreover, according to the HPA Cell Atlas, Rab5b resides in the vesicles (which, in this context, include the endosomes, lysosomes, peroxisomes and lipid droplets). There is no information regarding the sub-cellular location of Rab5a in this database.  
+
+Second, Q92738 (RN-tre) is a GTPase-activating protein (GAP) which controls the activity of several Rab GTPases. RN-tre is a major Rab5 (see above) regulator and therefore a key player in the organisation and dynamics of the endocytic pathway \citep{Lanzetti::2000, Gautreau::2014}. This protein modulates the internalisation of and signal transduction mediated by cell surface receptors such as EGFR, TfR and $\beta 1$ integrins \citep{Lanzetti::2000, Martinu::2002, Palamidessi::2013, De::2015}. It also controls early endosome-to-Golgi retrograde transport and Golgi membrane organisation \citep{Haas::2007}. We observe a steady-state snapshot of the sub-cellular distribution of RN-tre with potential localisation to the endosome and PM (figure \ref{figure:u2os}, panel d). In line with these results, RN-tre has been shown to reside in Rab5-positive early endosomes at steady state, but has also been detected at the PM and focal adhesions \citep{Lanzetti::2000,Martinu::2002, Palamidessi::2013,Gautreau::2014, De::2015}. There is no information concerning the sub-cellular localisation of RN-tre in the HPA Cell Atlas database. 
+
+Third, Q96L93 (KIF16B) is a plus end-directed molecular motor which belongs to the kinesin-3 protein family. This kinesin regulates early endosome motility along microtubules and is required for the establishment of the steady-state sub-cellular distribution of early endosomes as well as the balance between PM recycling and lysosome degradation of signal transducing cell surface receptors including EGFR and TfR \citep{Hoepfner:2005, Carlucci::2010}. In neuronal cells, KIF16B plays an important role in the establishment of somatodendritic early endosome localisation and in the trafficking of AMPA and NGF receptors \citep{Farkhondeh::2015}. In epithelial cells, this protein controls the transcytosis of TfR from juxtanuclear recycling endosomes to apical recycling endosomes \citep{Bay::2013}. KIF16B is also involved in tubular endosome biogenesis and fission by regulating early endosome fusion \citep{Skjeldal::2012}. Lastly, this kinesin has been shown to mediate biosynthetic Golgi-to-endosome transport of FGFR (fibroblast growth factor receptor)-carrying vesicles and thereby control FGFR cell surface presentation and signalling during in vivo mouse embryogenesis \citep{Ueno::2011}. Our results indicate a mixed localisation to the endosome and PM for KIF16B (figure \ref{figure:u2os}, panel d). In line with our observations, it has been reported that this protein is associated with early endosome membranes at steady state in mouse and human cells \citep{Hoepfner:2005, Farkhondeh::2015}. Additionally, it has been demonstrated that KIF16B co-localises with, and its spatial distribution and activity is regulated by, the small GTPase Rab5, whose isoforms Rab5a and Rab5b we also identified as potentially localised to the endosome and PM in the U-2 OS \textit{hyper}LOPIT dataset (see above), on early endosomes \citep{Hoepfner:2005,Skjeldal::2012}. Taking the above into account, a mixed distribution between the endosome and PM is reflective of the molecular function of KIF16B. However, the HPA Cell Atlas database classifies KIF16B as a component of the mitochondria (figure \ref{figure:u2os}, panel b), contradicting our findings as well as previously published information regarding the sub-cellular localisation and biological role of this protein. We speculate that this disagreement arises from the uncertainty associated with the specificity of the chosen antibody \citep{Thul:2017}. Indeed, the reliability of the mitochondrial annotation for KIF16B is classified as "uncertain" in this database.
+
+Fourth, Q8NHG8 (ZNRF2) is an E3 ubiquitin ligase which has been shown to regulate mTOR signalling as well as lysosomal acidity and homeostasis in mouse and human cells \citep{Hoxhaj:2016}. This protein has been found to control the sub-cellular localisation and biological function of mTORC1, the V-ATPase and the Na+/K+-ATPase $\alpha1$ \citep{Hoxhaj::2012, Hoxhaj:2016}. ZNRF2 is membrane-associated but can be released into the cytosol upon phosphorylation by various kinases \citep{Hoxhaj:2016}. We observe a mixed steady-state distribution between the endosome and PM for this protein (figure \ref{figure:u2os}, panel d). In support of this result, we find that ZNRF2 has been detected on the endosomes, lysosomes, Golgi apparatus and PM according to the literature \citep{Araki:2003, Hoxhaj:2016}. There is no information in regard to the sub-cellular location of ZNRF2 in the HPA Cell Atlas database. 
+
+Fifth, O15498 (Ykt6) is a SNARE (soluble N-ethylmaleimide-sensitive factor attachment protein receptor) protein which is conserved from yeast to humans. This protein regulates a wide variety of intracellular trafficking and membrane tethering and fusion processes including ER-to-Golgi vesicular transport, intra-Golgi traffic, retrograde Golgi-to-ER transport, retrograde endosome-to-TGN (trans-Golgi network) trafficking, homotypic fusion of ER membranes, Golgi-to-PM transport and exosome/secretory vesicle-PM fusion, Golgi-to-vacuole traffic (in yeast), homotypic vacuole fusion (in yeast), autophagosome formation and autophagosome-lysosome fusion \citep{Dilcher::2001, Tai:2004, Takats::2018, Matsui::2018, Linnemannstons::2018, Yong::2019}. Ykt6 lacks a transmembrane domain and is able to cycle between intracellular membranes and the cytosol in a palmitoylation- and farnesylation-dependent manner \citep{Fukasawa::2004,Meiringer::2008}. The membrane-associated form of Ykt6 has been detected on the PM, ER, Golgi apparatus, endosomes, lysosomes, vacuoles (in yeast), and autophagosomes as part of various SNARE complexes \citep{Dilcher::2001, Tai:2004,Fukasawa::2004,Meiringer::2008, Takats::2018, Matsui::2018, Linnemannstons::2018, Yong::2019}. In line with this information, our results show a mixed sub-cellular distribution for Ykt6 with potential localisation to the endosome and cytosol (figure \ref{figure:u2os}, panel d). The cytosolic localisation for Ykt6 is also supported by the HPA Cell Atlas annotation corresponding to this protein (figure \ref{figure:u2os}, panel b), further reinforcing our findings.
+
+Sixth, Q9NZN3 (EHD3) is another important regulator of endocytic trafficking and recycling. This protein promotes the biogenesis and stabilisation of tubular recycling endosomes by inducing early endosome membrane bending and tubulation \citep{Bahl::2016,Henmi::2016}. Additionally, EHD3 is essential for early endosome-to-recycling endosome transport, retrograde early endosome-to-Golgi traffic, Golgi apparatus morphology maintenance, and recycling endosome-to-PM transport \citep{Naslavsky::2006,Naslavsky::2009,George::2007,Cabasso::2015, Henmi::2016}. It plays an important role in the recycling of cell surface receptors and the biosynthetic transport of lysosome proteins \citep{Naslavsky::2006,Naslavsky::2009,George::2007,Cabasso::2015}. We observe a mixed steady-state potential localisation to the endosome and PM for EHD3 (figure \ref{figure:u2os}, panel d). Our results are in agreement with previously published studies which have reported that EHD3 is resident in the early endosomes and recycling endosomes at steady state \citep{Naslavsky::2006,Naslavsky::2009,George::2007,Cabasso::2015}, and our PM localisation-related observation is supported by the HPA Cell Atlas-derived annotation for this protein (figure \ref{figure:u2os}, panel b).
+
+Our findings provide insights on the dynamic sub-cellular distribution of proteins which play important roles in development, physiology and disease. For example, Rab5/Rab5a has been identified as a master regulator of cancer cell migration, tumour invasion and dissemination programs \textit{in vitro} and \textit{in vivo}. It has been demonstrated that Rab5/Rab5a expression is dysregulated in many invasive human cancers, Rab5/Rab5a is overexpressed in metastatic foci compared to the matched primary tumours, and Rab5/Rab5a activity critically promotes the acquisition of invasive properties by poorly invasive tumour cell types \citep{Torres::2010,Liu::2011,Liu::2015, Mendoza::2013,Frittoli::2014,Diaz::2014, Saitoh::2017}. Several publications have reported that elevated Rab5/Rab5a expression correlates with, and is predictive of, increased local invasiveness and metastatic potential, as well as poor patient prognosis in a variety of human cancer types \citep{Yu::1999,Fukui::2007,Zhao::2010,Yang::2011,Mendoza::2013, Frittoli::2014,Diaz::2014, Igarashi::2017}. Due to its established role in cancer progression and metastasis, Rab5/Rab5a is considered a fundamental cancer-associated protein and a potential diagnostic marker or therapeutic target \citep{Frittoli::2014, Igarashi::2017}. Recently, Rab5 was identified as a promising therapeutic target for colorectal cancer, as inhibition of Rab5 (and Rab7) activity led to elimination of colorectal cancer stem cells and disruption of colorectal cancer foci \citep{Takeda::2019}. Moreover, individual ablation of Rab5a but also Rab5b was shown to impair the invasion and dissemination ability of different cancer cell types \citep{Frittoli::2014}. In addition to its important role in cancer, there is some evidence suggesting that Rab5a might also be involved in the early pathogenesis of Alzheimer's disease \citep{Cataldo::1997,Cataldo::2000, Rosenfeld::2001}. Lastly, the Rab5 machinery has also been identified as an important factor in several bacterial, parasitic and viral infections. Bacterial pathogens such as \textit{Mycobacterium tuberculosis}, \textit{Listeria monocytogenes}, \textit{Tropheryma whipplei} and \textit{Salmonella typhimurium} \citep{Madan::2008}, as well as parasites such as \textit{Leishmania donovani} have evolved specific subversion mechanisms with which they are able to control the intracellular distribution and/or activity of Rab5 and its effectors as a way to avoid neutralisation by the immune system or facilitate invasion \citep{Verma::2017}. \textit{L. donovani} specifically controls the expression and function of the Rab5a isoform in this context \citep{Verma::2017}. Additionally, Rab5 was shown to participate in adenovirus endocytosis \citep{Rauma::1999}, both Rab5a and Rab5b were found to play functional roles in web formation and viral genome replication during HCV (hepatitis C virus) infection \citep{Stone::2007}, and Rab5a was identified as a crucial target of HBV (hepatitis B virus) during HBV-related hepatocellular carcinoma  pathogenesis \citep{Sheng::2014}.
+
+Apart from Rab5a and Rab5b, the other proteins also possess demonstrated roles in development and disease. RN-tre is overexpressed in a subset of aggressive basal-like breast cancers, where high levels of this protein prevent the endocytosis and recycling of EGFR, leading to Akt overstimulation. In turn, Akt activity stabilises the glucose transporter GLUT1 at the cell membrane, resulting in an increase in glycolysis and cancer cell proliferation. RN-tre has been proposed as a potential therapeutic target for these types of breast cancer \citep{Avanzato::2018}. This protein also plays a functional role in infection, as it was shown to regulate the uptake and intracellular trafficking of Shiga toxins \citep{Fuchs::2007}. Furthermore, it has been reported that KIF16B is essential for early post-implantation mouse embryo development, as Kif16b-knockout animals display peri-implantation embryonic lethality \citep{Ueno::2011}. In addition, recent studies have shown that ZNRF2 is overexpressed in human non-small cell lung cancer, osteosarcoma and papillary thyroid cancer, and that high levels of this protein are correlated with disease progression and poor patient prognosis in these cases \citep{Zhang::2016,Xiao::2017,Cui::2019}. Moreover, Ykt6 was found to be necessary for glycosome biogenesis and function in the kinetoplastid parasite \textit{Trypanosoma brucei}, which causes African sleeping sickness, with Ykt6 ablation significantly reducing the viability of the parasite in both its pro-cyclic and bloodstream forms \citep{Banerjee::2017}. Finally, EHD3 has been identified as an essential factor for heart physiology \citep{Curran::2014}.
+\subsection{Summary of convergence diagnostics}
+We provide a summary of convergence diagnostics using parallel chains analysis \citep{Gelman:1992}. We compute the number of proteins allocated to the outlier component at each iteration of the Markov-chain and monitor this quantity for convergence. The $\hat{R}$ statistic between parallel chains in then computed and reported in the table below. A value of $\hat{R} < 1.2$ indicates convergence.
+\begin{table}[h]
+	\centering
+	\footnotesize
+	\begin{tabular}{ |p{5cm}|p{3cm}|p{2cm}|p{4cm}|  }
+		\hline
+		\multicolumn{4}{|c|}{Convergence diagnostics for MCMC} \\
+		\hline
+		\vfill\hfil Dataset & \vfill\hfil Protocol & \vfill\hfil$\hat{R}$ & \vfill\hfil Upper confidence Interval \vfill\hfil $\hat{R}$   \\
+		\hline
+		\hline
+		mESC  & \textit{hyper}LOPIT&\vfill\hfil 1.03 & \vfill\hfil 1.15 \\
+		\hline
+		U-2 OS &\textit{hyper}LOPIT & \vfill\hfil 1.00  & \vfill\hfil 1.00\\
+		\hline
+		U-2 OS &LOPIT-DC  & \vfill\hfil 1.02&\vfill\hfil 1.06\\
+		\hline
+		\textit{S. cerevisiae} &\textit{hyper}LOPIT & \vfill\hfil 1.00 & \vfill\hfil 1.01\\
+		\hline
+		HCMV-infected fibroblast& Spatio-Temporal Proteomics &  \vfill\hfil 1.01 & \vfill\hfil 1.02 \\
+		\hline
+		HCMV mock fibroblast& Spatio-Temporal Proteomics &  \vfill\hfil 1.03 & \vfill\hfil 1.08 \\
+		\hline
+		HeLa \citep{Itzhak:2016}& DOM &  \vfill\hfil 1.07 & \vfill\hfil 1.21 \\
+		\hline
+		Mouse primary neurons & DOM &  \vfill\hfil 1.04 & \vfill\hfil 1.13 \\
+		\hline
+		HeLa \citep{Hirst:2018} & DOM &\vfill\hfil 1.02 & \vfill\hfil 1.06 \\
+		\hline
+		HEK-293 &LOPIT &  \vfill\hfil 1.00 & \vfill\hfil 1.01 \\
+		\hline
+		\hline
+	\end{tabular}
+	\caption{A table reporting convergence diagnostics for MCMC analysis}
+	\label{table:mcmcconvergence}
+\end{table}
+ 
+\textcolor{red}{ 
+\subsection{Prior specification and sensitivity}
+\subsubsection{Detailed prior specification} 
+To allow the inclusion of prior information and complete the Bayesian specification, we introduce priors on the mixture components. In the multivariate Gaussian components of the Novelty TAGM model, as with TAGM, a common and practical choice is the use of a normal-inverse-Wishart prior. That is
+\begin{equation}
+\begin{split}
+\mu|&\Sigma \sim \mathcal{N}(\mu_0, \Sigma/\lambda_0) \\
+&\Sigma \sim \mathcal{IW}(\nu_0, S_0) \\
+& \propto \lvert\Sigma\rvert^{\frac{\nu_0 + d + 1}{2}}\exp\left[-\frac{1}{2}\text{trace}(\Sigma^{-1}S_0^{-1})\right],
+\end{split}
+\end{equation}
+for each mixture component and where $d$ is the dimension of the data. 
+To complete this discussion, we need to specify the hyperparameters. We use diffusive priors that make minimal assumptions about the data, but they are set semi-empirically as to obtain the correct scale of the data. The hyperparameters are selected as follows
+\begin{equation}
+\begin{split}
+&\mu_0 = \frac{1}{n}\sum_{i = 1}^n{\bf x_i}, \\
+&\lambda_0 = 0.01, \\
+&\nu_0 = d + 2,\\
+& S_0 = \frac{\text{diag }(\text{var}(X))}{K^{1/d}}.
+\end{split}
+\end{equation}
+The hyperparameters are interpretted in the following ways. The prior mean is the mean of the data. Then $\lambda_0$ is viewed as the number of observations with data $\mu_0$ which are added to each component specific mean. This value is small to avoid strong prior influence. The marginal prior distribution (or prior predictive) for a cluster specific mean $\mu$ is given by a student's $t$-distribution. This can be observed by recalling that the student's $t$-distribution arises by marginalisation of the covariance from a normal distribution. Now, to ensure this $t$-distribution has finite covariance we require that $\nu_0 > d + 1$. Thus, the choice presented here is the smallest integer value of $\nu_0$ that ensures a finite covariance matrix. Hence, we have a well defined $t$-distribution with heavy tails. The empirically chosen scale matrix $S_0$ is chosen to roughly partition the range of the data into $K$ balls of equal size. Previous work has shown that these priors lead to good predictive performance \citep{Crook:2018}. For $\boldsymbol{\pi}$, we take a conjugate symmetric Dirichlet prior with parameter~$\beta$, so that $\pi_1, \ldots, \pi_{K_{max}} \sim \mbox{Dirichlet}(\beta)$. Note that to apply the principle of overfitted mixture, we have to choose $\max_j\beta_j < d/2$, which is satisfied in all examples by setting $\beta_j = 1$ for every $j$. Empirically \citet{Van::2015} have recommended smaller values of $\beta_j \approx n^{-1}$ to encourage stronger shrinkage.
+}
+
+\textcolor{red}{ 
+To explore the sensitivity of our inferences, we consider setting $\beta_j = 0.1,0.01$, as well as $\beta_j \approx n^{-1}$ for the mESC example, which in this case $n^{-1} \approx 0.0002$. As before, we hide nucleus, chromatin and ribosome annotations in an attempt to rediscover them. We find that our results are sensitive to this choice and should be set carefully. For example when $\beta_j = 0.1$, we are unable to detect a ribosomal phenotype. Furthermore, there was a joint nucleus and chromatin phenotype, phenotype 1, rather than two distinct phenotypes.  \textit{Chromosome} was enriched for this phenotype ($p < 10^{-100}$), as well as nucleolus $(p < 10^{-60})$. When $\beta_j = 0.01$ the results are somewhat improved with a phenotype 1 enriched for \textit{chromosome} ($p < 10^{-100}$) but phenotype 3 is enriched for cytosolic ribosome $(p < 10^{-48})$ and nucleolus $(p < 10^{-50})$. Setting $\beta_j = 0.0002$ provides the expected results with 3 distinct phenotypes for \textit{chromatin} (phenotype 1) $(p < 10^{-100})$, nucleolus (phenotype 4) $(p < 10^{-50})$, and cytosolic ribsome (phenotype 3) $(p < 10^{-59})$, successfully matching our test components. Hence, based on these results, we recommend either $\beta_j = 1$ or $\beta_j \approx n^{-1}$ depending on the desired amount of shrinkage. 
+}
+\textcolor{red}{ 
+\subsubsection{Relative proportions of labelled and unlabelled data}
+In all examples we considered, the proportion of labelled data is roughly $20\%$ of the total amount of data. The relative proportion of labelled data might have an impact on our ability to detect novel subcellular niches, particularly in the low data setting. To assess the impact of the relative proportion of labelled data and unlabelled data, we reconsider our mESC example, where the goal is to detect ribosomal, nuclear and chromatin niches without annotation. In addition to masking these annotations as test components, we also hide annotations from other components. To perform this analysis, we mask, uniformly at random, an additional $10\%,20\%$ and $50\%$ of labelled proteins and assess our ability to rediscover the ribosomal, nuclear and chromatin testing classes.
+}
+
+\textcolor{red}{ 
+In all cases, we were able to rediscover two distinct phenotypes according to two nuclear clusters. When we masked $10\%$ of the labels, the enrichments for the two nuclear phenotypes were chromosome $(p < 10^{-99})$ and nucleolus $(p < 10^{-59})$, the results were the same when we removed $20\%$ and $50\%$ of labels. However, only in the scenario were $20\%$ of the labels were hidden did we find a ribosome enriched phenotype $(p < 10^{-30})$. In the other cases the ribosome clustered with the other large protein complex: the proteasome. This reflects the similar biochemical properties of these subcellular niches. Furthermore, removing annotations renders the proteasome profile less well defined, allowing a more diffuse cluster. In practice, careful quality control would mitigate these scenarios \citep{Gatto::2019}. If there are very few annotated niches and the analysis is close to the unsupervised setting, it maybe valuable to increase $K_{novelty}$ above 10 - others have found $n/2$ to work well \citep{Kirk:2012}.
+}
+
+ 
+ 
+\section{Acknowledgements}
+The authors would like to thank Tom Smith and Lisa M. Breckels of the Cambridge Centre for Proteomics for critical reading of the manuscript. This work was supported by the National Institute for Health Research [Cambridge Biomedical Research Centre at the Cambridge University Hospitals NHS Foundation Trust] [*]. *The views expressed are those of the authors and not necessarily those of the NHS, the NIHR or the Department of Health and Social Care.
+
+\section{Data Availability}
+All mass spectrometry data used in this manuscript is available in the \textit{pRolocdata} Bioconductor package \citep{pRoloc:2014}. The Markov-chain Monte Carlo data can be found at Zenodo \citep{Crookdata}. Rmarkdown files to reproduce the figures can be found at the manuscript Github repository \citep{noveltyGithub}.
+
+
+
+\clearpage
+\bibliographystyle{natbib}
+\bibliography{BayesProt}
+\end{document}
