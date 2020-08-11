@@ -40,7 +40,7 @@
 \BOOKMARK [2][-]{subsection.7.7}{Further details of endosomal proteins}{section.7}% 40
 \BOOKMARK [2][-]{subsection.7.8}{Summary of convergence diagnostics}{section.7}% 41
 \BOOKMARK [2][-]{subsection.7.9}{Prior specification and sensitivity}{section.7}% 42
-\BOOKMARK [3][-]{subsubsection.7.9.1}{Detailed prior specification}{subsection.7.9}% 43
-\BOOKMARK [3][-]{subsubsection.7.9.2}{Relative proportions of labelled and unlabelled data}{subsection.7.9}% 44
+\BOOKMARK [3][-]{subsubsection.7.9.1}{Sensitivity to the choice of j}{subsection.7.9}% 43
+\BOOKMARK [2][-]{subsection.7.10}{Impact of reducing the proportion of labelled proteins}{section.7}% 44
 \BOOKMARK [1][-]{section.8}{Acknowledgements}{}% 45
 \BOOKMARK [1][-]{section.9}{Data Availability}{}% 46
