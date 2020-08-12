@@ -178,7 +178,7 @@ where, in the first summation, the $K$ components correspond to known sub-cellul
 $\boldsymbol{\theta} = \{\boldsymbol{\mu}_k, \Sigma_k \}_{k = 1}^{K_{max}}$
 to denote the set of all component mean and covariance parameters, and
 $\boldsymbol{\pi} = \{\pi_k\}_{k = 1}^{K_{max}}$ denotes the set of all mixture
-weights. Relying on the principle of over-fitted mixtures \citep{Rousseau::2011}, components that are not supported by the data are left empty with no proteins allocated to them. We find setting $K_{novety} = 10$ is ample to detect new phenotypes.   
+weights. Relying on the principle of over-fitted mixtures \citep{Rousseau::2011}, components that are not supported by the data are left empty with no proteins allocated to them. We find setting $K_{novety} = 10$ is ample to detect new phenotypes. \textcolor{red}{To complete our Bayesian model, we need to specify priors. Detailed prior specifications and sensitivity analysis are provided in the supplement (section \ref{section:prior}}).   
 \subsubsection{Bayesian inference and convergence}
 We perform Bayesian inference using Markov-chain Monte-Carlo methods. We make modifications to the collapsed Gibbs sampler approach used previously in \cite{Crook:2018} to allow inference to be performed for the parameters of the novel components (see supplement for full details). Since the number of occupied components at each iteration is random, we monitor this quantity as a convergence diagnostic.
 \subsubsection{Visualising patterns in uncertainty}
@@ -223,7 +223,7 @@ For the U-2 OS dataset, Novelty TAGM reveals $9$ putative phenotypes, which we r
 
 
 \subsubsection{Pluripotent mESCs (E14TG2a)}
-In the case of the mESC dataset, Novelty TAGM reveals $8$ new putative phenotypes. The chromatin enrichment preparation is also validated in these cells, as well as new phenotypes with additional annotations such \textit{nucleolus} and \textit{centrosome} (see supplement \ref{supplement:mesc}).
+In the case of the mESC dataset, Novelty TAGM reveals $8$ new putative phenotypes. The chromatin enrichment preparation is also validated in these cells, as well as new phenotypes with additional annotations such \textit{nucleolus} and \textit{centrosome} (see supplement \ref{supplement:mesc}). \textcolor{red}{We also used this dataset to explore how our results are impacted if we reduce the number of markers from other niches (see supplement \ref{section:unsuper}).}
 
 \begin{figure}[ht]
 	\begin{subfigure}[t]{0.5\textwidth}
@@ -599,7 +599,7 @@ We provide a summary of convergence diagnostics using parallel chains analysis \
 \end{table}
  
 \textcolor{red}{ 
-\subsection{Prior specification and sensitivity}
+\subsection{Prior specification and sensitivity} \label{section:prior}
 %\subsubsection{Detailed prior specification} 
 To complete the Bayesian specification, here we provide details of the priors on the model parameters. In the multivariate Gaussian components of the Novelty TAGM model, as with TAGM, a common and practical choice is the use of a normal-inverse-Wishart prior. That is,
 \begin{equation}
@@ -619,7 +619,7 @@ To complete this discussion, we need to specify the hyperparameters, $\mu_0, \la
 & S_0 = \frac{\text{diag }(\text{var}(X))}{K^{1/d}}.
 \end{split}
 \end{equation}
-The hyperparameters are interpreted in the following ways. The prior mean, $\mu_0$, is the mean of the data. Then $\lambda_0$ is viewed as the number of observations with data $\mu_0$ which are added to each component specific mean. This value is small to avoid strong prior influence. The marginal prior distribution (or prior predictive) for a cluster specific mean $\mu$ is given by a student's $t$-distribution. This can be observed by recalling that the student's $t$-distribution arises by marginalisation of the covariance from a normal distribution. Now, to ensure this $t$-distribution has finite covariance we require that $\nu_0 > d + 1$. Thus, the choice presented here is the smallest integer value of $\nu_0$ that ensures a finite covariance matrix. Hence, we have a well defined $t$-distribution with heavy tails. The empirically chosen scale matrix $S_0$ is chosen to roughly partition the range of the data into $K$ balls of equal size. Previous work has shown that these priors lead to good predictive performance \citep{Crook:2018}. For $\boldsymbol{\pi}$, we take a conjugate symmetric Dirichlet prior with parameter~$\beta$, so that $\pi_1, \ldots, \pi_{K_{max}} \sim \mbox{Dirichlet}(\beta)$. Note that to apply the principle of overfitted mixtures, we have to choose $\max_j\beta_j < d/2$   {\color{black}[\bf REFERENCE]}, which is satisfied in all examples by setting $\beta_j = 1$ for every $j$. Empirically \citet{Van::2015} have recommended smaller values of $\beta_j \approx n^{-1}$ to encourage stronger shrinkage.
+The hyperparameters are interpreted in the following ways. The prior mean, $\mu_0$, is the mean of the data. Then $\lambda_0$ is viewed as the number of observations with data $\mu_0$ which are added to each component specific mean. This value is small to avoid strong prior influence. The marginal prior distribution (or prior predictive) for a cluster specific mean $\mu$ is given by a student's $t$-distribution. This can be observed by recalling that the student's $t$-distribution arises by marginalisation of the covariance from a normal distribution. Now, to ensure this $t$-distribution has finite covariance we require that $\nu_0 > d + 1$. Thus, the choice presented here is the smallest integer value of $\nu_0$ that ensures a finite covariance matrix. Hence, we have a well defined $t$-distribution with heavy tails. The empirically chosen scale matrix $S_0$ is chosen to roughly partition the range of the data into $K$ balls of equal size. Previous work has shown that these priors lead to good predictive performance \citep{Crook:2018}. For $\boldsymbol{\pi}$, we take a conjugate symmetric Dirichlet prior with parameter~$\beta$, so that $\pi_1, \ldots, \pi_{K_{max}} \sim \mbox{Dirichlet}(\beta)$. Note that to apply the principle of overfitted mixtures, we have to choose $\max_j\beta_j < d/2$  \citep{Rousseau::2011}, which is satisfied in all examples by setting $\beta_j = 1$ for every $j$. Empirically \citet{Van::2015} have recommended smaller values of $\beta_j \approx n^{-1}$ to encourage stronger shrinkage.
 }
 
 \textcolor{red}{ 
@@ -627,7 +627,7 @@ The hyperparameters are interpreted in the following ways. The prior mean, $\mu_
 To explore the sensitivity of our inferences to the specification of $\beta_j$, we considered setting $\beta_j = 0.1,0.01$, as well as $\beta_j \approx n^{-1}$ for the mESC example, which in this case $n^{-1} \approx 0.0002$. As before, we hid nucleus, chromatin and ribosome annotations and sought to use our model to rediscover them. As we now summarily describe, we found that our results can be sensitive to the choice of $\beta_j$ and hence it should be set carefully. For example when $\beta_j = 0.1$, we were unable to detect a ribosomal phenotype. Furthermore, there was a joint nucleus and chromatin phenotype, phenotype 1, rather than two distinct phenotypes.  \textit{Chromosome} was enriched for this phenotype ($p < 10^{-100}$), as well as nucleolus $(p < 10^{-60})$. When $\beta_j = 0.01$ the results were somewhat improved with a phenotype 1 enriched for \textit{chromosome} ($p < 10^{-100}$) but phenotype 3 was enriched for cytosolic ribosome $(p < 10^{-48})$ and nucleolus $(p < 10^{-50})$. Setting $\beta_j = 0.0002$ provided the expected results with 3 distinct phenotypes for \textit{chromatin} (phenotype 1) $(p < 10^{-100})$, nucleolus (phenotype 4) $(p < 10^{-50})$, and cytosolic ribsome (phenotype 3) $(p < 10^{-59})$, successfully matching our test components. Hence, based on these results, we would recommend either $\beta_j = 1$ or $\beta_j \approx n^{-1}$ depending on the desired amount of shrinkage. 
 }
 \textcolor{red}{ 
-\subsection{Impact of reducing the proportion of labelled proteins}
+\subsection{Impact of reducing the proportion of labelled proteins} \label{section:unsuper}
 In all the examples we considered previously, the proportion of labelled proteins is roughly $20\%$ of the total number of proteins. %The relative proportion of labelled data might have an impact on our ability to detect novel subcellular niches, particularly in the low data setting.
   To assess the impact of the relative proportion of labelled and unlabelled proteins, we reconsidered our mESC example, where the goal was to detect ribosomal, nuclear and chromatin niches without annotation. In addition to masking these annotations as test components, we also masked, uniformly at random, an additional $10\%,20\%$ and $50\%$ of labelled proteins and assessed our ability to rediscover the ribosomal, nuclear and chromatin testing classes.
 }

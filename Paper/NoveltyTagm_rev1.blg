@@ -1,48 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: NoveltyTagm_rev1.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: NoveltyTagm_rev1.aux
 The style file: natbib.bst
 Database file #1: BayesProt.bib
 Warning--empty journal in mclust
-You've used 135 entries,
-            2391 wiz_defined-function locations,
-            1423 strings with 38567 characters,
-and the built_in function-call counts, 70100 in all, are:
-= -- 6785
-> -- 3746
-< -- 31
-+ -- 1118
-- -- 1071
-* -- 7127
-:= -- 11792
-add.period$ -- 672
-call.type$ -- 135
-change.case$ -- 824
-chr.to.int$ -- 132
-cite$ -- 136
-duplicate$ -- 2786
-empty$ -- 4573
-format.name$ -- 1366
-if$ -- 13860
-int.to.chr$ -- 4
-int.to.str$ -- 0
-missing$ -- 135
-newline$ -- 676
-num.names$ -- 540
-pop$ -- 841
-preamble$ -- 1
-purify$ -- 825
-quote$ -- 0
-skip$ -- 1759
-stack$ -- 0
-substring$ -- 5080
-swap$ -- 617
-text.length$ -- 9
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 1212
-warning$ -- 1
-while$ -- 499
-width$ -- 0
-write$ -- 1747
 (There was 1 warning)
