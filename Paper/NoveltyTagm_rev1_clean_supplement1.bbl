@@ -1,22 +1,10 @@
 \begin{thebibliography}{}
 
-\bibitem[Antoniak(1974)Antoniak]{antoniak::1974}
-Antoniak, C.~E. (1974).
-\newblock Mixtures of dirichlet processes with applications to bayesian
-  nonparametric problems.
-\newblock {\em Ann. Statist.}, {\bf 2}(6), 1152--1174.
-
 \bibitem[Araki and Milbrandt(2003)Araki and Milbrandt]{Araki:2003}
 Araki, T. et~al. (2003).
 \newblock Znrf proteins constitute a family of presynaptic e3 ubiquitin
   ligases.
 \newblock {\em Journal of Neuroscience\/}, {\bf 23}(28), 9385--9394.
-
-\bibitem[Ashburner {\em et~al.}(2000)Ashburner, Ball, Blake, Botstein, Butler,
-  Cherry, Davis, Dolinski, Dwight, Eppig, {\em et~al.}]{Ashburner:2000}
-Ashburner, M. et~al. (2000).
-\newblock Gene ontology: tool for the unification of biology.
-\newblock {\em Nature genetics\/}, {\bf 25}(1), 25--29.
 
 \bibitem[Avanzato {\em et~al.}(2018)Avanzato, Pupo, Ducano, Isella, Bertalot,
   Luise, Pece, Bruna, Rueda, Caldas, {\em et~al.}]{Avanzato::2018}
@@ -40,13 +28,6 @@ Banerjee, H. et~al. (2017).
   trypanosoma brucei.
 \newblock {\em Molecular and biochemical parasitology\/}, {\bf 218}, 28--37.
 
-\bibitem[Barylyuk {\em et~al.}(2020)Barylyuk, Koreny, Ke, Butterworth, Crook,
-  Lassadi, Gupta, Tromer, Mourier, Stevens, {\em et~al.}]{Barylyuk::2020}
-Barylyuk, K. et~al. (2020).
-\newblock A subcellular atlas of toxoplasma reveals the functional context of
-  the proteome.
-\newblock {\em bioRxiv\/}.
-
 \bibitem[Bastin and Heximer(2013)Bastin and Heximer]{Bastin::2013}
 Bastin, G. et~al. (2013).
 \newblock Rab family proteins regulate the endosomal trafficking and function
@@ -67,45 +48,11 @@ Beltran, P. M.~J. et~al. (2016).
   cytomegalovirus infection.
 \newblock {\em Cell systems\/}, {\bf 3}(4), 361--373.
 
-\bibitem[Benjamini and Hochberg(1995)Benjamini and Hochberg]{FDR:1995}
-Benjamini, Y. et~al. (1995).
-\newblock Controlling the false discovery rate: a practical and powerful
-  approach to multiple testing.
-\newblock {\em Journal of the royal statistical society. Series B
-  (Methodological)\/}, pages 289--300.
-
-\bibitem[Breckels {\em et~al.}(2013)Breckels, Gatto, Christoforou, Groen,
-  Lilley, and Trotter]{Breckels:2013}
-Breckels, L.~M. et~al. (2013).
-\newblock The effect of organelle discovery upon sub-cellular protein
-  localisation.
-\newblock {\em Journal of proteomics\/}, {\bf 88}, 129--140.
-
-\bibitem[Breckels {\em et~al.}(2016)Breckels, Holden, Wojnar, Mulvey,
-  Christoforou, Groen, Trotter, Kohlbacher, Lilley, and Gatto]{Breckels:2016}
-Breckels, L.~M. et~al. (2016).
-\newblock Learning from heterogeneous data sources: an application in spatial
-  proteomics.
-\newblock {\em PLoS computational biology\/}, {\bf 12}(5), e1004920.
-
-\bibitem[Bue {\em et~al.}(2006)Bue, Bentivoglio, and Barlowe]{Bue:2006}
-Bue, C.~A. et~al. (2006).
-\newblock Erv26p directs pro-alkaline phosphatase into endoplasmic
-  reticulum--derived coat protein complex ii transport vesicles.
-\newblock {\em Molecular biology of the cell\/}, {\bf 17}(11), 4780--4789.
-
 \bibitem[Cabasso {\em et~al.}(2015)Cabasso, Pekar, and Horowitz]{Cabasso::2015}
 Cabasso, O. et~al. (2015).
 \newblock Sumoylation of ehd3 modulates tubulation of the endocytic recycling
   compartment.
 \newblock {\em PloS one\/}, {\bf 10}(7), e0134053.
-
-\bibitem[Cappellaro {\em et~al.}(1998)Cappellaro, Mrsa, and
-  Tanner]{Cappellaro:1998}
-Cappellaro, C. et~al. (1998).
-\newblock New potential cell wall glucanases ofsaccharomyces cerevisiae and
-  their involvement in mating.
-\newblock {\em Journal of bacteriology\/}, {\bf 180}(19), 5030--5037.
 
 \bibitem[Carlucci {\em et~al.}(2010)Carlucci, Porpora, Garbi, Galgani,
   Santoriello, Mascolo, di~Lorenzo, Altieri, Quarto, Terracciano, {\em
@@ -144,41 +91,11 @@ Chen, P.-I. et~al. (2014).
   network; rab5c modulates rac-mediated cell motility.
 \newblock {\em PloS one\/}, {\bf 9}(2), e90384.
 
-\bibitem[Christoforou {\em et~al.}(2016)Christoforou, Mulvey, Breckels,
-  Geladaki, Hurrell, Hayward, Naake, Gatto, Viner, Arias, {\em et~al.}]{hyper}
-Christoforou, A. et~al. (2016).
-\newblock A draft map of the mouse pluripotent stem cell spatial proteome.
-\newblock {\em Nature communications\/}, {\bf 7}, 9992.
-
-\bibitem[Crook {\em et~al.}(2019a)Crook, Breckels, Lilley, Kirk, and
-  Gatto]{Crook::2019b}
-Crook, O. et~al. (2019a).
-\newblock A bioconductor workflow for the bayesian analysis of spatial
-  proteomics [version 1; peer review: awaiting peer review].
-\newblock {\em F1000Research\/}, {\bf 8}(446).
-
-\bibitem[Crook {\em et~al.}(2020a)Crook, Kirk, Gatto, and Lilley]{Crookdata}
-Crook, O. et~al. (2020a).
-\newblock Mcmc data for a semi-supervised bayesian approach for simultaneous
-  protein sub-cellular localisation assignment and novelty detection.
-
 \bibitem[Crook {\em et~al.}(2018)Crook, Mulvey, Kirk, Lilley, and
   Gatto]{Crook:2018}
 Crook, O.~M. et~al. (2018).
 \newblock A bayesian mixture modelling approach for spatial proteomics.
 \newblock {\em PLOS Computational Biology\/}, {\bf 14}(11), 1--29.
-
-\bibitem[Crook {\em et~al.}(2019b)Crook, Lilley, Gatto, and Kirk]{Crook::2019a}
-Crook, O.~M. et~al. (2019b).
-\newblock Semi-supervised non-parametric bayesian modelling of spatial
-  proteomics.
-\newblock {\em arXiv preprint arXiv:1903.02909\/}.
-
-\bibitem[Crook {\em et~al.}(2020b)Crook, Kirk, Lilley, and
-  Gatto]{noveltyGithub}
-Crook, O.~M. et~al. (2020b).
-\newblock ococrook/2019-noveltytagm: Novelty tagm initial release.
-\newblock {\em Zenodo\/}.
 
 \bibitem[Cui {\em et~al.}(2019)Cui, Luo, Lin, Shi, Hong, and Yan]{Cui::2019}
 Cui, Z. et~al. (2019).
@@ -204,12 +121,6 @@ Dealtry, G.~B. et~al. (1992).
 \newblock {\em Cell biology labfax\/}.
 \newblock Distributed in the United States and Canada by Academic Press.
 
-\bibitem[Delic {\em et~al.}(2013)Delic, Valli, Graf, Pfeffer, Mattanovich, and
-  Gasser]{Delic:2013}
-Delic, M. et~al. (2013).
-\newblock The secretory pathway: exploring yeast diversity.
-\newblock {\em FEMS microbiology reviews\/}, {\bf 37}(6), 872--914.
-
 \bibitem[D{\'\i}az {\em et~al.}(2014)D{\'\i}az, Mendoza, Ortiz, D{\'\i}az,
   Leyton, Stupack, Quest, and Torres]{Diaz::2014}
 D{\'\i}az, J. et~al. (2014).
@@ -224,19 +135,6 @@ Dilcher, M. et~al. (2001).
   functions for the r-snare ykt6.
 \newblock {\em Journal of Biological Chemistry\/}, {\bf 276}(37), 34537--34544.
 
-\bibitem[Dunkley {\em et~al.}(2004)Dunkley, Watson, Griffin, Dupree, and
-  Lilley]{Dunkley:2004}
-Dunkley, T.~P. et~al. (2004).
-\newblock Localization of organelle proteins by isotope tagging (lopit).
-\newblock {\em Molecular \& Cellular Proteomics\/}, {\bf 3}(11), 1128--1134.
-
-\bibitem[Dunkley {\em et~al.}(2006)Dunkley, Hester, Shadforth, Runions, Weimar,
-  Hanton, Griffin, Bessant, Brandizzi, Hawes, {\em et~al.}]{Dunkley:2006}
-Dunkley, T.~P. et~al. (2006).
-\newblock Mapping the arabidopsis organelle proteome.
-\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
-  103}(17), 6518--6523.
-
 \bibitem[Farkhondeh {\em et~al.}(2015)Farkhondeh, Niwa, Takei, and
   Hirokawa]{Farkhondeh::2015}
 Farkhondeh, A. et~al. (2015).
@@ -244,22 +142,6 @@ Farkhondeh, A. et~al. (2015).
   "stalk inhibition" mechanism that regulates its capacity to potentiate the
   selective somatodendritic localization of early endosomes.
 \newblock {\em Journal of Neuroscience\/}, {\bf 35}(12), 5067--5086.
-
-\bibitem[Ferguson(1974)Ferguson]{ferguson::1974}
-Ferguson, T.~S. (1974).
-\newblock Prior distributions on spaces of probability measures.
-\newblock {\em Ann. Statist.}, {\bf 2}(4), 615--629.
-
-\bibitem[Foster {\em et~al.}(2006)Foster, de~Hoog, Zhang, Zhang, Xie, Mootha,
-  and Mann]{Foster:2006}
-Foster, L.~J. et~al. (2006).
-\newblock A mammalian organelle map by protein correlation profiling.
-\newblock {\em Cell\/}, {\bf 125}(1), 187--199.
-
-\bibitem[Fraley {\em et~al.}(2012)Fraley, Raftery, Murphy, and Scrucca]{mclust}
-Fraley, C. et~al. (2012).
-\newblock mclust version 4 for r: Normal mixture modeling for model-based
-  clustering, classification, and density estimation.
 
 \bibitem[Fritsch and Ickstadt(2009)Fritsch and Ickstadt]{fritsch::2009}
 Fritsch, A. et~al. (2009).
@@ -297,31 +179,6 @@ Fukui, K. et~al. (2007).
   in epidermal growth factor signaling.
 \newblock {\em Hepatology Research\/}, {\bf 37}(11), 957--965.
 
-\bibitem[Gatto and Lilley(2012)Gatto and Lilley]{MSnbase:2012}
-Gatto, L. et~al. (2012).
-\newblock Msnbase - an r/bioconductor package for isobaric tagged mass
-  spectrometry data visualization, processing and quantitation.
-\newblock {\em Bioinformatics\/}, {\bf 28}, 288--289.
-
-\bibitem[Gatto {\em et~al.}(2010)Gatto, Vizca{\'\i}no, Hermjakob, Huber, and
-  Lilley]{Gatto:2010}
-Gatto, L. et~al. (2010).
-\newblock Organelle proteomics experimental designs and analysis.
-\newblock {\em Proteomics\/}, {\bf 10}(22), 3957--3969.
-
-\bibitem[Gatto {\em et~al.}(2014a)Gatto, Breckels, Burger, Nightingale, Groen,
-  Campbell, Mulvey, Christoforou, Ferro, and Lilley]{Gatto:2014b}
-Gatto, L. et~al. (2014a).
-\newblock A foundation for reliable spatial proteomics data analysis.
-\newblock {\em Molecular \& Cellular Proteomics\/}, pages mcp--M113.
-
-\bibitem[Gatto {\em et~al.}(2014b)Gatto, Breckels, Wieczorek, Burger, and
-  Lilley]{pRoloc:2014}
-Gatto, L. et~al. (2014b).
-\newblock Mass-spectrometry based spatial proteomics data analysis using proloc
-  and prolocdata.
-\newblock {\em Bioinformatics\/}.
-
 \bibitem[Gatto {\em et~al.}(2019)Gatto, Breckels, and Lilley]{Gatto::2019}
 Gatto, L. et~al. (2019).
 \newblock Assessing sub-cellular resolution in spatial proteomics experiments.
@@ -347,32 +204,12 @@ Gelman, A. et~al. (1992).
 \newblock Inference from iterative simulation using multiple sequences.
 \newblock {\em Statistical science\/}, pages 457--472.
 
-\bibitem[Gentleman {\em et~al.}(2004)Gentleman, Carey, Bates, Bolstad,
-  Dettling, Dudoit, Ellis, Gautier, Ge, Gentry, {\em
-  et~al.}]{Bioconductor::2004}
-Gentleman, R.~C. et~al. (2004).
-\newblock Bioconductor: open software development for computational biology and
-  bioinformatics.
-\newblock {\em Genome biology\/}, {\bf 5}(10), R80.
-
 \bibitem[George {\em et~al.}(2007)George, Ying, Rainey, Solomon, Parikh, Gao,
   Band, and Band]{George::2007}
 George, M. et~al. (2007).
 \newblock Shared as well as distinct roles of ehd proteins revealed by
   biochemical and functional comparisons in mammalian cells and c. elegans.
 \newblock {\em BMC cell biology\/}, {\bf 8}(1), 3.
-
-\bibitem[Gibson(2009)Gibson]{Gibson:2009}
-Gibson, T.~J. (2009).
-\newblock Cell regulation: determined to signal discrete cooperation.
-\newblock {\em Trends in biochemical sciences\/}, {\bf 34}(10), 471--482.
-
-\bibitem[Groen {\em et~al.}(2014)Groen, Sancho-Andrés, Breckels, Gatto,
-  Aniento, and Lilley]{Groen:2014}
-Groen, A.~J. et~al. (2014).
-\newblock Identification of trans-golgi network proteins in arabidopsis
-  thaliana root tissue.
-\newblock {\em Journal of proteome research\/}, {\bf 13}(2), 763--776.
 
 \bibitem[Haas {\em et~al.}(2007)Haas, Yoshimura, Stephens, Preisinger, Fuchs,
   and Barr]{Haas::2007}
@@ -416,22 +253,10 @@ Hoxhaj, G. et~al. (2016).
   its activation by amino acids.
 \newblock {\em elife\/}, {\bf 5}, e12278.
 
-\bibitem[Huber {\em et~al.}(2015)Huber, Carey, Gentleman, Anders, Carlson,
-  Carvalho, Bravo, Davis, Gatto, Girke, {\em et~al.}]{Huber:2015}
-Huber, W. et~al. (2015).
-\newblock Orchestrating high-throughput genomic analysis with bioconductor.
-\newblock {\em Nature methods\/}, {\bf 12}(2), 115--121.
-
 \bibitem[Hubert and Arabie(1985)Hubert and Arabie]{Hubert::1985}
 Hubert, L. et~al. (1985).
 \newblock Comparing partitions.
 \newblock {\em Journal of Classification\/}, {\bf 2}(1), 193--218.
-
-\bibitem[Huh {\em et~al.}(2003)Huh, Falvo, Gerke, Carroll, Howson, Weissman,
-  and O'shea]{Huh:2003}
-Huh, W.-K. et~al. (2003).
-\newblock Global analysis of protein localization in budding yeast.
-\newblock {\em Nature\/}, {\bf 425}(6959), 686.
 
 \bibitem[Igarashi {\em et~al.}(2017)Igarashi, Araki, Yokobori, Altan, Yamanaka,
   Ishii, Tsukagoshi, Watanabe, Kubo, Handa, {\em et~al.}]{Igarashi::2017}
@@ -440,14 +265,6 @@ Igarashi, T. et~al. (2017).
   progression and poor prognosis via e-cadherin suppression.
 \newblock {\em Oncotarget\/}, {\bf 8}(7), 12290.
 
-\bibitem[Inadome {\em et~al.}(2005)Inadome, Noda, Adachi, and
-  Yoda]{Inadome:2005}
-Inadome, H. et~al. (2005).
-\newblock Immunoisolaton of the yeast golgi subcompartments and
-  characterization of a novel membrane protein, svp26, discovered in the
-  sed5-containing compartments.
-\newblock {\em Molecular and cellular biology\/}, {\bf 25}(17), 7696--7710.
-
 \bibitem[Itzhak {\em et~al.}(2016)Itzhak, Tyanova, Cox, and
   Borner]{Itzhak:2016}
 Itzhak, D.~N. et~al. (2016).
@@ -455,44 +272,11 @@ Itzhak, D.~N. et~al. (2016).
   localization.
 \newblock {\em Elife\/}, {\bf 5}, e16950.
 
-\bibitem[Itzhak {\em et~al.}(2017)Itzhak, Davies, Tyanova, Mishra, Williamson,
-  Antrobus, Cox, Weekes, and Borner]{Itzhak::2017}
-Itzhak, D.~N. et~al. (2017).
-\newblock A mass spectrometry-based approach for mapping protein subcellular
-  localization reveals the spatial proteome of mouse primary neurons.
-\newblock {\em Cell reports\/}, {\bf 20}(11), 2706--2718.
-
-\bibitem[Kau {\em et~al.}(2004)Kau, Way, and Silver]{Kau:2004}
-Kau, T.~R. et~al. (2004).
-\newblock Nuclear transport and cancer: from mechanism to intervention.
-\newblock {\em Nature Reviews Cancer\/}, {\bf 4}(2), 106--117.
-
 \bibitem[Kirk {\em et~al.}(2012)Kirk, Griffin, Savage, Ghahramani, and
   Wild]{Kirk:2012}
 Kirk, P. et~al. (2012).
 \newblock Bayesian correlated clustering to integrate multiple datasets.
 \newblock {\em Bioinformatics\/}, {\bf 28}(24), 3290--3297.
-
-\bibitem[Krahmer {\em et~al.}(2018)Krahmer, Najafi, Schueder, Quagliarini,
-  Steger, Seitz, Kasper, Salinas, Cox, Uhlenhaut, {\em et~al.}]{Krahmer::2018}
-Krahmer, N. et~al. (2018).
-\newblock Organellar proteomics and phospho-proteomics reveal subcellular
-  reorganization in diet-induced hepatic steatosis.
-\newblock {\em Developmental cell\/}, {\bf 47}(2), 205--221.
-
-\bibitem[Kristensen and Foster(2014)Kristensen and Foster]{kristensen:2014}
-Kristensen, A.~R. et~al. (2014).
-\newblock Protein correlation profiling-silac to study protein-protein
-  interactions.
-\newblock In {\em Stable Isotope Labeling by Amino Acids in Cell Culture
-  (SILAC)\/}, pages 263--270. Springer.
-
-\bibitem[Kristensen {\em et~al.}(2012)Kristensen, Gsponer, and
-  Foster]{kristensen:2012}
-Kristensen, A.~R. et~al. (2012).
-\newblock A high-throughput approach for measuring temporal changes in the
-  interactome.
-\newblock {\em Nature methods\/}, {\bf 9}(9), 907.
 
 \bibitem[Lanzetti {\em et~al.}(2000)Lanzetti, Rybin, Malabarba, Christoforidis,
   Scita, Zerial, and Di~Fiore]{Lanzetti::2000}
@@ -500,12 +284,6 @@ Lanzetti, L. et~al. (2000).
 \newblock The eps8 protein coordinates egf receptor signalling through rac and
   trafficking through rab5.
 \newblock {\em Nature\/}, {\bf 408}(6810), 374.
-
-\bibitem[Laurila and Vihinen(2009)Laurila and Vihinen]{Laurila:2009}
-Laurila, K. et~al. (2009).
-\newblock Prediction of disease-related mutations affecting protein
-  localization.
-\newblock {\em BMC genomics\/}, {\bf 10}(1), 122.
 
 \bibitem[Law {\em et~al.}(2017)Law, Seo, Wang, DeLeon, Bolis, Brown, Zong, Du,
   and Rocheleau]{Law::2017}
@@ -554,13 +332,6 @@ Matsui, T. et~al. (2018).
   independently of syntaxin 17.
 \newblock {\em J Cell Biol\/}, {\bf 217}(8), 2633--2645.
 
-\bibitem[McAlister {\em et~al.}(2014)McAlister, Nusinow, Jedrychowski, Wühr,
-  Huttlin, Erickson, Rad, Haas, and Gygi]{Mcalister::2014}
-McAlister, G.~C. et~al. (2014).
-\newblock Multinotch ms3 enables accurate, sensitive, and multiplexed detection
-  of differential expression across cancer cell line proteomes.
-\newblock {\em Analytical chemistry\/}, {\bf 86}(14), 7150--7158.
-
 \bibitem[Meiringer {\em et~al.}(2008)Meiringer, Auffarth, Hou, and
   Ungermann]{Meiringer::2008}
 Meiringer, C.~T. et~al. (2008).
@@ -596,26 +367,6 @@ Naslavsky, N. et~al. (2009).
   morphology.
 \newblock {\em Journal of cell science\/}, {\bf 122}(3), 389--400.
 
-\bibitem[Nightingale {\em et~al.}(2019)Nightingale, Geladaki, Breckels, Oliver,
-  and Lilley]{Nightingale::2019}
-Nightingale, D. J.~H. et~al. (2019).
-\newblock The subcellular organisation of saccharomyces cerevisiae.
-\newblock {\em Current Opinion in Chemical Biology\/}, {\bf 48}(11), 1--10.
-
-\bibitem[Orre {\em et~al.}(2019)Orre, Vesterlund, Pan, Arslan, Zhu, Woodbridge,
-  Frings, Fredlund, and Lehtiö]{Orre:2019}
-Orre, L.~M. et~al. (2019).
-\newblock Subcellbarcode: Proteome-wide mapping of protein localization and
-  relocalization.
-\newblock {\em Molecular Cell\/}, {\bf 73}(1), 166 -- 182.
-
-\bibitem[Otte {\em et~al.}(2001)Otte, Belden, Heidtman, Liu, Jensen, and
-  Barlowe]{Otte:2001}
-Otte, S. et~al. (2001).
-\newblock Erv41p and erv46p: new components of copii vesicles involved in
-  transport between the er and golgi complex.
-\newblock {\em The Journal of cell biology\/}, {\bf 152}(3), 503--518.
-
 \bibitem[Palamidessi {\em et~al.}(2013)Palamidessi, Frittoli, Ducano,
   Offenhauser, Sigismund, Kajiho, Parazzoli, Oldani, Gobbi, Serini, {\em
   et~al.}]{Palamidessi::2013}
@@ -623,13 +374,6 @@ Palamidessi, A. et~al. (2013).
 \newblock The gtpase-activating protein rn-tre controls focal adhesion turnover
   and cell migration.
 \newblock {\em Current biology\/}, {\bf 23}(23), 2355--2364.
-
-\bibitem[Pardo {\em et~al.}(2004)Pardo, Monteoliva, Vazquez, Mart{\'\i}nez,
-  Molero, Nombela, and Gil]{Pardo:2004}
-Pardo, M. et~al. (2004).
-\newblock Pst1 and ecm33 encode two yeast cell surface gpi proteins important
-  for cell wall integrity.
-\newblock {\em Microbiology\/}, {\bf 150}(12), 4157--4170.
 
 \bibitem[Rand(1971)Rand]{rand::1971}
 Rand, W.~M. (1971).
@@ -679,11 +423,6 @@ Saitoh, S. et~al. (2017).
 \newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
   114}(12), E2327--E2336.
 
-\bibitem[Schwarz {\em et~al.}(1978)Schwarz {\em et~al.}]{Schwarz::1978}
-Schwarz, G. et~al. (1978).
-\newblock Estimating the dimension of a model.
-\newblock {\em The annals of statistics\/}, {\bf 6}(2), 461--464.
-
 \bibitem[Sheng {\em et~al.}(2014)Sheng, Li, Zou, Wang, Cao, Zhang, Huang, and
   Tang]{Sheng::2014}
 Sheng, Y. et~al. (2014).
@@ -691,20 +430,6 @@ Sheng, Y. et~al. (2014).
   proliferation and migration of hepatocellular carcinoma cells by targeting
   rab5a.
 \newblock {\em Archives of virology\/}, {\bf 159}(9), 2397--2410.
-
-\bibitem[Shin {\em et~al.}(2019)Shin, Crook, Borgeaud, Cattin-Ortol{\'a},
-  Peak-Chew, Chadwick, Lilley, and Munro]{Shin::2019}
-Shin, J.~J. et~al. (2019).
-\newblock Determining the content of vesicles captured by golgin tethers using
-  lopit-dc.
-\newblock {\em bioRxiv\/}, page 841965.
-
-\bibitem[Siljee {\em et~al.}(2018)Siljee, Wang, Bernard, Ersoy, Zhang, Marley,
-  Von~Zastrow, Reiter, and Vaisse]{Siljee:2018}
-Siljee, J.~E. et~al. (2018).
-\newblock Subcellular localization of {MC4R} with {ADCY3} at neuronal primary
-  cilia underlies a common pathway for genetic predisposition to obesity.
-\newblock {\em Nat Genet\/}.
 
 \bibitem[Simonsen {\em et~al.}(1998)Simonsen, Lippe, Christoforidis, Gaullier,
   Brech, Callaghan, Toh, Murphy, Zerial, and Stenmark]{Simonsen::1998}
@@ -732,14 +457,6 @@ Stone, M. et~al. (2007).
   virus rna replication machinery.
 \newblock {\em Journal of virology\/}, {\bf 81}(9), 4551--4563.
 
-\bibitem[Sullivan {\em et~al.}(2018)Sullivan, Winsnes, {\AA}kesson, Hjelmare,
-  Wiking, Schutten, Campbell, Leifsson, Rhodes, Nordgren, {\em
-  et~al.}]{Sullivan:2018}
-Sullivan, D.~P. et~al. (2018).
-\newblock Deep learning is combined with massive-scale citizen science to
-  improve large-scale image classification.
-\newblock {\em Nature biotechnology\/}, {\bf 36}(9), 820.
-
 \bibitem[Tai {\em et~al.}(2004)Tai, Lu, Wang, Tang, Goud, Johannes, and
   Hong]{Tai:2004}
 Tai, G. et~al. (2004).
@@ -761,31 +478,11 @@ Takeda, M. et~al. (2019).
   cancer stem cells.
 \newblock {\em Cancer research\/}, pages canres--2192.
 
-\bibitem[Tan {\em et~al.}(2009)Tan, Dvinge, Christoforou, Bertone,
-  Martinez~Arias, and Lilley]{Tan:2009}
-Tan, D.~J. et~al. (2009).
-\newblock Mapping organelle proteins and protein complexes in drosophila
-  melanogaster.
-\newblock {\em Journal of proteome research\/}, {\bf 8}(6), 2667--2678.
-
-\bibitem[Thompson {\em et~al.}(2003)Thompson, Sch{\"a}fer, Kuhn, Kienle,
-  Schwarz, Schmidt, Neumann, and Hamon]{Thompson:2003}
-Thompson, A. et~al. (2003).
-\newblock Tandem mass tags: a novel quantification strategy for comparative
-  analysis of complex protein mixtures by ms/ms.
-\newblock {\em Analytical chemistry\/}, {\bf 75}(8), 1895--1904.
-
 \bibitem[Thul {\em et~al.}(2017)Thul, {\AA}kesson, Wiking, Mahdessian,
   Geladaki, Blal, Alm, Asplund, Bj{\"o}rk, Breckels, {\em et~al.}]{Thul:2017}
 Thul, P.~J. et~al. (2017).
 \newblock A subcellular map of the human proteome.
 \newblock {\em Science\/}, {\bf 356}(6340), eaal3321.
-
-\bibitem[Ting {\em et~al.}(2011)Ting, Rad, Gygi, and Haas]{Ting:2011}
-Ting, L. et~al. (2011).
-\newblock Ms3 eliminates ratio distortion in isobaric multiplexed quantitative
-  proteomics.
-\newblock {\em Nature methods\/}, {\bf 8}(11), 937.
 
 \bibitem[Torres {\em et~al.}(2010)Torres, Mielgo, Barbero, Hsiao, Wilkins, and
   Stupack]{Torres::2010}
@@ -819,13 +516,6 @@ Verma, J.~K. et~al. (2017).
   upregulating rab5a expression via the downregulation of mir-494.
 \newblock {\em PLoS pathogens\/}, {\bf 13}(6), e1006459.
 
-\bibitem[Wendler {\em et~al.}(2010)Wendler, Gillingham, Sinka, Rosa-Ferreira,
-  Gordon, Franch-Marro, Peden, Vincent, and Munro]{Wendler:2010}
-Wendler, F. et~al. (2010).
-\newblock A genome-wide rna interference screen identifies two novel components
-  of the metazoan secretory pathway.
-\newblock {\em The EMBO journal\/}, {\bf 29}(2), 304--314.
-
 \bibitem[Woodman(2000)Woodman]{Woodman::2000}
 Woodman, P.~G. (2000).
 \newblock Biogenesis of the sorting endosome: the role of rab5.
@@ -844,33 +534,11 @@ Yang, P.-S. et~al. (2011).
   cancer patients.
 \newblock {\em Cancer science\/}, {\bf 102}(12), 2172--2178.
 
-\bibitem[Yin {\em et~al.}(2005)Yin, de~Groot, Dekker, de~Jong, Klis, and
-  de~Koster]{Yin:2005}
-Yin, Q.~Y. et~al. (2005).
-\newblock Comprehensive proteomic analysis of saccharomyces cerevisiae cell
-  walls identification of proteins covalently attached via
-  glycosylphosphatidylinositol remnants or mild alkali-sensitive linkages.
-\newblock {\em Journal of Biological Chemistry\/}, {\bf 280}(21), 20894--20901.
-
-\bibitem[Yofe {\em et~al.}(2016)Yofe, Weill, Meurer, Chuartzman, Zalckvar,
-  Goldman, Ben-Dor, Sch{\"u}tze, Wiedemann, Knop, {\em et~al.}]{Yofe:2016}
-Yofe, I. et~al. (2016).
-\newblock One library to make them all: streamlining the creation of yeast
-  libraries via a swap-tag strategy.
-\newblock {\em Nature methods\/}, {\bf 13}(4), 371.
-
 \bibitem[Yong and Tang(2019)Yong and Tang]{Yong::2019}
 Yong, C. Q.~Y. et~al. (2019).
 \newblock Another longin snare for autophagosome-lysosome fusion-how does ykt6
   work?
 \newblock {\em Autophagy\/}, {\bf 15}(2), 352--357.
-
-\bibitem[Yu {\em et~al.}(2012)Yu, Wang, Han, and He]{Yu:2012}
-Yu, G. et~al. (2012).
-\newblock {clusterProfiler}: an {R} package for comparing biological themes
-  among gene clusters.
-\newblock {\em Omics: a journal of integrative biology\/}, {\bf 16}(5),
-  284--287.
 
 \bibitem[Yu {\em et~al.}(1999)Yu, Hui-Chen, Chen, Zou, Yan, Chun-Xiang, Wu-Ru,
   and Li]{Yu::1999}

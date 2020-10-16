@@ -1,5 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: NoveltyTagm_rev1_clean.aux
-The style file: natbib.bst
-Database file #1: BayesProt.bib
-Warning--empty journal in mclust
-(There was 1 warning)
+The style file: biblatex.bst
+Database file #1: NoveltyTagm_rev1_clean-blx.bib
+Database file #2: BayesProt.bib
+Biblatex version: 3.13
+Too many commas in name 1 of "Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY 10801 USA" for entry Yu:2012
+while executing---line 2805 of file biblatex.bst
+(There was 1 error message)

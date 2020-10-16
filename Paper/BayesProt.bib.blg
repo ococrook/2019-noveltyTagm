@@ -1,0 +1,5 @@
+[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
+[0] Config.pm:315> INFO - Logfile is 'BayesProt.bib.blg'
+[124] biber-MSWIN64:330> INFO - === 
+[543] Utils.pm:411> ERROR - Cannot find 'BayesProt.bib.bcf'!
+[543] Biber.pm:132> INFO - ERRORS: 1

@@ -1,901 +1,4793 @@
-\begin{thebibliography}{}
-
-\bibitem[Antoniak(1974)Antoniak]{antoniak::1974}
-Antoniak, C.~E. (1974).
-\newblock Mixtures of dirichlet processes with applications to bayesian
-  nonparametric problems.
-\newblock {\em Ann. Statist.}, {\bf 2}(6), 1152--1174.
-
-\bibitem[Araki and Milbrandt(2003)Araki and Milbrandt]{Araki:2003}
-Araki, T. et~al. (2003).
-\newblock Znrf proteins constitute a family of presynaptic e3 ubiquitin
-  ligases.
-\newblock {\em Journal of Neuroscience\/}, {\bf 23}(28), 9385--9394.
-
-\bibitem[Ashburner {\em et~al.}(2000)Ashburner, Ball, Blake, Botstein, Butler,
-  Cherry, Davis, Dolinski, Dwight, Eppig, {\em et~al.}]{Ashburner:2000}
-Ashburner, M. et~al. (2000).
-\newblock Gene ontology: tool for the unification of biology.
-\newblock {\em Nature genetics\/}, {\bf 25}(1), 25--29.
-
-\bibitem[Avanzato {\em et~al.}(2018)Avanzato, Pupo, Ducano, Isella, Bertalot,
-  Luise, Pece, Bruna, Rueda, Caldas, {\em et~al.}]{Avanzato::2018}
-Avanzato, D. et~al. (2018).
-\newblock High usp6nl levels in breast cancer sustain chronic akt
-  phosphorylation and glut1 stability fueling aerobic glycolysis.
-\newblock {\em Cancer research\/}, {\bf 78}(13), 3432--3444.
-
-\bibitem[Bahl {\em et~al.}(2016)Bahl, Xie, Spagnol, Sorgen, Naslavsky, and
-  Caplan]{Bahl::2016}
-Bahl, K. et~al. (2016).
-\newblock Ehd3 protein is required for tubular recycling endosome
-  stabilization, and an asparagine-glutamic acid residue pair within its eps15
-  homology (eh) domain dictates its selective binding to npf peptides.
-\newblock {\em Journal of Biological Chemistry\/}, {\bf 291}(26), 13465--13478.
-
-\bibitem[Banerjee and Rachubinski(2017)Banerjee and
-  Rachubinski]{Banerjee::2017}
-Banerjee, H. et~al. (2017).
-\newblock Involvement of snare protein ykt6 in glycosome biogenesis in
-  trypanosoma brucei.
-\newblock {\em Molecular and biochemical parasitology\/}, {\bf 218}, 28--37.
-
-\bibitem[Barylyuk {\em et~al.}(2020)Barylyuk, Koreny, Ke, Butterworth, Crook,
-  Lassadi, Gupta, Tromer, Mourier, Stevens, {\em et~al.}]{Barylyuk::2020}
-Barylyuk, K. et~al. (2020).
-\newblock A subcellular atlas of toxoplasma reveals the functional context of
-  the proteome.
-\newblock {\em bioRxiv\/}.
-
-\bibitem[Bastin and Heximer(2013)Bastin and Heximer]{Bastin::2013}
-Bastin, G. et~al. (2013).
-\newblock Rab family proteins regulate the endosomal trafficking and function
-  of rgs4.
-\newblock {\em Journal of Biological Chemistry\/}, {\bf 288}(30), 21836--21849.
-
-\bibitem[Bay {\em et~al.}(2013)Bay, Schreiner, Mazzoni, Carvajal-Gonzalez,
-  Gravotta, Perret, Mantaras, Zhu, and Rodriguez-Boulan]{Bay::2013}
-Bay, A. E.~P. et~al. (2013).
-\newblock The kinesin kif16b mediates apical transcytosis of transferrin
-  receptor in ap-1b-deficient epithelia.
-\newblock {\em The EMBO journal\/}, {\bf 32}(15), 2125--2139.
-
-\bibitem[Beltran {\em et~al.}(2016)Beltran, Mathias, and
-  Cristea]{Jean_Beltran:2016}
-Beltran, P. M.~J. et~al. (2016).
-\newblock A portrait of the human organelle proteome in space and time during
-  cytomegalovirus infection.
-\newblock {\em Cell systems\/}, {\bf 3}(4), 361--373.
-
-\bibitem[Benjamini and Hochberg(1995)Benjamini and Hochberg]{FDR:1995}
-Benjamini, Y. et~al. (1995).
-\newblock Controlling the false discovery rate: a practical and powerful
-  approach to multiple testing.
-\newblock {\em Journal of the royal statistical society. Series B
-  (Methodological)\/}, pages 289--300.
-
-\bibitem[Breckels {\em et~al.}(2013)Breckels, Gatto, Christoforou, Groen,
-  Lilley, and Trotter]{Breckels:2013}
-Breckels, L.~M. et~al. (2013).
-\newblock The effect of organelle discovery upon sub-cellular protein
-  localisation.
-\newblock {\em Journal of proteomics\/}, {\bf 88}, 129--140.
-
-\bibitem[Breckels {\em et~al.}(2016)Breckels, Holden, Wojnar, Mulvey,
-  Christoforou, Groen, Trotter, Kohlbacher, Lilley, and Gatto]{Breckels:2016}
-Breckels, L.~M. et~al. (2016).
-\newblock Learning from heterogeneous data sources: an application in spatial
-  proteomics.
-\newblock {\em PLoS computational biology\/}, {\bf 12}(5), e1004920.
-
-\bibitem[Bue {\em et~al.}(2006)Bue, Bentivoglio, and Barlowe]{Bue:2006}
-Bue, C.~A. et~al. (2006).
-\newblock Erv26p directs pro-alkaline phosphatase into endoplasmic
-  reticulum--derived coat protein complex ii transport vesicles.
-\newblock {\em Molecular biology of the cell\/}, {\bf 17}(11), 4780--4789.
-
-\bibitem[Cabasso {\em et~al.}(2015)Cabasso, Pekar, and Horowitz]{Cabasso::2015}
-Cabasso, O. et~al. (2015).
-\newblock Sumoylation of ehd3 modulates tubulation of the endocytic recycling
-  compartment.
-\newblock {\em PloS one\/}, {\bf 10}(7), e0134053.
-
-\bibitem[Cappellaro {\em et~al.}(1998)Cappellaro, Mrsa, and
-  Tanner]{Cappellaro:1998}
-Cappellaro, C. et~al. (1998).
-\newblock New potential cell wall glucanases ofsaccharomyces cerevisiae and
-  their involvement in mating.
-\newblock {\em Journal of bacteriology\/}, {\bf 180}(19), 5030--5037.
-
-\bibitem[Carlucci {\em et~al.}(2010)Carlucci, Porpora, Garbi, Galgani,
-  Santoriello, Mascolo, di~Lorenzo, Altieri, Quarto, Terracciano, {\em
-  et~al.}]{Carlucci::2010}
-Carlucci, A. et~al. (2010).
-\newblock Ptpd1 supports receptor stability and mitogenic signaling in bladder
-  cancer cells.
-\newblock {\em Journal of biological chemistry\/}, {\bf 285}(50), 39260--39270.
-
-\bibitem[Cataldo {\em et~al.}(1997)Cataldo, Barnett, Pieroni, and
-  Nixon]{Cataldo::1997}
-Cataldo, A.~M. et~al. (1997).
-\newblock Increased neuronal endocytosis and protease delivery to early
-  endosomes in sporadic alzheimer's disease: neuropathologic evidence for a
-  mechanism of increased $\beta$-amyloidogenesis.
-\newblock {\em Journal of Neuroscience\/}, {\bf 17}(16), 6142--6151.
-
-\bibitem[Cataldo {\em et~al.}(2000)Cataldo, Peterhoff, Troncoso, Gomez-Isla,
-  Hyman, and Nixon]{Cataldo::2000}
-Cataldo, A.~M. et~al. (2000).
-\newblock Endocytic pathway abnormalities precede amyloid $\beta$ deposition in
-  sporadic alzheimer's disease and down syndrome: differential effects of apoe
-  genotype and presenilin mutations.
-\newblock {\em The American journal of pathology\/}, {\bf 157}(1), 277--286.
-
-\bibitem[Chen {\em et~al.}(2009)Chen, Kong, Su, and Stahl]{Chen::2009}
-Chen, P.-I. et~al. (2009).
-\newblock Rab5 isoforms differentially regulate the trafficking and degradation
-  of epidermal growth factor receptors.
-\newblock {\em Journal of Biological Chemistry\/}, {\bf 284}(44), 30328--30338.
-
-\bibitem[Chen {\em et~al.}(2014)Chen, Schauer, Kong, Harding, Goud, and
-  Stahl]{Chen::2014}
-Chen, P.-I. et~al. (2014).
-\newblock Rab5 isoforms orchestrate a "division of labor" in the endocytic
-  network; rab5c modulates rac-mediated cell motility.
-\newblock {\em PloS one\/}, {\bf 9}(2), e90384.
-
-\bibitem[Christoforou {\em et~al.}(2016)Christoforou, Mulvey, Breckels,
-  Geladaki, Hurrell, Hayward, Naake, Gatto, Viner, Arias, {\em et~al.}]{hyper}
-Christoforou, A. et~al. (2016).
-\newblock A draft map of the mouse pluripotent stem cell spatial proteome.
-\newblock {\em Nature communications\/}, {\bf 7}, 9992.
-
-\bibitem[Crook {\em et~al.}(2019a)Crook, Breckels, Lilley, Kirk, and
-  Gatto]{Crook::2019b}
-Crook, O. et~al. (2019a).
-\newblock A bioconductor workflow for the bayesian analysis of spatial
-  proteomics [version 1; peer review: awaiting peer review].
-\newblock {\em F1000Research\/}, {\bf 8}(446).
-
-\bibitem[Crook {\em et~al.}(2020a)Crook, Kirk, Gatto, and Lilley]{Crookdata}
-Crook, O. et~al. (2020a).
-\newblock Mcmc data for a semi-supervised bayesian approach for simultaneous
-  protein sub-cellular localisation assignment and novelty detection.
-
-\bibitem[Crook {\em et~al.}(2018)Crook, Mulvey, Kirk, Lilley, and
-  Gatto]{Crook:2018}
-Crook, O.~M. et~al. (2018).
-\newblock A bayesian mixture modelling approach for spatial proteomics.
-\newblock {\em PLOS Computational Biology\/}, {\bf 14}(11), 1--29.
-
-\bibitem[Crook {\em et~al.}(2019b)Crook, Lilley, Gatto, and Kirk]{Crook::2019a}
-Crook, O.~M. et~al. (2019b).
-\newblock Semi-supervised non-parametric bayesian modelling of spatial
-  proteomics.
-\newblock {\em arXiv preprint arXiv:1903.02909\/}.
-
-\bibitem[Crook {\em et~al.}(2020b)Crook, Kirk, Lilley, and
-  Gatto]{noveltyGithub}
-Crook, O.~M. et~al. (2020b).
-\newblock ococrook/2019-noveltytagm: Novelty tagm initial release.
-\newblock {\em Zenodo\/}.
-
-\bibitem[Cui {\em et~al.}(2019)Cui, Luo, Lin, Shi, Hong, and Yan]{Cui::2019}
-Cui, Z. et~al. (2019).
-\newblock Long non-coding rna ttn-as1 facilitates tumorigenesis of papillary
-  thyroid cancer through modulating mir-153-3p/znrf2 axis.
-\newblock {\em The journal of gene medicine\/}, page e3083.
-
-\bibitem[Curran {\em et~al.}(2014)Curran, Makara, Little, Musa, Liu, Wu,
-  Polina, Alecusan, Wright, Li, {\em et~al.}]{Curran::2014}
-Curran, J. et~al. (2014).
-\newblock Ehd3-dependent endosome pathway regulates cardiac membrane
-  excitability and physiology.
-\newblock {\em Circulation research\/}, {\bf 115}(1), 68--78.
-
-\bibitem[De~Franceschi {\em et~al.}(2015)De~Franceschi, Hamidi, Alanko, Sahgal,
-  and Ivaska]{De::2015}
-De~Franceschi, N. et~al. (2015).
-\newblock Integrin traffic--the update.
-\newblock {\em J Cell Sci\/}, {\bf 128}(5), 839--852.
-
-\bibitem[Dealtry and Rickwood(1992)Dealtry and Rickwood]{Dealtry:1992}
-Dealtry, G.~B. et~al. (1992).
-\newblock {\em Cell biology labfax\/}.
-\newblock Distributed in the United States and Canada by Academic Press.
-
-\bibitem[Delic {\em et~al.}(2013)Delic, Valli, Graf, Pfeffer, Mattanovich, and
-  Gasser]{Delic:2013}
-Delic, M. et~al. (2013).
-\newblock The secretory pathway: exploring yeast diversity.
-\newblock {\em FEMS microbiology reviews\/}, {\bf 37}(6), 872--914.
-
-\bibitem[D{\'\i}az {\em et~al.}(2014)D{\'\i}az, Mendoza, Ortiz, D{\'\i}az,
-  Leyton, Stupack, Quest, and Torres]{Diaz::2014}
-D{\'\i}az, J. et~al. (2014).
-\newblock Rab5 is required in metastatic cancer cells for caveolin-1-enhanced
-  rac1 activation, migration and invasion.
-\newblock {\em J Cell Sci\/}, {\bf 127}(11), 2401--2406.
-
-\bibitem[Dilcher {\em et~al.}(2001)Dilcher, K{\"o}hler, and von
-  Mollard]{Dilcher::2001}
-Dilcher, M. et~al. (2001).
-\newblock Genetic interactions with the yeast q-snare vti1reveal novel
-  functions for the r-snare ykt6.
-\newblock {\em Journal of Biological Chemistry\/}, {\bf 276}(37), 34537--34544.
-
-\bibitem[Dunkley {\em et~al.}(2004)Dunkley, Watson, Griffin, Dupree, and
-  Lilley]{Dunkley:2004}
-Dunkley, T.~P. et~al. (2004).
-\newblock Localization of organelle proteins by isotope tagging (lopit).
-\newblock {\em Molecular \& Cellular Proteomics\/}, {\bf 3}(11), 1128--1134.
-
-\bibitem[Dunkley {\em et~al.}(2006)Dunkley, Hester, Shadforth, Runions, Weimar,
-  Hanton, Griffin, Bessant, Brandizzi, Hawes, {\em et~al.}]{Dunkley:2006}
-Dunkley, T.~P. et~al. (2006).
-\newblock Mapping the arabidopsis organelle proteome.
-\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
-  103}(17), 6518--6523.
-
-\bibitem[Farkhondeh {\em et~al.}(2015)Farkhondeh, Niwa, Takei, and
-  Hirokawa]{Farkhondeh::2015}
-Farkhondeh, A. et~al. (2015).
-\newblock Characterizing kif16b in neurons reveals a novel intramolecular
-  "stalk inhibition" mechanism that regulates its capacity to potentiate the
-  selective somatodendritic localization of early endosomes.
-\newblock {\em Journal of Neuroscience\/}, {\bf 35}(12), 5067--5086.
-
-\bibitem[Ferguson(1974)Ferguson]{ferguson::1974}
-Ferguson, T.~S. (1974).
-\newblock Prior distributions on spaces of probability measures.
-\newblock {\em Ann. Statist.}, {\bf 2}(4), 615--629.
-
-\bibitem[Foster {\em et~al.}(2006)Foster, de~Hoog, Zhang, Zhang, Xie, Mootha,
-  and Mann]{Foster:2006}
-Foster, L.~J. et~al. (2006).
-\newblock A mammalian organelle map by protein correlation profiling.
-\newblock {\em Cell\/}, {\bf 125}(1), 187--199.
-
-\bibitem[Fraley {\em et~al.}(2012)Fraley, Raftery, Murphy, and Scrucca]{mclust}
-Fraley, C. et~al. (2012).
-\newblock mclust version 4 for r: Normal mixture modeling for model-based
-  clustering, classification, and density estimation.
-
-\bibitem[Fritsch and Ickstadt(2009)Fritsch and Ickstadt]{fritsch::2009}
-Fritsch, A. et~al. (2009).
-\newblock Improved criteria for clustering based on the posterior similarity
-  matrix.
-\newblock {\em Bayesian Anal.}, {\bf 4}(2), 367--391.
-
-\bibitem[Frittoli {\em et~al.}(2014)Frittoli, Palamidessi, Marighetti,
-  Confalonieri, Bianchi, Malinverno, Mazzarol, Viale, Martin-Padura, Garr{\'e},
-  {\em et~al.}]{Frittoli::2014}
-Frittoli, E. et~al. (2014).
-\newblock A rab5/rab4 recycling circuitry induces a proteolytic invasive
-  program and promotes tumor dissemination.
-\newblock {\em J Cell Biol\/}, {\bf 206}(2), 307--328.
-
-\bibitem[Fuchs {\em et~al.}(2007)Fuchs, Haas, Spooner, Yoshimura, Lord, and
-  Barr]{Fuchs::2007}
-Fuchs, E. et~al. (2007).
-\newblock Specific rab gtpase-activating proteins define the shiga toxin and
-  epidermal growth factor uptake pathways.
-\newblock {\em The Journal of cell biology\/}, {\bf 177}(6), 1133--1143.
-
-\bibitem[Fukasawa {\em et~al.}(2004)Fukasawa, Varlamov, Eng, S{\"o}llner, and
-  Rothman]{Fukasawa::2004}
-Fukasawa, M. et~al. (2004).
-\newblock Localization and activity of the snare ykt6 determined by its
-  regulatory domain and palmitoylation.
-\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
-  101}(14), 4815--4820.
-
-\bibitem[Fukui {\em et~al.}(2007)Fukui, Tamura, Wada, Kamada, Igura, Kiso, and
-  Hayashi]{Fukui::2007}
-Fukui, K. et~al. (2007).
-\newblock Expression of rab5a in hepatocellular carcinoma: possible involvement
-  in epidermal growth factor signaling.
-\newblock {\em Hepatology Research\/}, {\bf 37}(11), 957--965.
-
-\bibitem[Gatto and Lilley(2012)Gatto and Lilley]{MSnbase:2012}
-Gatto, L. et~al. (2012).
-\newblock Msnbase - an r/bioconductor package for isobaric tagged mass
-  spectrometry data visualization, processing and quantitation.
-\newblock {\em Bioinformatics\/}, {\bf 28}, 288--289.
-
-\bibitem[Gatto {\em et~al.}(2010)Gatto, Vizca{\'\i}no, Hermjakob, Huber, and
-  Lilley]{Gatto:2010}
-Gatto, L. et~al. (2010).
-\newblock Organelle proteomics experimental designs and analysis.
-\newblock {\em Proteomics\/}, {\bf 10}(22), 3957--3969.
-
-\bibitem[Gatto {\em et~al.}(2014a)Gatto, Breckels, Burger, Nightingale, Groen,
-  Campbell, Mulvey, Christoforou, Ferro, and Lilley]{Gatto:2014b}
-Gatto, L. et~al. (2014a).
-\newblock A foundation for reliable spatial proteomics data analysis.
-\newblock {\em Molecular \& Cellular Proteomics\/}, pages mcp--M113.
-
-\bibitem[Gatto {\em et~al.}(2014b)Gatto, Breckels, Wieczorek, Burger, and
-  Lilley]{pRoloc:2014}
-Gatto, L. et~al. (2014b).
-\newblock Mass-spectrometry based spatial proteomics data analysis using proloc
-  and prolocdata.
-\newblock {\em Bioinformatics\/}.
-
-\bibitem[Gatto {\em et~al.}(2019)Gatto, Breckels, and Lilley]{Gatto::2019}
-Gatto, L. et~al. (2019).
-\newblock Assessing sub-cellular resolution in spatial proteomics experiments.
-\newblock {\em Current opinion in chemical biology\/}, {\bf 48}, 123--149.
-
-\bibitem[Gautreau {\em et~al.}(2014)Gautreau, Oguievetskaia, and
-  Ungermann]{Gautreau::2014}
-Gautreau, A. et~al. (2014).
-\newblock Function and regulation of the endosomal fusion and fission
-  machineries.
-\newblock {\em Cold Spring Harbor perspectives in biology\/}, {\bf 6}(3),
-  a016832.
-
-\bibitem[Geladaki {\em et~al.}(2019)Geladaki, Britovsek, Breckels, Smith,
-  Mulvey, Crook, Gatto, and Lilley]{DC:2018}
-Geladaki, A. et~al. (2019).
-\newblock Combining lopit with differential ultracentrifugation for
-  high-resolution spatial proteomics.
-\newblock {\em Nature Communications\/}, {\bf 10}, 331.
-
-\bibitem[Gelman and Rubin(1992)Gelman and Rubin]{Gelman:1992}
-Gelman, A. et~al. (1992).
-\newblock Inference from iterative simulation using multiple sequences.
-\newblock {\em Statistical science\/}, pages 457--472.
-
-\bibitem[Gentleman {\em et~al.}(2004)Gentleman, Carey, Bates, Bolstad,
-  Dettling, Dudoit, Ellis, Gautier, Ge, Gentry, {\em
-  et~al.}]{Bioconductor::2004}
-Gentleman, R.~C. et~al. (2004).
-\newblock Bioconductor: open software development for computational biology and
-  bioinformatics.
-\newblock {\em Genome biology\/}, {\bf 5}(10), R80.
-
-\bibitem[George {\em et~al.}(2007)George, Ying, Rainey, Solomon, Parikh, Gao,
-  Band, and Band]{George::2007}
-George, M. et~al. (2007).
-\newblock Shared as well as distinct roles of ehd proteins revealed by
-  biochemical and functional comparisons in mammalian cells and c. elegans.
-\newblock {\em BMC cell biology\/}, {\bf 8}(1), 3.
-
-\bibitem[Gibson(2009)Gibson]{Gibson:2009}
-Gibson, T.~J. (2009).
-\newblock Cell regulation: determined to signal discrete cooperation.
-\newblock {\em Trends in biochemical sciences\/}, {\bf 34}(10), 471--482.
-
-\bibitem[Groen {\em et~al.}(2014)Groen, Sancho-Andrés, Breckels, Gatto,
-  Aniento, and Lilley]{Groen:2014}
-Groen, A.~J. et~al. (2014).
-\newblock Identification of trans-golgi network proteins in arabidopsis
-  thaliana root tissue.
-\newblock {\em Journal of proteome research\/}, {\bf 13}(2), 763--776.
-
-\bibitem[Haas {\em et~al.}(2007)Haas, Yoshimura, Stephens, Preisinger, Fuchs,
-  and Barr]{Haas::2007}
-Haas, A.~K. et~al. (2007).
-\newblock Analysis of gtpase-activating proteins: Rab1 and rab43 are key rabs
-  required to maintain a functional golgi complex in human cells.
-\newblock {\em Journal of cell science\/}, {\bf 120}(17), 2997--3010.
-
-\bibitem[Henmi {\em et~al.}(2016)Henmi, Oe, Kono, Taguchi, Takei, and
-  Tanabe]{Henmi::2016}
-Henmi, Y. et~al. (2016).
-\newblock Phosphatidic acid induces ehd3-containing membrane tubulation and is
-  required for receptor recycling.
-\newblock {\em Experimental cell research\/}, {\bf 342}(1), 1--10.
-
-\bibitem[Hirst {\em et~al.}(2018)Hirst, Itzhak, Antrobus, Borner, and
-  Robinson]{Hirst:2018}
-Hirst, J. et~al. (2018).
-\newblock Role of the ap-5 adaptor protein complex in late endosome-to-golgi
-  retrieval.
-\newblock {\em PLoS biology\/}, {\bf 16}(1), e2004411.
-
-\bibitem[Hoepfner {\em et~al.}(2005)Hoepfner, Severin, Cabezas, Habermann,
-  Runge, Gillooly, Stenmark, and Zerial]{Hoepfner:2005}
-Hoepfner, S. et~al. (2005).
-\newblock Modulation of receptor recycling and degradation by the endosomal
-  kinesin kif16b.
-\newblock {\em Cell\/}, {\bf 121}(3), 437--450.
-
-\bibitem[Hoxhaj {\em et~al.}(2012)Hoxhaj, Najafov, Toth, Campbell, Prescott,
-  and MacKintosh]{Hoxhaj::2012}
-Hoxhaj, G. et~al. (2012).
-\newblock Znrf2 is released from membranes by growth factors and, together with
-  znrf1, regulates the na+/k+ atpase.
-\newblock {\em J Cell Sci\/}, {\bf 125}(19), 4662--4675.
-
-\bibitem[Hoxhaj {\em et~al.}(2016)Hoxhaj, Caddye, Najafov, Houde, Johnson,
-  Dissanayake, Toth, Campbell, Prescott, and MacKintosh]{Hoxhaj:2016}
-Hoxhaj, G. et~al. (2016).
-\newblock The e3 ubiquitin ligase znrf2 is a substrate of mtorc1 and regulates
-  its activation by amino acids.
-\newblock {\em elife\/}, {\bf 5}, e12278.
-
-\bibitem[Huber {\em et~al.}(2015)Huber, Carey, Gentleman, Anders, Carlson,
-  Carvalho, Bravo, Davis, Gatto, Girke, {\em et~al.}]{Huber:2015}
-Huber, W. et~al. (2015).
-\newblock Orchestrating high-throughput genomic analysis with bioconductor.
-\newblock {\em Nature methods\/}, {\bf 12}(2), 115--121.
-
-\bibitem[Hubert and Arabie(1985)Hubert and Arabie]{Hubert::1985}
-Hubert, L. et~al. (1985).
-\newblock Comparing partitions.
-\newblock {\em Journal of Classification\/}, {\bf 2}(1), 193--218.
-
-\bibitem[Huh {\em et~al.}(2003)Huh, Falvo, Gerke, Carroll, Howson, Weissman,
-  and O'shea]{Huh:2003}
-Huh, W.-K. et~al. (2003).
-\newblock Global analysis of protein localization in budding yeast.
-\newblock {\em Nature\/}, {\bf 425}(6959), 686.
-
-\bibitem[Igarashi {\em et~al.}(2017)Igarashi, Araki, Yokobori, Altan, Yamanaka,
-  Ishii, Tsukagoshi, Watanabe, Kubo, Handa, {\em et~al.}]{Igarashi::2017}
-Igarashi, T. et~al. (2017).
-\newblock Association of rab5 overexpression in pancreatic cancer with cancer
-  progression and poor prognosis via e-cadherin suppression.
-\newblock {\em Oncotarget\/}, {\bf 8}(7), 12290.
-
-\bibitem[Inadome {\em et~al.}(2005)Inadome, Noda, Adachi, and
-  Yoda]{Inadome:2005}
-Inadome, H. et~al. (2005).
-\newblock Immunoisolaton of the yeast golgi subcompartments and
-  characterization of a novel membrane protein, svp26, discovered in the
-  sed5-containing compartments.
-\newblock {\em Molecular and cellular biology\/}, {\bf 25}(17), 7696--7710.
-
-\bibitem[Itzhak {\em et~al.}(2016)Itzhak, Tyanova, Cox, and
-  Borner]{Itzhak:2016}
-Itzhak, D.~N. et~al. (2016).
-\newblock Global, quantitative and dynamic mapping of protein subcellular
-  localization.
-\newblock {\em Elife\/}, {\bf 5}, e16950.
-
-\bibitem[Itzhak {\em et~al.}(2017)Itzhak, Davies, Tyanova, Mishra, Williamson,
-  Antrobus, Cox, Weekes, and Borner]{Itzhak::2017}
-Itzhak, D.~N. et~al. (2017).
-\newblock A mass spectrometry-based approach for mapping protein subcellular
-  localization reveals the spatial proteome of mouse primary neurons.
-\newblock {\em Cell reports\/}, {\bf 20}(11), 2706--2718.
-
-\bibitem[Kau {\em et~al.}(2004)Kau, Way, and Silver]{Kau:2004}
-Kau, T.~R. et~al. (2004).
-\newblock Nuclear transport and cancer: from mechanism to intervention.
-\newblock {\em Nature Reviews Cancer\/}, {\bf 4}(2), 106--117.
-
-\bibitem[Kirk {\em et~al.}(2012)Kirk, Griffin, Savage, Ghahramani, and
-  Wild]{Kirk:2012}
-Kirk, P. et~al. (2012).
-\newblock Bayesian correlated clustering to integrate multiple datasets.
-\newblock {\em Bioinformatics\/}, {\bf 28}(24), 3290--3297.
-
-\bibitem[Krahmer {\em et~al.}(2018)Krahmer, Najafi, Schueder, Quagliarini,
-  Steger, Seitz, Kasper, Salinas, Cox, Uhlenhaut, {\em et~al.}]{Krahmer::2018}
-Krahmer, N. et~al. (2018).
-\newblock Organellar proteomics and phospho-proteomics reveal subcellular
-  reorganization in diet-induced hepatic steatosis.
-\newblock {\em Developmental cell\/}, {\bf 47}(2), 205--221.
-
-\bibitem[Kristensen and Foster(2014)Kristensen and Foster]{kristensen:2014}
-Kristensen, A.~R. et~al. (2014).
-\newblock Protein correlation profiling-silac to study protein-protein
-  interactions.
-\newblock In {\em Stable Isotope Labeling by Amino Acids in Cell Culture
-  (SILAC)\/}, pages 263--270. Springer.
-
-\bibitem[Kristensen {\em et~al.}(2012)Kristensen, Gsponer, and
-  Foster]{kristensen:2012}
-Kristensen, A.~R. et~al. (2012).
-\newblock A high-throughput approach for measuring temporal changes in the
-  interactome.
-\newblock {\em Nature methods\/}, {\bf 9}(9), 907.
-
-\bibitem[Lanzetti {\em et~al.}(2000)Lanzetti, Rybin, Malabarba, Christoforidis,
-  Scita, Zerial, and Di~Fiore]{Lanzetti::2000}
-Lanzetti, L. et~al. (2000).
-\newblock The eps8 protein coordinates egf receptor signalling through rac and
-  trafficking through rab5.
-\newblock {\em Nature\/}, {\bf 408}(6810), 374.
-
-\bibitem[Laurila and Vihinen(2009)Laurila and Vihinen]{Laurila:2009}
-Laurila, K. et~al. (2009).
-\newblock Prediction of disease-related mutations affecting protein
-  localization.
-\newblock {\em BMC genomics\/}, {\bf 10}(1), 122.
-
-\bibitem[Law {\em et~al.}(2017)Law, Seo, Wang, DeLeon, Bolis, Brown, Zong, Du,
-  and Rocheleau]{Law::2017}
-Law, F. et~al. (2017).
-\newblock The vps34 pi3k negatively regulates rab-5 during endosome maturation.
-\newblock {\em J Cell Sci\/}, {\bf 130}(12), 2007--2017.
-
-\bibitem[Linnemannst{\"o}ns {\em et~al.}(2018)Linnemannst{\"o}ns, Witte,
-  Kittel, Danieli, M{\"u}ller, Nitsch, Honemann-Capito, Grawe, Wodarz, Gross,
-  {\em et~al.}]{Linnemannstons::2018}
-Linnemannst{\"o}ns, K. et~al. (2018).
-\newblock Ykt6 membrane-to-cytosol cycling regulates exosomal wnt secretion.
-\newblock {\em bioRxiv\/}, page 485565.
-
-\bibitem[Liu {\em et~al.}(2015)Liu, Su, Li, Yuan, Mo, Li, He, Ma, and
-  Han]{Liu::2015}
-Liu, B. et~al. (2015).
-\newblock Cmtm7 knockdown increases tumorigenicity of human non-small cell lung
-  cancer cells and egfr-akt signaling by reducing rab5 activation.
-\newblock {\em Oncotarget\/}, {\bf 6}(38), 41092.
-
-\bibitem[Liu {\em et~al.}(2011)Liu, Chen, Zheng, Shi, and Li]{Liu::2011}
-Liu, S.-s. et~al. (2011).
-\newblock Knockdown of rab5a expression decreases cancer cell motility and
-  invasion through integrin-mediated signaling pathway.
-\newblock {\em Journal of biomedical science\/}, {\bf 18}(1), 58.
-
-\bibitem[Madan {\em et~al.}(2008)Madan, Krishnamurthy, and
-  Mukhopadhyay]{Madan::2008}
-Madan, R. et~al. (2008).
-\newblock Sope-mediated recruitment of host rab5 on phagosomes inhibits
-  salmonella transport to lysosomes.
-\newblock In {\em Autophagosome and Phagosome\/}, pages 417--437. Springer.
-
-\bibitem[Martinu {\em et~al.}(2002)Martinu, Santiago-Walker, Qi, and
-  Chou]{Martinu::2002}
-Martinu, L. et~al. (2002).
-\newblock Endocytosis of epidermal growth factor receptor regulated by
-  grb2-mediated recruitment of the rab5 gtpase-activating protein rn-tre.
-\newblock {\em Journal of Biological Chemistry\/}, {\bf 277}(52), 50996--51002.
-
-\bibitem[Matsui {\em et~al.}(2018)Matsui, Jiang, Nakano, Sakamaki, Yamamoto,
-  and Mizushima]{Matsui::2018}
-Matsui, T. et~al. (2018).
-\newblock Autophagosomal ykt6 is required for fusion with lysosomes
-  independently of syntaxin 17.
-\newblock {\em J Cell Biol\/}, {\bf 217}(8), 2633--2645.
-
-\bibitem[McAlister {\em et~al.}(2014)McAlister, Nusinow, Jedrychowski, Wühr,
-  Huttlin, Erickson, Rad, Haas, and Gygi]{Mcalister::2014}
-McAlister, G.~C. et~al. (2014).
-\newblock Multinotch ms3 enables accurate, sensitive, and multiplexed detection
-  of differential expression across cancer cell line proteomes.
-\newblock {\em Analytical chemistry\/}, {\bf 86}(14), 7150--7158.
-
-\bibitem[Meiringer {\em et~al.}(2008)Meiringer, Auffarth, Hou, and
-  Ungermann]{Meiringer::2008}
-Meiringer, C.~T. et~al. (2008).
-\newblock Depalmitoylation of ykt6 prevents its entry into the multivesicular
-  body pathway.
-\newblock {\em Traffic\/}, {\bf 9}(9), 1510--1521.
-
-\bibitem[Mendoza {\em et~al.}(2013)Mendoza, Ortiz, D{\'\i}az, Quest, Leyton,
-  Stupack, and Torres]{Mendoza::2013}
-Mendoza, P. et~al. (2013).
-\newblock Rab5 activation promotes focal adhesion disassembly, migration and
-  invasiveness in tumor cells.
-\newblock {\em J Cell Sci\/}, {\bf 126}(17), 3835--3847.
-
-\bibitem[Mulvey {\em et~al.}(2017)Mulvey, Breckels, Geladaki, Britov{\v{s}}ek,
-  Nightingale, Christoforou, Elzek, Deery, Gatto, and Lilley]{Mulvey:2017}
-Mulvey, C.~M. et~al. (2017).
-\newblock Using {hyperLOPIT} to perform high-resolution mapping of the spatial
-  proteome.
-\newblock {\em Nature Protocols\/}, {\bf 12}(6), 1110--1135.
-
-\bibitem[Naslavsky {\em et~al.}(2006)Naslavsky, Rahajeng, Sharma, Jovic, and
-  Caplan]{Naslavsky::2006}
-Naslavsky, N. et~al. (2006).
-\newblock Interactions between ehd proteins and rab11-fip2: a role for ehd3 in
-  early endosomal transport.
-\newblock {\em Molecular biology of the cell\/}, {\bf 17}(1), 163--177.
-
-\bibitem[Naslavsky {\em et~al.}(2009)Naslavsky, McKenzie, Altan-Bonnet, Sheff,
-  and Caplan]{Naslavsky::2009}
-Naslavsky, N. et~al. (2009).
-\newblock Ehd3 regulates early-endosome-to-golgi transport and preserves golgi
-  morphology.
-\newblock {\em Journal of cell science\/}, {\bf 122}(3), 389--400.
-
-\bibitem[Nightingale {\em et~al.}(2019)Nightingale, Geladaki, Breckels, Oliver,
-  and Lilley]{Nightingale::2019}
-Nightingale, D. J.~H. et~al. (2019).
-\newblock The subcellular organisation of saccharomyces cerevisiae.
-\newblock {\em Current Opinion in Chemical Biology\/}, {\bf 48}(11), 1--10.
-
-\bibitem[Orre {\em et~al.}(2019)Orre, Vesterlund, Pan, Arslan, Zhu, Woodbridge,
-  Frings, Fredlund, and Lehtiö]{Orre:2019}
-Orre, L.~M. et~al. (2019).
-\newblock Subcellbarcode: Proteome-wide mapping of protein localization and
-  relocalization.
-\newblock {\em Molecular Cell\/}, {\bf 73}(1), 166 -- 182.
-
-\bibitem[Otte {\em et~al.}(2001)Otte, Belden, Heidtman, Liu, Jensen, and
-  Barlowe]{Otte:2001}
-Otte, S. et~al. (2001).
-\newblock Erv41p and erv46p: new components of copii vesicles involved in
-  transport between the er and golgi complex.
-\newblock {\em The Journal of cell biology\/}, {\bf 152}(3), 503--518.
-
-\bibitem[Palamidessi {\em et~al.}(2013)Palamidessi, Frittoli, Ducano,
-  Offenhauser, Sigismund, Kajiho, Parazzoli, Oldani, Gobbi, Serini, {\em
-  et~al.}]{Palamidessi::2013}
-Palamidessi, A. et~al. (2013).
-\newblock The gtpase-activating protein rn-tre controls focal adhesion turnover
-  and cell migration.
-\newblock {\em Current biology\/}, {\bf 23}(23), 2355--2364.
-
-\bibitem[Pardo {\em et~al.}(2004)Pardo, Monteoliva, Vazquez, Mart{\'\i}nez,
-  Molero, Nombela, and Gil]{Pardo:2004}
-Pardo, M. et~al. (2004).
-\newblock Pst1 and ecm33 encode two yeast cell surface gpi proteins important
-  for cell wall integrity.
-\newblock {\em Microbiology\/}, {\bf 150}(12), 4157--4170.
-
-\bibitem[Rand(1971)Rand]{rand::1971}
-Rand, W.~M. (1971).
-\newblock Objective criteria for the evaluation of clustering methods.
-\newblock {\em Journal of the American Statistical association\/}, {\bf
-  66}(336), 846--850.
-
-\bibitem[Rauma {\em et~al.}(1999)Rauma, Tuukkanen, Bergelson, Denning, and
-  Hautala]{Rauma::1999}
-Rauma, T. et~al. (1999).
-\newblock rab5 gtpase regulates adenovirus endocytosis.
-\newblock {\em Journal of virology\/}, {\bf 73}(11), 9664--9668.
-
-\bibitem[Richardson and Green(1997)Richardson and Green]{Richardson::1997}
-Richardson, S. et~al. (1997).
-\newblock On bayesian analysis of mixtures with an unknown number of components
-  (with discussion).
-\newblock {\em Journal of the Royal Statistical Society: series B (statistical
-  methodology)\/}, {\bf 59}(4), 731--792.
-
-\bibitem[Rink {\em et~al.}(2005)Rink, Ghigo, Kalaidzidis, and
-  Zerial]{Rink::2005}
-Rink, J. et~al. (2005).
-\newblock Rab conversion as a mechanism of progression from early to late
-  endosomes.
-\newblock {\em Cell\/}, {\bf 122}(5), 735--749.
-
-\bibitem[Rosenfeld {\em et~al.}(2001)Rosenfeld, Moore, Zimmer, Alpizar-Foster,
-  Dai, Zarka, and Knoll]{Rosenfeld::2001}
-Rosenfeld, J.~L. et~al. (2001).
-\newblock Lysosome proteins are redistributed during expression of a
-  gtp-hydrolysis-defective rab5a.
-\newblock {\em Journal of cell science\/}, {\bf 114}(24), 4499--4508.
-
-\bibitem[Rousseau and Mengersen(2011)Rousseau and Mengersen]{Rousseau::2011}
-Rousseau, J. et~al. (2011).
-\newblock Asymptotic behaviour of the posterior distribution in overfitted
-  mixture models.
-\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
-  Methodology)\/}, {\bf 73}(5), 689--710.
-
-\bibitem[Saitoh {\em et~al.}(2017)Saitoh, Maruyama, Yako, Kajita, Fujioka,
-  Ohba, Kasai, Sugama, Kon, Ishikawa, {\em et~al.}]{Saitoh::2017}
-Saitoh, S. et~al. (2017).
-\newblock Rab5-regulated endocytosis plays a crucial role in apical extrusion
-  of transformed cells.
-\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
-  114}(12), E2327--E2336.
-
-\bibitem[Schwarz {\em et~al.}(1978)Schwarz {\em et~al.}]{Schwarz::1978}
-Schwarz, G. et~al. (1978).
-\newblock Estimating the dimension of a model.
-\newblock {\em The annals of statistics\/}, {\bf 6}(2), 461--464.
-
-\bibitem[Sheng {\em et~al.}(2014)Sheng, Li, Zou, Wang, Cao, Zhang, Huang, and
-  Tang]{Sheng::2014}
-Sheng, Y. et~al. (2014).
-\newblock Downregulation of mir-101-3p by hepatitis b virus promotes
-  proliferation and migration of hepatocellular carcinoma cells by targeting
-  rab5a.
-\newblock {\em Archives of virology\/}, {\bf 159}(9), 2397--2410.
-
-\bibitem[Shin {\em et~al.}(2019)Shin, Crook, Borgeaud, Cattin-Ortol{\'a},
-  Peak-Chew, Chadwick, Lilley, and Munro]{Shin::2019}
-Shin, J.~J. et~al. (2019).
-\newblock Determining the content of vesicles captured by golgin tethers using
-  lopit-dc.
-\newblock {\em bioRxiv\/}, page 841965.
-
-\bibitem[Siljee {\em et~al.}(2018)Siljee, Wang, Bernard, Ersoy, Zhang, Marley,
-  Von~Zastrow, Reiter, and Vaisse]{Siljee:2018}
-Siljee, J.~E. et~al. (2018).
-\newblock Subcellular localization of {MC4R} with {ADCY3} at neuronal primary
-  cilia underlies a common pathway for genetic predisposition to obesity.
-\newblock {\em Nat Genet\/}.
-
-\bibitem[Simonsen {\em et~al.}(1998)Simonsen, Lippe, Christoforidis, Gaullier,
-  Brech, Callaghan, Toh, Murphy, Zerial, and Stenmark]{Simonsen::1998}
-Simonsen, A. et~al. (1998).
-\newblock Eea1 links pi (3) k function to rab5 regulation of endosome fusion.
-\newblock {\em Nature\/}, {\bf 394}(6692), 494.
-
-\bibitem[Skjeldal {\em et~al.}(2012)Skjeldal, Strunze, Bergeland, Walseng,
-  Gregers, and Bakke]{Skjeldal::2012}
-Skjeldal, F.~M. et~al. (2012).
-\newblock The fusion of early endosomes induces molecular-motor-driven tubule
-  formation and fission.
-\newblock {\em J Cell Sci\/}, {\bf 125}(8), 1910--1919.
-
-\bibitem[Stephens(2000)Stephens]{Stephens:2000}
-Stephens, M. (2000).
-\newblock Dealing with label switching in mixture models.
-\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
-  Methodology)\/}, {\bf 62}(4), 795--809.
-
-\bibitem[Stone {\em et~al.}(2007)Stone, Jia, Do~Heo, Meyer, and
-  Konan]{Stone::2007}
-Stone, M. et~al. (2007).
-\newblock Participation of rab5, an early endosome protein, in hepatitis c
-  virus rna replication machinery.
-\newblock {\em Journal of virology\/}, {\bf 81}(9), 4551--4563.
-
-\bibitem[Sullivan {\em et~al.}(2018)Sullivan, Winsnes, {\AA}kesson, Hjelmare,
-  Wiking, Schutten, Campbell, Leifsson, Rhodes, Nordgren, {\em
-  et~al.}]{Sullivan:2018}
-Sullivan, D.~P. et~al. (2018).
-\newblock Deep learning is combined with massive-scale citizen science to
-  improve large-scale image classification.
-\newblock {\em Nature biotechnology\/}, {\bf 36}(9), 820.
-
-\bibitem[Tai {\em et~al.}(2004)Tai, Lu, Wang, Tang, Goud, Johannes, and
-  Hong]{Tai:2004}
-Tai, G. et~al. (2004).
-\newblock Participation of the syntaxin 5/ykt6/gs28/gs15 snare complex in
-  transport from the early/recycling endosome to the trans-golgi network.
-\newblock {\em Molecular biology of the cell\/}, {\bf 15}(9), 4011--4022.
-
-\bibitem[Tak{\'a}ts {\em et~al.}(2018)Tak{\'a}ts, Glatz, Szenci, Boda,
-  Horv{\'a}th, Heged{\H{u}}s, Kov{\'a}cs, and Juh{\'a}sz]{Takats::2018}
-Tak{\'a}ts, S. et~al. (2018).
-\newblock Non-canonical role of the snare protein ykt6 in
-  autophagosome-lysosome fusion.
-\newblock {\em PLoS genetics\/}, {\bf 14}(4), e1007359.
-
-\bibitem[Takeda {\em et~al.}(2019)Takeda, Koseki, Takahashi, Miyoshi, Nishida,
-  Nishimura, Hata, Matsuda, Mizushima, Yamamoto, {\em et~al.}]{Takeda::2019}
-Takeda, M. et~al. (2019).
-\newblock Disruption of endolysosomal rab5/7 efficiently eliminates colorectal
-  cancer stem cells.
-\newblock {\em Cancer research\/}, pages canres--2192.
-
-\bibitem[Tan {\em et~al.}(2009)Tan, Dvinge, Christoforou, Bertone,
-  Martinez~Arias, and Lilley]{Tan:2009}
-Tan, D.~J. et~al. (2009).
-\newblock Mapping organelle proteins and protein complexes in drosophila
-  melanogaster.
-\newblock {\em Journal of proteome research\/}, {\bf 8}(6), 2667--2678.
-
-\bibitem[Thompson {\em et~al.}(2003)Thompson, Sch{\"a}fer, Kuhn, Kienle,
-  Schwarz, Schmidt, Neumann, and Hamon]{Thompson:2003}
-Thompson, A. et~al. (2003).
-\newblock Tandem mass tags: a novel quantification strategy for comparative
-  analysis of complex protein mixtures by ms/ms.
-\newblock {\em Analytical chemistry\/}, {\bf 75}(8), 1895--1904.
-
-\bibitem[Thul {\em et~al.}(2017)Thul, {\AA}kesson, Wiking, Mahdessian,
-  Geladaki, Blal, Alm, Asplund, Bj{\"o}rk, Breckels, {\em et~al.}]{Thul:2017}
-Thul, P.~J. et~al. (2017).
-\newblock A subcellular map of the human proteome.
-\newblock {\em Science\/}, {\bf 356}(6340), eaal3321.
-
-\bibitem[Ting {\em et~al.}(2011)Ting, Rad, Gygi, and Haas]{Ting:2011}
-Ting, L. et~al. (2011).
-\newblock Ms3 eliminates ratio distortion in isobaric multiplexed quantitative
-  proteomics.
-\newblock {\em Nature methods\/}, {\bf 8}(11), 937.
-
-\bibitem[Torres {\em et~al.}(2010)Torres, Mielgo, Barbero, Hsiao, Wilkins, and
-  Stupack]{Torres::2010}
-Torres, V.~A. et~al. (2010).
-\newblock Rab5 mediates caspase-8--promoted cell motility and metastasis.
-\newblock {\em Molecular biology of the cell\/}, {\bf 21}(2), 369--376.
-
-\bibitem[Trischler {\em et~al.}(1999)Trischler, Stoorvogel, and
-  Ullrich]{Trischler::1999}
-Trischler, M. et~al. (1999).
-\newblock Biochemical analysis of distinct rab5-and rab11-positive endosomes
-  along the transferrin pathway.
-\newblock {\em J Cell Sci\/}, {\bf 112}(24), 4773--4783.
-
-\bibitem[Ueno {\em et~al.}(2011)Ueno, Huang, Tanaka, and Hirokawa]{Ueno::2011}
-Ueno, H. et~al. (2011).
-\newblock Kif16b/rab14 molecular motor complex is critical for early embryonic
-  development by transporting fgf receptor.
-\newblock {\em Developmental cell\/}, {\bf 20}(1), 60--71.
-
-\bibitem[Van~Havre {\em et~al.}(2015)Van~Havre, White, Rousseau, and
-  Mengersen]{Van::2015}
-Van~Havre, Z. et~al. (2015).
-\newblock Overfitting bayesian mixture models with an unknown number of
-  components.
-\newblock {\em PloS one\/}, {\bf 10}(7), e0131739.
-
-\bibitem[Verma {\em et~al.}(2017)Verma, Rastogi, and Mukhopadhyay]{Verma::2017}
-Verma, J.~K. et~al. (2017).
-\newblock Leishmania donovani resides in modified early endosomes by
-  upregulating rab5a expression via the downregulation of mir-494.
-\newblock {\em PLoS pathogens\/}, {\bf 13}(6), e1006459.
-
-\bibitem[Wendler {\em et~al.}(2010)Wendler, Gillingham, Sinka, Rosa-Ferreira,
-  Gordon, Franch-Marro, Peden, Vincent, and Munro]{Wendler:2010}
-Wendler, F. et~al. (2010).
-\newblock A genome-wide rna interference screen identifies two novel components
-  of the metazoan secretory pathway.
-\newblock {\em The EMBO journal\/}, {\bf 29}(2), 304--314.
-
-\bibitem[Woodman(2000)Woodman]{Woodman::2000}
-Woodman, P.~G. (2000).
-\newblock Biogenesis of the sorting endosome: the role of rab5.
-\newblock {\em Traffic\/}, {\bf 1}(9), 695--701.
-
-\bibitem[Xiao {\em et~al.}(2017)Xiao, Yang, An, and Qi]{Xiao::2017}
-Xiao, Q. et~al. (2017).
-\newblock Microrna-100 suppresses human osteosarcoma cell proliferation and
-  chemo-resistance via znrf2.
-\newblock {\em Oncotarget\/}, {\bf 8}(21), 34678.
-
-\bibitem[Yang {\em et~al.}(2011)Yang, Yin, Tseng, Yang, Hsu, Lee, Horng, and
-  Chi]{Yang::2011}
-Yang, P.-S. et~al. (2011).
-\newblock Rab5a is associated with axillary lymph node metastasis in breast
-  cancer patients.
-\newblock {\em Cancer science\/}, {\bf 102}(12), 2172--2178.
-
-\bibitem[Yin {\em et~al.}(2005)Yin, de~Groot, Dekker, de~Jong, Klis, and
-  de~Koster]{Yin:2005}
-Yin, Q.~Y. et~al. (2005).
-\newblock Comprehensive proteomic analysis of saccharomyces cerevisiae cell
-  walls identification of proteins covalently attached via
-  glycosylphosphatidylinositol remnants or mild alkali-sensitive linkages.
-\newblock {\em Journal of Biological Chemistry\/}, {\bf 280}(21), 20894--20901.
-
-\bibitem[Yofe {\em et~al.}(2016)Yofe, Weill, Meurer, Chuartzman, Zalckvar,
-  Goldman, Ben-Dor, Sch{\"u}tze, Wiedemann, Knop, {\em et~al.}]{Yofe:2016}
-Yofe, I. et~al. (2016).
-\newblock One library to make them all: streamlining the creation of yeast
-  libraries via a swap-tag strategy.
-\newblock {\em Nature methods\/}, {\bf 13}(4), 371.
-
-\bibitem[Yong and Tang(2019)Yong and Tang]{Yong::2019}
-Yong, C. Q.~Y. et~al. (2019).
-\newblock Another longin snare for autophagosome-lysosome fusion-how does ykt6
-  work?
-\newblock {\em Autophagy\/}, {\bf 15}(2), 352--357.
-
-\bibitem[Yu {\em et~al.}(2012)Yu, Wang, Han, and He]{Yu:2012}
-Yu, G. et~al. (2012).
-\newblock {clusterProfiler}: an {R} package for comparing biological themes
-  among gene clusters.
-\newblock {\em Omics: a journal of integrative biology\/}, {\bf 16}(5),
-  284--287.
-
-\bibitem[Yu {\em et~al.}(1999)Yu, Hui-Chen, Chen, Zou, Yan, Chun-Xiang, Wu-Ru,
-  and Li]{Yu::1999}
-Yu, L. et~al. (1999).
-\newblock Differential expression of rab5a in human lung adenocarcinoma cells
-  with different metastasis potential.
-\newblock {\em Clinical \& experimental metastasis\/}, {\bf 17}(3), 213--219.
-
-\bibitem[Zerial and McBride(2001)Zerial and McBride]{Zerial::2001}
-Zerial, M. et~al. (2001).
-\newblock Rab proteins as membrane organizers.
-\newblock {\em Nature reviews Molecular cell biology\/}, {\bf 2}(2), 107.
-
-\bibitem[Zhang {\em et~al.}(2016)Zhang, Guo, Zhao, Xu, Han, Li, and
-  Wang]{Zhang::2016}
-Zhang, X. et~al. (2016).
-\newblock The role of znrf2 in the growth of non-small cell lung cancer.
-\newblock {\em European review for medical and pharmacological sciences\/},
-  {\bf 20}, 4011--4017.
-
-\bibitem[Zhao {\em et~al.}(2010)Zhao, Liu, Wu, Zou, Wang, Ni, Chen, and
-  Fan]{Zhao::2010}
-Zhao, Z. et~al. (2010).
-\newblock Rab5a overexpression promoting ovarian cancer cell proliferation may
-  be associated with appl1-related epidermal growth factor signaling pathway.
-\newblock {\em Cancer science\/}, {\bf 101}(6), 1454--1462.
-
-\end{thebibliography}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{Kau:2004}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KTR}{%
+         family={Kau},
+         familyi={K\bibinitperiod},
+         given={Tweeny\bibnamedelima R},
+         giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=WJC}{%
+         family={Way},
+         familyi={W\bibinitperiod},
+         given={Jeffrey\bibnamedelima C},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SPA}{%
+         family={Silver},
+         familyi={S\bibinitperiod},
+         given={Pamela\bibnamedelima A},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{KTRWJCSPA1}
+    \strng{fullhash}{KTRWJCSPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{106\bibrangedash 117}
+    \field{title}{Nuclear transport and cancer: from mechanism to intervention}
+    \field{volume}{4}
+    \field{journaltitle}{Nature Reviews Cancer}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Siljee:2018}{article}{}
+    \name{author}{9}{}{%
+      {{hash=SJE}{%
+         family={Siljee},
+         familyi={S\bibinitperiod},
+         given={J\bibnamedelima E},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Y},
+         giveni={Y},
+      }}%
+      {{hash=BAA}{%
+         family={Bernard},
+         familyi={B\bibinitperiod},
+         given={A\bibnamedelima A},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=EBA}{%
+         family={Ersoy},
+         familyi={E\bibinitperiod},
+         given={B\bibnamedelima A},
+         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=MA}{%
+         family={Marley},
+         familyi={M\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=VZM}{%
+         family={Von\bibnamedelima Zastrow},
+         familyi={V\bibinitperiod\bibinitdelim Z\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=RJF}{%
+         family={Reiter},
+         familyi={R\bibinitperiod},
+         given={J\bibnamedelima F},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=VC}{%
+         family={Vaisse},
+         familyi={V\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+    }
+    \strng{namehash}{SJE+1}
+    \strng{fullhash}{SJEWYBAAEBAZSMAVZMRJFVC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/s41588-017-0020-9
+    \endverb
+    \field{title}{Subcellular localization of {MC4R} with {ADCY3} at neuronal
+  primary cilia underlies a common pathway for genetic predisposition to
+  obesity.}
+    \field{journaltitle}{Nat Genet}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Laurila:2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LK}{%
+         family={Laurila},
+         familyi={L\bibinitperiod},
+         given={Kirsti},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Vihinen},
+         familyi={V\bibinitperiod},
+         given={Mauno},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {BioMed Central}%
+    }
+    \strng{namehash}{LKVM1}
+    \strng{fullhash}{LKVM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{122}
+    \field{title}{Prediction of disease-related mutations affecting protein
+  localization}
+    \field{volume}{10}
+    \field{journaltitle}{BMC genomics}
+    \field{year}{2009}
+  \endentry
+
+  \entry{hyper}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=CA}{%
+         family={Christoforou},
+         familyi={C\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MCM}{%
+         family={Mulvey},
+         familyi={M\bibinitperiod},
+         given={Claire\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geladaki},
+         familyi={G\bibinitperiod},
+         given={Aikaterini},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Hurrell},
+         familyi={H\bibinitperiod},
+         given={Tracey},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HPC}{%
+         family={Hayward},
+         familyi={H\bibinitperiod},
+         given={Penelope\bibnamedelima C},
+         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=NT}{%
+         family={Naake},
+         familyi={N\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=VR}{%
+         family={Viner},
+         familyi={V\bibinitperiod},
+         given={Rosa},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=AAM}{%
+         family={Arias},
+         familyi={A\bibinitperiod},
+         given={Alfonso\bibnamedelima Martinez},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{CA+2}
+    \strng{fullhash}{CAMCMBLMGAHTHPCNTGLVRAAM+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{9992}
+    \field{title}{A draft map of the mouse pluripotent stem cell spatial
+  proteome}
+    \field{volume}{7}
+    \field{journaltitle}{Nature communications}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Thul:2017}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=TPJ}{%
+         family={Thul},
+         familyi={T\bibinitperiod},
+         given={Peter\bibnamedelima J},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=AL}{%
+         family={{\AA}kesson},
+         familyi={{\AA}\bibinitperiod},
+         given={Lovisa},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wiking},
+         familyi={W\bibinitperiod},
+         given={Mikaela},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Mahdessian},
+         familyi={M\bibinitperiod},
+         given={Diana},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geladaki},
+         familyi={G\bibinitperiod},
+         given={Aikaterini},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BHA}{%
+         family={Blal},
+         familyi={B\bibinitperiod},
+         given={Hammou\bibnamedelima Ait},
+         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=AT}{%
+         family={Alm},
+         familyi={A\bibinitperiod},
+         given={Tove},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Asplund},
+         familyi={A\bibinitperiod},
+         given={Anna},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Bj{\"o}rk},
+         familyi={B\bibinitperiod},
+         given={Lars},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{TPJ+1}
+    \strng{fullhash}{TPJALWMMDGABHAATAABLBLM+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6340}
+    \field{pages}{eaal3321}
+    \field{title}{A subcellular map of the human proteome}
+    \field{volume}{356}
+    \field{journaltitle}{Science}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Gibson:2009}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GTJ}{%
+         family={Gibson},
+         familyi={G\bibinitperiod},
+         given={Toby\bibnamedelima J},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GTJ1}
+    \strng{fullhash}{GTJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{10}
+    \field{pages}{471\bibrangedash 482}
+    \field{title}{Cell regulation: determined to signal discrete cooperation}
+    \field{volume}{34}
+    \field{journaltitle}{Trends in biochemical sciences}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Mulvey:2017}{article}{}
+    \name{author}{10}{}{%
+      {{hash=MCM}{%
+         family={Mulvey},
+         familyi={M\bibinitperiod},
+         given={Claire\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geladaki},
+         familyi={G\bibinitperiod},
+         given={Aikaterini},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BNK}{%
+         family={Britov{\v{s}}ek},
+         familyi={B\bibinitperiod},
+         given={Nina\bibnamedelima Ko{\v{c}}evar},
+         giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=NDJ}{%
+         family={Nightingale},
+         familyi={N\bibinitperiod},
+         given={Daniel\bibnamedelima JH},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Christoforou},
+         familyi={C\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=EM}{%
+         family={Elzek},
+         familyi={E\bibinitperiod},
+         given={Mohamed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DMJ}{%
+         family={Deery},
+         familyi={D\bibinitperiod},
+         given={Michael\bibnamedelima J},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Research}%
+    }
+    \strng{namehash}{MCM+1}
+    \strng{fullhash}{MCMBLMGABNKNDJCAEMDMJGLLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{1110\bibrangedash 1135}
+    \field{title}{Using {hyperLOPIT} to perform high-resolution mapping of the
+  spatial proteome}
+    \field{volume}{12}
+    \field{journaltitle}{Nature Protocols}
+    \field{year}{2017}
+  \endentry
+
+  \entry{DC:2018}{article}{}
+    \name{author}{8}{}{%
+      {{hash=GA}{%
+         family={Geladaki},
+         familyi={G\bibinitperiod},
+         given={Aikaterini},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BNK}{%
+         family={Britovsek},
+         familyi={B\bibinitperiod},
+         given={Nina\bibnamedelima Kocevar},
+         giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=STSOLV}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Tom Sand Owen L\bibnamedelima Vennard},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  O\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=MCM}{%
+         family={Mulvey},
+         familyi={M\bibinitperiod},
+         given={Claire\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=COM}{%
+         family={Crook},
+         familyi={C\bibinitperiod},
+         given={Oliver\bibnamedelima M},
+         giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{GA+1}
+    \strng{fullhash}{GABNKBLMSTSOLVMCMCOMGLLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{331}
+    \field{title}{Combining LOPIT with differential ultracentrifugation for
+  high-resolution spatial proteomics}
+    \field{volume}{10}
+    \field{journaltitle}{Nature Communications}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Orre:2019}{article}{}
+    \name{author}{9}{}{%
+      {{hash=OLM}{%
+         family={Orre},
+         familyi={O\bibinitperiod},
+         given={Lukas\bibnamedelima Minus},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Vesterlund},
+         familyi={V\bibinitperiod},
+         given={Mattias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PY}{%
+         family={Pan},
+         familyi={P\bibinitperiod},
+         given={Yanbo},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=AT}{%
+         family={Arslan},
+         familyi={A\bibinitperiod},
+         given={Taner},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Yafeng},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WAF}{%
+         family={Woodbridge},
+         familyi={W\bibinitperiod},
+         given={Alejandro\bibnamedelima Fernandez},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=FO}{%
+         family={Frings},
+         familyi={F\bibinitperiod},
+         given={Oliver},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=FE}{%
+         family={Fredlund},
+         familyi={F\bibinitperiod},
+         given={Erik},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lehtiö},
+         familyi={L\bibinitperiod},
+         given={Janne},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{proteomics, protein localization, mass spectrometry, proteogenomics,
+  splice variants, organelle proteome, protein domains}
+    \strng{namehash}{OLM+1}
+    \strng{fullhash}{OLMVMPYATZYWAFFOFELJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.molcel.2018.11.035
+    \endverb
+    \field{issn}{1097-2765}
+    \field{number}{1}
+    \field{pages}{166 \bibrangedash  182}
+    \field{title}{SubCellBarCode: Proteome-wide Mapping of Protein Localization
+  and Relocalization}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S1097276518310050
+    \endverb
+    \field{volume}{73}
+    \field{journaltitle}{Molecular Cell}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Gatto:2010}{article}{}
+    \name{author}{5}{}{%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=VJA}{%
+         family={Vizca{\'\i}no},
+         familyi={V\bibinitperiod},
+         given={Juan\bibnamedelima Antonio},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HH}{%
+         family={Hermjakob},
+         familyi={H\bibinitperiod},
+         given={Henning},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Huber},
+         familyi={H\bibinitperiod},
+         given={Wolfgang},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{GL+1}
+    \strng{fullhash}{GLVJAHHHWLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{22}
+    \field{pages}{3957\bibrangedash 3969}
+    \field{title}{Organelle proteomics experimental designs and analysis}
+    \field{volume}{10}
+    \field{journaltitle}{Proteomics}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Gatto:2014b}{article}{}
+    \name{author}{10}{}{%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Burger},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=NDJ}{%
+         family={Nightingale},
+         familyi={N\bibinitperiod},
+         given={Daniel\bibnamedelima JH},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GAJ}{%
+         family={Groen},
+         familyi={G\bibinitperiod},
+         given={Arnoud\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Campbell},
+         familyi={C\bibinitperiod},
+         given={Callum},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MCM}{%
+         family={Mulvey},
+         familyi={M\bibinitperiod},
+         given={Claire\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Christoforou},
+         familyi={C\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Ferro},
+         familyi={F\bibinitperiod},
+         given={Myriam},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ASBMB}%
+    }
+    \strng{namehash}{GL+1}
+    \strng{fullhash}{GLBLMBTNDJGAJCCMCMCAFMLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{mcp\bibrangedash M113}
+    \field{title}{A foundation for reliable spatial proteomics data analysis}
+    \field{journaltitle}{Molecular \& Cellular Proteomics}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Barylyuk::2020}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=BK}{%
+         family={Barylyuk},
+         familyi={B\bibinitperiod},
+         given={Konstantin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KL}{%
+         family={Koreny},
+         familyi={K\bibinitperiod},
+         given={Ludek},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Ke},
+         familyi={K\bibinitperiod},
+         given={Huiling},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Butterworth},
+         familyi={B\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=COM}{%
+         family={Crook},
+         familyi={C\bibinitperiod},
+         given={Oliver\bibnamedelima M},
+         giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LI}{%
+         family={Lassadi},
+         familyi={L\bibinitperiod},
+         given={Imen},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=GV}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Vipul},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=TEC}{%
+         family={Tromer},
+         familyi={T\bibinitperiod},
+         given={Eelco\bibnamedelima C},
+         giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Mourier},
+         familyi={M\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=STJ}{%
+         family={Stevens},
+         familyi={S\bibinitperiod},
+         given={Tim\bibnamedelima J},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cold Spring Harbor Laboratory}%
+    }
+    \strng{namehash}{BK+2}
+    \strng{fullhash}{BKKLKHBSCOMLIGVTECMTSTJ+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A subcellular atlas of Toxoplasma reveals the functional
+  context of the proteome}
+    \field{journaltitle}{bioRxiv}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Breckels:2013}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Christoforou},
+         familyi={C\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GAJ}{%
+         family={Groen},
+         familyi={G\bibinitperiod},
+         given={Arnoud\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=TMW}{%
+         family={Trotter},
+         familyi={T\bibinitperiod},
+         given={Matthew\bibnamedelima WB},
+         giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{BLM+1}
+    \strng{fullhash}{BLMGLCAGAJLKSTMW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{129\bibrangedash 140}
+    \field{title}{The effect of organelle discovery upon sub-cellular protein
+  localisation}
+    \field{volume}{88}
+    \field{journaltitle}{Journal of proteomics}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Schwarz::1978}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=SG}{%
+         family={Schwarz},
+         familyi={S\bibinitperiod},
+         given={Gideon},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Institute of Mathematical Statistics}%
+    }
+    \strng{namehash}{SG+1}
+    \strng{fullhash}{SG+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{461\bibrangedash 464}
+    \field{title}{Estimating the dimension of a model}
+    \field{volume}{6}
+    \field{journaltitle}{The annals of statistics}
+    \field{year}{1978}
+  \endentry
+
+  \entry{Dunkley:2006}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=DTP}{%
+         family={Dunkley},
+         familyi={D\bibinitperiod},
+         given={Tom\bibnamedelima PJ},
+         giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hester},
+         familyi={H\bibinitperiod},
+         given={Svenja},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SIP}{%
+         family={Shadforth},
+         familyi={S\bibinitperiod},
+         given={Ian\bibnamedelima P},
+         giveni={I\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Runions},
+         familyi={R\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WT}{%
+         family={Weimar},
+         familyi={W\bibinitperiod},
+         given={Thilo},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HSL}{%
+         family={Hanton},
+         familyi={H\bibinitperiod},
+         given={Sally\bibnamedelima L},
+         giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=GJL}{%
+         family={Griffin},
+         familyi={G\bibinitperiod},
+         given={Julian\bibnamedelima L},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Bessant},
+         familyi={B\bibinitperiod},
+         given={Conrad},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Brandizzi},
+         familyi={B\bibinitperiod},
+         given={Federica},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hawes},
+         familyi={H\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {National Acad Sciences}%
+    }
+    \strng{namehash}{DTP+1}
+    \strng{fullhash}{DTPHSSIPRJWTHSLGJLBCBFHC+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{17}
+    \field{pages}{6518\bibrangedash 6523}
+    \field{title}{Mapping the Arabidopsis organelle proteome}
+    \field{volume}{103}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Tan:2009}{article}{}
+    \name{author}{6}{}{%
+      {{hash=TDJ}{%
+         family={Tan},
+         familyi={T\bibinitperiod},
+         given={Denise\bibnamedelima JL},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=DH}{%
+         family={Dvinge},
+         familyi={D\bibinitperiod},
+         given={Heidi},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Christoforou},
+         familyi={C\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BP}{%
+         family={Bertone},
+         familyi={B\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MAA}{%
+         family={Martinez\bibnamedelima Arias},
+         familyi={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+         given={Alfonso},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{TDJ+1}
+    \strng{fullhash}{TDJDHCABPMAALKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{2667\bibrangedash 2678}
+    \field{title}{Mapping organelle proteins and protein complexes in
+  drosophila melanogaster}
+    \field{volume}{8}
+    \field{journaltitle}{Journal of proteome research}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Groen:2014}{article}{}
+    \name{author}{6}{}{%
+      {{hash=GAJ}{%
+         family={Groen},
+         familyi={G\bibinitperiod},
+         given={Arnoud\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SAG}{%
+         family={Sancho-Andrés},
+         familyi={S\bibinithyphendelim A\bibinitperiod},
+         given={Gloria},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=AF}{%
+         family={Aniento},
+         familyi={A\bibinitperiod},
+         given={Fernando},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{GAJ+1}
+    \strng{fullhash}{GAJSAGBLMGLAFLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{763\bibrangedash 776}
+    \field{title}{Identification of trans-Golgi network proteins in Arabidopsis
+  thaliana root tissue}
+    \field{volume}{13}
+    \field{journaltitle}{Journal of proteome research}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Crook:2018}{article}{}
+    \name{author}{5}{}{%
+      {{hash=COM}{%
+         family={Crook},
+         familyi={C\bibinitperiod},
+         given={Oliver\bibnamedelima M.},
+         giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MCM}{%
+         family={Mulvey},
+         familyi={M\bibinitperiod},
+         given={Claire\bibnamedelima M.},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=KPDW}{%
+         family={Kirk},
+         familyi={K\bibinitperiod},
+         given={Paul D.\bibnamedelima W.},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{COM+2}
+    \strng{fullhash}{COMMCMKPDWLKSGL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1371/journal.pcbi.1006516
+    \endverb
+    \field{number}{11}
+    \field{pages}{1\bibrangedash 29}
+    \field{title}{A Bayesian mixture modelling approach for spatial proteomics}
+    \verb{url}
+    \verb https://doi.org/10.1371/journal.pcbi.1006516
+    \endverb
+    \field{volume}{14}
+    \field{journaltitle}{PLOS Computational Biology}
+    \field{month}{11}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Crook::2019b}{article}{}
+    \name{author}{5}{}{%
+      {{hash=CO}{%
+         family={Crook},
+         familyi={C\bibinitperiod},
+         given={OM},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={LM},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={KS},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kirk},
+         familyi={K\bibinitperiod},
+         given={PDW},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+    }
+    \strng{namehash}{CO+1}
+    \strng{fullhash}{COBLLKKPGL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.12688/f1000research.18636.1
+    \endverb
+    \field{number}{446}
+    \field{title}{A Bioconductor workflow for the Bayesian analysis of spatial
+  proteomics [version 1; peer review: awaiting peer review]}
+    \field{volume}{8}
+    \field{journaltitle}{F1000Research}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Crook::2019a}{article}{}
+    \name{author}{4}{}{%
+      {{hash=COM}{%
+         family={Crook},
+         familyi={C\bibinitperiod},
+         given={Oliver\bibnamedelima M},
+         giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KPD}{%
+         family={Kirk},
+         familyi={K\bibinitperiod},
+         given={Paul\bibnamedelima DW},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{COM+1}
+    \strng{fullhash}{COMLKSGLKPD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Semi-Supervised Non-Parametric Bayesian Modelling of Spatial
+  Proteomics}
+    \field{journaltitle}{arXiv preprint arXiv:1903.02909}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Shin::2019}{article}{}
+    \name{author}{8}{}{%
+      {{hash=SJJ}{%
+         family={Shin},
+         familyi={S\bibinitperiod},
+         given={John\bibnamedelima JH},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=COM}{%
+         family={Crook},
+         familyi={C\bibinitperiod},
+         given={Oliver\bibnamedelima M},
+         giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Borgeaud},
+         familyi={B\bibinitperiod},
+         given={Alicia},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=COJ}{%
+         family={Cattin-Ortol{\'a}},
+         familyi={C\bibinithyphendelim O\bibinitperiod},
+         given={J{\'e}r{\^o}me},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PCSY}{%
+         family={Peak-Chew},
+         familyi={P\bibinithyphendelim C\bibinitperiod},
+         given={Sew-Yeu},
+         giveni={S\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Chadwick},
+         familyi={C\bibinitperiod},
+         given={Jessica},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Munro},
+         familyi={M\bibinitperiod},
+         given={Sean},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cold Spring Harbor Laboratory}%
+    }
+    \strng{namehash}{SJJ+1}
+    \strng{fullhash}{SJJCOMBACOJPCSYCJLKSMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{841965}
+    \field{title}{Determining the content of vesicles captured by golgin
+  tethers using LOPIT-DC}
+    \field{journaltitle}{bioRxiv}
+    \field{year}{2019}
+  \endentry
+
+  \entry{ferguson::1974}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FTS}{%
+         family={Ferguson},
+         familyi={F\bibinitperiod},
+         given={Thomas\bibnamedelima S.},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Institute of Mathematical Statistics}%
+    }
+    \strng{namehash}{FTS1}
+    \strng{fullhash}{FTS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1214/aos/1176342752
+    \endverb
+    \field{number}{4}
+    \field{pages}{615\bibrangedash 629}
+    \field{title}{Prior Distributions on Spaces of Probability Measures}
+    \verb{url}
+    \verb http://dx.doi.org/10.1214/aos/1176342752
+    \endverb
+    \field{volume}{2}
+    \field{journaltitle}{Ann. Statist.}
+    \field{month}{07}
+    \field{year}{1974}
+  \endentry
+
+  \entry{antoniak::1974}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ACE}{%
+         family={Antoniak},
+         familyi={A\bibinitperiod},
+         given={Charles\bibnamedelima E.},
+         giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Institute of Mathematical Statistics}%
+    }
+    \strng{namehash}{ACE1}
+    \strng{fullhash}{ACE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1214/aos/1176342871
+    \endverb
+    \field{number}{6}
+    \field{pages}{1152\bibrangedash 1174}
+    \field{title}{Mixtures of Dirichlet Processes with Applications to Bayesian
+  Nonparametric Problems}
+    \verb{url}
+    \verb http://dx.doi.org/10.1214/aos/1176342871
+    \endverb
+    \field{volume}{2}
+    \field{journaltitle}{Ann. Statist.}
+    \field{month}{11}
+    \field{year}{1974}
+  \endentry
+
+  \entry{Richardson::1997}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RS}{%
+         family={Richardson},
+         familyi={R\bibinitperiod},
+         given={Sylvia},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GPJ}{%
+         family={Green},
+         familyi={G\bibinitperiod},
+         given={Peter\bibnamedelima J},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{RSGPJ1}
+    \strng{fullhash}{RSGPJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{731\bibrangedash 792}
+    \field{title}{On Bayesian analysis of mixtures with an unknown number of
+  components (with discussion)}
+    \field{volume}{59}
+    \field{journaltitle}{Journal of the Royal Statistical Society: series B
+  (statistical methodology)}
+    \field{year}{1997}
+  \endentry
+
+  \entry{Rousseau::2011}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RJ}{%
+         family={Rousseau},
+         familyi={R\bibinitperiod},
+         given={Judith},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Mengersen},
+         familyi={M\bibinitperiod},
+         given={Kerrie},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{RJMK1}
+    \strng{fullhash}{RJMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{689\bibrangedash 710}
+    \field{title}{Asymptotic behaviour of the posterior distribution in
+  overfitted mixture models}
+    \field{volume}{73}
+    \field{journaltitle}{Journal of the Royal Statistical Society: Series B
+  (Statistical Methodology)}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Kirk:2012}{article}{}
+    \name{author}{5}{}{%
+      {{hash=KP}{%
+         family={Kirk},
+         familyi={K\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GJE}{%
+         family={Griffin},
+         familyi={G\bibinitperiod},
+         given={Jim\bibnamedelima E},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=SRS}{%
+         family={Savage},
+         familyi={S\bibinitperiod},
+         given={Richard\bibnamedelima S},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GZ}{%
+         family={Ghahramani},
+         familyi={G\bibinitperiod},
+         given={Zoubin},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=WDL}{%
+         family={Wild},
+         familyi={W\bibinitperiod},
+         given={David\bibnamedelima L},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{KP+1}
+    \strng{fullhash}{KPGJESRSGZWDL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{24}
+    \field{pages}{3290\bibrangedash 3297}
+    \field{title}{Bayesian correlated clustering to integrate multiple
+  datasets}
+    \field{volume}{28}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Itzhak:2016}{article}{}
+    \name{author}{4}{}{%
+      {{hash=IDN}{%
+         family={Itzhak},
+         familyi={I\bibinitperiod},
+         given={Daniel\bibnamedelima N},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=TS}{%
+         family={Tyanova},
+         familyi={T\bibinitperiod},
+         given={Stefka},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Cox},
+         familyi={C\bibinitperiod},
+         given={J{\"u}rgen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BGH}{%
+         family={Borner},
+         familyi={B\bibinitperiod},
+         given={Georg\bibnamedelima HH},
+         giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {eLife Sciences Publications Limited}%
+    }
+    \strng{namehash}{IDN+1}
+    \strng{fullhash}{IDNTSCJBGH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{e16950}
+    \field{title}{Global, quantitative and dynamic mapping of protein
+  subcellular localization}
+    \field{volume}{5}
+    \field{journaltitle}{Elife}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Jean_Beltran:2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BPMJ}{%
+         family={Beltran},
+         familyi={B\bibinitperiod},
+         given={Pierre M\bibnamedelima Jean},
+         giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  J\bibinitperiod},
+      }}%
+      {{hash=MRA}{%
+         family={Mathias},
+         familyi={M\bibinitperiod},
+         given={Rommel\bibnamedelima A},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CIM}{%
+         family={Cristea},
+         familyi={C\bibinitperiod},
+         given={Ileana\bibnamedelima M},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{BPMJMRACIM1}
+    \strng{fullhash}{BPMJMRACIM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{361\bibrangedash 373}
+    \field{title}{A portrait of the human organelle proteome in space and time
+  during cytomegalovirus infection}
+    \field{volume}{3}
+    \field{journaltitle}{Cell systems}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Foster:2006}{article}{}
+    \name{author}{7}{}{%
+      {{hash=FLJ}{%
+         family={Foster},
+         familyi={F\bibinitperiod},
+         given={Leonard\bibnamedelima J},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=dHCL}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Hoog},
+         familyi={H\bibinitperiod},
+         given={Carmen\bibnamedelima L},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yanling},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=XX}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Xiaohui},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=MVK}{%
+         family={Mootha},
+         familyi={M\bibinitperiod},
+         given={Vamsi\bibnamedelima K},
+         giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mann},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{FLJ+1}
+    \strng{fullhash}{FLJHCLdZYZYXXMVKMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{187\bibrangedash 199}
+    \field{title}{A mammalian organelle map by protein correlation profiling}
+    \field{volume}{125}
+    \field{journaltitle}{Cell}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Krahmer::2018}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=KN}{%
+         family={Krahmer},
+         familyi={K\bibinitperiod},
+         given={Natalie},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=NB}{%
+         family={Najafi},
+         familyi={N\bibinitperiod},
+         given={Bahar},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Schueder},
+         familyi={S\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=QF}{%
+         family={Quagliarini},
+         familyi={Q\bibinitperiod},
+         given={Fabiana},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Steger},
+         familyi={S\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Seitz},
+         familyi={S\bibinitperiod},
+         given={Susanne},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kasper},
+         familyi={K\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Salinas},
+         familyi={S\bibinitperiod},
+         given={Favio},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Cox},
+         familyi={C\bibinitperiod},
+         given={J{\"u}rgen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=UNH}{%
+         family={Uhlenhaut},
+         familyi={U\bibinitperiod},
+         given={Nina\bibnamedelima Henriette},
+         giveni={N\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KN+1}
+    \strng{fullhash}{KNNBSFQFSMSSKRSFCJUNH+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{205\bibrangedash 221}
+    \field{title}{Organellar proteomics and phospho-proteomics reveal
+  subcellular reorganization in diet-induced hepatic steatosis}
+    \field{volume}{47}
+    \field{journaltitle}{Developmental cell}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Breckels:2016}{article}{}
+    \name{author}{10}{}{%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HSB}{%
+         family={Holden},
+         familyi={H\bibinitperiod},
+         given={Sean\bibnamedelima B},
+         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wojnar},
+         familyi={W\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MCM}{%
+         family={Mulvey},
+         familyi={M\bibinitperiod},
+         given={Claire\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Christoforou},
+         familyi={C\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Groen},
+         familyi={G\bibinitperiod},
+         given={Arnoud},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TMW}{%
+         family={Trotter},
+         familyi={T\bibinitperiod},
+         given={Matthew\bibnamedelima WB},
+         giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=KO}{%
+         family={Kohlbacher},
+         familyi={K\bibinitperiod},
+         given={Oliver},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{BLM+1}
+    \strng{fullhash}{BLMHSBWDMCMCAGATMWKOLKSGL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{e1004920}
+    \field{title}{Learning from heterogeneous data sources: an application in
+  spatial proteomics}
+    \field{volume}{12}
+    \field{journaltitle}{PLoS computational biology}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Dunkley:2004}{article}{}
+    \name{author}{5}{}{%
+      {{hash=DTP}{%
+         family={Dunkley},
+         familyi={D\bibinitperiod},
+         given={Tom\bibnamedelima PJ},
+         giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=WR}{%
+         family={Watson},
+         familyi={W\bibinitperiod},
+         given={Rod},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GJL}{%
+         family={Griffin},
+         familyi={G\bibinitperiod},
+         given={Julian\bibnamedelima L},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dupree},
+         familyi={D\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ASBMB}%
+    }
+    \strng{namehash}{DTP+1}
+    \strng{fullhash}{DTPWRGJLDPLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{1128\bibrangedash 1134}
+    \field{title}{Localization of organelle proteins by isotope tagging
+  (LOPIT)}
+    \field{volume}{3}
+    \field{journaltitle}{Molecular \& Cellular Proteomics}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Nightingale::2019}{article}{}
+    \name{author}{5}{}{%
+      {{hash=NDJH}{%
+         family={Nightingale},
+         familyi={N\bibinitperiod},
+         given={Daniel. J.\bibnamedelima H.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  H\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geladaki},
+         familyi={G\bibinitperiod},
+         given={Aikaterini.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa.\bibnamedelima M.},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=OSG}{%
+         family={Oliver},
+         familyi={O\bibinitperiod},
+         given={Stephen.\bibnamedelima G.},
+         giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn.\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NDJH+1}
+    \strng{fullhash}{NDJHGABLMOSGLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{1\bibrangedash 10}
+    \field{title}{The subcellular organisation of Saccharomyces cerevisiae}
+    \field{volume}{48}
+    \field{journaltitle}{Current Opinion in Chemical Biology}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Thompson:2003}{article}{}
+    \name{author}{8}{}{%
+      {{hash=TA}{%
+         family={Thompson},
+         familyi={T\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Sch{\"a}fer},
+         familyi={S\bibinitperiod},
+         given={J{\"u}rgen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kuhn},
+         familyi={K\bibinitperiod},
+         given={Karsten},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kienle},
+         familyi={K\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Schwarz},
+         familyi={S\bibinitperiod},
+         given={Josef},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={G{\"u}nter},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=NT}{%
+         family={Neumann},
+         familyi={N\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hamon},
+         familyi={H\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{TA+1}
+    \strng{fullhash}{TASJKKKSSJSGNTHC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{8}
+    \field{pages}{1895\bibrangedash 1904}
+    \field{title}{Tandem mass tags: a novel quantification strategy for
+  comparative analysis of complex protein mixtures by MS/MS}
+    \field{volume}{75}
+    \field{journaltitle}{Analytical chemistry}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Ting:2011}{article}{}
+    \name{author}{4}{}{%
+      {{hash=TL}{%
+         family={Ting},
+         familyi={T\bibinitperiod},
+         given={Lily},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Rad},
+         familyi={R\bibinitperiod},
+         given={Ramin},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GSP}{%
+         family={Gygi},
+         familyi={G\bibinitperiod},
+         given={Steven\bibnamedelima P},
+         giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Haas},
+         familyi={H\bibinitperiod},
+         given={Wilhelm},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{TL+1}
+    \strng{fullhash}{TLRRGSPHW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{937}
+    \field{title}{MS3 eliminates ratio distortion in isobaric multiplexed
+  quantitative proteomics}
+    \field{volume}{8}
+    \field{journaltitle}{Nature methods}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Mcalister::2014}{article}{}
+    \name{author}{9}{}{%
+      {{hash=MGC}{%
+         family={McAlister},
+         familyi={M\bibinitperiod},
+         given={Graeme\bibnamedelima C},
+         giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=NDP}{%
+         family={Nusinow},
+         familyi={N\bibinitperiod},
+         given={David\bibnamedelima P},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=JMP}{%
+         family={Jedrychowski},
+         familyi={J\bibinitperiod},
+         given={Mark\bibnamedelima P},
+         giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wühr},
+         familyi={W\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HEL}{%
+         family={Huttlin},
+         familyi={H\bibinitperiod},
+         given={Edward\bibnamedelima L},
+         giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=EBK}{%
+         family={Erickson},
+         familyi={E\bibinitperiod},
+         given={Brian\bibnamedelima K},
+         giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Rad},
+         familyi={R\bibinitperiod},
+         given={Ramin},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Haas},
+         familyi={H\bibinitperiod},
+         given={Wilhelm},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=GSP}{%
+         family={Gygi},
+         familyi={G\bibinitperiod},
+         given={Steven\bibnamedelima P},
+         giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{MGC+1}
+    \strng{fullhash}{MGCNDPJMPWMHELEBKRRHWGSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{14}
+    \field{pages}{7150\bibrangedash 7158}
+    \field{title}{MultiNotch MS3 enables accurate, sensitive, and multiplexed
+  detection of differential expression across cancer cell line proteomes}
+    \field{volume}{86}
+    \field{journaltitle}{Analytical chemistry}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Itzhak::2017}{article}{}
+    \name{author}{9}{}{%
+      {{hash=IDN}{%
+         family={Itzhak},
+         familyi={I\bibinitperiod},
+         given={Daniel\bibnamedelima N},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=DC}{%
+         family={Davies},
+         familyi={D\bibinitperiod},
+         given={Colin},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TS}{%
+         family={Tyanova},
+         familyi={T\bibinitperiod},
+         given={Stefka},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mishra},
+         familyi={M\bibinitperiod},
+         given={Archana},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Williamson},
+         familyi={W\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Antrobus},
+         familyi={A\bibinitperiod},
+         given={Robin},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Cox},
+         familyi={C\bibinitperiod},
+         given={J{\"u}rgen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WMP}{%
+         family={Weekes},
+         familyi={W\bibinitperiod},
+         given={Michael\bibnamedelima P},
+         giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=BGH}{%
+         family={Borner},
+         familyi={B\bibinitperiod},
+         given={Georg\bibnamedelima HH},
+         giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{IDN+1}
+    \strng{fullhash}{IDNDCTSMAWJARCJWMPBGH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{2706\bibrangedash 2718}
+    \field{title}{A Mass Spectrometry-Based Approach for Mapping Protein
+  Subcellular Localization Reveals the Spatial Proteome of Mouse Primary
+  Neurons}
+    \field{volume}{20}
+    \field{journaltitle}{Cell reports}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Hirst:2018}{article}{}
+    \name{author}{5}{}{%
+      {{hash=HJ}{%
+         family={Hirst},
+         familyi={H\bibinitperiod},
+         given={Jennifer},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=IDN}{%
+         family={Itzhak},
+         familyi={I\bibinitperiod},
+         given={Daniel\bibnamedelima N},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Antrobus},
+         familyi={A\bibinitperiod},
+         given={Robin},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=BGH}{%
+         family={Borner},
+         familyi={B\bibinitperiod},
+         given={Georg\bibnamedelima HH},
+         giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=RMS}{%
+         family={Robinson},
+         familyi={R\bibinitperiod},
+         given={Margaret\bibnamedelima S},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{HJ+1}
+    \strng{fullhash}{HJIDNARBGHRMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{e2004411}
+    \field{title}{Role of the AP-5 adaptor protein complex in late
+  endosome-to-Golgi retrieval}
+    \field{volume}{16}
+    \field{journaltitle}{PLoS biology}
+    \field{year}{2018}
+  \endentry
+
+  \entry{kristensen:2012}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KAR}{%
+         family={Kristensen},
+         familyi={K\bibinitperiod},
+         given={Anders\bibnamedelima R},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Gsponer},
+         familyi={G\bibinitperiod},
+         given={Joerg},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=FLJ}{%
+         family={Foster},
+         familyi={F\bibinitperiod},
+         given={Leonard\bibnamedelima J},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{KARGJFLJ1}
+    \strng{fullhash}{KARGJFLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{907}
+    \field{title}{A high-throughput approach for measuring temporal changes in
+  the interactome}
+    \field{volume}{9}
+    \field{journaltitle}{Nature methods}
+    \field{year}{2012}
+  \endentry
+
+  \entry{kristensen:2014}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=KAR}{%
+         family={Kristensen},
+         familyi={K\bibinitperiod},
+         given={Anders\bibnamedelima R},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=FLJ}{%
+         family={Foster},
+         familyi={F\bibinitperiod},
+         given={Leonard\bibnamedelima J},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{KARFLJ1}
+    \strng{fullhash}{KARFLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Stable Isotope Labeling by Amino Acids in Cell Culture
+  (SILAC)}
+    \field{pages}{263\bibrangedash 270}
+    \field{title}{Protein correlation profiling-SILAC to study protein-protein
+  interactions}
+    \field{year}{2014}
+  \endentry
+
+  \entry{fritsch::2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FA}{%
+         family={Fritsch},
+         familyi={F\bibinitperiod},
+         given={Arno},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=IK}{%
+         family={Ickstadt},
+         familyi={I\bibinitperiod},
+         given={Katja},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {International Society for Bayesian Analysis}%
+    }
+    \strng{namehash}{FAIK1}
+    \strng{fullhash}{FAIK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1214/09-BA414
+    \endverb
+    \field{number}{2}
+    \field{pages}{367\bibrangedash 391}
+    \field{title}{Improved criteria for clustering based on the posterior
+  similarity matrix}
+    \verb{url}
+    \verb http://dx.doi.org/10.1214/09-BA414
+    \endverb
+    \field{volume}{4}
+    \field{journaltitle}{Bayesian Anal.}
+    \field{month}{06}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Sullivan:2018}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=SDP}{%
+         family={Sullivan},
+         familyi={S\bibinitperiod},
+         given={Devin\bibnamedelima P},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=WCF}{%
+         family={Winsnes},
+         familyi={W\bibinitperiod},
+         given={Casper\bibnamedelima F},
+         giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=AL}{%
+         family={{\AA}kesson},
+         familyi={{\AA}\bibinitperiod},
+         given={Lovisa},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hjelmare},
+         familyi={H\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wiking},
+         familyi={W\bibinitperiod},
+         given={Mikaela},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Schutten},
+         familyi={S\bibinitperiod},
+         given={Rutger},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CL}{%
+         family={Campbell},
+         familyi={C\bibinitperiod},
+         given={Linzi},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Leifsson},
+         familyi={L\bibinitperiod},
+         given={Hjalti},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Rhodes},
+         familyi={R\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=NA}{%
+         family={Nordgren},
+         familyi={N\bibinitperiod},
+         given={Andie},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{SDP+1}
+    \strng{fullhash}{SDPWCFALHMWMSRCLLHRSNA+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{820}
+    \field{title}{Deep learning is combined with massive-scale citizen science
+  to improve large-scale image classification}
+    \field{volume}{36}
+    \field{journaltitle}{Nature biotechnology}
+    \field{year}{2018}
+  \endentry
+
+  \entry{FDR:1995}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BY}{%
+         family={Benjamini},
+         familyi={B\bibinitperiod},
+         given={Yoav},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HY}{%
+         family={Hochberg},
+         familyi={H\bibinitperiod},
+         given={Yosef},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{BYHY1}
+    \strng{fullhash}{BYHY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{289\bibrangedash 300}
+    \field{title}{Controlling the false discovery rate: a practical and
+  powerful approach to multiple testing}
+    \field{journaltitle}{Journal of the royal statistical society. Series B
+  (Methodological)}
+    \field{year}{1995}
+  \endentry
+
+  \entry{Ashburner:2000}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=AM}{%
+         family={Ashburner},
+         familyi={A\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BCA}{%
+         family={Ball},
+         familyi={B\bibinitperiod},
+         given={Catherine\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BJA}{%
+         family={Blake},
+         familyi={B\bibinitperiod},
+         given={Judith\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Botstein},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BH}{%
+         family={Butler},
+         familyi={B\bibinitperiod},
+         given={Heather},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=CJM}{%
+         family={Cherry},
+         familyi={C\bibinitperiod},
+         given={J\bibnamedelima Michael},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=DAP}{%
+         family={Davis},
+         familyi={D\bibinitperiod},
+         given={Allan\bibnamedelima P},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=DK}{%
+         family={Dolinski},
+         familyi={D\bibinitperiod},
+         given={Kara},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=DSS}{%
+         family={Dwight},
+         familyi={D\bibinitperiod},
+         given={Selina\bibnamedelima S},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=EJT}{%
+         family={Eppig},
+         familyi={E\bibinitperiod},
+         given={Janan\bibnamedelima T},
+         giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{AM+1}
+    \strng{fullhash}{AMBCABJABDBHCJMDAPDKDSSEJT+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{25\bibrangedash 29}
+    \field{title}{Gene Ontology: tool for the unification of biology}
+    \field{volume}{25}
+    \field{journaltitle}{Nature genetics}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Yu:2012}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YG}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Guangchuang},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=WLG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Li-Gen},
+         giveni={L\bibinithyphendelim G\bibinitperiod},
+      }}%
+      {{hash=HY}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={Yanyan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HQY}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Qing-Yu},
+         giveni={Q\bibinithyphendelim Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY
+  10801 USA}%
+    }
+    \strng{namehash}{YG+1}
+    \strng{fullhash}{YGWLGHYHQY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{284\bibrangedash 287}
+    \field{title}{{clusterProfiler}: an {R} package for comparing biological
+  themes among gene clusters}
+    \field{volume}{16}
+    \field{journaltitle}{Omics: a journal of integrative biology}
+    \field{year}{2012}
+  \endentry
+
+  \entry{mclust}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FC}{%
+         family={Fraley},
+         familyi={F\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=RAE}{%
+         family={Raftery},
+         familyi={R\bibinitperiod},
+         given={Adrian\bibnamedelima E},
+         giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=MTB}{%
+         family={Murphy},
+         familyi={M\bibinitperiod},
+         given={T\bibnamedelima Brendan},
+         giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Scrucca},
+         familyi={S\bibinitperiod},
+         given={Luca},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FC+1}
+    \strng{fullhash}{FCRAEMTBSL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{mclust Version 4 for R: Normal Mixture Modeling for
+  Model-Based Clustering, Classification, and Density Estimation}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Bue:2006}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BCA}{%
+         family={Bue},
+         familyi={B\bibinitperiod},
+         given={Catherine\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BCM}{%
+         family={Bentivoglio},
+         familyi={B\bibinitperiod},
+         given={Christine\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Barlowe},
+         familyi={B\bibinitperiod},
+         given={Charles},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Am Soc Cell Biol}%
+    }
+    \strng{namehash}{BCABCMBC1}
+    \strng{fullhash}{BCABCMBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{4780\bibrangedash 4789}
+    \field{title}{Erv26p directs pro-alkaline phosphatase into endoplasmic
+  reticulum--derived coat protein complex II transport vesicles}
+    \field{volume}{17}
+    \field{journaltitle}{Molecular biology of the cell}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Inadome:2005}{article}{}
+    \name{author}{4}{}{%
+      {{hash=IH}{%
+         family={Inadome},
+         familyi={I\bibinitperiod},
+         given={Hironori},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=NY}{%
+         family={Noda},
+         familyi={N\bibinitperiod},
+         given={Yoichi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=AH}{%
+         family={Adachi},
+         familyi={A\bibinitperiod},
+         given={Hiroyuki},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YK}{%
+         family={Yoda},
+         familyi={Y\bibinitperiod},
+         given={Koji},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Am Soc Microbiol}%
+    }
+    \strng{namehash}{IH+1}
+    \strng{fullhash}{IHNYAHYK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{17}
+    \field{pages}{7696\bibrangedash 7710}
+    \field{title}{Immunoisolaton of the yeast Golgi subcompartments and
+  characterization of a novel membrane protein, Svp26, discovered in the
+  Sed5-containing compartments}
+    \field{volume}{25}
+    \field{journaltitle}{Molecular and cellular biology}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Otte:2001}{article}{}
+    \name{author}{6}{}{%
+      {{hash=OS}{%
+         family={Otte},
+         familyi={O\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BWJ}{%
+         family={Belden},
+         familyi={B\bibinitperiod},
+         given={William\bibnamedelima J},
+         giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Heidtman},
+         familyi={H\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Jay},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=JON}{%
+         family={Jensen},
+         familyi={J\bibinitperiod},
+         given={Ole\bibnamedelima N},
+         giveni={O\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Barlowe},
+         familyi={B\bibinitperiod},
+         given={Charles},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Rockefeller University Press}%
+    }
+    \strng{namehash}{OS+1}
+    \strng{fullhash}{OSBWJHMLJJONBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{503\bibrangedash 518}
+    \field{title}{Erv41p and Erv46p: new components of COPII vesicles involved
+  in transport between the ER and Golgi complex}
+    \field{volume}{152}
+    \field{journaltitle}{The Journal of cell biology}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Yofe:2016}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=YI}{%
+         family={Yofe},
+         familyi={Y\bibinitperiod},
+         given={Ido},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=WU}{%
+         family={Weill},
+         familyi={W\bibinitperiod},
+         given={Uri},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Meurer},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Chuartzman},
+         familyi={C\bibinitperiod},
+         given={Silvia},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=ZE}{%
+         family={Zalckvar},
+         familyi={Z\bibinitperiod},
+         given={Einat},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GO}{%
+         family={Goldman},
+         familyi={G\bibinitperiod},
+         given={Omer},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=BDS}{%
+         family={Ben-Dor},
+         familyi={B\bibinithyphendelim D\bibinitperiod},
+         given={Shifra},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Sch{\"u}tze},
+         familyi={S\bibinitperiod},
+         given={Conny},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=WN}{%
+         family={Wiedemann},
+         familyi={W\bibinitperiod},
+         given={Nils},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Knop},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{YI+1}
+    \strng{fullhash}{YIWUMMCSZEGOBDSSCWNKM+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{371}
+    \field{title}{One library to make them all: streamlining the creation of
+  yeast libraries via a SWAp-Tag strategy}
+    \field{volume}{13}
+    \field{journaltitle}{Nature methods}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Delic:2013}{article}{}
+    \name{author}{6}{}{%
+      {{hash=DM}{%
+         family={Delic},
+         familyi={D\bibinitperiod},
+         given={Marizela},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Valli},
+         familyi={V\bibinitperiod},
+         given={Minoska},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GAB}{%
+         family={Graf},
+         familyi={G\bibinitperiod},
+         given={Alexandra\bibnamedelima B},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pfeffer},
+         familyi={P\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Mattanovich},
+         familyi={M\bibinitperiod},
+         given={Diethard},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Gasser},
+         familyi={G\bibinitperiod},
+         given={Brigitte},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Blackwell Publishing Ltd Oxford, UK}%
+    }
+    \strng{namehash}{DM+1}
+    \strng{fullhash}{DMVMGABPMMDGB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{872\bibrangedash 914}
+    \field{title}{The secretory pathway: exploring yeast diversity}
+    \field{volume}{37}
+    \field{journaltitle}{FEMS microbiology reviews}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Wendler:2010}{article}{}
+    \name{author}{9}{}{%
+      {{hash=WF}{%
+         family={Wendler},
+         familyi={W\bibinitperiod},
+         given={Franz},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GAK}{%
+         family={Gillingham},
+         familyi={G\bibinitperiod},
+         given={Alison\bibnamedelima K},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Sinka},
+         familyi={S\bibinitperiod},
+         given={Rita},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RFC}{%
+         family={Rosa-Ferreira},
+         familyi={R\bibinithyphendelim F\bibinitperiod},
+         given={Cl{\'a}udia},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GDE}{%
+         family={Gordon},
+         familyi={G\bibinitperiod},
+         given={David\bibnamedelima E},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=FMX}{%
+         family={Franch-Marro},
+         familyi={F\bibinithyphendelim M\bibinitperiod},
+         given={Xavier},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=PAA}{%
+         family={Peden},
+         familyi={P\bibinitperiod},
+         given={Andrew\bibnamedelima A},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=VJP}{%
+         family={Vincent},
+         familyi={V\bibinitperiod},
+         given={Jean-Paul},
+         giveni={J\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Munro},
+         familyi={M\bibinitperiod},
+         given={Sean},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {EMBO Press}%
+    }
+    \strng{namehash}{WF+1}
+    \strng{fullhash}{WFGAKSRRFCGDEFMXPAAVJPMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{304\bibrangedash 314}
+    \field{title}{A genome-wide RNA interference screen identifies two novel
+  components of the metazoan secretory pathway}
+    \field{volume}{29}
+    \field{journaltitle}{The EMBO journal}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Cappellaro:1998}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CC}{%
+         family={Cappellaro},
+         familyi={C\bibinitperiod},
+         given={Corinna},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Mrsa},
+         familyi={M\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=TW}{%
+         family={Tanner},
+         familyi={T\bibinitperiod},
+         given={Widmar},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Am Soc Microbiol}%
+    }
+    \strng{namehash}{CCMVTW1}
+    \strng{fullhash}{CCMVTW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{19}
+    \field{pages}{5030\bibrangedash 5037}
+    \field{title}{New Potential Cell Wall Glucanases ofSaccharomyces cerevisiae
+  and Their Involvement in Mating}
+    \field{volume}{180}
+    \field{journaltitle}{Journal of bacteriology}
+    \field{year}{1998}
+  \endentry
+
+  \entry{Pardo:2004}{article}{}
+    \name{author}{7}{}{%
+      {{hash=PM}{%
+         family={Pardo},
+         familyi={P\bibinitperiod},
+         given={Mercedes},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ML}{%
+         family={Monteoliva},
+         familyi={M\bibinitperiod},
+         given={Lucía},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=VP}{%
+         family={Vazquez},
+         familyi={V\bibinitperiod},
+         given={Paloma},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Mart{\'\i}nez},
+         familyi={M\bibinitperiod},
+         given={Raquel},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={Molero},
+         familyi={M\bibinitperiod},
+         given={Gloria},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=NC}{%
+         family={Nombela},
+         familyi={N\bibinitperiod},
+         given={Cesar},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gil},
+         familyi={G\bibinitperiod},
+         given={Concha},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Microbiology Society}%
+    }
+    \strng{namehash}{PM+1}
+    \strng{fullhash}{PMMLVPMRMGNCGC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{12}
+    \field{pages}{4157\bibrangedash 4170}
+    \field{title}{PST1 and ECM33 encode two yeast cell surface GPI proteins
+  important for cell wall integrity}
+    \field{volume}{150}
+    \field{journaltitle}{Microbiology}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Yin:2005}{article}{}
+    \name{author}{6}{}{%
+      {{hash=YQY}{%
+         family={Yin},
+         familyi={Y\bibinitperiod},
+         given={Qing\bibnamedelima Yuan},
+         giveni={Q\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=dGPW}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Groot},
+         familyi={G\bibinitperiod},
+         given={Piet\bibnamedelima WJ},
+         giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=DHL}{%
+         family={Dekker},
+         familyi={D\bibinitperiod},
+         given={Henk\bibnamedelima L},
+         giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=dJL}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Jong},
+         familyi={J\bibinitperiod},
+         given={Luitzen},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KFM}{%
+         family={Klis},
+         familyi={K\bibinitperiod},
+         given={Frans\bibnamedelima M},
+         giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=dKCG}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Koster},
+         familyi={K\bibinitperiod},
+         given={Chris\bibnamedelima G},
+         giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ASBMB}%
+    }
+    \strng{namehash}{YQY+1}
+    \strng{fullhash}{YQYGPWdDHLJLdKFMKCGd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{21}
+    \field{pages}{20894\bibrangedash 20901}
+    \field{title}{Comprehensive proteomic analysis of Saccharomyces cerevisiae
+  cell walls identification of proteins covalently attached via
+  glycosylphosphatidylinositol remnants or mild alkali-sensitive linkages}
+    \field{volume}{280}
+    \field{journaltitle}{Journal of Biological Chemistry}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Huh:2003}{article}{}
+    \name{author}{7}{}{%
+      {{hash=HWK}{%
+         family={Huh},
+         familyi={H\bibinitperiod},
+         given={Won-Ki},
+         giveni={W\bibinithyphendelim K\bibinitperiod},
+      }}%
+      {{hash=FJV}{%
+         family={Falvo},
+         familyi={F\bibinitperiod},
+         given={James\bibnamedelima V},
+         giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=GLC}{%
+         family={Gerke},
+         familyi={G\bibinitperiod},
+         given={Luke\bibnamedelima C},
+         giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=CAS}{%
+         family={Carroll},
+         familyi={C\bibinitperiod},
+         given={Adam\bibnamedelima S},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=HRW}{%
+         family={Howson},
+         familyi={H\bibinitperiod},
+         given={Russell\bibnamedelima W},
+         giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=WJS}{%
+         family={Weissman},
+         familyi={W\bibinitperiod},
+         given={Jonathan\bibnamedelima S},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=OEK}{%
+         family={O'shea},
+         familyi={O\bibinitperiod},
+         given={Erin\bibnamedelima K},
+         giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{HWK+1}
+    \strng{fullhash}{HWKFJVGLCCASHRWWJSOEK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6959}
+    \field{pages}{686}
+    \field{title}{Global analysis of protein localization in budding yeast}
+    \field{volume}{425}
+    \field{journaltitle}{Nature}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Gatto::2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GLBLMLKS1}
+    \strng{fullhash}{GLBLMLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{123\bibrangedash 149}
+    \field{title}{Assessing sub-cellular resolution in spatial proteomics
+  experiments}
+    \field{volume}{48}
+    \field{journaltitle}{Current opinion in chemical biology}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Simonsen::1998}{article}{}
+    \name{author}{10}{}{%
+      {{hash=SA}{%
+         family={Simonsen},
+         familyi={S\bibinitperiod},
+         given={Anne},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LR}{%
+         family={Lippe},
+         familyi={L\bibinitperiod},
+         given={Roger},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Christoforidis},
+         familyi={C\bibinitperiod},
+         given={Savvas},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GJM}{%
+         family={Gaullier},
+         familyi={G\bibinitperiod},
+         given={Jean-Michel},
+         giveni={J\bibinithyphendelim M\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Brech},
+         familyi={B\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Callaghan},
+         familyi={C\bibinitperiod},
+         given={Judy},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TBH}{%
+         family={Toh},
+         familyi={T\bibinitperiod},
+         given={Ban-Hock},
+         giveni={B\bibinithyphendelim H\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Murphy},
+         familyi={M\bibinitperiod},
+         given={Carol},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zerial},
+         familyi={Z\bibinitperiod},
+         given={Marino},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Stenmark},
+         familyi={S\bibinitperiod},
+         given={Harald},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{SA+1}
+    \strng{fullhash}{SALRCSGJMBACJTBHMCZMSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6692}
+    \field{pages}{494}
+    \field{title}{EEA1 links PI (3) K function to Rab5 regulation of endosome
+  fusion}
+    \field{volume}{394}
+    \field{journaltitle}{Nature}
+    \field{year}{1998}
+  \endentry
+
+  \entry{Woodman::2000}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WPG}{%
+         family={Woodman},
+         familyi={W\bibinitperiod},
+         given={Philip\bibnamedelima G},
+         giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{WPG1}
+    \strng{fullhash}{WPG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{695\bibrangedash 701}
+    \field{title}{Biogenesis of the sorting endosome: the role of Rab5}
+    \field{volume}{1}
+    \field{journaltitle}{Traffic}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Zerial::2001}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ZM}{%
+         family={Zerial},
+         familyi={Z\bibinitperiod},
+         given={Marino},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={McBride},
+         familyi={M\bibinitperiod},
+         given={Heidi},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{ZMMH1}
+    \strng{fullhash}{ZMMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{107}
+    \field{title}{Rab proteins as membrane organizers}
+    \field{volume}{2}
+    \field{journaltitle}{Nature reviews Molecular cell biology}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Rink::2005}{article}{}
+    \name{author}{4}{}{%
+      {{hash=RJ}{%
+         family={Rink},
+         familyi={R\bibinitperiod},
+         given={Jochen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GE}{%
+         family={Ghigo},
+         familyi={G\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=KY}{%
+         family={Kalaidzidis},
+         familyi={K\bibinitperiod},
+         given={Yannis},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zerial},
+         familyi={Z\bibinitperiod},
+         given={Marino},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{RJ+1}
+    \strng{fullhash}{RJGEKYZM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{735\bibrangedash 749}
+    \field{title}{Rab conversion as a mechanism of progression from early to
+  late endosomes}
+    \field{volume}{122}
+    \field{journaltitle}{Cell}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Mendoza::2013}{article}{}
+    \name{author}{7}{}{%
+      {{hash=MP}{%
+         family={Mendoza},
+         familyi={M\bibinitperiod},
+         given={Pablo},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=OR}{%
+         family={Ortiz},
+         familyi={O\bibinitperiod},
+         given={Rina},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={D{\'\i}az},
+         familyi={D\bibinitperiod},
+         given={Jorge},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=QAF}{%
+         family={Quest},
+         familyi={Q\bibinitperiod},
+         given={Andrew\bibnamedelima FG},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=LL}{%
+         family={Leyton},
+         familyi={L\bibinitperiod},
+         given={Lisette},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Stupack},
+         familyi={S\bibinitperiod},
+         given={Dwayne},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=TVA}{%
+         family={Torres},
+         familyi={T\bibinitperiod},
+         given={Vicente\bibnamedelima A},
+         giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Company of Biologists Ltd}%
+    }
+    \strng{namehash}{MP+1}
+    \strng{fullhash}{MPORDJQAFLLSDTVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{17}
+    \field{pages}{3835\bibrangedash 3847}
+    \field{title}{Rab5 activation promotes focal adhesion disassembly,
+  migration and invasiveness in tumor cells}
+    \field{volume}{126}
+    \field{journaltitle}{J Cell Sci}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Chen::2014}{article}{}
+    \name{author}{6}{}{%
+      {{hash=CPI}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Pin-I},
+         giveni={P\bibinithyphendelim I\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Schauer},
+         familyi={S\bibinitperiod},
+         given={Kristine},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KC}{%
+         family={Kong},
+         familyi={K\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HAR}{%
+         family={Harding},
+         familyi={H\bibinitperiod},
+         given={Andrew\bibnamedelima R},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Goud},
+         familyi={G\bibinitperiod},
+         given={Bruno},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SPD}{%
+         family={Stahl},
+         familyi={S\bibinitperiod},
+         given={Philip\bibnamedelima D},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{CPI+1}
+    \strng{fullhash}{CPISKKCHARGBSPD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{e90384}
+    \field{title}{Rab5 isoforms orchestrate a "division of labor" in the
+  endocytic network; Rab5C modulates Rac-mediated cell motility}
+    \field{volume}{9}
+    \field{journaltitle}{PloS one}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Gautreau::2014}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GA}{%
+         family={Gautreau},
+         familyi={G\bibinitperiod},
+         given={Alexis},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=OK}{%
+         family={Oguievetskaia},
+         familyi={O\bibinitperiod},
+         given={Ksenia},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=UC}{%
+         family={Ungermann},
+         familyi={U\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cold Spring Harbor Lab}%
+    }
+    \strng{namehash}{GAOKUC1}
+    \strng{fullhash}{GAOKUC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{a016832}
+    \field{title}{Function and regulation of the endosomal fusion and fission
+  machineries}
+    \field{volume}{6}
+    \field{journaltitle}{Cold Spring Harbor perspectives in biology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Law::2017}{article}{}
+    \name{author}{9}{}{%
+      {{hash=LF}{%
+         family={Law},
+         familyi={L\bibinitperiod},
+         given={Fiona},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SJH}{%
+         family={Seo},
+         familyi={S\bibinitperiod},
+         given={Jung\bibnamedelima Hwa},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Ziqing},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=DJL}{%
+         family={DeLeon},
+         familyi={D\bibinitperiod},
+         given={Jennifer\bibnamedelima L},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bolis},
+         familyi={B\bibinitperiod},
+         given={Yousstina},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Brown},
+         familyi={B\bibinitperiod},
+         given={Ashley},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=ZWX}{%
+         family={Zong},
+         familyi={Z\bibinitperiod},
+         given={Wei-Xing},
+         giveni={W\bibinithyphendelim X\bibinitperiod},
+      }}%
+      {{hash=DG}{%
+         family={Du},
+         familyi={D\bibinitperiod},
+         given={Guangwei},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=RCE}{%
+         family={Rocheleau},
+         familyi={R\bibinitperiod},
+         given={Christian\bibnamedelima E},
+         giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Company of Biologists Ltd}%
+    }
+    \strng{namehash}{LF+1}
+    \strng{fullhash}{LFSJHWZDJLBYBAZWXDGRCE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{12}
+    \field{pages}{2007\bibrangedash 2017}
+    \field{title}{The VPS34 PI3K negatively regulates RAB-5 during endosome
+  maturation}
+    \field{volume}{130}
+    \field{journaltitle}{J Cell Sci}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Lanzetti::2000}{article}{}
+    \name{author}{7}{}{%
+      {{hash=LL}{%
+         family={Lanzetti},
+         familyi={L\bibinitperiod},
+         given={Letizia},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=RV}{%
+         family={Rybin},
+         familyi={R\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MMG}{%
+         family={Malabarba},
+         familyi={M\bibinitperiod},
+         given={Maria\bibnamedelima Grazia},
+         giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Christoforidis},
+         familyi={C\bibinitperiod},
+         given={Savvas},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Scita},
+         familyi={S\bibinitperiod},
+         given={Giorgio},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zerial},
+         familyi={Z\bibinitperiod},
+         given={Marino},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DFPP}{%
+         family={Di\bibnamedelima Fiore},
+         familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Pier\bibnamedelima Paolo},
+         giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{LL+1}
+    \strng{fullhash}{LLRVMMGCSSGZMDFPP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6810}
+    \field{pages}{374}
+    \field{title}{The Eps8 protein coordinates EGF receptor signalling through
+  Rac and trafficking through Rab5}
+    \field{volume}{408}
+    \field{journaltitle}{Nature}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Hoepfner:2005}{article}{}
+    \name{author}{8}{}{%
+      {{hash=HS}{%
+         family={Hoepfner},
+         familyi={H\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Severin},
+         familyi={S\bibinitperiod},
+         given={Fedor},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Cabezas},
+         familyi={C\bibinitperiod},
+         given={Alicia},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={Habermann},
+         familyi={H\bibinitperiod},
+         given={Bianca},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Runge},
+         familyi={R\bibinitperiod},
+         given={Anja},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GD}{%
+         family={Gillooly},
+         familyi={G\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Stenmark},
+         familyi={S\bibinitperiod},
+         given={Harald},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zerial},
+         familyi={Z\bibinitperiod},
+         given={Marino},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{HS+1}
+    \strng{fullhash}{HSSFCAHBRAGDSHZM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{437\bibrangedash 450}
+    \field{title}{Modulation of receptor recycling and degradation by the
+  endosomal kinesin KIF16B}
+    \field{volume}{121}
+    \field{journaltitle}{Cell}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Carlucci::2010}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=CA}{%
+         family={Carlucci},
+         familyi={C\bibinitperiod},
+         given={Annalisa},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Porpora},
+         familyi={P\bibinitperiod},
+         given={Monia},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Garbi},
+         familyi={G\bibinitperiod},
+         given={Corrado},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Galgani},
+         familyi={G\bibinitperiod},
+         given={Mario},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Santoriello},
+         familyi={S\bibinitperiod},
+         given={Margherita},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mascolo},
+         familyi={M\bibinitperiod},
+         given={Massimo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=dLD}{%
+         prefix={di},
+         prefixi={d\bibinitperiod},
+         family={Lorenzo},
+         familyi={L\bibinitperiod},
+         given={Domenico},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=AV}{%
+         family={Altieri},
+         familyi={A\bibinitperiod},
+         given={Vincenzo},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=QM}{%
+         family={Quarto},
+         familyi={Q\bibinitperiod},
+         given={Maria},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={Terracciano},
+         familyi={T\bibinitperiod},
+         given={Luigi},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ASBMB}%
+    }
+    \strng{namehash}{CA+1}
+    \strng{fullhash}{CAPMGCGMSMMMLDdAVQMTL+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{50}
+    \field{pages}{39260\bibrangedash 39270}
+    \field{title}{PTPD1 supports receptor stability and mitogenic signaling in
+  bladder cancer cells}
+    \field{volume}{285}
+    \field{journaltitle}{Journal of biological chemistry}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Araki:2003}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AT}{%
+         family={Araki},
+         familyi={A\bibinitperiod},
+         given={Toshiyuki},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Milbrandt},
+         familyi={M\bibinitperiod},
+         given={Jeffrey},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Soc Neuroscience}%
+    }
+    \strng{namehash}{ATMJ1}
+    \strng{fullhash}{ATMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{28}
+    \field{pages}{9385\bibrangedash 9394}
+    \field{title}{ZNRF proteins constitute a family of presynaptic E3 ubiquitin
+  ligases}
+    \field{volume}{23}
+    \field{journaltitle}{Journal of Neuroscience}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Hoxhaj:2016}{article}{}
+    \name{author}{10}{}{%
+      {{hash=HG}{%
+         family={Hoxhaj},
+         familyi={H\bibinitperiod},
+         given={Gerta},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CE}{%
+         family={Caddye},
+         familyi={C\bibinitperiod},
+         given={Edward},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=NA}{%
+         family={Najafov},
+         familyi={N\bibinitperiod},
+         given={Ayaz},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HVP}{%
+         family={Houde},
+         familyi={H\bibinitperiod},
+         given={Vanessa\bibnamedelima P},
+         giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=JC}{%
+         family={Johnson},
+         familyi={J\bibinitperiod},
+         given={Catherine},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=DK}{%
+         family={Dissanayake},
+         familyi={D\bibinitperiod},
+         given={Kumara},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Toth},
+         familyi={T\bibinitperiod},
+         given={Rachel},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CDG}{%
+         family={Campbell},
+         familyi={C\bibinitperiod},
+         given={David\bibnamedelima G},
+         giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=PAR}{%
+         family={Prescott},
+         familyi={P\bibinitperiod},
+         given={Alan\bibnamedelima R},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={MacKintosh},
+         familyi={M\bibinitperiod},
+         given={Carol},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {eLife Sciences Publications Limited}%
+    }
+    \strng{namehash}{HG+1}
+    \strng{fullhash}{HGCENAHVPJCDKTRCDGPARMC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{e12278}
+    \field{title}{The E3 ubiquitin ligase ZNRF2 is a substrate of mTORC1 and
+  regulates its activation by amino acids}
+    \field{volume}{5}
+    \field{journaltitle}{elife}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Dilcher::2001}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DM}{%
+         family={Dilcher},
+         familyi={D\bibinitperiod},
+         given={Meik},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={K{\"o}hler},
+         familyi={K\bibinitperiod},
+         given={Beate},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=vMGF}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Mollard},
+         familyi={M\bibinitperiod},
+         given={Gabriele\bibnamedelima Fischer},
+         giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ASBMB}%
+    }
+    \strng{namehash}{DMKBMGFv1}
+    \strng{fullhash}{DMKBMGFv1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{37}
+    \field{pages}{34537\bibrangedash 34544}
+    \field{title}{Genetic Interactions with the Yeast Q-SNARE VTI1Reveal Novel
+  Functions for the R-SNARE YKT6}
+    \field{volume}{276}
+    \field{journaltitle}{Journal of Biological Chemistry}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Tai:2004}{article}{}
+    \name{author}{7}{}{%
+      {{hash=TG}{%
+         family={Tai},
+         familyi={T\bibinitperiod},
+         given={Guihua},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LL}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Lei},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WTL}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Tuan\bibnamedelima Lao},
+         giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=TBL}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Bor\bibnamedelima Luen},
+         giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Goud},
+         familyi={G\bibinitperiod},
+         given={Bruno},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=JL}{%
+         family={Johannes},
+         familyi={J\bibinitperiod},
+         given={Ludger},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Hong},
+         familyi={H\bibinitperiod},
+         given={Wanjin},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Am Soc Cell Biol}%
+    }
+    \strng{namehash}{TG+1}
+    \strng{fullhash}{TGLLWTLTBLGBJLHW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{4011\bibrangedash 4022}
+    \field{title}{Participation of the syntaxin 5/Ykt6/GS28/GS15 SNARE complex
+  in transport from the early/recycling endosome to the trans-Golgi network}
+    \field{volume}{15}
+    \field{journaltitle}{Molecular biology of the cell}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Fukasawa::2004}{article}{}
+    \name{author}{5}{}{%
+      {{hash=FM}{%
+         family={Fukasawa},
+         familyi={F\bibinitperiod},
+         given={Masayoshi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VO}{%
+         family={Varlamov},
+         familyi={V\bibinitperiod},
+         given={Oleg},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=EWS}{%
+         family={Eng},
+         familyi={E\bibinitperiod},
+         given={William\bibnamedelima S},
+         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=STH}{%
+         family={S{\"o}llner},
+         familyi={S\bibinitperiod},
+         given={Thomas\bibnamedelima H},
+         giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=RJE}{%
+         family={Rothman},
+         familyi={R\bibinitperiod},
+         given={James\bibnamedelima E},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {National Acad Sciences}%
+    }
+    \strng{namehash}{FM+1}
+    \strng{fullhash}{FMVOEWSSTHRJE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{14}
+    \field{pages}{4815\bibrangedash 4820}
+    \field{title}{Localization and activity of the SNARE Ykt6 determined by its
+  regulatory domain and palmitoylation}
+    \field{volume}{101}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Meiringer::2008}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MCT}{%
+         family={Meiringer},
+         familyi={M\bibinitperiod},
+         given={Christoph\bibnamedelima TA},
+         giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=AK}{%
+         family={Auffarth},
+         familyi={A\bibinitperiod},
+         given={Kathrin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HH}{%
+         family={Hou},
+         familyi={H\bibinitperiod},
+         given={Haitong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=UC}{%
+         family={Ungermann},
+         familyi={U\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{MCT+1}
+    \strng{fullhash}{MCTAKHHUC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{1510\bibrangedash 1521}
+    \field{title}{Depalmitoylation of Ykt6 prevents its entry into the
+  multivesicular body pathway}
+    \field{volume}{9}
+    \field{journaltitle}{Traffic}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Takats::2018}{article}{}
+    \name{author}{8}{}{%
+      {{hash=TS}{%
+         family={Tak{\'a}ts},
+         familyi={T\bibinitperiod},
+         given={Szabolcs},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Glatz},
+         familyi={G\bibinitperiod},
+         given={G{\'a}bor},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Szenci},
+         familyi={S\bibinitperiod},
+         given={Gy{\H{o}}z{\H{o}}},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Boda},
+         familyi={B\bibinitperiod},
+         given={Attila},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HGV}{%
+         family={Horv{\'a}th},
+         familyi={H\bibinitperiod},
+         given={G{\'a}bor\bibnamedelima V},
+         giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={Heged{\H{u}}s},
+         familyi={H\bibinitperiod},
+         given={Krisztina},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KAL}{%
+         family={Kov{\'a}cs},
+         familyi={K\bibinitperiod},
+         given={Attila\bibnamedelima L},
+         giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=JG}{%
+         family={Juh{\'a}sz},
+         familyi={J\bibinitperiod},
+         given={G{\'a}bor},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{TS+1}
+    \strng{fullhash}{TSGGSGBAHGVHKKALJG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{e1007359}
+    \field{title}{Non-canonical role of the SNARE protein Ykt6 in
+  autophagosome-lysosome fusion}
+    \field{volume}{14}
+    \field{journaltitle}{PLoS genetics}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Matsui::2018}{article}{}
+    \name{author}{6}{}{%
+      {{hash=MT}{%
+         family={Matsui},
+         familyi={M\bibinitperiod},
+         given={Takahide},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=JP}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Peidu},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=NS}{%
+         family={Nakano},
+         familyi={N\bibinitperiod},
+         given={Saori},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Sakamaki},
+         familyi={S\bibinitperiod},
+         given={Yuriko},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Yamamoto},
+         familyi={Y\bibinitperiod},
+         given={Hayashi},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Mizushima},
+         familyi={M\bibinitperiod},
+         given={Noboru},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Rockefeller University Press}%
+    }
+    \strng{namehash}{MT+1}
+    \strng{fullhash}{MTJPNSSYYHMN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{8}
+    \field{pages}{2633\bibrangedash 2645}
+    \field{title}{Autophagosomal YKT6 is required for fusion with lysosomes
+  independently of syntaxin 17}
+    \field{volume}{217}
+    \field{journaltitle}{J Cell Biol}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Linnemannstons::2018}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=LK}{%
+         family={Linnemannst{\"o}ns},
+         familyi={L\bibinitperiod},
+         given={Karen},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={Witte},
+         familyi={W\bibinitperiod},
+         given={Leonie},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KJC}{%
+         family={Kittel},
+         familyi={K\bibinitperiod},
+         given={Jeanette\bibnamedelima Clarissa},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Danieli},
+         familyi={D\bibinitperiod},
+         given={Adi},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={M{\"u}ller},
+         familyi={M\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=NL}{%
+         family={Nitsch},
+         familyi={N\bibinitperiod},
+         given={Lena},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=HCM}{%
+         family={Honemann-Capito},
+         familyi={H\bibinithyphendelim C\bibinitperiod},
+         given={Mona},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GF}{%
+         family={Grawe},
+         familyi={G\bibinitperiod},
+         given={Ferdi},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=WA}{%
+         family={Wodarz},
+         familyi={W\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GJC}{%
+         family={Gross},
+         familyi={G\bibinitperiod},
+         given={Julia\bibnamedelima Christina},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cold Spring Harbor Laboratory}%
+    }
+    \strng{namehash}{LK+1}
+    \strng{fullhash}{LKWLKJCDAMDNLHCMGFWAGJC+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{485565}
+    \field{title}{Ykt6 membrane-to-cytosol cycling regulates exosomal Wnt
+  secretion}
+    \field{journaltitle}{bioRxiv}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Yong::2019}{article}{}
+    \name{author}{2}{}{%
+      {{hash=YCQY}{%
+         family={Yong},
+         familyi={Y\bibinitperiod},
+         given={Cheryl Qian\bibnamedelima Ying},
+         giveni={C\bibinitperiod\bibinitdelim Q\bibinitperiod\bibinitdelim
+  Y\bibinitperiod},
+      }}%
+      {{hash=TBL}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Bor\bibnamedelima Luen},
+         giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis}%
+    }
+    \strng{namehash}{YCQYTBL1}
+    \strng{fullhash}{YCQYTBL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{352\bibrangedash 357}
+    \field{title}{Another longin SNARE for autophagosome-lysosome fusion-how
+  does Ykt6 work?}
+    \field{volume}{15}
+    \field{journaltitle}{Autophagy}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Bahl::2016}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BK}{%
+         family={Bahl},
+         familyi={B\bibinitperiod},
+         given={Kriti},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=XS}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Shuwei},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Spagnol},
+         familyi={S\bibinitperiod},
+         given={Gaelle},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Sorgen},
+         familyi={S\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=NN}{%
+         family={Naslavsky},
+         familyi={N\bibinitperiod},
+         given={Naava},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Caplan},
+         familyi={C\bibinitperiod},
+         given={Steve},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ASBMB}%
+    }
+    \strng{namehash}{BK+1}
+    \strng{fullhash}{BKXSSGSPNNCS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{26}
+    \field{pages}{13465\bibrangedash 13478}
+    \field{title}{EHD3 protein is required for tubular recycling endosome
+  stabilization, and an asparagine-glutamic acid residue pair within its Eps15
+  homology (EH) domain dictates its selective binding to NPF peptides}
+    \field{volume}{291}
+    \field{journaltitle}{Journal of Biological Chemistry}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Henmi::2016}{article}{}
+    \name{author}{6}{}{%
+      {{hash=HY}{%
+         family={Henmi},
+         familyi={H\bibinitperiod},
+         given={Yuji},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ON}{%
+         family={Oe},
+         familyi={O\bibinitperiod},
+         given={Natsuko},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=KN}{%
+         family={Kono},
+         familyi={K\bibinitperiod},
+         given={Nozomu},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=TT}{%
+         family={Taguchi},
+         familyi={T\bibinitperiod},
+         given={Tomohiko},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=TK}{%
+         family={Takei},
+         familyi={T\bibinitperiod},
+         given={Kohji},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=TK}{%
+         family={Tanabe},
+         familyi={T\bibinitperiod},
+         given={Kenji},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{HY+1}
+    \strng{fullhash}{HYONKNTTTKTK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 10}
+    \field{title}{Phosphatidic acid induces EHD3-containing membrane tubulation
+  and is required for receptor recycling}
+    \field{volume}{342}
+    \field{journaltitle}{Experimental cell research}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Naslavsky::2006}{article}{}
+    \name{author}{5}{}{%
+      {{hash=NN}{%
+         family={Naslavsky},
+         familyi={N\bibinitperiod},
+         given={Naava},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rahajeng},
+         familyi={R\bibinitperiod},
+         given={Juliati},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sharma},
+         familyi={S\bibinitperiod},
+         given={Mahak},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JM}{%
+         family={Jovic},
+         familyi={J\bibinitperiod},
+         given={Marko},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Caplan},
+         familyi={C\bibinitperiod},
+         given={Steve},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Am Soc Cell Biol}%
+    }
+    \strng{namehash}{NN+1}
+    \strng{fullhash}{NNRJSMJMCS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{163\bibrangedash 177}
+    \field{title}{Interactions between EHD proteins and Rab11-FIP2: a role for
+  EHD3 in early endosomal transport}
+    \field{volume}{17}
+    \field{journaltitle}{Molecular biology of the cell}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Naslavsky::2009}{article}{}
+    \name{author}{5}{}{%
+      {{hash=NN}{%
+         family={Naslavsky},
+         familyi={N\bibinitperiod},
+         given={Naava},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={McKenzie},
+         familyi={M\bibinitperiod},
+         given={Jenna},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ABN}{%
+         family={Altan-Bonnet},
+         familyi={A\bibinithyphendelim B\bibinitperiod},
+         given={Nihal},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Sheff},
+         familyi={S\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Caplan},
+         familyi={C\bibinitperiod},
+         given={Steve},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Company of Biologists Ltd}%
+    }
+    \strng{namehash}{NN+1}
+    \strng{fullhash}{NNMJABNSDCS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{389\bibrangedash 400}
+    \field{title}{EHD3 regulates early-endosome-to-Golgi transport and
+  preserves Golgi morphology}
+    \field{volume}{122}
+    \field{journaltitle}{Journal of cell science}
+    \field{year}{2009}
+  \endentry
+
+  \entry{George::2007}{article}{}
+    \name{author}{8}{}{%
+      {{hash=GM}{%
+         family={George},
+         familyi={G\bibinitperiod},
+         given={Manju},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YG}{%
+         family={Ying},
+         familyi={Y\bibinitperiod},
+         given={GuoGuang},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=RMA}{%
+         family={Rainey},
+         familyi={R\bibinitperiod},
+         given={Mark\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Solomon},
+         familyi={S\bibinitperiod},
+         given={Aharon},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PPT}{%
+         family={Parikh},
+         familyi={P\bibinitperiod},
+         given={Pankit\bibnamedelima T},
+         giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=GQ}{%
+         family={Gao},
+         familyi={G\bibinitperiod},
+         given={Qingshen},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=BV}{%
+         family={Band},
+         familyi={B\bibinitperiod},
+         given={Vimla},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=BH}{%
+         family={Band},
+         familyi={B\bibinitperiod},
+         given={Hamid},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {BioMed Central}%
+    }
+    \strng{namehash}{GM+1}
+    \strng{fullhash}{GMYGRMASAPPTGQBVBH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{3}
+    \field{title}{Shared as well as distinct roles of EHD proteins revealed by
+  biochemical and functional comparisons in mammalian cells and C. elegans}
+    \field{volume}{8}
+    \field{journaltitle}{BMC cell biology}
+    \field{year}{2007}
+  \endentry
+
+  \entry{Cabasso::2015}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CO}{%
+         family={Cabasso},
+         familyi={C\bibinitperiod},
+         given={Or},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=PO}{%
+         family={Pekar},
+         familyi={P\bibinitperiod},
+         given={Olga},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Horowitz},
+         familyi={H\bibinitperiod},
+         given={Mia},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{COPOHM1}
+    \strng{fullhash}{COPOHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{7}
+    \field{pages}{e0134053}
+    \field{title}{SUMOylation of EHD3 modulates tubulation of the endocytic
+  recycling compartment}
+    \field{volume}{10}
+    \field{journaltitle}{PloS one}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Bioconductor::2004}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=GRC}{%
+         family={Gentleman},
+         familyi={G\bibinitperiod},
+         given={Robert\bibnamedelima C},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=CVJ}{%
+         family={Carey},
+         familyi={C\bibinitperiod},
+         given={Vincent\bibnamedelima J},
+         giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BDM}{%
+         family={Bates},
+         familyi={B\bibinitperiod},
+         given={Douglas\bibnamedelima M},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BB}{%
+         family={Bolstad},
+         familyi={B\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Dettling},
+         familyi={D\bibinitperiod},
+         given={Marcel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Dudoit},
+         familyi={D\bibinitperiod},
+         given={Sandrine},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=EB}{%
+         family={Ellis},
+         familyi={E\bibinitperiod},
+         given={Byron},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gautier},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Ge},
+         familyi={G\bibinitperiod},
+         given={Yongchao},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Gentry},
+         familyi={G\bibinitperiod},
+         given={Jeff},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {BioMed Central}%
+    }
+    \strng{namehash}{GRC+1}
+    \strng{fullhash}{GRCCVJBDMBBDMDSEBGLGYGJ+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{10}
+    \field{pages}{R80}
+    \field{title}{Bioconductor: open software development for computational
+  biology and bioinformatics}
+    \field{volume}{5}
+    \field{journaltitle}{Genome biology}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Huber:2015}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=HW}{%
+         family={Huber},
+         familyi={H\bibinitperiod},
+         given={Wolfgang},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=CVJ}{%
+         family={Carey},
+         familyi={C\bibinitperiod},
+         given={Vincent\bibnamedelima J},
+         giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={Gentleman},
+         familyi={G\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={Anders},
+         familyi={A\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Carlson},
+         familyi={C\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CBS}{%
+         family={Carvalho},
+         familyi={C\bibinitperiod},
+         given={Benilton\bibnamedelima S},
+         giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=BHC}{%
+         family={Bravo},
+         familyi={B\bibinitperiod},
+         given={Hector\bibnamedelima Corrada},
+         giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Davis},
+         familyi={D\bibinitperiod},
+         given={Sean},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GT}{%
+         family={Girke},
+         familyi={G\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Research}%
+    }
+    \strng{namehash}{HW+1}
+    \strng{fullhash}{HWCVJGRASCMCBSBHCDSGLGT+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{115\bibrangedash 121}
+    \field{title}{Orchestrating high-throughput genomic analysis with
+  Bioconductor}
+    \field{volume}{12}
+    \field{journaltitle}{Nature methods}
+    \field{year}{2015}
+  \endentry
+
+  \entry{MSnbase:2012}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GLLK1}
+    \strng{fullhash}{GLLK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{288\bibrangedash 289}
+    \field{title}{MSnbase - an R/Bioconductor package for isobaric tagged mass
+  spectrometry data visualization, processing and quantitation}
+    \field{volume}{28}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2012}
+  \endentry
+
+  \entry{pRoloc:2014}{article}{}
+    \name{author}{5}{}{%
+      {{hash=GL}{%
+         family={Gatto},
+         familyi={G\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BLM}{%
+         family={Breckels},
+         familyi={B\bibinitperiod},
+         given={Lisa\bibnamedelima M.},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wieczorek},
+         familyi={W\bibinitperiod},
+         given={Samuel},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Burger},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={Lilley},
+         familyi={L\bibinitperiod},
+         given={Kathryn\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GL+1}
+    \strng{fullhash}{GLBLMWSBTLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Mass-spectrometry based spatial proteomics data analysis
+  using pRoloc and pRolocdata}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2014}
+  \endentry
+\enddatalist
+\endinput
